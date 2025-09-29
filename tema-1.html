@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tema 1: La Constitución Española</title>
+    <title>Tema 2: Administración Pública - Cuestionario</title>
     <link rel="stylesheet" href="styles.css"> 
 </head>
 <body>
@@ -11,7 +11,7 @@
     <nav>
         <ul>
             <li><a href="index.html">Inicio</a></li>
-            <li><a href="tema-1.html">Tema 1</a></li>
+            <li><a href="tema-1.html">Tema 1: La Costitución Español</a></li>
             <li><a href="tema-2.html">Tema 2: Administración Pública</a></li>
             <li><a href="tema-3.html">Tema 3</a></li>
             <li><a href="tema-4.html">Tema 4</a></li>
@@ -23,25 +23,24 @@
     </nav>
 
     <main>
-        <h1>Tema 1: La Constitución Española de 1978</h1>
-        <p class="lead">Este tema se centra en el marco jurídico fundamental del Estado español.</p>
-        
-        <section>
-            <h2>Estructura y Principios Fundamentales</h2>
-            <p>La Constitución Española (CE) fue aprobada en referéndum el 6 de diciembre de 1978. Consta de un Preámbulo, un Título Preliminar y diez Títulos. Establece a España como un <strong>Estado social y democrático de Derecho</strong> que propugna como valores superiores de su ordenamiento jurídico la libertad, la justicia, la igualdad y el pluralismo político.</p>
-            
-            <h3>La Jefatura del Estado</h3>
-            <p>La figura del Rey es el Jefe del Estado, símbolo de su unidad y permanencia. Ejerce las funciones que le atribuyen expresamente la Constitución y las Leyes.</p>
-        </section>
+        <h1>Tema 1: La Costitución Española (100 Preguntas)</h1>
+        <p>Selecciona la única opción correcta en cada pregunta. Cuando termines, pulsa el botón para ver tu puntuación y las correcciones.</p>
 
-        <section>
-            <h2>Derechos y Deberes</h2>
-            <p>El Título I se dedica a los derechos y deberes fundamentales. La protección de estos derechos varía según su ubicación, siendo los derechos fundamentales de la Sección 1ª del Capítulo II (Artículos 15 a 29) los que gozan de la máxima protección, incluyendo el recurso de amparo ante el Tribunal Constitucional.</p>
-        </section>
+        <div id="quiz-container">
+        </div>
 
-        <p style="margin-top: 30px; padding: 10px; border: 1px solid #ccc; background-color: #f9f9f9;">*Nota: Puedes reemplazar este contenido con el material didáctico real de tu Tema 1.*</p>
+        <button id="submit-quiz">Finalizar Cuestionario y Ver Puntuación</button>
 
+        <div id="results"></div>
     </main>
-    
+
+    <script src="tema-1-questions.js"></script> 
+    <script>
+        // Lógica para inicializar el quiz y vincular el botón
+        document.addEventListener('DOMContentLoaded', () => {
+            loadQuiz(); // Función definida en tema-2-questions.js
+            document.getElementById('submit-quiz').addEventListener('click', calculateResults); // Función definida en tema-2-questions.js
+        });
+    </script>
 </body>
 </html>
