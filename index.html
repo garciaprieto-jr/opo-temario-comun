@@ -3,36 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página Principal | Temario Oposiciones</title>
-    <link rel="stylesheet" href="styles.css"> 
-</head>
+    <title>Carga Dinámica de Preguntas</title>
+    </head>
 <body>
 
-    <nav>
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="tema-1.html">Tema 1: La Constitución Española</a></li>
-            <li><a href="tema-2.html">Tema 2: Administración Pública (Quiz)</a></li>
-            <li><a href="tema-3.html">Tema 3</a></li>
-            <li><a href="tema-4.html">Tema 4</a></li>
-            <li><a href="tema-5.html">Tema 5</a></li>
-            <li><a href="tema-6.html">Tema 6</a></li>
-            <li><a href="tema-7.html">Tema 7</a></li>
-            <li><a href="tema-8.html">Tema 8</a></li>
-        </ul>
-    </nav>
+    <h1>Selecciona un Tema</h1>
+    <p>Haz clic en un tema para cargar las preguntas correspondidas.</p>
 
-    <main>
-        <h1>Bienvenido al Portal de Preparación de Temas</h1>
-        <p class="lead">Este portal te ayudará a prepararte para tu temario. Utiliza el menú superior para acceder a los distintos temas.</p>
-        
-        <section>
-            <h2>Estructura del Temario</h2>
-            <p>Hemos dividido el temario en ocho módulos para facilitar su estudio. El **Tema 2** incluye un cuestionario interactivo de 120 preguntas para autoevaluación.</p>
-            <p>Empieza explorando el **Tema 1: La Constitución Española** o pon a prueba tus conocimientos sobre la **Administración Pública** en el Tema 2.</p>
-        </section>
-        
-    </main>
-    
+    <div id="controles">
+        <button id="tema-1">Cargar Preguntas Tema 1</button>
+        <button id="tema-2">Cargar Preguntas Tema 2</button>
+    </div>
+
+    <hr>
+
+    <h2>Preguntas del Tema Seleccionado</h2>
+    <div id="preguntas-container">
+        <p>Aún no has cargado ningún tema.</p>
+    </div>
+
+    <script src="script.js"></script>
+
 </body>
 </html>
