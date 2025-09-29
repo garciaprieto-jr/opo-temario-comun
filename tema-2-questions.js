@@ -1203,89 +1203,195 @@ const quizQuestions = [
     }
 ];
 
-// Lógica de Renderizado de las Preguntas
-function loadQuiz() {
-    const container = document.getElementById('quiz-container');
-    let output = [];
+// Variables de estado
+let preguntasSeleccionadas = [];
+let aciertos = 0;
+let errores = 0;
+// Array para guardar la respuesta seleccionada por el usuario en cada pregunta
+let respuestasUsuario = []; 
+let examenCorregido = false;
 
-    quizQuestions.forEach((currentQuestion, questionNumber) => {
-        const options = [];
-        
-        // Generar opciones (A, B, C, D) con radio buttons
-        currentQuestion.options.forEach((option, optionIndex) => {
-            options.push(
-                `<label>
-                    <input type="radio" name="question${questionNumber}" value="${option}">
-                    ${String.fromCharCode(65 + optionIndex)}. ${option}
-                </label>`
-            );
-        });
+// Función para obtener preguntas aleatorias
+function seleccionarPreguntas(num) {
+    // Si num es 0 o mayor que el total, selecciona todas las preguntas
+    const numSeleccion = num > 0 && num <= preguntas.length ? num : preguntas.length;
 
-        // Generar el bloque HTML para la pregunta
-        output.push(
-            `<div class="question-block" id="q-${questionNumber}">
-                <div class="question">${currentQuestion.question}</div>
-                <div class="options">${options.join('')}</div>
-            </div>`
-        );
-    });
+    // Mezcla el array original de preguntas (usando una copia)
+    const preguntasMezcladas = [...preguntas].sort(() => Math.random() - 0.5);
 
-    container.innerHTML = output.join('');
+    // Selecciona las primeras 'numSeleccion' preguntas
+    preguntasSeleccionadas = preguntasMezcladas.slice(0, numSeleccion).map((p, index) => ({
+        ...p,
+        // Usamos el ID del array de preguntasSeleccionadas como identificador
+        id: index 
+    }));
+
+    // Inicializa las respuestas del usuario con null para el nuevo examen
+    respuestasUsuario = Array(preguntasSeleccionadas.length).fill(null);
+    examenCorregido = false;
 }
 
-// Lógica de Calificación y Visualización de Resultados
-function calculateResults() {
-    const container = document.getElementById('quiz-container');
-    const resultsDiv = document.getElementById('results');
-    let numCorrect = 0;
+// Función para mezclar las opciones de respuesta y asegurarnos que sean aleatorias
+function mezclarOpciones(opciones) {
+    return opciones.sort(() => Math.random() - 0.5);
+}
 
-    quizQuestions.forEach((currentQuestion, questionNumber) => {
-        const selector = `input[name=question${questionNumber}]:checked`;
-        const userAnswer = (container.querySelector(selector) || {}).value;
+// Función principal para renderizar el examen completo
+function mostrarExamen() {
+    seleccionarPreguntas(25); // Selecciona 25 preguntas
+    const contenedor = document.getElementById('quiz-container');
+    contenedor.innerHTML = '<h2>Test de Constitución Española (25 Preguntas)</h2>';
 
-        const questionElement = document.getElementById(`q-${questionNumber}`);
-        const allOptions = questionElement.querySelectorAll('label');
+    const formulario = document.createElement('form');
+    formulario.id = 'quiz-form';
+    formulario.onsubmit = function(event) {
+        event.preventDefault(); // Detiene el envío del formulario tradicional
+        corregirExamen();
+    };
 
-        // Limpiar estilos previos
-        questionElement.style.backgroundColor = '';
-        allOptions.forEach(label => {
-            label.style.fontWeight = 'normal';
-            label.style.color = 'inherit';
+    preguntasSeleccionadas.forEach((pregunta, index) => {
+        const divPregunta = document.createElement('div');
+        divPregunta.classList.add('pregunta');
+        // Estilos para separación de preguntas
+        divPregunta.style.marginBottom = '25px';
+        divPregunta.style.padding = '15px';
+        divPregunta.style.border = '1px solid #ccc';
+        divPregunta.style.borderRadius = '5px';
+        divPregunta.id = `pregunta-${index}`; // ID para facilitar la corrección
+
+        const textoPregunta = document.createElement('p');
+        // Quita el número inicial de la pregunta original y añade el número del test
+        textoPregunta.innerHTML = `<strong>${index + 1}.</strong> ${pregunta.pregunta.substring(pregunta.pregunta.indexOf('.') + 2)}`; 
+        divPregunta.appendChild(textoPregunta);
+
+        // Mezcla las opciones al renderizar
+        const opcionesMezcladas = mezclarOpciones(pregunta.opciones); 
+
+        opcionesMezcladas.forEach((opcion, i) => {
+            const label = document.createElement('label');
+            label.style.display = 'block';
+            label.style.marginTop = '5px';
+            label.style.padding = '5px';
+            label.style.borderRadius = '3px';
+
+            const input = document.createElement('input');
+            input.type = 'radio';
+            input.name = `pregunta-${index}`; // Nombre del grupo de radio para la pregunta
+            input.value = opcion;
+            input.style.marginRight = '10px';
+
+            label.appendChild(input);
+            label.appendChild(document.createTextNode(opcion));
+            divPregunta.appendChild(label);
         });
 
-        // Buscar y marcar la respuesta correcta
-        const correctOptionElement = Array.from(allOptions).find(label => 
-            label.querySelector('input').value === currentQuestion.correctAnswer
-        );
+        formulario.appendChild(divPregunta);
+    });
 
-        if (userAnswer === currentQuestion.correctAnswer) {
-            numCorrect++;
-            questionElement.style.backgroundColor = 'rgba(144, 238, 144, 0.5)'; /* Verde claro para correcto */
-        } else {
-            questionElement.style.backgroundColor = 'rgba(250, 128, 114, 0.5)'; /* Rojo claro para incorrecto */
-            
-            // Marcar la opción seleccionada como incorrecta (si la hubo)
-            if (userAnswer) {
-                const selectedOptionElement = Array.from(allOptions).find(label => 
-                    label.querySelector('input').value === userAnswer
-                );
-                if (selectedOptionElement) {
-                    selectedOptionElement.style.color = 'darkred';
-                    selectedOptionElement.style.fontWeight = 'bold';
+    // Botón de Corregir
+    const btnCorregir = document.createElement('button');
+    btnCorregir.type = 'submit';
+    btnCorregir.textContent = '✅ Corregir Examen';
+    btnCorregir.id = 'btn-corregir';
+    btnCorregir.style.cssText = 'padding: 15px 30px; font-size: 1.2em; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; display: block; width: 100%; margin: 20px 0;';
+
+    formulario.appendChild(btnCorregir);
+
+    contenedor.appendChild(formulario);
+
+    // Contenedor para los resultados
+    const divResultados = document.createElement('div');
+    divResultados.id = 'resultados-container';
+    contenedor.appendChild(divResultados);
+}
+
+// Función para corregir el examen completo
+function corregirExamen() {
+    if (examenCorregido) return; // Evita corregir dos veces
+
+    aciertos = 0;
+    errores = 0;
+
+    const form = document.getElementById('quiz-form');
+    // Deshabilita el formulario y el botón de corregir
+    form.querySelectorAll('input[type="radio"]').forEach(input => input.disabled = true);
+    document.getElementById('btn-corregir').disabled = true;
+
+    // 1. Recoger respuestas y contar aciertos/errores
+    preguntasSeleccionadas.forEach((pregunta, index) => {
+        const nombreRadio = `pregunta-${index}`;
+        const respuestaSeleccionada = form.querySelector(`input[name="${nombreRadio}"]:checked`);
+        const divPregunta = document.getElementById(`pregunta-${index}`);
+
+        // 2. Marcar visualmente las respuestas
+        const labels = divPregunta.querySelectorAll('label');
+        let haContestado = false;
+
+        labels.forEach(label => {
+            const input = label.querySelector('input');
+            const valorInput = input.value;
+
+            // Si la respuesta es la correcta
+            if (valorInput === pregunta.respuestaCorrecta) {
+                label.style.fontWeight = 'bold';
+                label.style.backgroundColor = '#d4edda'; // Color base para la correcta
+            }
+
+            // Si el usuario marcó esta opción
+            if (input.checked) {
+                haContestado = true;
+                if (valorInput === pregunta.respuestaCorrecta) {
+                    label.style.backgroundColor = '#28a745'; // Verde para acierto
+                    label.style.color = 'white';
+                    aciertos++;
+                } else {
+                    label.style.backgroundColor = '#dc3545'; // Rojo para error
+                    label.style.color = 'white';
+                    errores++;
                 }
             }
-            // Resaltar la respuesta correcta
-            if (correctOptionElement) {
-                correctOptionElement.style.fontWeight = 'bold';
-                correctOptionElement.style.color = 'darkgreen';
+
+            // Si NO ha contestado y no es la correcta, se queda con el color base (blanco/transparente)
+            if (!haContestado && valorInput === pregunta.respuestaCorrecta) {
+                 label.style.backgroundColor = '#ffc107'; // Amarillo para correcta no contestada
             }
-        }
+        });
     });
 
-    // Mostrar el resultado final
-    resultsDiv.innerHTML = `
-        <h2>Resultado del Cuestionario</h2>
-        <p>Aciertos: <strong style="color: darkgreen;">${numCorrect}</strong> de ${quizQuestions.length}</p>
-        <p>Porcentaje: <strong style="color: #007bff;">${((numCorrect / quizQuestions.length) * 100).toFixed(2)}%</strong></p>
-    `;
+    // 3. Mostrar resultados
+    mostrarResultados();
+    examenCorregido = true;
 }
+
+// Función para mostrar los resultados finales
+function mostrarResultados() {
+    const contenedorResultados = document.getElementById('resultados-container');
+    const total = preguntasSeleccionadas.length;
+    const contestadas = aciertos + errores;
+    const sinContestar = total - contestadas;
+
+    // Cálculo de la nota tradicional de oposiciones: Aciertos - (Errores / 3)
+    const nota = aciertos - (errores / 3); 
+
+    contenedorResultados.innerHTML = `
+        <div style="border: 2px solid #007bff; padding: 20px; border-radius: 8px; margin-top: 30px; background-color: #f8f9fa;">
+            <h2 style="color: #007bff; border-bottom: 2px solid #007bff; padding-bottom: 10px;">📊 Puntuación Final</h2>
+            <p style="font-size: 1.1em;">Total de Preguntas: <strong>${total}</strong></p>
+            <p style="font-size: 1.1em;">Total Contestadas: <strong>${contestadas}</strong></p>
+            <p style="font-size: 1.1em;">Sin Contestar: <strong>${sinContestar}</strong></p>
+            <hr>
+            <p style="font-size: 1.2em; color: green;">✅ Aciertos: <strong style="font-size: 1.3em;">${aciertos}</strong></p>
+            <p style="font-size: 1.2em; color: red;">❌ Errores: <strong style="font-size: 1.3em;">${errores}</strong></p>
+            <hr>
+            <p style="font-size: 1.5em; color: blue;">Nota (penalización 1/3): <strong style="font-size: 1.5em;">${nota.toFixed(2)}</strong></p>
+            <hr>
+            <button onclick="mostrarExamen()" style="margin-top: 20px; padding: 10px 20px; font-size: 1.1em; background-color: #28a745; color: white; border: none; border-radius: 5px; cursor: pointer;">🔁 Repetir Examen (25 preguntas)</button>
+        </div>
+    `;
+
+    // Desplazar a los resultados para que el usuario los vea
+    contenedorResultados.scrollIntoView({ behavior: 'smooth' });
+}
+
+// Función inicial para empezar el examen
+document.addEventListener('DOMContentLoaded', mostrarExamen);
