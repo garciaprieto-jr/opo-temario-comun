@@ -1,107 +1,153 @@
-/* Estilos generales */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background-color: #f4f4f4;
-    color: #333;
+/* Paleta de Colores: Azul oscuro (#1E3A5F), Azul medio (#007bff), Gris claro (#F7F9FC), Acento verde/rojo. */
+:root {
+    --primary-color: #1E3A5F;
+    --secondary-color: #007bff;
+    --background-light: #F7F9FC;
+    --text-dark: #333;
+    --success-bg: #e6ffed; /* Fondo verde muy claro */
+    --error-bg: #fff0f0; /* Fondo rojo muy claro */
+    --success-border: #4CAF50;
+    --error-border: #F44336;
 }
 
-/* Estilos del menú de Navegación */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: var(--background-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+/* --- Navegación (Header) --- */
 nav {
-    background-color: #007bff;
+    background-color: var(--primary-color);
     color: white;
-    padding: 0;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     display: flex;
-    flex-wrap: wrap; /* Permite que el menú se ajuste en pantallas pequeñas */
+    flex-wrap: wrap; 
     justify-content: center;
 }
 nav ul li a {
     color: white;
     text-decoration: none;
-    padding: 15px 18px;
+    padding: 15px 20px;
     display: block;
-    transition: background-color 0.3s;
+    font-weight: 500;
+    transition: background-color 0.3s, color 0.3s;
 }
 nav ul li a:hover {
-    background-color: #0056b3;
+    background-color: #007bff; /* Secondary color on hover */
+    color: #fff;
+}
+nav ul li a[href="tema-2.html"] {
+    /* Destacar el tema con contenido */
+    background-color: #007bff; 
+    font-weight: bold;
 }
 
-/* Estilos del Contenido Principal (Quiz) */
+/* --- Contenido Principal --- */
 main {
-    max-width: 900px;
-    margin: 20px auto;
+    max-width: 950px;
+    margin: 30px auto;
     padding: 30px;
     background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
 }
 h1 {
-    color: #007bff;
-    border-bottom: 2px solid #007bff;
-    padding-bottom: 10px;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    font-size: 2em;
 }
 
-/* Estilos de las Preguntas */
+/* --- Estilos del Cuestionario (Tema 2) --- */
 .question-block {
-    margin-bottom: 25px;
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 6px;
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
     background-color: #fff;
+    transition: all 0.3s;
 }
 .question {
-    font-weight: bold;
-    margin-bottom: 10px;
-    font-size: 1.1em;
+    font-weight: 600;
+    margin-bottom: 15px;
+    font-size: 1.15em;
+    color: var(--primary-color);
 }
 .options label {
-    display: block;
-    margin: 8px 0;
-    padding: 5px 10px;
-    border-radius: 4px;
+    display: flex; /* Para alinear el radio button */
+    align-items: center;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.2s;
+    border: 1px solid transparent;
 }
 .options label:hover {
-    background-color: #f0f8ff;
+    background-color: #f0f0f0;
+}
+.options input[type="radio"] {
+    margin-right: 10px;
 }
 
-/* Botón y Resultados */
+/* --- Retroalimentación Visual (JavaScript) --- */
+/* Correcto */
+.question-block[style*="rgba(144, 238, 144"] {
+    background-color: var(--success-bg) !important;
+    border-left: 5px solid var(--success-border);
+    box-shadow: 0 0 10px rgba(76, 175, 80, 0.2);
+}
+/* Incorrecto */
+.question-block[style*="rgba(250, 128, 114"] {
+    background-color: var(--error-bg) !important;
+    border-left: 5px solid var(--error-border);
+    box-shadow: 0 0 10px rgba(244, 67, 54, 0.2);
+}
+/* Respuesta correcta resaltada */
+.question-block label[style*="darkgreen"] {
+    background-color: #d8f8d8; 
+}
+/* Respuesta incorrecta seleccionada */
+.question-block label[style*="darkred"] {
+    background-color: #ffcccc;
+}
+
+/* --- Botón y Resultados --- */
 #submit-quiz {
     display: block;
     width: 100%;
     padding: 15px;
     font-size: 1.2em;
-    background-color: #28a745;
+    background-color: #007bff;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     margin-top: 30px;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.1s;
 }
 #submit-quiz:hover {
-    background-color: #1e7e34;
+    background-color: #0056b3;
+}
+#submit-quiz:active {
+    transform: scale(0.99);
 }
 #results {
     margin-top: 30px;
-    padding: 20px;
-    border: 2px solid #007bff;
-    border-radius: 5px;
+    padding: 25px;
+    border: 3px solid var(--secondary-color);
+    border-radius: 8px;
     text-align: center;
-    background-color: #e9f5ff;
-}
-
-/* Estilos de Corrección (Añadidos por JS) */
-.question-block[style*="rgba(144, 238, 144"] {
-    border-left: 5px solid darkgreen;
-}
-.question-block[style*="rgba(250, 128, 114"] {
-    border-left: 5px solid darkred;
+    background-color: #f0f8ff;
+    font-size: 1.1em;
+    font-weight: bold;
 }
