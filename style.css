@@ -82,43 +82,50 @@ h1 {
     font-size: 1.15em;
     color: var(--primary-color);
 }
-.options label {
-    display: flex; /* Para alinear el radio button */
-    align-items: center;
+.options .option-label {
+    display: flex;
+    align-items: flex-start; /* Alinea el texto si es largo */
     margin: 10px 0;
-    padding: 10px;
+    padding: 12px; /* Aumentado para mejor clickabilidad */
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.2s;
+    transition: background-color 0.2s, border 0.2s;
     border: 1px solid transparent;
 }
-.options label:hover {
+.options .option-label:hover {
     background-color: #f0f0f0;
 }
 .options input[type="radio"] {
-    margin-right: 10px;
+    margin-right: 12px;
+    margin-top: 4px; /* Ajuste visual */
+    flex-shrink: 0;
 }
 
-/* --- Retroalimentación Visual (JavaScript) --- */
-/* Correcto */
-.question-block[style*="rgba(144, 238, 144"] {
-    background-color: var(--success-bg) !important;
+/* --- Retroalimentación Visual (Clases JS) --- */
+
+/* Bloque correcto */
+.question-block.correct {
+    background-color: var(--success-bg);
     border-left: 5px solid var(--success-border);
-    box-shadow: 0 0 10px rgba(76, 175, 80, 0.2);
 }
-/* Incorrecto */
-.question-block[style*="rgba(250, 128, 114"] {
-    background-color: var(--error-bg) !important;
+/* Bloque incorrecto */
+.question-block.incorrect {
+    background-color: var(--error-bg);
     border-left: 5px solid var(--error-border);
-    box-shadow: 0 0 10px rgba(244, 67, 54, 0.2);
 }
-/* Respuesta correcta resaltada */
-.question-block label[style*="darkgreen"] {
+
+/* Respuesta Correcta (resaltada en cualquier bloque) */
+.option-label.is-correct {
     background-color: #d8f8d8; 
+    color: darkgreen;
+    border: 1px solid var(--success-border);
 }
-/* Respuesta incorrecta seleccionada */
-.question-block label[style*="darkred"] {
+
+/* Respuesta Incorrecta Seleccionada (solo en bloques incorrectos) */
+.option-label.is-incorrect {
     background-color: #ffcccc;
+    color: darkred;
+    border: 1px solid var(--error-border);
 }
 
 /* --- Botón y Resultados --- */
@@ -127,7 +134,7 @@ h1 {
     width: 100%;
     padding: 15px;
     font-size: 1.2em;
-    background-color: #007bff;
+    background-color: var(--secondary-color);
     color: white;
     border: none;
     border-radius: 5px;
@@ -144,7 +151,7 @@ h1 {
 #results {
     margin-top: 30px;
     padding: 25px;
-    border: 3px solid var(--secondary-color);
+    border: 3px solid var(--primary-color);
     border-radius: 8px;
     text-align: center;
     background-color: #f0f8ff;
