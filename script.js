@@ -173,7 +173,7 @@ const preguntas = [
     {
         pregunta: "35. El deber de contribuir al sostenimiento de los gastos públicos (deber fundamental) se establece en el Artículo:",
         opciones: ["30", "31", "32", "33"],
-        respuestaCorrecta: "Artículo 31"
+        respuestaCorrecta: "31"
     },
     {
         pregunta: "36. La colegiación obligatoria solo podrá ser impuesta por ley para el ejercicio de:",
