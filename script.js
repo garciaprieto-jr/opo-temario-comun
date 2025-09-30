@@ -1,52 +1,72 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Obtener los botones de la interfaz
-    const btnTema1 = document.getElementById('tema-1');
-    const btnTema2 = document.getElementById('tema-2');
+    // 1. Obtener los enlaces de navegación para la carga dinámica
+    const navTema1 = document.getElementById('nav-tema-1');
+    const navTema2 = document.getElementById('nav-tema-2');
 
-    // 2. Asignar el evento de clic a cada botón
-    btnTema1.addEventListener('click', () => cargarPreguntas('tema-1'));
-    btnTema2.addEventListener('click', () => cargarPreguntas('tema-2'));
+    // 2. Asignar el evento de clic a los enlaces
+    if (navTema1) navTema1.addEventListener('click', (e) => {
+        e.preventDefault(); // Evita que el enlace recargue la página
+        cargarPreguntas('tema-1', 'Tema 1: La Constitución Española');
+    });
+    if (navTema2) navTema2.addEventListener('click', (e) => {
+        e.preventDefault();
+        cargarPreguntas('tema-2', 'Tema 2: Administración Pública');
+    });
 
-    // 3. Función principal para cargar los datos JSON
-    function cargarPreguntas(tema) {
-        // CORRECCIÓN CRÍTICA: La ruta al archivo JSON debe ser correcta.
-        // Se asume que los archivos están en la carpeta 'data/'
-        const url = `data/${tema}.js`; 
+    // 3. Función principal para cargar los datos
+    function cargarPreguntas(file_name, title) {
+        // CORRECCIÓN CRÍTICA DE RUTA: 
+        // La URL apunta a la carpeta 'data/' y usa la extensión '.js' según tu estructura.
+        const url = `data/${file_name}.js`; 
         
+        const titleElement = document.getElementById('main-title');
         const container = document.getElementById('preguntas-container');
-        container.innerHTML = `<p>Cargando preguntas del ${tema.toUpperCase()}...</p>`;
+        
+        titleElement.innerHTML = title;
+        container.innerHTML = `<p>Cargando preguntas del ${title}...</p>`;
 
         fetch(url)
             .then(response => {
-                // VERIFICACIÓN CLAVE: Comprueba el código de estado (por ejemplo, si es 404 Not Found)
+                // VERIFICACIÓN CLAVE: Comprueba el código de estado (404)
                 if (!response.ok) {
-                    // Muestra el error de la ruta directamente en la consola
                     console.error(`Error ${response.status}: No se encontró el archivo en la ruta: ${url}`);
-                    // Lanza un error para ser capturado por el .catch
-                    throw new Error(`¡Error! No se pudieron cargar las preguntas del ${tema}. Revisa que el archivo exista en la ruta correcta: data/${tema}.json`);
+                    // Nota: Si el archivo es .js y NO JSON, puede fallar aquí.
+                    throw new Error(`¡Error! No se pudieron cargar las preguntas. Verifica si el archivo '${file_name}.js' existe en la carpeta 'data/' y si contiene datos JSON válidos.`);
                 }
-                return response.json();
+                // Asumiendo que el archivo .js contiene datos JSON válido
+                return response.json(); 
             })
             .then(data => {
                 // Si la carga fue exitosa, muestra los datos
-                mostrarPreguntas(data, tema);
+                mostrarPreguntas(data, title);
             })
             .catch(error => {
-                // Manejo de errores (ruta incorrecta, JSON mal formado, etc.)
+                // Manejo de errores
                 container.innerHTML = `<p style="color: red;">${error.message}</p>`;
+                document.getElementById('submit-quiz').style.display = 'none'; // Oculta el botón si falla
+                document.getElementById('results').style.display = 'none';
             });
     }
 
-    // 4. Función para renderizar o mostrar las preguntas
-    function mostrarPreguntas(preguntas, tema) {
+    // 4. Función para renderizar el contenido (simplificada para el ejemplo)
+    function mostrarPreguntas(preguntas, title) {
         const container = document.getElementById('preguntas-container');
-        let html = `<h3>${tema.toUpperCase().replace('-', ' ')} (${preguntas.length} Preguntas)</h3><ul>`;
+        let html = `<p>Mostrando ${preguntas.length} preguntas de: ${title}</p><ol>`;
         
         preguntas.forEach((q, index) => {
-            html += `<li><strong>${index + 1}. ${q.pregunta}</strong> (Respuesta: ${q.respuesta})</li>`;
+            // Nota: Aquí deberías renderizar las opciones y radios para un quiz real.
+            // Esto es solo una demostración de que los datos se cargaron.
+            html += `<li class="question-block">
+                        <div class="question">${q.pregunta}</div>
+                        </li>`;
         });
         
-        html += `</ul>`;
+        html += `</ol>`;
         container.innerHTML = html;
+        
+        // Muestra el botón de quiz (aunque la lógica del quiz esté incompleta)
+        document.getElementById('submit-quiz').style.display = 'block'; 
+        // Nota: Las funciones 'loadQuiz' y 'calculateResults' aún deben ser definidas en otro lugar 
+        // si quieres que el quiz sea funcional y no solo una lista.
     }
 });
