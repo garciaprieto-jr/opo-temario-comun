@@ -60,3 +60,18 @@ respuestasUsuario = obj;
 
 
 mostrarExamenCompl
+
+// --- PUNTO DE ARRANQUE DE LA APLICACIÓN ---
+document.addEventListener('DOMContentLoaded', () => {
+    // 1. Inicializa el estado de la aplicación mostrando el selector de temas.
+    mostrarSelectorTemas();
+
+    // 2. Adjunta los listeners a los botones de inicio de examen.
+    // Esto asume que tienes botones con la clase 'btn-tema' y un data-tema="temaX" en tu index.html
+    document.querySelectorAll('.btn-tema').forEach(button => {
+        button.addEventListener('click', (e) => {
+            const temaId = e.target.dataset.tema;
+            iniciarExamen(temaId);
+        });
+    });
+});
