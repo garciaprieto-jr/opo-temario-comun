@@ -124,7 +124,8 @@ function mostrarExamenCompleto(){
 }
 
 /**
- * Procesa las respuestas, calcula la nota con penalización (3 fallos = 1 acierto) y llama a mostrarResultados.
+ * Procesa las respuestas, calcula la nota con penalización (3 fallos = 1 acierto).
+ * IMPORTANTE: SÓLO RESTAN LAS RESPUESTAS ELEGIDAS INCORRECTAMENTE.
  */
 function corregirExamen(){
     let correctas = 0;           // C: Aciertos
@@ -144,10 +145,12 @@ function corregirExamen(){
                 esCorrecta = true;
                 correctas++;
             } else {
-                fallosPuntuables++; // Solo suma como fallo si fue elegida y era incorrecta
+                // FALLO: Solo suma como fallo si fue elegida y era incorrecta
+                fallosPuntuables++; 
             }
         } else {
-            sinResponder++; // Suma como sin responder si fue null
+            // SIN RESPONDER: Suma como sin responder si fue null
+            sinResponder++; 
         }
         
         return {
@@ -161,15 +164,17 @@ function corregirExamen(){
     });
 
     // 1. APLICAR LA REGLA DE OPOSICIÓN: 3 fallos anulan 1 acierto.
-    const aciertosNetos = correctas - (fallosPuntuables / 3);
+    // Los fallos (W) que penalizan son SÓLO los *elegidos* incorrectamente.
+    const penalizacion = fallosPuntuables / 3;
+    const aciertosNetos = correctas - penalizacion;
     
     // 2. Calcular la nota sobre 10. Math.max(0, ...) asegura que la nota nunca sea negativa.
     const notaFinal = Math.max(0, (aciertosNetos / total) * 10);
     
-    // Los fallos totales para la visualización (Fallos que penalizan + Sin Responder)
+    // Los fallos totales para la visualización (Fallos elegidos incorrectamente + Sin Responder)
     const fallosTotalesVisual = fallosPuntuables + sinResponder;
 
-    mostrarResultados(notaFinal, correctas, fallosTotalesVisual, total, resultadosDetallados);
+    mostrarResultados(notaFinal, correctas, fallosTotalesVisual, total, detalles);
 
     // Limpiar respuestas guardadas tras la corrección
     const temaId = Object.keys(temas).find(id => temas[id].titulo === temaActualNombre);
@@ -204,9 +209,12 @@ function mostrarResultados(nota, correctas, fallosVisual, total, detalles){
             // Si la respuesta elegida no es la correcta, marcar la del usuario
             if (oIndex === d.respuestaElegidaIndex && oIndex !== d.indexCorrecta) {
                 marca = ' (Tu Respuesta)';
+            } else if (d.respuestaElegidaIndex === null && oIndex === d.indexCorrecta) {
+                // Marcar la correcta si no se ha contestado
+                 marca = ' (No Contestada)';
             }
             
-            return `<li class="${oIndex === d.indexCorrecta ? 'correcta-opcion' : ''} ${oIndex === d.respuestaElegidaIndex && !d.esCorrecta ? 'fallo-opcion' : ''}">${opcion}${marca}</li>`;
+            return `<li class="${oIndex === d.indexCorrecta ? 'correcta-opcion' : ''} ${oIndex === d.respuestaElegidaIndex !== null && !d.esCorrecta ? 'fallo-opcion' : ''}">${opcion}${marca}</li>`;
         }).join('');
 
         return `
