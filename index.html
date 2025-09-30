@@ -3,26 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carga Dinámica de Preguntas</title>
-    </head>
+    <title>Temario de Oposiciones - Inicio</title>
+    <link rel="stylesheet" href="styles.css"> 
+</head>
 <body>
 
-    <h1>Selecciona un Tema</h1>
-    <p>Haz clic en un tema para cargar las preguntas correspondidas.</p>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="#" id="nav-tema-1">Tema 1: La Constitución Española</a></li>
+            <li><a href="#" id="nav-tema-2">Tema 2: Administración Pública (Quiz)</a></li>
+            <li><a href="#">Tema 3</a></li>
+            <li><a href="#">Tema 4</a></li>
+            <li><a href="#">Tema 5</a></li>
+            <li><a href="#">Tema 6</a></li>
+            <li><a href="#">Tema 7</a></li>
+            <li><a href="#">Tema 8</a></li>
+        </ul>
+    </nav>
 
-    <div id="controles">
-        <button id="tema-1">Cargar Preguntas Tema 1</button>
-        <button id="tema-2">Cargar Preguntas Tema 2</button>
-    </div>
+    <main>
+        <h1 id="main-title">Bienvenido al Temario de Oposiciones</h1>
+        
+        <div id="preguntas-container">
+            <p>Selecciona un tema en la barra de navegación superior para ver el contenido o iniciar el cuestionario.</p>
+        </div>
 
-    <hr>
-
-    <h2>Preguntas del Tema Seleccionado</h2>
-    <div id="preguntas-container">
-        <p>Aún no has cargado ningún tema.</p>
-    </div>
+        <button id="submit-quiz" style="display:none;">Finalizar Cuestionario y Ver Puntuación</button>
+        <div id="results" style="display:none;"></div>
+    </main>
 
     <script src="script.js"></script>
 
 </body>
 </html>
+
