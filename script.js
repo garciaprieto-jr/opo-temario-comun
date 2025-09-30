@@ -1,12 +1,10 @@
-// script.js (CORREGIDO)
+// script.js
 
-// Variables de estado del examen
+// Variables de estado global
 let preguntasActuales = [];
 let respuestasUsuario = [];
 let temaActualNombre = '';
-let temaActualID = '';
-
-// --- FUNCIONES DE INICIO Y NAVEGACIÓN ---
+let indicePreguntaActual = 0;
 
 /**
  * Muestra la pantalla de selección de temas
@@ -16,7 +14,7 @@ function mostrarSelectorTemas() {
     document.getElementById('examen').style.display = 'none';
     document.getElementById('contenedor-resultados').style.display = 'none';
     
-    // Asegurarse de que el contenedor de examen esté limpio
+    // Restaurar el contenedor del examen a su estado inicial
     document.getElementById('contenedor-examen').innerHTML = `
         <div id="contenedor-pregunta"></div>
         <div id="contenedor-opciones"></div>
@@ -33,18 +31,18 @@ function mostrarSelectorTemas() {
  * @param {string} temaId - 'tema1' o 'tema2'
  */
 function iniciarExamen(temaId) {
-    if (!window.temas || !window.temas[temaId]) {
-        console.error('Error: La estructura de temas no está cargada correctamente o el ID es incorrecto.', temaId);
-        // Si el archivo data.js no se cargó, 'temas' será undefined.
-        alert('Error: No se pudieron cargar los datos de las preguntas. Asegúrate de que el archivo data.js esté en la misma carpeta.');
+    // Verificar que la variable global 'temas' exista y contenga el ID
+    if (typeof temas === 'undefined' || !temas[temaId]) {
+        console.error('Error: La variable "temas" no está definida o el ID es incorrecto. Verifica data.js');
+        alert('Error: No se pudieron cargar los datos de las preguntas. Asegúrate de que el archivo data.js esté cargado correctamente.');
         return;
     }
 
-    // Establecer el estado del examen
-    temaActualID = temaId;
-    temaActualNombre = window.temas[temaId].nombre;
-    preguntasActuales = window.temas[temaId].preguntas;
+    // Inicializar el estado del examen
+    temaActualNombre = temas[temaId].titulo;
+    preguntasActuales = temas[temaId].preguntas;
     respuestasUsuario = new Array(preguntasActuales.length).fill(null);
+    indicePreguntaActual = 0;
 
     // Actualizar la interfaz
     document.getElementById('titulo-examen').textContent = temaActualNombre;
@@ -52,10 +50,8 @@ function iniciarExamen(temaId) {
     document.getElementById('contenedor-resultados').style.display = 'none';
     document.getElementById('examen').style.display = 'block';
 
-    mostrarPregunta(0);
+    mostrarPregunta(indicePreguntaActual);
 }
-
-// --- FUNCIONES DEL EXAMEN ---
 
 /**
  * Muestra una pregunta específica
@@ -69,6 +65,7 @@ function mostrarPregunta(indice) {
     // Comprobar límites
     if (indice < 0 || indice >= preguntasActuales.length) return;
 
+    indicePreguntaActual = indice; // Actualizar el índice global
     const pregunta = preguntasActuales[indice];
 
     // Mostrar el título de la pregunta
@@ -81,6 +78,7 @@ function mostrarPregunta(indice) {
     contenedorOpciones.innerHTML = '';
     pregunta.opciones.forEach((opcion, i) => {
         const idOpcion = `p${indice}-op${i}`;
+        // Si el usuario ya respondió, marcar la opción guardada
         const checked = respuestasUsuario[indice] === opcion ? 'checked' : '';
 
         const label = document.createElement('label');
@@ -105,7 +103,6 @@ function mostrarPregunta(indice) {
 
 /**
  * Registra la respuesta del usuario para la pregunta actual.
- * El cambio clave: Lee el valor del radio button marcado, evitando problemas de string escaping.
  * @param {number} indice - Índice de la pregunta
  */
 function seleccionarRespuesta(indice) {
@@ -141,7 +138,6 @@ function finalizarExamen() {
         }
     });
 
-    // Calcular la nota con penalización de 1/3
     // Fórmula: Nota = Aciertos - (Errores / 3)
     const nota = aciertos - (errores / 3);
 
@@ -170,7 +166,6 @@ function finalizarExamen() {
     `;
 }
 
-
 /**
  * Muestra el examen con las respuestas correctas e incorrectas marcadas.
  */
@@ -180,6 +175,8 @@ function revisarExamen() {
     document.getElementById('contenedor-resultados').style.display = 'none';
     document.getElementById('titulo-examen').textContent = `Revisión: ${temaActualNombre}`;
     document.getElementById('btn-finalizar').style.display = 'none';
+    
+    // Solo mostramos el botón de volver a temas en la revisión
     document.getElementById('controles-navegacion').innerHTML = '<button onclick="mostrarSelectorTemas()" style="margin-top: 20px; padding: 10px 20px; background-color: #6c757d; color: white; border: none; border-radius: 5px; cursor: pointer;">Volver a Temas</button>';
 
     const preguntasHTML = preguntasActuales.map((pregunta, indice) => {
@@ -188,18 +185,13 @@ function revisarExamen() {
         
         let opcionesHTML = pregunta.opciones.map(opcion => {
             let clase = '';
-            // Marcar la respuesta correcta en verde
+            // 1. Marcar la respuesta correcta en verde
             if (opcion === respuestaCorrecta) {
                 clase = 'correcta';
             }
-            // Marcar la respuesta incorrecta del usuario en rojo (si la hay)
+            // 2. Marcar la respuesta incorrecta del usuario en rojo (si la hay)
             if (opcion === respuestaSeleccionada && opcion !== respuestaCorrecta) {
                 clase = 'incorrecta';
-            }
-            
-            // Si no se seleccionó nada, pero es la correcta
-            if (respuestaSeleccionada === null && opcion === respuestaCorrecta) {
-                clase = 'correcta no-seleccionada'; // Indica que esta era la correcta y no se marcó
             }
 
             return `
@@ -224,16 +216,16 @@ function revisarExamen() {
                 <div class="opciones-revision">
                     ${opcionesHTML}
                 </div>
-                ${respuestaSeleccionada === null ? '' : `<p style="font-weight: bold; margin-top: 10px;">Tu respuesta: ${respuestaSeleccionada}</p>`}
-                <p style="font-weight: bold;">Respuesta Correcta: ${respuestaCorrecta}</p>
+                ${respuestaSeleccionada !== null && respuestaSeleccionada !== respuestaCorrecta ? `<p style="font-weight: bold; margin-top: 10px; color: red;">Tu Respuesta: ${respuestaSeleccionada}</p>` : ''}
+                <p style="font-weight: bold; margin-top: 5px; color: green;">Respuesta Correcta: ${respuestaCorrecta}</p>
             </div>
         `;
     }).join('');
 
-    // Reemplazamos los contenidos de los contenedores dinámicos
-    document.getElementById('contenedor-pregunta').innerHTML = ''; // Ocultar pregunta actual
-    document.getElementById('contenedor-opciones').innerHTML = ''; // Ocultar opciones actuales
-    document.getElementById('contenedor-examen').innerHTML = preguntasHTML; // Mostrar revisión
+    // Reemplazamos los contenidos de los contenedores dinámicos para mostrar todas las preguntas de una vez
+    document.getElementById('contenedor-pregunta').innerHTML = '';
+    document.getElementById('contenedor-opciones').innerHTML = '';
+    document.getElementById('contenedor-examen').innerHTML = preguntasHTML + document.getElementById('controles-navegacion').outerHTML; // Muestra la revisión y el botón de volver
 }
 
 
