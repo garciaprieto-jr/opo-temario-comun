@@ -1,8 +1,8 @@
-// data.js
+// data.js (Completo y Corregido)
 
-// ----------------------------------------------------
-// PREGUNTAS DEL TEMA 1 (Contenido original de tema-1.js)
-// ----------------------------------------------------
+// =================================================================
+// PREGUNTAS DEL TEMA 1: Constitución Española - Principios y Derechos
+// =================================================================
 const tema1_preguntas = [
     {
         pregunta: "1. ¿Cuál de las siguientes características NO se atribuye comúnmente a la Constitución Española de 1978 (CE)?",
@@ -281,14 +281,14 @@ const tema1_preguntas = [
     },
     {
         pregunta: "56. La Ley Orgánica que desarrolle los derechos y libertades de la Sección 1ª del Capítulo II del Título I requiere para su aprobación:",
-        opciones: ["Mayoría simple del Congreso y Senado.", "Mayoría absoluta del Congreso.", "Mayoría de tres quintos del Congreso.", "Mayoría de dos tercios del Congreso y Senado."],
+        opciones: ["Mayoría absoluta del Congreso.", "Mayoría simple de ambas Cámaras.", "Mayoría absoluta de ambas Cámaras.", "Mayoría de dos tercios del Congreso."],
         respuestaCorrecta: "Mayoría absoluta del Congreso."
     }
 ];
 
-// ----------------------------------------------------
-// PREGUNTAS DEL TEMA 2 (Contenido original de tema-2.js, con nombres de propiedades unificados)
-// ----------------------------------------------------
+// =================================================================
+// PREGUNTAS DEL TEMA 2: Administración y Organización Territorial
+// =================================================================
 const tema2_preguntas = [
     {
         pregunta: "1. Según el artículo 103.1 de la Constitución Española (CE), la Administración Pública sirve con objetividad a:",
@@ -298,7 +298,7 @@ const tema2_preguntas = [
             "Los intereses particulares de los ciudadanos.",
             "Los intereses del Gobierno de turno."
         ],
-        respuestaCorrecta: "Los intereses generales." 
+        respuestaCorrecta: "Los intereses generales."
     },
     {
         pregunta: "2. El principio de eficacia de la Administración Pública, junto con los de jerarquía, descentralización, desconcentración y coordinación, se recoge en:",
@@ -1024,13 +1024,25 @@ const tema2_preguntas = [
         pregunta: "74. Las competencias que la Constitución no haya atribuido expresamente al Estado podrán corresponder a:",
         opciones: [
             "El Consejo de Estado.",
-            "Las Comunidades Autónomas, según sus Estatutos.",
-            "El Gobierno, mediante decreto.",
-            "Las Corporaciones Locales."
+            "Las Comunidades Autónomas, de acuerdo con sus Estatutos.",
+            "Los municipios.",
+            "La Administración Periférica."
         ],
-        respuestaCorrecta: "Las Comunidades Autónomas, según sus Estatutos."
+        respuestaCorrecta: "Las Comunidades Autónomas, de acuerdo con sus Estatutos."
     }
 ];
 
-// Estructura maestra para la aplicación
-const temas
+
+// =================================================================
+// ESTRUCTURA MAESTRA DE TEMAS (ESENCIAL PARA QUE EL CÓDIGO FUNCIONE)
+// =================================================================
+const temas = {
+    'tema1': {
+        nombre: 'Tema 1: Constitución Española - Principios y Derechos',
+        preguntas: tema1_preguntas
+    },
+    'tema2': {
+        nombre: 'Tema 2: Administración y Organización Territorial',
+        preguntas: tema2_preguntas
+    }
+};
