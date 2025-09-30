@@ -5,7 +5,10 @@
  * TEMA 1: CONSTITUCIÓN ESPAÑOLA (100 PREGUNTAS)
  * =========================================================
  */
-const tema1_preguntas = [
+const temas = {
+tema1: {
+titulo: 'Constitución Española (TEMA 1) - Banco de preguntas',
+preguntas: [
     {
         pregunta: "1. ¿Cuál de las siguientes características NO se atribuye comúnmente a la Constitución Española de 1978 (CE)?",
         opciones: ["Consensuada", "Rígida", "Extensa", "Originaria (Auténtica)"],
