@@ -1,156 +1,31 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Asistente de Programación - Quiz</title>
-    <style>
-        /* Estilos generales */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            background-color: #f4f7f6;
-            color: #333;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background-color: #fff;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        }
-        h1, h2 {
-            text-align: center;
-            color: #007bff;
-        }
-
-        /* Botones de Tema */
-        .selector-temas button {
-            display: block;
-            width: 100%;
-            padding: 20px;
-            margin: 15px 0;
-            font-size: 1.5em;
-            cursor: pointer;
-            border: none;
-            border-radius: 8px;
-            background-color: #007bff;
-            color: white;
-            transition: background-color 0.3s ease;
-        }
-        .selector-temas button:hover {
-            background-color: #0056b3;
-        }
-
-        /* Estilos de las Opciones (Radio Buttons) */
-        .opcion-quiz {
-            display: block;
-            background-color: #f1f1f1;
-            padding: 15px;
-            margin-bottom: 10px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.2s;
-        }
-        .opcion-quiz:hover {
-            background-color: #e0e0e0;
-        }
-        .opcion-quiz input[type="radio"] {
-            margin-right: 10px;
-        }
-        /* Estilo para opción seleccionada */
-        .opcion-quiz input[type="radio"]:checked + span {
-            font-weight: bold;
-            color: #007bff;
-        }
-
-        /* Estilos de Revisión */
-        .pregunta-revision {
-            border: 1px solid #ccc;
-            padding: 15px;
-            margin-bottom: 20px;
-            border-radius: 5px;
-            background-color: #f9f9f9;
-        }
-        .opcion-revision {
-            padding: 10px;
-            margin-bottom: 5px;
-            border-radius: 3px;
-            border-left: 5px solid transparent;
-        }
-        .opcion-revision.correcta {
-            background-color: #d4edda;
-            color: #155724;
-            border-left-color: #28a745;
-        }
-        .opcion-revision.incorrecta {
-            background-color: #f8d7da;
-            color: #721c24;
-            border-left-color: #dc3545;
-        }
-        .opcion-revision.correcta.no-seleccionada {
-            border-left-color: #ffc107; /* Amarillo para la correcta no marcada */
-        }
-        .opciones-revision {
-            margin-top: 10px;
-        }
-
-        /* Controles de Navegación */
-        #controles-navegacion button {
-            padding: 10px 20px;
-            background-color: #6c757d;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1em;
-            transition: background-color 0.3s;
-        }
-        #controles-navegacion button:disabled {
-            background-color: #adb5bd;
-            cursor: not-allowed;
-        }
-        #btn-finalizar {
-            background-color: #28a745 !important;
-        }
-        #btn-finalizar:hover {
-            background-color: #1e7e34 !important;
-        }
-    </style>
-</head>
-<body>
-
-    <div class="container">
-        <div id="selector-temas">
-            <h1>Selecciona un Tema para Iniciar el Examen</h1>
-            <div class="selector-temas">
-                <button onclick="iniciarExamen('tema1')">Tema 1: Constitución (100 Preguntas)</button>
-                <button onclick="iniciarExamen('tema2')">Tema 2: Administración y Territorio (120 Preguntas)</button>
-            </div>
-        </div>
-
-        <div id="examen" style="display: none;">
-            <h2 id="titulo-examen"></h2>
-            <div id="contenedor-examen">
-                <div id="contenedor-pregunta"></div>
-                <div id="contenedor-opciones"></div>
-                <hr>
-                <div id="controles-navegacion" style="display: flex; justify-content: space-between; margin-top: 20px;"></div>
-                <button id="btn-finalizar" onclick="finalizarExamen()" style="display: none; width: 100%; padding: 15px; margin-top: 20px; background-color: #28a745; color: white; border: none; border-radius: 5px; font-size: 1.1em; cursor: pointer;">
-                    Finalizar Examen y Ver Resultados
-                </button>
-            </div>
-        </div>
-
-        <div id="contenedor-resultados" style="display: none;">
-            </div>
-
-    </div>
-
-    <script src="data.js"></script>
-    <script src="script.js"></script>
-
-</body>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Asistente de Programación - Quiz</title>
+<link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+<style>
+/* Estilos generales */
+:root{
+--primary:#007bff;
+--muted:#6c757d;
+--bg:#f4f7f6;
+--card:#ffffff;
+--success:#28a745;
+--danger:#dc3545;
+--info:#17a2b8;
+}
+html,body{height:100%;}
+body {
+font-family: Inter, Arial, Helvetica, sans-serif;
+margin: 0;
+padding: 20px;
+background-color: var(--bg);
+color: #222;
+-webkit-font-smoothing:antialiased;
+}
+.container {
+max-width: 1000px;
+margin: 24px auto;
 </html>
