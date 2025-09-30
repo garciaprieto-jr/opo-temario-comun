@@ -1,10 +1,29 @@
-// script.js
+// script.js (Actualizado para 25 preguntas aleatorias en una página)
 
 // Variables de estado global
 let preguntasActuales = [];
 let respuestasUsuario = [];
 let temaActualNombre = '';
-let indicePreguntaActual = 0;
+const CANTIDAD_PREGUNTAS = 25; // Define el número fijo de preguntas a mostrar
+
+/**
+ * Función auxiliar para seleccionar preguntas aleatorias.
+ * @param {Array} array - El array de preguntas completo del tema.
+ * @param {number} n - La cantidad de preguntas a seleccionar.
+ * @returns {Array} Un nuevo array con 'n' preguntas aleatorias.
+ */
+function seleccionarPreguntasAleatorias(array, n) {
+    // Mezcla el array (algoritmo de Fisher-Yates)
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    // Devuelve los primeros 'n' elementos
+    return array.slice(0, n);
+}
+
+
+// --- FUNCIONES DE INICIO Y NAVEGACIÓN ---
 
 /**
  * Muestra la pantalla de selección de temas
@@ -14,96 +33,83 @@ function mostrarSelectorTemas() {
     document.getElementById('examen').style.display = 'none';
     document.getElementById('contenedor-resultados').style.display = 'none';
     
-    // Restaurar el contenedor del examen a su estado inicial
-    document.getElementById('contenedor-examen').innerHTML = `
-        <div id="contenedor-pregunta"></div>
-        <div id="contenedor-opciones"></div>
-        <hr>
-        <div id="controles-navegacion" style="display: flex; justify-content: space-between; margin-top: 20px;"></div>
-        <button id="btn-finalizar" onclick="finalizarExamen()" style="display: none; width: 100%; padding: 15px; margin-top: 20px; background-color: #28a745; color: white; border: none; border-radius: 5px; font-size: 1.1em; cursor: pointer;">
-            Finalizar Examen y Ver Resultados
-        </button>
-    `;
+    // Asegurarse de que el contenedor de examen esté limpio
+    document.getElementById('contenedor-preguntas-completas').innerHTML = '';
 }
 
 /**
- * Inicia el examen cargando las preguntas del tema seleccionado
+ * Inicia el examen: selecciona 25 preguntas aleatorias y las muestra.
  * @param {string} temaId - 'tema1' o 'tema2'
  */
 function iniciarExamen(temaId) {
-    // Verificar que la variable global 'temas' exista y contenga el ID
     if (typeof temas === 'undefined' || !temas[temaId]) {
-        console.error('Error: La variable "temas" no está definida o el ID es incorrecto. Verifica data.js');
-        alert('Error: No se pudieron cargar los datos de las preguntas. Asegúrate de que el archivo data.js esté cargado correctamente.');
+        alert('Error: No se pudieron cargar los datos de las preguntas. Verifica data.js');
         return;
     }
 
-    // Inicializar el estado del examen
-    temaActualNombre = temas[temaId].titulo;
-    preguntasActuales = temas[temaId].preguntas;
-    respuestasUsuario = new Array(preguntasActuales.length).fill(null);
-    indicePreguntaActual = 0;
+    // 1. Seleccionar las 25 preguntas aleatorias
+    const preguntasTemaCompleto = temas[temaId].preguntas;
+    preguntasActuales = seleccionarPreguntasAleatorias([...preguntasTemaCompleto], CANTIDAD_PREGUNTAS);
 
-    // Actualizar la interfaz
-    document.getElementById('titulo-examen').textContent = temaActualNombre;
+    // 2. Inicializar el estado del examen
+    temaActualNombre = temas[temaId].titulo;
+    respuestasUsuario = new Array(preguntasActuales.length).fill(null);
+    
+    // 3. Actualizar la interfaz
+    document.getElementById('titulo-examen').textContent = `Examen Aleatorio de 25 Preguntas: ${temaActualNombre}`;
     document.getElementById('selector-temas').style.display = 'none';
     document.getElementById('contenedor-resultados').style.display = 'none';
     document.getElementById('examen').style.display = 'block';
 
-    mostrarPregunta(indicePreguntaActual);
+    // 4. Mostrar todas las preguntas en la página
+    mostrarExamenCompleto();
 }
 
 /**
- * Muestra una pregunta específica
- * @param {number} indice - Índice de la pregunta a mostrar
+ * Genera y muestra todo el HTML de las 25 preguntas en la página.
  */
-function mostrarPregunta(indice) {
-    const contenedorPregunta = document.getElementById('contenedor-pregunta');
-    const contenedorOpciones = document.getElementById('contenedor-opciones');
-    const controlesNavegacion = document.getElementById('controles-navegacion');
+function mostrarExamenCompleto() {
+    const contenedorPreguntas = document.getElementById('contenedor-preguntas-completas');
+    contenedorPreguntas.innerHTML = ''; // Limpiar el contenedor
 
-    // Comprobar límites
-    if (indice < 0 || indice >= preguntasActuales.length) return;
+    let preguntasHTML = '';
 
-    indicePreguntaActual = indice; // Actualizar el índice global
-    const pregunta = preguntasActuales[indice];
+    preguntasActuales.forEach((pregunta, indice) => {
+        let opcionesHTML = '';
 
-    // Mostrar el título de la pregunta
-    contenedorPregunta.innerHTML = `
-        <p style="margin-bottom: 5px;">Pregunta ${indice + 1} de ${preguntasActuales.length}</p>
-        <h3 style="margin-top: 0;">${pregunta.pregunta}</h3>
-    `;
+        // Generar las opciones de la pregunta
+        pregunta.opciones.forEach((opcion, i) => {
+            const idOpcion = `p${indice}-op${i}`;
+            // Necesitamos guardar la respuesta al hacer clic, ya que no hay navegación
+            const checked = respuestasUsuario[indice] === opcion ? 'checked' : '';
 
-    // Generar las opciones
-    contenedorOpciones.innerHTML = '';
-    pregunta.opciones.forEach((opcion, i) => {
-        const idOpcion = `p${indice}-op${i}`;
-        // Si el usuario ya respondió, marcar la opción guardada
-        const checked = respuestasUsuario[indice] === opcion ? 'checked' : '';
+            opcionesHTML += `
+                <label class="opcion-quiz">
+                    <input type="radio" name="pregunta-${indice}" id="${idOpcion}" value="${opcion}" ${checked}
+                           onclick="seleccionarRespuesta(${indice})">
+                    <span>${opcion}</span>
+                </label>
+            `;
+        });
 
-        const label = document.createElement('label');
-        label.className = 'opcion-quiz';
-        label.innerHTML = `
-            <input type="radio" name="pregunta-${indice}" id="${idOpcion}" value="${opcion}" ${checked}
-                   onclick="seleccionarRespuesta(${indice})">
-            <span>${opcion}</span>
+        // Contenedor de la pregunta individual
+        preguntasHTML += `
+            <div class="pregunta-individual">
+                <h4>${indice + 1}. ${pregunta.pregunta}</h4>
+                <div class="contenedor-opciones-individual">${opcionesHTML}</div>
+            </div>
         `;
-        contenedorOpciones.appendChild(label);
     });
 
-    // Control de navegación
-    controlesNavegacion.innerHTML = `
-        <button onclick="mostrarPregunta(${indice - 1})" ${indice === 0 ? 'disabled' : ''}>← Anterior</button>
-        <button onclick="mostrarPregunta(${indice + 1})" ${indice === preguntasActuales.length - 1 ? 'disabled' : ''}>Siguiente →</button>
-    `;
-
-    // Mostrar el botón de finalizar solo en la última pregunta
-    document.getElementById('btn-finalizar').style.display = (indice === preguntasActuales.length - 1) ? 'block' : 'none';
+    // Añadir todas las preguntas y el botón de finalizar
+    contenedorPreguntas.innerHTML = preguntasHTML;
 }
 
+
 /**
- * Registra la respuesta del usuario para la pregunta actual.
- * @param {number} indice - Índice de la pregunta
+ * Registra la respuesta del usuario para la pregunta.
+ * Esta función es llamada por el evento onclick de cada radio button.
+ * @param {number} indice - Índice de la pregunta en el array preguntasActuales.
  */
 function seleccionarRespuesta(indice) {
     const selector = `input[name="pregunta-${indice}"]:checked`;
@@ -115,6 +121,7 @@ function seleccionarRespuesta(indice) {
         respuestasUsuario[indice] = null;
     }
 }
+
 
 /**
  * Calcula la puntuación final y muestra los resultados.
@@ -166,6 +173,7 @@ function finalizarExamen() {
     `;
 }
 
+
 /**
  * Muestra el examen con las respuestas correctas e incorrectas marcadas.
  */
@@ -174,10 +182,11 @@ function revisarExamen() {
     contenedorExamen.style.display = 'block';
     document.getElementById('contenedor-resultados').style.display = 'none';
     document.getElementById('titulo-examen').textContent = `Revisión: ${temaActualNombre}`;
-    document.getElementById('btn-finalizar').style.display = 'none';
     
-    // Solo mostramos el botón de volver a temas en la revisión
-    document.getElementById('controles-navegacion').innerHTML = '<button onclick="mostrarSelectorTemas()" style="margin-top: 20px; padding: 10px 20px; background-color: #6c757d; color: white; border: none; border-radius: 5px; cursor: pointer;">Volver a Temas</button>';
+    // Ocultamos el botón de finalizar y navegación, solo dejamos el de volver a temas
+    const controlesAdicionales = document.getElementById('controles-adicionales');
+    controlesAdicionales.innerHTML = '<button onclick="mostrarSelectorTemas()" style="margin-top: 20px; padding: 10px 20px; background-color: #6c757d; color: white; border: none; border-radius: 5px; cursor: pointer;">Volver a Temas</button>';
+
 
     const preguntasHTML = preguntasActuales.map((pregunta, indice) => {
         const respuestaCorrecta = pregunta.respuestaCorrecta;
@@ -222,10 +231,9 @@ function revisarExamen() {
         `;
     }).join('');
 
-    // Reemplazamos los contenidos de los contenedores dinámicos para mostrar todas las preguntas de una vez
-    document.getElementById('contenedor-pregunta').innerHTML = '';
-    document.getElementById('contenedor-opciones').innerHTML = '';
-    document.getElementById('contenedor-examen').innerHTML = preguntasHTML + document.getElementById('controles-navegacion').outerHTML; // Muestra la revisión y el botón de volver
+    // Reemplazamos los contenidos de los contenedores dinámicos
+    const contenedorPreguntas = document.getElementById('contenedor-preguntas-completas');
+    contenedorPreguntas.innerHTML = preguntasHTML;
 }
 
 
