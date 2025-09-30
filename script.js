@@ -124,10 +124,12 @@ function mostrarExamenCompleto(){
 }
 
 /**
- * Procesa las respuestas, calcula la nota y llama a mostrarResultados.
+ * Procesa las respuestas, calcula la nota con penalización (3 fallos = 1 acierto) y llama a mostrarResultados.
  */
 function corregirExamen(){
-    let correctas = 0;
+    let correctas = 0;           // C: Aciertos
+    let fallosPuntuables = 0;    // W: Respuestas elegidas que son incorrectas (penalizan)
+    let sinResponder = 0;        // U: Preguntas no contestadas (no penalizan)
     let total = preguntasActuales.length;
     
     // Generar un objeto detallado de los resultados
@@ -136,10 +138,16 @@ function corregirExamen(){
         const respuestaCorrectaIndex = p.opciones.indexOf(p.respuestaCorrecta);
         const respuestaElegidaIndex = respuestasUsuario[index];
         let esCorrecta = false;
-
-        if(respuestaElegidaIndex !== null && respuestaElegidaIndex === respuestaCorrectaIndex){
-            esCorrecta = true;
-            correctas++;
+        
+        if(respuestaElegidaIndex !== null){
+            if(respuestaElegidaIndex === respuestaCorrectaIndex){
+                esCorrecta = true;
+                correctas++;
+            } else {
+                fallosPuntuables++; // Solo suma como fallo si fue elegida y era incorrecta
+            }
+        } else {
+            sinResponder++; // Suma como sin responder si fue null
         }
         
         return {
@@ -152,9 +160,16 @@ function corregirExamen(){
         };
     });
 
-    const nota = (correctas / total) * 10; // Nota sobre 10
+    // 1. APLICAR LA REGLA DE OPOSICIÓN: 3 fallos anulan 1 acierto.
+    const aciertosNetos = correctas - (fallosPuntuables / 3);
     
-    mostrarResultados(nota, correctas, total, resultadosDetallados);
+    // 2. Calcular la nota sobre 10. Math.max(0, ...) asegura que la nota nunca sea negativa.
+    const notaFinal = Math.max(0, (aciertosNetos / total) * 10);
+    
+    // Los fallos totales para la visualización (Fallos que penalizan + Sin Responder)
+    const fallosTotalesVisual = fallosPuntuables + sinResponder;
+
+    mostrarResultados(notaFinal, correctas, fallosTotalesVisual, total, resultadosDetallados);
 
     // Limpiar respuestas guardadas tras la corrección
     const temaId = Object.keys(temas).find(id => temas[id].titulo === temaActualNombre);
@@ -164,13 +179,14 @@ function corregirExamen(){
 /**
  * Muestra los resultados finales y la corrección detallada.
  */
-function mostrarResultados(nota, correctas, total, detalles){
+function mostrarResultados(nota, correctas, fallosVisual, total, detalles){
     document.getElementById('examen').style.display = 'none';
     document.getElementById('contenedor-resultados').style.display = 'block';
     
     document.getElementById('resultado-nota').textContent = nota.toFixed(2);
     document.getElementById('resultado-correctas').textContent = correctas;
-    document.getElementById('resultado-fallos').textContent = total - correctas;
+    // fallosVisual ahora incluye fallos elegidos y no contestadas para el resumen
+    document.getElementById('resultado-fallos').textContent = fallosVisual;
     document.getElementById('resultado-total').textContent = total;
     
     const contenedorDetalles = document.getElementById('detalles-correccion');
@@ -204,16 +220,13 @@ function mostrarResultados(nota, correctas, total, detalles){
 
 
 // ----------------------------------------------------------------------
-// --- PUNTO DE ARRANQUE DE LA APLICACIÓN (CORRECCIÓN CRÍTICA) ---
+// --- PUNTO DE ARRANQUE DE LA APLICACIÓN ---
 // ----------------------------------------------------------------------
-// Este código se ejecuta cuando el DOM está completamente cargado.
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Inicializa el estado de la aplicación mostrando el selector de temas.
-    // Esto resuelve el problema de la pantalla en blanco al inicio.
+    // Inicializa el estado de la aplicación mostrando el selector de temas.
     mostrarSelectorTemas();
 
-    // 2. Adjunta los listeners a los botones de inicio de examen.
-    // Asume que los botones tienen la clase 'btn-tema' y un data-tema="temaX"
+    // Adjunta los listeners a los botones de inicio de examen.
     document.querySelectorAll('.btn-tema').forEach(button => {
         button.addEventListener('click', (e) => {
             const temaId = e.target.dataset.tema;
@@ -221,7 +234,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
     
-    // Listener para el botón de Reiniciar/Volver al selector (si existe en index.html)
+    // Listener para el botón de Reiniciar/Volver al selector
     const btnReiniciar = document.getElementById('btn-reiniciar-selector');
     if(btnReiniciar) {
         btnReiniciar.addEventListener('click', mostrarSelectorTemas);
