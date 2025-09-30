@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function cargarPreguntas(tema) {
         // CORRECCIÓN CRÍTICA: La ruta al archivo JSON debe ser correcta.
         // Se asume que los archivos están en la carpeta 'data/'
-        const url = `data/${tema}.json`; 
+        const url = `data/${tema}.js`; 
         
         const container = document.getElementById('preguntas-container');
         container.innerHTML = `<p>Cargando preguntas del ${tema.toUpperCase()}...</p>`;
