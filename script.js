@@ -164,7 +164,6 @@ function corregirExamen(){
     });
 
     // 1. APLICAR LA REGLA DE OPOSICIÓN: 3 fallos anulan 1 acierto.
-    // Los fallos (W) que penalizan son SÓLO los *elegidos* incorrectamente.
     const penalizacion = fallosPuntuables / 3;
     const aciertosNetos = correctas - penalizacion;
     
@@ -174,7 +173,15 @@ function corregirExamen(){
     // Los fallos totales para la visualización (Fallos elegidos incorrectamente + Sin Responder)
     const fallosTotalesVisual = fallosPuntuables + sinResponder;
 
-    mostrarResultados(notaFinal, correctas, fallosTotalesVisual, total, detalles);
+    mostrarResultados(
+        notaFinal, 
+        correctas, 
+        fallosPuntuables, // Fallos Elegidos (penalizan)
+        sinResponder,     // No Contestadas (no penalizan)
+        penalizacion,     // Puntuación Negativa
+        total, 
+        resultadosDetallados
+    );
 
     // Limpiar respuestas guardadas tras la corrección
     const temaId = Object.keys(temas).find(id => temas[id].titulo === temaActualNombre);
@@ -183,38 +190,80 @@ function corregirExamen(){
 
 /**
  * Muestra los resultados finales y la corrección detallada.
+ * Se han añadido los parámetros fallosElegidos, noContestadas y penalizacionPuntos para el detalle.
  */
-function mostrarResultados(nota, correctas, fallosVisual, total, detalles){
+function mostrarResultados(nota, correctas, fallosElegidos, noContestadas, penalizacionPuntos, total, detalles){
     document.getElementById('examen').style.display = 'none';
     document.getElementById('contenedor-resultados').style.display = 'block';
     
-    document.getElementById('resultado-nota').textContent = nota.toFixed(2);
-    document.getElementById('resultado-correctas').textContent = correctas;
-    // fallosVisual ahora incluye fallos elegidos y no contestadas para el resumen
-    document.getElementById('resultado-fallos').textContent = fallosVisual;
-    document.getElementById('resultado-total').textContent = total;
+    // --- 1. ACTUALIZAR EL RESUMEN DE RESULTADOS DETALLADO ---
+    
+    // Seleccionar el contenedor principal del resumen (asumo que existe en index.html)
+    const resumenContainer = document.getElementById('contenedor-resultados').querySelector('.resumen-resultados');
+    
+    // Construir el nuevo contenido HTML con el desglose
+    const resumenHTML = `
+        <div class="resumen-resultados">
+            <h3>Puntuación Final: <span class="nota" id="resultado-nota">${nota.toFixed(2)}</span>/10</h3>
+            <p>Preguntas Totales: <strong>${total}</strong></p>
+            <hr style="border-top: 1px dashed #ccc;">
+            
+            <p style="color: var(--success);">✅ Aciertos: <strong>${correctas}</strong></p>
+            <p style="color: var(--danger);">❌ Fallos Elegidos: <strong>${fallosElegidos}</strong></p>
+            <p style="color: var(--muted);">➖ No Contestadas: <strong>${noContestadas}</strong></p>
+            <hr style="border-top: 1px dashed #ccc; margin-top: 15px; margin-bottom: 15px;">
+
+            <h4>Cálculo de la Nota (Netas)</h4>
+            <p>Puntuación Bruta (Aciertos): <strong>${correctas}</strong> puntos.</p>
+            <p>Penalización (1/3 por fallo): <strong>-${penalizacionPuntos.toFixed(2)}</strong> puntos.</p>
+            <p>Netas antes de nota/10: <strong>${(correctas - penalizacionPuntos).toFixed(2)}</strong> puntos.</p>
+        </div>
+    `;
+
+    // Reemplazar o actualizar el contenido del resumen
+    if (resumenContainer) {
+        resumenContainer.innerHTML = resumenHTML;
+    } else {
+        // Fallback: Si no existe el contenedor específico, actualizar los IDs existentes.
+        document.getElementById('resultado-nota').textContent = nota.toFixed(2);
+        document.getElementById('resultado-correctas').textContent = correctas;
+        document.getElementById('resultado-fallos').textContent = fallosElegidos + noContestadas; // Mostrar el total de fallos/sin responder
+        document.getElementById('resultado-total').textContent = total;
+    }
+
+
+    // --- 2. ACTUALIZAR DETALLES DE CORRECCIÓN ---
     
     const contenedorDetalles = document.getElementById('detalles-correccion');
     if (!contenedorDetalles) return;
 
     contenedorDetalles.innerHTML = detalles.map((d, index) => {
-        const clase = d.esCorrecta ? 'correcta' : 'fallo';
-        const icono = d.esCorrecta ? '✅' : '❌';
+        // Determinar la clase del card
+        const clase = d.esCorrecta ? 'correcta' : (d.respuestaElegidaIndex !== null ? 'fallo' : 'no-contestada');
+        // Determinar el icono
+        let icono = d.esCorrecta ? '✅' : '❌';
+        if (d.respuestaElegidaIndex === null) {
+            icono = '➖'; // Icono para no contestada
+        }
         
         const opcionesHTML = d.opciones.map((opcion, oIndex) => {
             let marca = '';
-            if (oIndex === d.indexCorrecta) {
+            const esRespuestaElegida = oIndex === d.respuestaElegidaIndex;
+            const esRespuestaCorrecta = oIndex === d.indexCorrecta;
+
+            if (esRespuestaCorrecta) {
                 marca = ' (Respuesta Correcta)';
             }
-            // Si la respuesta elegida no es la correcta, marcar la del usuario
-            if (oIndex === d.respuestaElegidaIndex && oIndex !== d.indexCorrecta) {
-                marca = ' (Tu Respuesta)';
-            } else if (d.respuestaElegidaIndex === null && oIndex === d.indexCorrecta) {
-                // Marcar la correcta si no se ha contestado
+            // Marcar la opción elegida por el usuario si era incorrecta
+            if (esRespuestaElegida && !d.esCorrecta) {
+                marca = ' (Tu Respuesta: INCORRECTA)';
+            }
+            // Etiquetar si no se contestó
+            if (d.respuestaElegidaIndex === null && esRespuestaCorrecta) {
                  marca = ' (No Contestada)';
             }
             
-            return `<li class="${oIndex === d.indexCorrecta ? 'correcta-opcion' : ''} ${oIndex === d.respuestaElegidaIndex !== null && !d.esCorrecta ? 'fallo-opcion' : ''}">${opcion}${marca}</li>`;
+            return `<li class="${esRespuestaCorrecta ? 'correcta-opcion' : ''} ${esRespuestaElegida && !d.esCorrecta ? 'fallo-opcion' : ''}">${opcion}${marca}</li>`;
         }).join('');
 
         return `
