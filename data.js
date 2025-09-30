@@ -4,11 +4,9 @@
  * =========================================================
  * TEMA 1: CONSTITUCIÓN ESPAÑOLA (100 PREGUNTAS)
  * =========================================================
+ * Claves utilizadas: pregunta, opciones, respuestaCorrecta
  */
-const temas = {
-tema1: {
-titulo: 'Constitución Española (TEMA 1) - Banco de preguntas',
-preguntas: [
+const tema1_preguntas = [
     {
         pregunta: "1. ¿Cuál de las siguientes características NO se atribuye comúnmente a la Constitución Española de 1978 (CE)?",
         opciones: ["Consensuada", "Rígida", "Extensa", "Originaria (Auténtica)"],
@@ -19,7 +17,8 @@ preguntas: [
         opciones: ["Su amplia extensión de 169 artículos.", "La existencia de procedimientos especiales y agravados para su reforma.", "El amplio catálogo de derechos fundamentales que incorpora.", "La previsión de la sucesión monárquica en la Corona."],
         respuestaCorrecta: "La existencia de procedimientos especiales y agravados para su reforma."
     },
-            pregunta: "3. ¿Cuál de estos NO se menciona en el Artículo 1.1 de la CE como valor superior de su ordenamiento jurídico?",
+    {
+        pregunta: "3. ¿Cuál de estos NO se menciona en el Artículo 1.1 de la CE como valor superior de su ordenamiento jurídico?",
         opciones: ["Justicia", "Solidaridad", "Igualdad", "Pluralismo Político"],
         respuestaCorrecta: "Solidaridad"
     },
@@ -514,6 +513,7 @@ preguntas: [
  * =========================================================
  * TEMA 2: ADMINISTRACIÓN Y ORGANIZACIÓN TERRITORIAL (120 PREGUNTAS)
  * =========================================================
+ * Claves CORREGIDAS: pregunta, opciones, respuestaCorrecta
  */
 const tema2_preguntas = [
     {
@@ -526,1191 +526,601 @@ const tema2_preguntas = [
         opciones: ["El artículo 9.3 de la CE.", "El artículo 106.1 de la CE.", "El artículo 103.3 de la CE.", "El artículo 103.1 de la CE."],
         respuestaCorrecta: "El artículo 103.1 de la CE."
     },
-        {
-        question: "3. El sometimiento pleno de la Administración a la Ley y al Derecho se fundamenta en el principio de:",
-        options: [
-            "Eficacia.",
-            "Jerarquía.",
-            "Legalidad.",
-            "Coordinación."
-        ],
-        correctAnswer: "Legalidad."
-    },
-    {
-        question: "4. ¿Cuál de los siguientes principios NO está expresamente mencionado en el artículo 103.1 de la CE en relación con la actuación de la Administración Pública?",
-        options: [
-            "Desconcentración.",
-            "Transparencia.",
-            "Jerarquía.",
-            "Coordinación."
-        ],
-        correctAnswer: "Transparencia."
-    },
-    {
-        question: "5. La potestad reglamentaria del Gobierno está sometida a fiscalización por parte de:",
-        options: [
-            "Solo el Tribunal Constitucional.",
-            "Solo el Defensor del Pueblo.",
-            "Los Tribunales de Justicia.",
-            "El Consejo de Estado en exclusiva."
-        ],
-        correctAnswer: "Los Tribunales de Justicia."
-    },
-    {
-        question: "6. ¿Qué principio constitucional implica la transferencia de titularidad de una competencia desde la Administración central a otra Administración territorial distinta?",
-        options: [
-            "Desconcentración.",
-            "Jerarquía.",
-            "Descentralización.",
-            "Coordinación."
-        ],
-        correctAnswer: "Descentralización."
-    },
-    {
-        question: "7. El principio de **buena fe** en las relaciones entre los ciudadanos y la Administración se deriva del principio de:",
-        options: [
-            "Seguridad jurídica.",
-            "Economía.",
-            "Desconcentración.",
-            "Eficacia."
-        ],
-        correctAnswer: "Seguridad jurídica."
-    },
-    {
-        question: "8. La responsabilidad patrimonial de la Administración Pública por el funcionamiento de los servicios públicos se recoge en el artículo:",
-        options: [
-            "104 de la CE.",
-            "106.2 de la CE.",
-            "103.3 de la CE.",
-            "9.1 de la CE."
-        ],
-        correctAnswer: "106.2 de la CE."
-    },
-    {
-        question: "9. ¿Qué principio del artículo 103.1 de la CE implica la ordenación de órganos con relación de superioridad y subordinación?",
-        options: [
-            "Descentralización.",
-            "Coordinación.",
-            "Desconcentración.",
-            "Jerarquía."
-        ],
-        correctAnswer: "Jerarquía."
-    },
-    {
-        question: "10. La reserva de Ley que exige que el desarrollo de los derechos fundamentales se realice mediante Ley Orgánica, ¿qué principio constitucional refuerza?",
-        options: [
-            "El principio democrático.",
-            "El principio de legalidad.",
-            "El principio de economía.",
-            "El principio de subsidiariedad."
-        ],
-        correctAnswer: "El principio de legalidad."
-    },
-    {
-        question: "11. ¿Cuál es el tribunal encargado de controlar la legalidad de la actuación administrativa y la sumisión de esta a los fines que la justifican?",
-        options: [
-            "Tribunal Supremo en Pleno.",
-            "Tribunal Constitucional.",
-            "Tribunales de la jurisdicción Contencioso-Administrativa.",
-            "Tribunal de Cuentas."
-        ],
-        correctAnswer: "Tribunales de la jurisdicción Contencioso-Administrativa."
-    },
-    {
-        question: "12. El principio de **igualdad** en el acceso a las funciones públicas se garantiza de acuerdo con los criterios de:",
-        options: [
-            "Capacidad y formación.",
-            "Mérito y antigüedad.",
-            "Mérito y capacidad.",
-            "Antigüedad y formación."
-        ],
-        correctAnswer: "Mérito y capacidad."
-    },
-    {
-        question: "13. El artículo 9.3 de la CE garantiza la interdicción de la arbitrariedad de los poderes públicos, lo que está directamente relacionado con el principio de:",
-        options: [
-            "Publicidad.",
-            "Legalidad.",
-            "Descentralización.",
-            "Eficiencia."
-        ],
-        correctAnswer: "Legalidad."
-    },
-    {
-        question: "14. ¿Qué implica el principio de **desconcentración** en la Administración?",
-        options: [
-            "La creación de nuevas Administraciones territoriales.",
-            "La transferencia de funciones a órganos periféricos dentro de la misma Administración.",
-            "La atribución de personalidad jurídica propia a entes dependientes.",
-            "La asunción de competencias por el órgano superior."
-        ],
-        correctAnswer: "La transferencia de funciones a órganos periféricos dentro de la misma Administración."
-    },
-    {
-        question: "15. Los funcionarios públicos están al servicio de los intereses generales de acuerdo con los principios de:",
-        options: [
-            "Imparcialidad y objetividad.",
-            "Lealtad y subordinación.",
-            "Eficacia y economía.",
-            "Jerarquía y disciplina."
-        ],
-        correctAnswer: "Imparcialidad y objetividad."
-    },
-    {
-        question: "16. La existencia de la figura del **Defensor del Pueblo** se enmarca dentro del control de:",
-        options: [
-            "Los actos de gobierno del Poder Ejecutivo.",
-            "La actividad de la Administración en la defensa de los derechos fundamentales.",
-            "Las sentencias de los tribunales.",
-            "La potestad legislativa del Parlamento."
-        ],
-        correctAnswer: "La actividad de la Administración en la defensa de los derechos fundamentales."
-    },
-    {
-        question: "17. El control jurisdiccional de la potestad reglamentaria del Gobierno implica que:",
-        options: [
-            "Los reglamentos pueden ser recurridos ante el Tribunal Constitucional.",
-            "Los jueces pueden anular reglamentos contrarios a la Constitución o a la Ley.",
-            "El Tribunal Supremo debe aprobar previamente todos los reglamentos.",
-            "Solo el Parlamento puede suspender la aplicación de un reglamento."
-        ],
-        correctAnswer: "Los jueces pueden anular reglamentos contrarios a la Constitución o a la Ley."
-    },
-    {
-        question: "18. ¿Cuál es el principio que exige que la Administración actúe de forma proporcionada a los fines perseguidos, evitando actuaciones excesivas?",
-        options: [
-            "Principio de legalidad.",
-            "Principio de proporcionalidad.",
-            "Principio de jerarquía.",
-            "Principio de coordinación."
-        ],
-        correctAnswer: "Principio de proporcionalidad."
-    },
-    {
-        question: "19. La ley que regula la actuación de la Administración Pública en materia de procedimiento administrativo común es un desarrollo directo del principio constitucional de:",
-        options: [
-            "Eficacia.",
-            "Seguridad jurídica.",
-            "Legalidad y debido proceso.",
-            "Autonomía."
-        ],
-        correctAnswer: "Legalidad y debido proceso."
-    },
-    {
-        question: "20. La obligación de la Administración de resolver de forma expresa y notificar sus resoluciones se relaciona con el principio de:",
-        options: [
-            "Transparencia.",
-            "Eficacia.",
-            "Desconcentración.",
-            "Descentralización."
-        ],
-        correctAnswer: "Eficacia."
-    },
-    {
-        question: "21. La Constitución garantiza el derecho de los particulares a ser indemnizados por toda lesión que sufran en cualquiera de sus bienes y derechos, salvo en casos de:",
-        options: [
-            "Fuerza mayor.",
-            "Imprudencia leve.",
-            "Culpa exclusiva del perjudicado.",
-            "Caso fortuito."
-        ],
-        correctAnswer: "Culpa exclusiva del perjudicado."
-    },
-    {
-        question: "22. El principio de **transparencia** en la actividad administrativa implica principalmente:",
-        options: [
-            "La publicidad activa y el derecho de acceso a la información pública.",
-            "La obligación de todos los funcionarios de declarar sus bienes.",
-            "La celebración de todos los actos administrativos a puerta abierta.",
-            "La gratuidad de todos los trámites administrativos."
-        ],
-        correctAnswer: "La publicidad activa y el derecho de acceso a la información pública."
-    },
-    {
-        question: "23. Los principios de la Administración se aplican:",
-        options: [
-            "Solo a la Administración General del Estado.",
-            "Solo a las Administraciones Territoriales.",
-            "A todas las Administraciones Públicas, de acuerdo con sus leyes reguladoras.",
-            "Únicamente a la Administración Instrumental."
-        ],
-        correctAnswer: "A todas las Administraciones Públicas, de acuerdo con sus leyes reguladoras."
-    },
-    {
-        question: "24. ¿Qué órgano ejerce el control interno de la gestión económico-financiera del sector público estatal?",
-        options: [
-            "El Tribunal de Cuentas.",
-            "La Intervención General de la Administración del Estado (IGAE).",
-            "El Consejo de Estado.",
-            "El Defensor del Pueblo."
-        ],
-        correctAnswer: "La Intervención General de la Administración del Estado (IGAE)."
-    },
-    {
-        question: "25. El órgano superior que dirige la acción del Gobierno y coordina las funciones de los demás miembros es:",
-        options: [
-            "El Consejo de Ministros.",
-            "El Presidente del Gobierno.",
-            "Las Comisiones Delegadas del Gobierno.",
-            "El Jefe del Estado."
-        ],
-        correctAnswer: "El Presidente del Gobierno."
-    },
-    {
-        question: "26. ¿Cuál de los siguientes NO es un órgano superior de la Administración General del Estado (AGE)?",
-        options: [
-            "El Subsecretario.",
-            "El Ministro.",
-            "El Presidente del Gobierno.",
-            "El Secretario de Estado."
-        ],
-        correctAnswer: "El Subsecretario."
-    },
-    {
-        question: "27. Los **Ministros** son titulares de sus Departamentos y, además de ejercer la potestad reglamentaria en su ámbito, forman parte de:",
-        options: [
-            "La Comisión General de Secretarios de Estado y Subsecretarios.",
-            "El Consejo de Estado.",
-            "El Gobierno.",
-            "El Tribunal de Cuentas."
-        ],
-        correctAnswer: "El Gobierno."
-    },
-    {
-        question: "28. La **Comisión General de Secretarios de Estado y Subsecretarios** es un órgano:",
-        options: [
-            "De control de la actividad económica.",
-            "Superior de la AGE.",
-            "Interministerial de apoyo al Consejo de Ministros.",
-            "De la organización periférica."
-        ],
-        correctAnswer: "Interministerial de apoyo al Consejo de Ministros."
-    },
-    {
-        question: "29. ¿Qué órganos de la AGE están directamente regulados por Real Decreto del Consejo de Ministros?",
-        options: [
-            "Solo las Secretarías Generales.",
-            "Las Secretarías de Estado y las Subsecretarías.",
-            "Los Ministerios, las Secretarías de Estado y las Subsecretarías.",
-            "Únicamente los Ministros."
-        ],
-        correctAnswer: "Los Ministerios, las Secretarías de Estado y las Subsecretarías."
-    },
-    {
-        question: "30. Los **Secretarios de Estado** son órganos:",
-        options: [
-            "Directivos.",
-            "Superiores.",
-            "Consultivos.",
-            "Periféricos."
-        ],
-        correctAnswer: "Superiores."
-    },
-    {
-        question: "31. ¿Cuál es el órgano de la organización periférica de la AGE con nivel orgánico de Subsecretario que representa al Gobierno en una Comunidad Autónoma?",
-        options: [
-            "El Delegado del Gobierno.",
-            "El Subdelegado del Gobierno.",
-            "El Director Insular.",
-            "El Gobernador Civil."
-        ],
-        correctAnswer: "El Delegado del Gobierno."
-    },
-    {
-        question: "32. ¿A quién corresponde la dirección de los servicios territoriales no integrados de la AGE en una provincia, bajo la inmediata dependencia del Delegado del Gobierno?",
-        options: [
-            "Al Director Insular.",
-            "Al Subdelegado del Gobierno.",
-            "Al Director Provincial.",
-            "Al Secretario General."
-        ],
-        correctAnswer: "Al Subdelegado del Gobierno."
-    },
-    {
-        question: "33. La **organización periférica** de la AGE se articula fundamentalmente en torno a:",
-        options: [
-            "Los Ministerios.",
-            "Los Organismos Autónomos.",
-            "Las Delegaciones y Subdelegaciones del Gobierno.",
-            "Las Agencias Estatales."
-        ],
-        correctAnswer: "Las Delegaciones y Subdelegaciones del Gobierno."
-    },
-    {
-        question: "34. ¿Qué es un **Organismo Autónomo** dentro del Sector Público Estatal?",
-        options: [
-            "Un órgano de la AGE sin personalidad jurídica.",
-            "Una entidad de Derecho Público con personalidad jurídica propia, que ejerce potestades administrativas.",
-            "Una sociedad mercantil estatal.",
-            "Una Fundación del sector público."
-        ],
-        correctAnswer: "Una entidad de Derecho Público con personalidad jurídica propia, que ejerce potestades administrativas."
-    },
-    {
-        question: "35. Las **Comisiones Delegadas del Gobierno** son creadas por:",
-        options: [
-            "El Presidente del Gobierno, mediante Real Decreto.",
-            "El Consejo de Ministros, mediante Acuerdo.",
-            "Ley Orgánica.",
-            "El Ministro de Hacienda y Función Pública."
-        ],
-        correctAnswer: "El Presidente del Gobierno, mediante Real Decreto."
-    },
-    {
-        question: "36. ¿Quién preside las Comisiones Delegadas del Gobierno?",
-        options: [
-            "El Ministro de la Presidencia, por defecto.",
-            "El Vicepresidente que designe el Presidente del Gobierno.",
-            "El miembro del Gobierno que se determine en el Real Decreto de su creación.",
-            "El Ministro más antiguo."
-        ],
-        correctAnswer: "El miembro del Gobierno que se determine en el Real Decreto de su creación."
-    },
-    {
-        question: "37. ¿Cuál es el órgano de la AGE que ostenta la representación ordinaria del Estado en el ámbito insular?",
-        options: [
-            "El Subdelegado del Gobierno.",
-            "El Delegado del Gobierno.",
-            "El Director Insular.",
-            "El Cabildo Insular."
-        ],
-        correctAnswer: "El Director Insular."
-    },
-    {
-        question: "38. Las **Secretarías Generales Técnicas** se encuadran en la estructura de la AGE como órganos de apoyo y se sitúan jerárquicamente bajo:",
-        options: [
-            "El Ministro.",
-            "La Subsecretaría.",
-            "La Secretaría de Estado.",
-            "La Dirección General."
-        ],
-        correctAnswer: "La Subsecretaría."
-    },
-    {
-        question: "39. La estructura orgánica básica de los Ministerios se establece mediante:",
-        options: [
-            "Orden Ministerial.",
-            "Acuerdo del Consejo de Ministros.",
-            "Real Decreto.",
-            "Ley."
-        ],
-        correctAnswer: "Real Decreto."
-    },
-    {
-        question: "40. Los **Directores Generales** son órganos:",
-        options: [
-            "Superiores.",
-            "Directivos.",
-            "Periféricos.",
-            "Consultivos."
-        ],
-        correctAnswer: "Directivos."
-    },
-    {
-        question: "41. ¿Cuál es la función principal del Consejo de Ministros?",
-        options: [
-            "Representar al Estado en el exterior.",
-            "Ejercer la potestad legislativa.",
-            "Determinar la dirección política y aprobar proyectos de ley.",
-            "Ejercer el mando supremo de las Fuerzas Armadas."
-        ],
-        correctAnswer: "Determinar la dirección política y aprobar proyectos de ley."
-    },
-    {
-        question: "42. La relación de puestos de trabajo (RPT) de la AGE es un instrumento de:",
-        options: [
-            "Desconcentración.",
-            "Ordenación del empleo público.",
-            "Delegación de competencias.",
-            "Planificación económica."
-        ],
-        correctAnswer: "Ordenación del empleo público."
-    },
-    {
-        question: "43. La AGE actúa y se relaciona con los ciudadanos y empresas a través de:",
-        options: [
-            "Servicios centrales y servicios territoriales.",
-            "Solo organismos públicos.",
-            "Únicamente sus Ministerios.",
-            "Exclusivamente las Delegaciones del Gobierno."
-        ],
-        correctAnswer: "Servicios centrales y servicios territoriales."
-    },
-    {
-        question: "44. La figura del **Subdirector General** es considerada un órgano:",
-        options: [
-            "De asesoramiento.",
-            "Directivo, de acuerdo con la legislación básica.",
-            "Superior.",
-            "Periférico."
-        ],
-        correctAnswer: "Directivo, de acuerdo con la legislación básica."
-    },
-    {
-        question: "45. ¿Qué nivel orgánico, como regla general, tiene atribuida la dirección y gestión de uno o varios sectores funcionales de la Subsecretaría?",
-        options: [
-            "El Director General.",
-            "El Secretario General.",
-            "El Subdirector General.",
-            "El Secretario de Estado."
-        ],
-        correctAnswer: "El Subdirector General."
-    },
-    {
-        question: "46. La Ley 40/2015, de Régimen Jurídico del Sector Público, regula la AGE y también:",
-        options: [
-            "Solo el Sector Público Autonómico.",
-            "El Sector Público Institucional.",
-            "Solo las Corporaciones de Derecho Público.",
-            "Exclusivamente las relaciones interadministrativas."
-        ],
-        correctAnswer: "El Sector Público Institucional."
-    },
-    {
-        question: "47. ¿Quién puede proponer la creación, modificación y supresión de Direcciones Generales?",
-        options: [
-            "Solo el Presidente del Gobierno.",
-            "El Ministro del Departamento correspondiente.",
-            "El Consejo de Estado.",
-            "El Secretario de Estado."
-        ],
-        correctAnswer: "El Ministro del Departamento correspondiente."
-    },
-    {
-        question: "48. En la organización territorial del Estado, las **Delegaciones del Gobierno** en las Comunidades Autónomas se configuran como:",
-        options: [
-            "Un órgano de la CCAA.",
-            "La expresión de la organización periférica de la AGE.",
-            "Una entidad local.",
-            "Un órgano consultivo del Gobierno Central."
-        ],
-        correctAnswer: "La expresión de la organización periférica de la AGE."
-    },
-    {
-        question: "49. El Título VIII de la Constitución Española se denomina:",
-        options: [
-            "De los derechos y deberes fundamentales.",
-            "Del Gobierno y de la Administración.",
-            "De la organización territorial del Estado.",
-            "Del Poder Judicial."
-        ],
-        correctAnswer: "De la organización territorial del Estado."
-    },
-    {
-        question: "50. La Constitución garantiza el principio de **autonomía** para:",
-        options: [
-            "Los Ministerios.",
-            "Las Comunidades Autónomas y las Provincias.",
-            "Los municipios y las provincias.",
-            "Los municipios, las provincias y las Comunidades Autónomas."
-        ],
-        correctAnswer: "Los municipios, las provincias y las Comunidades Autónomas."
-    },
-    {
-        question: "51. ¿Qué precepto constitucional establece la indisoluble unidad de la Nación española?",
-        options: [
-            "Artículo 1.1 de la CE.",
-            "Artículo 2 de la CE.",
-            "Artículo 8.1 de la CE.",
-            "Artículo 137 de la CE."
-        ],
-        correctAnswer: "Artículo 2 de la CE."
-    },
-    {
-        question: "52. Las **Comunidades Autónomas** se constituyen con:",
-        options: [
-            "Autonomía política y administrativa.",
-            "Autonomía solo administrativa.",
-            "Autonomía legislativa.",
-            "Capacidad para delegar la soberanía."
-        ],
-        correctAnswer: "Autonomía política y administrativa."
-    },
-    {
-        question: "53. ¿Cuál es la norma institucional básica de la Comunidad Autónoma?",
-        options: [
-            "La Ley Orgánica de Transferencias.",
-            "La Ley de Bases de Régimen Local.",
-            "El Estatuto de Autonomía.",
-            "La Ley de Régimen Jurídico de las Administraciones Públicas."
-        ],
-        correctAnswer: "El Estatuto de Autonomía."
-    },
-    {
-        question: "54. Los Estatutos de Autonomía son aprobados mediante:",
-        options: [
-            "Ley ordinaria de las Cortes Generales.",
-            "Ley Orgánica.",
-            "Real Decreto.",
-            "Acuerdo del Consejo de Ministros."
-        ],
-        correctAnswer: "Ley Orgánica."
-    },
-    {
-        question: "55. ¿Cuál de estos NO es un órgano institucional de las Comunidades Autónomas (modelo constitucional básico)?",
-        options: [
-            "La Asamblea Legislativa.",
-            "El Consejo de Gobierno.",
-            "El Tribunal Superior de Justicia.",
-            "El Presidente."
-        ],
-        correctAnswer: "El Tribunal Superior de Justicia."
-    },
-    {
-        question: "56. El **Gobierno y la Administración** de una Comunidad Autónoma recaen en:",
-        options: [
-            "El Parlamento y el Tribunal Superior de Justicia.",
-            "El Consejo de Gobierno.",
-            "Las Diputaciones Provinciales.",
-            "El Delegado del Gobierno."
-        ],
-        correctAnswer: "El Consejo de Gobierno."
-    },
-    {
-        question: "57. La **Provincia** es una entidad local que, además de ser una división territorial para el cumplimiento de las actividades del Estado, está dotada de:",
-        options: [
-            "Autonomía política.",
-            "Personalidad jurídica propia.",
-            "Potestad legislativa exclusiva.",
-            "Competencias de coordinación con el Estado."
-        ],
-        correctAnswer: "Personalidad jurídica propia."
-    },
-    {
-        question: "58. ¿Qué órgano ejerce el gobierno y la administración autónoma de la provincia?",
-        options: [
-            "El Delegado del Gobierno.",
-            "La Diputación u órgano equivalente.",
-            "El Consejo de Ministros.",
-            "El Parlamento Autonómico."
-        ],
-        correctAnswer: "La Diputación u órgano equivalente."
-    },
-    {
-        question: "59. Los **municipios** gozan de autonomía para la gestión de sus respectivos intereses, que se concreta en:",
-        options: [
-            "El derecho a separarse de la Comunidad Autónoma.",
-            "La potestad para legislar sobre cualquier materia.",
-            "Plena personalidad jurídica y capacidad para ejercer potestades.",
-            "La subordinación a la provincia."
-        ],
-        correctAnswer: "Plena personalidad jurídica y capacidad para ejercer potestades."
-    },
-    {
-        question: "60. ¿Quién nombra al Presidente de la Comunidad Autónoma?",
-        options: [
-            "Las Cortes Generales.",
-            "El Rey, a propuesta del Presidente de la Asamblea Legislativa de la CCAA.",
-            "El Presidente del Gobierno Central.",
-            "El Pleno del Tribunal Constitucional."
-        ],
-        correctAnswer: "El Rey, a propuesta del Presidente de la Asamblea Legislativa de la CCAA."
-    },
-    {
-        question: "61. El control de la constitucionalidad de las disposiciones normativas con fuerza de ley de las Comunidades Autónomas corresponde a:",
-        options: [
-            "El Tribunal Supremo.",
-            "El Tribunal Superior de Justicia de la CCAA.",
-            "El Tribunal Constitucional.",
-            "Las Cortes Generales."
-        ],
-        correctAnswer: "El Tribunal Constitucional."
-    },
-    {
-        question: "62. ¿Qué vía de acceso a la autonomía se conoce como 'vía lenta' o del artículo 143 de la CE?",
-        options: [
-            "La vía del artículo 151 de la CE.",
-            "La vía de la disposición transitoria segunda.",
-            "La vía del artículo 143 de la CE.",
-            "La vía de la disposición adicional primera."
-        ],
-        correctAnswer: "La vía del artículo 143 de la CE."
-    },
-    {
-        question: "63. La posibilidad de que el Estado obligue a una Comunidad Autónoma al cumplimiento forzoso de sus obligaciones se regula en el artículo:",
-        options: [
-            "149 de la CE.",
-            "155 de la CE.",
-            "143 de la CE.",
-            "151 de la CE."
-        ],
-        correctAnswer: "155 de la CE."
-    },
-    {
-        question: "64. Los territorios que en el momento de entrar en vigor la Constitución contaban con regímenes preautonómicos y que se constituyeron en CCAA por la vía del artículo 151 de la CE son:",
-        options: [
-            "Todas las CCAA.",
-            "El País Vasco, Cataluña, Galicia y Andalucía.",
-            "Solo el País Vasco y Cataluña.",
-            "Canarias y Baleares."
-        ],
-        correctAnswer: "El País Vasco, Cataluña, Galicia y Andalucía."
-    },
-    {
-        question: "65. La asunción de competencias por las Comunidades Autónomas está limitada por:",
-        options: [
-            "La Ley de Régimen Local.",
-            "El listado de competencias exclusivas del Estado (art. 149.1 CE).",
-            "La voluntad de las provincias.",
-            "El principio de subsidiariedad."
-        ],
-        correctAnswer: "El listado de competencias exclusivas del Estado (art. 149.1 CE)."
-    },
-    {
-        question: "66. ¿Cuál es la institución de la Comunidad Autónoma que ejerce la función legislativa?",
-        options: [
-            "El Consejo de Gobierno.",
-            "La Asamblea Legislativa o Parlamento Autonómico.",
-            "El Tribunal Superior de Justicia.",
-            "El Presidente."
-        ],
-        correctAnswer: "La Asamblea Legislativa o Parlamento Autonómico."
-    },
-    {
-        question: "67. Las **Ciudades Autónomas** de Ceuta y Melilla:",
-        options: [
-            "Tienen la misma capacidad competencial que cualquier CCAA.",
-            "Son un tipo especial de Entidad Local con competencias autonómicas y régimen foral.",
-            "Son Entidades Locales con régimen especial, reguladas por Ley Orgánica.",
-            "Son provincias de ultramar."
-        ],
-        correctAnswer: "Son Entidades Locales con régimen especial, reguladas por Ley Orgánica."
-    },
-    {
-        question: "68. El **Consejo de Gobierno** de la Comunidad Autónoma tiene, principalmente, funciones:",
-        options: [
-            "Jurisdiccionales.",
-            "Electorales.",
-            "Ejecutivas y administrativas.",
-            "De control del Estado."
-        ],
-        correctAnswer: "Ejecutivas y administrativas."
-    },
-    {
-        question: "69. La creación de agrupaciones de municipios se denomina:",
-        options: [
-            "Descentralización funcional.",
-            "Comarcas u otras Entidades Supramunicipales.",
-            "Desconcentración provincial.",
-            "Mancomunidad de Regiones."
-        ],
-        correctAnswer: "Comarcas u otras Entidades Supramunicipales."
-    },
-    {
-        question: "70. ¿Qué mayoría se exigió en el referéndum para la ratificación de los Estatutos de Autonomía de las CCAA que accedieron por la vía del artículo 151 de la CE?",
-        options: [
-            "Mayoría simple de los electores de cada provincia.",
-            "Mayoría absoluta de los electores de cada provincia.",
-            "Mayoría de dos tercios de los votos válidos.",
-            "Mayoría simple de los votos emitidos."
-        ],
-        correctAnswer: "Mayoría absoluta de los electores de cada provincia."
-    },
-    {
-        question: "71. La **disolución anticipada** de la Asamblea Legislativa de una Comunidad Autónoma corresponde a:",
-        options: [
-            "El Presidente del Gobierno de la Nación.",
-            "El Presidente de la Comunidad Autónoma.",
-            "Las Cortes Generales.",
-            "El Tribunal Constitucional."
-        ],
-        correctAnswer: "El Presidente de la Comunidad Autónoma."
-    },
-    {
-        question: "72. El **control económico y presupuestario** de las Comunidades Autónomas es ejercido por:",
-        options: [
-            "El Banco de España.",
-            "El Ministerio de Hacienda.",
-            "El Tribunal de Cuentas y los Órganos de Control Externo autonómicos.",
-            "El Tribunal Superior de Justicia."
-        ],
-        correctAnswer: "El Tribunal de Cuentas y los Órganos de Control Externo autonómicos."
-    },
-    {
-        question: "73. El artículo 149.1 de la CE establece las competencias que son **exclusivas** del:",
-        options: [
-            "Municipio.",
-            "Estado.",
-            "Comunidad Autónoma.",
-            "Provincia."
-        ],
-        correctAnswer: "Estado."
-    },
-    {
-        question: "74. Las competencias que la Constitución no haya atribuido expresamente al Estado podrán corresponder a:",
-        options: [
-            "El Consejo de Estado.",
-            "Las Comunidades Autónomas, de acuerdo con sus Estatutos.",
-            "Los municipios.",
-            "La Administración Periférica."
-        ],
-        correctAnswer: "Las Comunidades Autónomas, de acuerdo con sus Estatutos."
-    },
-    {
-        question: "75. ¿Qué significa que una competencia sea **exclusiva** del Estado (art. 149.1 CE)?",
-        options: [
-            "Que el Estado solo puede legislar sobre ella.",
-            "Que el Estado tiene la potestad legislativa y la ejecutiva.",
-            "Que la CCAA puede ejecutar la normativa estatal si su Estatuto lo prevé.",
-            "Que el Estado solo tiene capacidad de coordinación."
-        ],
-        correctAnswer: "Que el Estado tiene la potestad legislativa y la ejecutiva."
-    },
-    {
-        question: "76. ¿Qué ocurre con las materias no atribuidas al Estado por la CE y que los Estatutos no asuman?",
-        options: [
-            "Corresponden al Estado, que podrá legislar y ejecutar.",
-            "Quedan sin regulación.",
-            "Corresponden a los municipios.",
-            "Se regulan por la costumbre."
-        ],
-        correctAnswer: "Corresponden al Estado, que podrá legislar y ejecutar."
-    },
-    {
-        question: "77. ¿Cuál de las siguientes materias es competencia **exclusiva** del Estado, según el art. 149.1 de la CE?",
-        options: [
-            "Sanidad.",
-            "Bases del régimen minero y energético.",
-            "Nacionalidad, inmigración, emigración, extranjería y derecho de asilo.",
-            "Ordenación del territorio."
-        ],
-        correctAnswer: "Nacionalidad, inmigración, emigración, extranjería y derecho de asilo."
-    },
-    {
-        question: "78. La competencia sobre la **legislación básica** en materia de Sanidad corresponde al:",
-        options: [
-            "Municipio.",
-            "Estado.",
-            "Comunidad Autónoma.",
-            "Consejo de Estado."
-        ],
-        correctAnswer: "Estado."
-    },
-    {
-        question: "79. La regulación de la **enseñanza** es competencia de las Comunidades Autónomas, pero el Estado tiene reservada la competencia sobre:",
-        options: [
-            "La organización de los centros educativos.",
-            "La regulación de los niveles educativos.",
-            "Las normas básicas para el desarrollo del artículo 27 de la CE.",
-            "La totalidad del sistema educativo."
-        ],
-        correctAnswer: "Las normas básicas para el desarrollo del artículo 27 de la CE."
-    },
-    {
-        question: "80. Un **conflicto de competencias** entre el Estado y una Comunidad Autónoma es resuelto por:",
-        options: [
-            "El Tribunal Supremo.",
-            "El Tribunal Constitucional.",
-            "El Consejo de Estado.",
-            "El Tribunal Superior de Justicia de la CCAA."
-        ],
-        correctAnswer: "El Tribunal Constitucional."
-    },
-    {
-        question: "81. ¿Qué tipo de conflicto se plantea cuando un órgano del Estado cree que una disposición o resolución de una CCAA invade la esfera de su competencia?",
-        options: [
-            "Conflicto de jurisdicción.",
-            "Conflicto positivo de competencias.",
-            "Cuestión de inconstitucionalidad.",
-            "Recurso de amparo."
-        ],
-        correctAnswer: "Conflicto positivo de competencias."
-    },
-    {
-        question: "82. ¿Qué ocurre si ninguna de las Administraciones Territoriales ejerce una competencia que le corresponde (conflicto negativo de competencias)?",
-        options: [
-            "El Tribunal Supremo asume la competencia.",
-            "El ciudadano puede acudir al Tribunal Constitucional.",
-            "El Consejo de Estado asume la competencia provisionalmente.",
-            "La competencia se atribuye a la AGE."
-        ],
-        correctAnswer: "El ciudadano puede acudir al Tribunal Constitucional."
-    },
-    {
-        question: "83. Las Leyes Marco que permiten a las Cortes Generales atribuir a las Comunidades Autónomas la facultad de dictar normas legislativas se recogen en el artículo:",
-        options: [
-            "150.1 de la CE.",
-            "149.1 de la CE.",
-            "153.a de la CE.",
-            "150.2 de la CE."
-        ],
-        correctAnswer: "150.1 de la CE."
-    },
-    {
-        question: "84. La figura de la **delegación o transferencia de facultades** de titularidad estatal a favor de las CCAA está regulada en el artículo:",
-        options: [
-            "149.1 CE.",
-            "150.2 CE.",
-            "148.1 CE.",
-            "155 CE."
-        ],
-        correctAnswer: "150.2 CE."
-    },
-    {
-        question: "85. En la distribución competencial, el concepto de **legislación básica** implica:",
-        options: [
-            "El desarrollo normativo completo de la materia por el Estado.",
-            "La fijación de principios o mínimos comunes por el Estado.",
-            "La ejecución exclusiva por parte de la CCAA.",
-            "La posibilidad de que la CCAA dicte normas con rango de Ley Orgánica."
-        ],
-        correctAnswer: "La fijación de principios o mínimos comunes por el Estado."
-    },
-    {
-        question: "86. La competencia en materia de **fomento de la cultura** puede ser ejercida por:",
-        options: [
-            "Solo el Estado.",
-            "Solo las Comunidades Autónomas.",
-            "El Estado y las Comunidades Autónomas, de forma concurrente o compartida.",
-            "Exclusivamente los municipios."
-        ],
-        correctAnswer: "El Estado y las Comunidades Autónomas, de forma concurrente o compartida."
-    },
-    {
-        question: "87. Si una Ley estatal contiene solo la regulación de la 'legislación básica' sobre una materia, ¿a quién corresponde el desarrollo normativo y la ejecución?",
-        options: [
-            "Al Estado, obligatoriamente.",
-            "A las Comunidades Autónomas, si así lo prevé su Estatuto.",
-            "Al Gobierno de la Nación.",
-            "Al Consejo de Estado."
-        ],
-        correctAnswer: "A las Comunidades Autónomas, si así lo prevé su Estatuto."
-    },
-    {
-        question: "88. La **cláusula de cierre** del sistema competencial (art. 149.3 CE) establece que el derecho estatal será:",
-        options: [
-            "Supletorio del derecho de las Comunidades Autónomas.",
-            "Superior jerárquicamente.",
-            "El único aplicable en caso de conflicto.",
-            "Siempre prevalente."
-        ],
-        correctAnswer: "Supletorio del derecho de las Comunidades Autónomas."
-    },
-    {
-        question: "89. El **Recurso de Inconstitucionalidad** contra una Ley o norma con fuerza de Ley de una CCAA es resuelto por:",
-        options: [
-            "El Tribunal Supremo.",
-            "La Sala Contencioso-Administrativa de la Audiencia Nacional.",
-            "El Tribunal Constitucional.",
-            "El Pleno del Congreso de los Diputados."
-        ],
-        correctAnswer: "El Tribunal Constitucional."
-    },
-    {
-        question: "90. ¿Qué significa que una competencia sea **compartida**?",
-        options: [
-            "Que la CCAA puede legislar y ejecutar con independencia del Estado.",
-            "Que el Estado establece la legislación básica y la CCAA el desarrollo legislativo y la ejecución.",
-            "Que el Estado solo tiene funciones de coordinación.",
-            "Que ambas Administraciones ejercen la misma potestad sobre el mismo objeto."
-        ],
-        correctAnswer: "Que el Estado establece la legislación básica y la CCAA el desarrollo legislativo y la ejecución."
-    },
-    {
-        question: "91. El **Recurso de Amparo** en materia de competencias es:",
-        options: [
-            "Inexistente, no procede en esta materia.",
-            "Un mecanismo para resolver conflictos entre órganos constitucionales.",
-            "Un recurso ordinario contra los actos del Gobierno.",
-            "Un mecanismo para resolver conflictos entre las CCAA."
-        ],
-        correctAnswer: "Inexistente, no procede en esta materia."
-    },
-    {
-        question: "92. ¿A quién corresponde la competencia exclusiva sobre el **régimen de la Seguridad Social**?",
-        options: [
-            "A las Comunidades Autónomas.",
-            "Al Estado.",
-            "A los Ayuntamientos.",
-            "Es una competencia concurrente."
-        ],
-        correctAnswer: "Al Estado."
-    },
-    {
-        question: "93. Los conflictos de competencias entre los órganos de la misma Comunidad Autónoma se resuelven de acuerdo con:",
-        options: [
-            "La Ley Orgánica del Tribunal Constitucional.",
-            "El Estatuto de Autonomía de la CCAA.",
-            "La Ley de Régimen Local.",
-            "El criterio del Ministerio de la Presidencia."
-        ],
-        correctAnswer: "El Estatuto de Autonomía de la CCAA."
-    },
-    {
-        question: "94. En el caso de delegación de facultades del Estado a una CCAA mediante Ley Orgánica (art. 150.2 CE), la norma de delegación debe prever:",
-        options: [
-            "Un mecanismo de control solo del Tribunal Constitucional.",
-            "Las formas de control del Estado.",
-            "Que la CCAA pueda modificar la ley orgánica.",
-            "Un plazo de vigencia indefinido."
-        ],
-        correctAnswer: "Las formas de control del Estado."
-    },
-    {
-        question: "95. ¿Qué acción puede ejercer el Gobierno central si entiende que una disposición de una CCAA es inconstitucional?",
-        options: [
-            "Recurso Contencioso-Administrativo.",
-            "Conflicto positivo de competencias.",
-            "Recurso de inconstitucionalidad ante el TC.",
-            "Recurso de alzada."
-        ],
-        correctAnswer: "Recurso de inconstitucionalidad ante el TC."
-    },
-    {
-        question: "96. ¿A quién corresponde la competencia en materia de **obras públicas de interés general**?",
-        options: [
-            "A las Comunidades Autónomas.",
-            "A los municipios.",
-            "Al Estado.",
-            "A las provincias."
-        ],
-        correctAnswer: "Al Estado."
-    },
-    {
-        question: "97. El principio de **coordinación** entre las Administraciones Públicas implica:",
-        options: [
-            "La subordinación jerárquica de unas a otras.",
-            "La fijación de técnicas para la colaboración en el ejercicio de las respectivas competencias.",
-            "La centralización de todas las funciones administrativas.",
-            "La obligatoriedad de la AGE de aprobar todos los actos de las CCAA."
-        ],
-        correctAnswer: "La fijación de técnicas para la colaboración en el ejercicio de las respectivas competencias."
-    },
-    {
-        question: "98. La Ley 40/2015, de Régimen Jurídico del Sector Público, regula los instrumentos y técnicas de:",
-        options: [
-            "Desconcentración interna.",
-            "Relaciones interadministrativas.",
-            "Control presupuestario.",
-            "Organización periférica."
-        ],
-        correctAnswer: "Relaciones interadministrativas."
-    },
-    {
-        question: "99. La **Conferencia de Presidentes** es un órgano de cooperación de composición:",
-        options: [
-            "Bilateral.",
-            "Interministerial.",
-            "Multilateral y de máximo nivel político.",
-            "Consultiva, compuesta por expertos."
-        ],
-        correctAnswer: "Multilateral y de máximo nivel político."
-    },
-    {
-        question: "100. Los **Convenios de Colaboración** entre Administraciones Públicas tienen por objeto:",
-        options: [
-            "La cesión de la titularidad de una competencia.",
-            "Fijar la obligación de una Administración de subordinarse a otra.",
-            "La formalización de compromisos de actuación conjunta en materias de competencia común.",
-            "La resolución de conflictos de competencias."
-        ],
-        correctAnswer: "La formalización de compromisos de actuación conjunta en materias de competencia común."
-    },
-    {
-        question: "101. ¿Cuál es el órgano de cooperación multilateral de composición sectorial que reúne a los miembros del Gobierno de la Nación responsables de un área y a los correspondientes Consejeros de las CCAA?",
-        options: [
-            "La Comisión Bilateral de Cooperación.",
-            "La Conferencia Sectorial.",
-            "La Conferencia de Presidentes.",
-            "La Comisión Interministerial."
-        ],
-        correctAnswer: "La Conferencia Sectorial."
-    },
-    {
-        question: "102. La **cooperación interadministrativa** puede ser:",
-        options: [
-            "Solo vertical.",
-            "Solo horizontal.",
-            "Horizontal (entre CCAA o entre EELL) y vertical (Estado con CCAA o EELL).",
-            "Únicamente voluntaria."
-        ],
-        correctAnswer: "Horizontal (entre CCAA o entre EELL) y vertical (Estado con CCAA o EELL)."
-    },
-    {
-        question: "103. ¿Cuál de los siguientes es un instrumento de la cooperación **voluntaria** entre Administraciones?",
-        options: [
-            "El requerimiento de incompetencia.",
-            "El Conflicto Positivo de Competencias.",
-            "El Convenio de Colaboración.",
-            "Las medidas de control del art. 155 CE."
-        ],
-        correctAnswer: "El Convenio de Colaboración."
-    },
-    {
-        question: "104. El deber de colaboración entre Administraciones se basa en el principio de:",
-        options: [
-            "Jerarquía.",
-            "Lealtad institucional.",
-            "Desconcentración.",
-            "Economía."
-        ],
-        correctAnswer: "Lealtad institucional."
-    },
-    {
-        question: "105. ¿Quién puede constituir Comisiones Bilaterales de Cooperación para la coordinación entre el Estado y una Comunidad Autónoma?",
-        options: [
-            "El Tribunal Constitucional.",
-            "El Gobierno de la Nación y el Consejo de Gobierno de la CCAA.",
-            "El Defensor del Pueblo.",
-            "El Congreso de los Diputados."
-        ],
-        correctAnswer: "El Gobierno de la Nación y el Consejo de Gobierno de la CCAA."
-    },
-    {
-        question: "106. La coordinación, a diferencia de la cooperación, implica:",
-        options: [
-            "La libre voluntad de las partes para actuar conjuntamente.",
-            "Una imposición del ente superior para homogeneizar la acción del inferior.",
-            "La transferencia de la titularidad competencial.",
-            "La resolución de un conflicto de atribuciones."
-        ],
-        correctAnswer: "Una imposición del ente superior para homogeneizar la acción del inferior."
-    },
-    {
-        question: "107. ¿Cuál es el instrumento principal para la coordinación financiera entre el Estado y las CCAA?",
-        options: [
-            "El Consejo de Política Fiscal y Financiera (CPFF).",
-            "La Conferencia de Presidentes.",
-            "La Comisión Bilateral.",
-            "El Fondo de Compensación Interterritorial."
-        ],
-        correctAnswer: "El Consejo de Política Fiscal y Financiera (CPFF)."
-    },
-    {
-        question: "108. Los **Planes y Programas conjuntos** se utilizan como técnica de cooperación para:",
-        options: [
-            "La ejecución de obras públicas de interés general.",
-            "La ejecución de competencias autonómicas en el ámbito del Estado.",
-            "Desarrollar políticas que afectan a varias Administraciones.",
-            "La delegación de competencias del Estado a las CCAA."
-        ],
-        correctAnswer: "Desarrollar políticas que afectan a varias Administraciones."
-    },
-    {
-        question: "109. ¿Qué instrumento permite una gestión común de servicios, prestaciones o actividades?",
-        options: [
-            "El Protocolo General de Actuación.",
-            "La Conferencia Sectorial.",
-            "La figura de los Consorcios.",
-            "El Conflicto Positivo de Competencias."
-        ],
-        correctAnswer: "La figura de los Consorcios."
-    },
-    {
-        question: "110. El deber de información mutua en el ámbito de la cooperación se relaciona directamente con el principio de:",
-        options: [
-            "Publicidad activa.",
-            "Lealtad institucional.",
-            "Subsidiariedad.",
-            "Imparcialidad."
-        ],
-        correctAnswer: "Lealtad institucional."
-    },
-    {
-        question: "111. En los **Consorcios** interadministrativos, la participación de la AGE o de sus Organismos Públicos es:",
-        options: [
-            "Exclusiva.",
-            "Obligatoria.",
-            "Voluntaria.",
-            "Limitada solo a funciones consultivas."
-        ],
-        correctAnswer: "Voluntaria."
-    },
-    {
-        question: "112. Un **Protocolo General de Actuación** tiene valor de:",
-        options: [
-            "Ley.",
-            "Norma reglamentaria.",
-            "Simple declaración de intenciones o marco de colaboración futura.",
-            "Convenio de colaboración."
-        ],
-        correctAnswer: "Simple declaración de intenciones o marco de colaboración futura."
-    },
-    {
-        question: "113. ¿Cuál es la forma de cooperación que exige a las Administraciones implicadas la creación de una nueva persona jurídica?",
-        options: [
-            "Los Convenios.",
-            "Los Consorcios.",
-            "Los Protocolos.",
-            "Las Conferencias Sectoriales."
-        ],
-        correctAnswer: "Los Consorcios."
-    },
-    {
-        question: "114. La Ley 40/2015 establece que las Administraciones Públicas deberán abstenerse de cualquier actuación que suponga:",
-        options: [
-            "El ejercicio de potestades administrativas.",
-            "La duplicidad de trámites o la superposición de actuaciones.",
-            "La ejecución de normativa estatal.",
-            "La coordinación de servicios."
-        ],
-        correctAnswer: "La duplicidad de trámites o la superposición de actuaciones."
-    },
-    {
-        question: "115. El ejercicio de las competencias por los Entes Locales debe realizarse de la forma más cercana a los ciudadanos (principio de:):",
-        options: [
-            "Desconcentración.",
-            "Subsidiariedad.",
-            "Proporcionalidad.",
-            "Legalidad."
-        ],
-        correctAnswer: "Subsidiariedad."
-    },
-    {
-        question: "116. En la Conferencia Sectorial, los Acuerdos que obligan a las CCAA requieren el voto favorable de:",
-        options: [
-            "Dos tercios de los representantes.",
-            "La mayoría simple de los presentes.",
-            "La representación del Estado y de las CCAA que supongan al menos la mitad de la población.",
-            "La unanimidad de todos los miembros."
-        ],
-        correctAnswer: "La representación del Estado y de las CCAA que supongan al menos la mitad de la población."
-    },
-    {
-        question: "117. ¿Qué implica el deber de **asistencia activa** en las relaciones interadministrativas?",
-        options: [
-            "La obligación de la AGE de financiar todas las actuaciones de las CCAA.",
-            "La obligación de auxiliar a otra Administración cuando sea necesario para el ejercicio de sus competencias.",
-            "La asunción de competencias ajenas.",
-            "La participación obligatoria en todos los órganos de cooperación."
-        ],
-        correctAnswer: "La obligación de auxiliar a otra Administración cuando sea necesario para el ejercicio de sus competencias."
-    },
-    {
-        question: "118. El **Fondo de Compensación Interterritorial** es un instrumento para hacer efectivo el principio de:",
-        options: [
-            "Eficacia.",
-            "Solidaridad.",
-            "Jerarquía.",
-            "Desconcentración."
-        ],
-        correctAnswer: "Solidaridad."
-    },
-    {
-        question: "119. ¿Cuál de estos órganos puede ser utilizado como técnica de cooperación **vertical** (Estado-CCAA)?",
-        options: [
-            "Mancomunidad de Municipios.",
-            "Consorcio entre municipios vecinos.",
-            "Comisión Bilateral de Cooperación.",
-            "Agrupación de Comarcas."
-        ],
-        correctAnswer: "Comisión Bilateral de Cooperación."
-    },
-    {
-        question: "120. ¿Qué técnica permite a una Administración realizar actuaciones propias de otra, previa autorización de esta?",
-        options: [
-            "La delegación de competencias.",
-            "La encomienda de gestión.",
-            "La transferencia de titularidad.",
-            "La coordinación forzosa."
-        ],
-        correctAnswer: "La encomienda de gestión."
+    {
+        pregunta: "3. El sometimiento pleno de la Administración a la Ley y al Derecho se fundamenta en el principio de:",
+        opciones: ["Eficacia.", "Jerarquía.", "Legalidad.", "Coordinación."],
+        respuestaCorrecta: "Legalidad."
+    },
+    {
+        pregunta: "4. ¿Cuál de los siguientes principios NO está expresamente mencionado en el artículo 103.1 de la CE en relación con la actuación de la Administración Pública?",
+        opciones: ["Desconcentración.", "Transparencia.", "Jerarquía.", "Coordinación."],
+        respuestaCorrecta: "Transparencia."
+    },
+    {
+        pregunta: "5. La potestad reglamentaria del Gobierno está sometida a fiscalización por parte de:",
+        opciones: ["Solo el Tribunal Constitucional.", "Solo el Defensor del Pueblo.", "Los Tribunales de Justicia.", "El Consejo de Estado en exclusiva."],
+        respuestaCorrecta: "Los Tribunales de Justicia."
+    },
+    {
+        pregunta: "6. ¿Qué principio constitucional implica la transferencia de titularidad de una competencia desde la Administración central a otra Administración territorial distinta?",
+        opciones: ["Desconcentración.", "Jerarquía.", "Descentralización.", "Coordinación."],
+        respuestaCorrecta: "Descentralización."
+    },
+    {
+        pregunta: "7. El principio de **buena fe** en las relaciones entre los ciudadanos y la Administración se deriva del principio de:",
+        opciones: ["Seguridad jurídica.", "Economía.", "Desconcentración.", "Eficacia."],
+        respuestaCorrecta: "Seguridad jurídica."
+    },
+    {
+        pregunta: "8. La responsabilidad patrimonial de la Administración Pública por el funcionamiento de los servicios públicos se recoge en el artículo:",
+        opciones: ["104 de la CE.", "106.2 de la CE.", "103.3 de la CE.", "9.1 de la CE."],
+        respuestaCorrecta: "106.2 de la CE."
+    },
+    {
+        pregunta: "9. ¿Qué principio del artículo 103.1 de la CE implica la ordenación de órganos con relación de superioridad y subordinación?",
+        opciones: ["Descentralización.", "Coordinación.", "Desconcentración.", "Jerarquía."],
+        respuestaCorrecta: "Jerarquía."
+    },
+    {
+        pregunta: "10. La reserva de Ley que exige que el desarrollo de los derechos fundamentales se realice mediante Ley Orgánica, ¿qué principio constitucional refuerza?",
+        opciones: ["El principio democrático.", "El principio de legalidad.", "El principio de economía.", "El principio de subsidiariedad."],
+        respuestaCorrecta: "El principio de legalidad."
+    },
+    {
+        pregunta: "11. ¿Cuál es el tribunal encargado de controlar la legalidad de la actuación administrativa y la sumisión de esta a los fines que la justifican?",
+        opciones: ["Tribunal Supremo en Pleno.", "Tribunal Constitucional.", "Tribunales de la jurisdicción Contencioso-Administrativa.", "Tribunal de Cuentas."],
+        respuestaCorrecta: "Tribunales de la jurisdicción Contencioso-Administrativa."
+    },
+    {
+        pregunta: "12. El principio de **igualdad** en el acceso a las funciones públicas se garantiza de acuerdo con los criterios de:",
+        opciones: ["Capacidad y formación.", "Mérito y antigüedad.", "Mérito y capacidad.", "Antigüedad y formación."],
+        respuestaCorrecta: "Mérito y capacidad."
+    },
+    {
+        pregunta: "13. El artículo 9.3 de la CE garantiza la interdicción de la arbitrariedad de los poderes públicos, lo que está directamente relacionado con el principio de:",
+        opciones: ["Publicidad.", "Legalidad.", "Descentralización.", "Eficiencia."],
+        respuestaCorrecta: "Legalidad."
+    },
+    {
+        pregunta: "14. ¿Qué implica el principio de **desconcentración** en la Administración?",
+        opciones: ["La creación de nuevas Administraciones territoriales.", "La transferencia de funciones a órganos periféricos dentro de la misma Administración.", "La atribución de personalidad jurídica propia a entes dependientes.", "La asunción de competencias por el órgano superior."],
+        respuestaCorrecta: "La transferencia de funciones a órganos periféricos dentro de la misma Administración."
+    },
+    {
+        pregunta: "15. ¿Cuál es la finalidad principal del principio de **coordinación** entre Administraciones Públicas?",
+        opciones: ["Garantizar la jerarquía.", "Asegurar la eficacia y la coherencia.", "Evitar la duplicidad de funciones.", "Todas son correctas."],
+        respuestaCorrecta: "Asegurar la eficacia y la coherencia."
+    },
+    {
+        pregunta: "16. Los actos de la Administración Pública se presumen:",
+        opciones: ["Legales y ejecutivos.", "Ejecutivos y válidos.", "Válidos y eficaces.", "Eficaces y justos."],
+        respuestaCorrecta: "Válidos y eficaces."
+    },
+    {
+        pregunta: "17. El control jurisdiccional de la potestad reglamentaria del Gobierno se realiza a través de la jurisdicción:",
+        opciones: ["Civil.", "Penal.", "Contencioso-Administrativa.", "Social."],
+        respuestaCorrecta: "Contencioso-Administrativa."
+    },
+    {
+        pregunta: "18. ¿Qué institución es el superior órgano consultivo del Gobierno de la Nación?",
+        opciones: ["El Consejo de Estado.", "El Tribunal de Cuentas.", "El Defensor del Pueblo.", "El Consejo Fiscal."],
+        respuestaCorrecta: "El Consejo de Estado."
+    },
+    {
+        pregunta: "19. El control de la legalidad de los gastos e ingresos del Estado se atribuye a:",
+        opciones: ["El Senado.", "El Tribunal de Cuentas.", "El Tribunal Constitucional.", "La Intervención General de la Administración del Estado."],
+        respuestaCorrecta: "El Tribunal de Cuentas."
+    },
+    {
+        pregunta: "20. La Administración del Estado se organiza territorialmente en:",
+        opciones: ["Provincias y Municipios.", "Comunidades Autónomas y Provincias.", "Comunidades Autónomas.", "Provincias, con el establecimiento de órganos periféricos en el ámbito autonómico."],
+        respuestaCorrecta: "Provincias, con el establecimiento de órganos periféricos en el ámbito autonómico."
+    },
+    {
+        pregunta: "21. ¿Qué órgano ejerce la representación ordinaria del Estado en una Comunidad Autónoma?",
+        opciones: ["El Delegado del Gobierno.", "El Presidente de la Comunidad Autónoma.", "El Subdelegado del Gobierno.", "El Ministro de Política Territorial."],
+        respuestaCorrecta: "El Delegado del Gobierno."
+    },
+    {
+        pregunta: "22. La Constitución establece que las Comunidades Autónomas se constituyen sobre la base de:",
+        opciones: ["Provincias limítrofes con características históricas y culturales comunes.", "Provincias con ámbito territorial propio.", "Provincias limítrofes.", "Regiones históricas."],
+        respuestaCorrecta: "Provincias limítrofes con características históricas y culturales comunes."
+    },
+    {
+        pregunta: "23. La iniciativa para el proceso autonómico puede partir de:",
+        opciones: ["Todas las Diputaciones interesadas o del 75% de los municipios.", "Dos tercios de los municipios y dos tercios de los electores.", "Todas las Diputaciones interesadas y dos tercios de los municipios.", "El 50% de los municipios y la mayoría de las Diputaciones."],
+        respuestaCorrecta: "Todas las Diputaciones interesadas y dos tercios de los municipios."
+    },
+    {
+        pregunta: "24. El principio de **solidaridad** entre las Comunidades Autónomas tiene como finalidad:",
+        opciones: ["Garantizar un nivel mínimo de servicios públicos en todo el territorio.", "Evitar el separatismo.", "Promover el desarrollo económico equilibrado.", "Unificar las normativas autonómicas."],
+        respuestaCorrecta: "Promover el desarrollo económico equilibrado."
+    },
+    {
+        pregunta: "25. ¿Qué artículo constitucional establece la obligación del Estado de garantizar la realización efectiva del principio de solidaridad?",
+        opciones: ["Artículo 2", "Artículo 138", "Artículo 158", "Artículo 156"],
+        respuestaCorrecta: "Artículo 138"
+    },
+    {
+        pregunta: "26. ¿Qué institución se encarga de dirimir los conflictos de competencias entre el Estado y las Comunidades Autónomas?",
+        opciones: ["El Tribunal Supremo.", "El Consejo de Estado.", "El Tribunal Constitucional.", "Las Cortes Generales."],
+        respuestaCorrecta: "El Tribunal Constitucional."
+    },
+    {
+        pregunta: "27. Los Estatutos de Autonomía se aprueban mediante:",
+        opciones: ["Ley Ordinaria.", "Decreto Ley.", "Ley de Bases.", "Ley Orgánica."],
+        respuestaCorrecta: "Ley Orgánica."
+    },
+    {
+        pregunta: "28. ¿Cuál de los siguientes NO es un órgano de la Comunidad Autónoma, según el Estatuto de Autonomía?",
+        opciones: ["El Consejo de Gobierno.", "La Asamblea Legislativa.", "El Tribunal Superior de Justicia.", "El Presidente."],
+        respuestaCorrecta: "El Tribunal Superior de Justicia."
+    },
+    {
+        pregunta: "29. ¿En qué artículo de la CE se regulan las Haciendas de las Comunidades Autónomas?",
+        opciones: ["Artículo 157", "Artículo 156", "Artículo 158", "Artículo 155"],
+        respuestaCorrecta: "Artículo 156"
+    },
+    {
+        pregunta: "30. ¿Qué mecanismo constitucional permite al Gobierno adoptar medidas para obligar a una Comunidad Autónoma a cumplir sus obligaciones o proteger el interés general?",
+        opciones: ["El Recurso de Inconstitucionalidad.", "La Ley Orgánica de Armonización.", "El Artículo 155 de la CE.", "La Declaración de Estado de Sitio."],
+        respuestaCorrecta: "El Artículo 155 de la CE."
+    },
+    {
+        pregunta: "31. ¿Qué Título de la CE se dedica a la Organización Territorial del Estado?",
+        opciones: ["Título VI", "Título VII", "Título VIII", "Título IX"],
+        respuestaCorrecta: "Título VIII"
+    },
+    {
+        pregunta: "32. El principio de autonomía de los municipios y provincias está garantizado por la Constitución en el Artículo:",
+        opciones: ["137", "140", "141", "142"],
+        respuestaCorrecta: "137"
+    },
+    {
+        pregunta: "33. La provincia es una entidad local con personalidad jurídica propia, determinada por:",
+        opciones: ["La agrupación de Comarcas.", "La agrupación de municipios.", "Las circunscripciones electorales.", "Las divisiones históricas."],
+        respuestaCorrecta: "La agrupación de municipios."
+    },
+    {
+        pregunta: "34. ¿A quién corresponde el gobierno y la administración de la provincia?",
+        opciones: ["Al Gobierno Provincial.", "A la Diputación u órganos similares.", "Al Delegado del Gobierno.", "A la Asamblea de Municipios."],
+        respuestaCorrecta: "A la Diputación u órganos similares."
+    },
+    {
+        pregunta: "35. ¿Cuál es el órgano que ostenta el gobierno y la administración del municipio?",
+        opciones: ["El Concejo Abierto.", "El Pleno Municipal.", "El Alcalde y los Concejales.", "El Ayuntamiento."],
+        respuestaCorrecta: "El Ayuntamiento."
+    },
+    {
+        pregunta: "36. La autonomía municipal está protegida por:",
+        opciones: ["Reserva de Ley Orgánica.", "Reserva de Ley.", "El Reglamento de la Corporación.", "Los Tratados Internacionales."],
+        respuestaCorrecta: "Reserva de Ley."
+    },
+    {
+        pregunta: "37. El Fondo de Compensación Interterritorial se establece en el Artículo:",
+        opciones: ["156", "157", "158", "159"],
+        respuestaCorrecta: "158"
+    },
+    {
+        pregunta: "38. ¿Cuál es el criterio principal que el Fondo de Compensación Interterritorial debe corregir?",
+        opciones: ["El desequilibrio fiscal entre CCAA.", "El desequilibrio económico interterritorial.", "El desequilibrio demográfico.", "El déficit de infraestructuras."],
+        respuestaCorrecta: "El desequilibrio económico interterritorial."
+    },
+    {
+        pregunta: "39. El derecho a la autonomía de los municipios está garantizado por el Artículo:",
+        opciones: ["140", "141", "142", "143"],
+        respuestaCorrecta: "140"
+    },
+    {
+        pregunta: "40. ¿Cuál de estos órganos es un instrumento de cooperación vertical (Estado-CCAA) más formal?",
+        opciones: ["Convenios de Colaboración.", "Conferencias Sectoriales.", "Comisiones Bilaterales de Cooperación.", "Mancomunidades."],
+        respuestaCorrecta: "Conferencias Sectoriales."
+    },
+    {
+        pregunta: "41. ¿Qué es una Mancomunidad de Municipios?",
+        opciones: ["Una entidad territorial con personalidad jurídica propia.", "Una asociación de municipios para ejecutar obras o servicios comunes.", "Un órgano de cooperación entre provincias.", "Un órgano de gestión de infraestructuras."],
+        respuestaCorrecta: "Una asociación de municipios para ejecutar obras o servicios comunes."
+    },
+    {
+        pregunta: "42. Los Decretos Leyes son normas con rango de Ley que pueden dictarse en caso de:",
+        opciones: ["Urgencia parlamentaria.", "Necesidad extraordinaria y urgente.", "Vacío legal.", "Pérdida de confianza."],
+        respuestaCorrecta: "Necesidad extraordinaria y urgente."
+    },
+    {
+        pregunta: "43. ¿Qué materias NO pueden ser reguladas por Decreto Ley?",
+        opciones: ["La Hacienda Pública.", "Los derechos, deberes y libertades del Título I.", "Las CCAA.", "El régimen electoral general."],
+        respuestaCorrecta: "Los derechos, deberes y libertades del Título I."
+    },
+    {
+        pregunta: "44. ¿Qué plazo tiene el Congreso de los Diputados para convalidar o derogar un Decreto Ley?",
+        opciones: ["15 días.", "30 días.", "20 días.", "60 días."],
+        respuestaCorrecta: "30 días."
+    },
+    {
+        pregunta: "45. Las Leyes de Comisión (transferencia o delegación de facultades) se regulan en el Artículo:",
+        opciones: ["81", "82", "83", "84"],
+        respuestaCorrecta: "82"
+    },
+    {
+        pregunta: "46. ¿Cuál es la finalidad de las Leyes de Bases?",
+        opciones: ["Regular los derechos fundamentales.", "Delegar la potestad de dictar normas con rango de Ley en el Gobierno.", "Establecer la base económica del Estado.", "Regular el régimen electoral general."],
+        respuestaCorrecta: "Delegar la potestad de dictar normas con rango de Ley en el Gobierno."
+    },
+    {
+        pregunta: "47. La forma de las normas que dicta el Gobierno en virtud de una delegación legislativa se denomina:",
+        opciones: ["Decreto Ley.", "Decreto Legislativo.", "Orden Ministerial.", "Decreto de la Presidencia."],
+        respuestaCorrecta: "Decreto Legislativo."
+    },
+    {
+        pregunta: "48. ¿Cuál de estas normas tiene RANGO DE LEY?",
+        opciones: ["Reglamento.", "Orden Ministerial.", "Decreto Legislativo.", "Circular."],
+        respuestaCorrecta: "Decreto Legislativo."
+    },
+    {
+        pregunta: "49. ¿Quién refrenda las Leyes y demás normas con rango de Ley, y los Decretos del Consejo de Ministros?",
+        opciones: ["El Presidente del Gobierno.", "El Rey.", "El Ministro competente.", "El Consejo de Estado."],
+        respuestaCorrecta: "El Presidente del Gobierno."
+    },
+    {
+        pregunta: "50. El refrendo de los actos del Rey es necesario para:",
+        opciones: ["Su validez.", "Su publicidad.", "Su eficacia.", "Su ejecutividad."],
+        respuestaCorrecta: "Su validez."
+    },
+    {
+        pregunta: "51. ¿Qué tipo de Ley no puede ser objeto de delegación legislativa al Gobierno?",
+        opciones: ["Ley Ordinaria.", "Ley Orgánica.", "Ley de Presupuestos.", "Ley de Bases."],
+        respuestaCorrecta: "Ley Orgánica."
+    },
+    {
+        pregunta: "52. ¿Quién ejerce el control de constitucionalidad sobre los Decretos Leyes y Decretos Legislativos?",
+        opciones: ["El Tribunal Supremo.", "El Congreso de los Diputados.", "El Tribunal Constitucional.", "El Consejo de Estado."],
+        respuestaCorrecta: "El Tribunal Constitucional."
+    },
+    {
+        pregunta: "53. El Consejo de Estado, como órgano consultivo, emite dictámenes en función de:",
+        opciones: ["La legalidad de la norma.", "La oportunidad política.", "La adecuación económica.", "La moral pública."],
+        respuestaCorrecta: "La legalidad de la norma."
+    },
+    {
+        pregunta: "54. ¿Cuál de los siguientes NO es un criterio de ordenación de las fuentes del Derecho?",
+        opciones: ["Jerarquía.", "Competencia.", "Sucesión.", "Territorialidad."],
+        respuestaCorrecta: "Sucesión."
+    },
+    {
+        pregunta: "55. El principio de **competencia** se aplica en las relaciones entre:",
+        opciones: ["Ley Ordinaria y Ley Orgánica.", "Ley Estatal y Ley Autonómica.", "Ley y Reglamento.", "Leyes de distintos rangos."],
+        respuestaCorrecta: "Ley Estatal y Ley Autonómica."
+    },
+    {
+        pregunta: "56. El Gobierno está sometido a:",
+        opciones: ["La Constitución y la Ley.", "La Constitución, las Leyes y el Derecho.", "El Tribunal Constitucional y el Tribunal Supremo.", "Las Cortes Generales."],
+        respuestaCorrecta: "La Constitución, las Leyes y el Derecho."
+    },
+    {
+        pregunta: "57. ¿Qué norma regula la Administración de Justicia?",
+        opciones: ["Ley de Enjuiciamiento Civil.", "Ley Orgánica del Poder Judicial.", "Código Penal.", "Código Civil."],
+        respuestaCorrecta: "Ley Orgánica del Poder Judicial."
+    },
+    {
+        pregunta: "58. La Ley de Bases debe fijar obligatoriamente:",
+        opciones: ["El objeto y el plazo para su ejercicio.", "La finalidad y la materia que se regula.", "El contenido y la delegación.", "Las competencias del Gobierno."],
+        respuestaCorrecta: "El objeto y el plazo para su ejercicio."
+    },
+    {
+        pregunta: "59. ¿Qué Ley debe aprobar el Parlamento para que el Gobierno pueda dictar un Texto Refundido?",
+        opciones: ["Ley de Bases.", "Ley de Autorización.", "Ley Ordinaria.", "Ley de Delegación."],
+        respuestaCorrecta: "Ley de Autorización."
+    },
+    {
+        pregunta: "60. El principio de **reserva de ley** implica que una materia debe ser regulada por una norma:",
+        opciones: ["Con rango de Ley.", "Que afecta al Título I.", "Aprobada por el Gobierno.", "Con mayoría absoluta."],
+        respuestaCorrecta: "Con rango de Ley."
+    },
+    {
+        pregunta: "61. El Artículo 103.2 de la CE establece que los órganos de la Administración del Estado son creados, regidos y coordinados de acuerdo con la:",
+        opciones: ["Constitución y la Ley.", "Ley.", "Ley Orgánica.", "Voluntad del Gobierno."],
+        respuestaCorrecta: "Ley."
+    },
+    {
+        pregunta: "62. ¿Cuál es el rango normativo de un **Real Decreto**?",
+        opciones: ["Tiene rango de Ley.", "Tiene rango de Reglamento.", "Depende del contenido.", "Solo es un acto administrativo."],
+        respuestaCorrecta: "Tiene rango de Reglamento."
+    },
+    {
+        pregunta: "63. ¿Qué tipo de Ley debe regular el régimen electoral general?",
+        opciones: ["Ley Ordinaria.", "Ley de Bases.", "Ley Orgánica.", "Decreto Legislativo."],
+        respuestaCorrecta: "Ley Orgánica."
+    },
+    {
+        pregunta: "64. Las leyes de la Comunidad Autónoma están sometidas, en su control de constitucionalidad, al:",
+        opciones: ["Tribunal Supremo.", "Tribunal Constitucional.", "Consejo de Estado.", "Asamblea Legislativa."],
+        respuestaCorrecta: "Tribunal Constitucional."
+    },
+    {
+        pregunta: "65. ¿Qué principio garantiza la igualdad de derechos y obligaciones de los ciudadanos en todo el territorio español?",
+        opciones: ["El principio de legalidad.", "El principio de unidad.", "El principio de solidaridad.", "El principio de no discriminación."],
+        respuestaCorrecta: "El principio de no discriminación."
+    },
+    {
+        pregunta: "66. Los acuerdos de cooperación entre CCAA necesitan la autorización de:",
+        opciones: ["El Rey.", "Las Cortes Generales.", "El Tribunal Constitucional.", "El Gobierno."],
+        respuestaCorrecta: "Las Cortes Generales."
+    },
+    {
+        pregunta: "67. ¿Qué órgano ejerce la Alta Inspección para la protección del interés general del Estado en las CCAA?",
+        opciones: ["El Gobierno.", "El Senado.", "El Tribunal Constitucional.", "El Consejo de Estado."],
+        respuestaCorrecta: "El Gobierno."
+    },
+    {
+        pregunta: "68. La **Disposición Transitoria Segunda** de la CE permite a las provincias de régimen preautonómico que no accedieron por el Art. 143 (vía lenta), acceder por la vía del:",
+        opciones: ["Artículo 155.", "Artículo 151 (vía rápida).", "Artículo 145.", "Estatuto de Autonomía."],
+        respuestaCorrecta: "Artículo 151 (vía rápida)."
+    },
+    {
+        pregunta: "69. ¿Cuál es la finalidad del **principio de lealtad constitucional** en el Estado Autonómico?",
+        opciones: ["Garantizar la financiación de las CCAA.", "Asegurar que las CCAA no se separen del Estado.", "Exigir la colaboración y el respeto entre el Estado y las CCAA.", "Garantizar la supremacía del Estado."],
+        respuestaCorrecta: "Exigir la colaboración y el respeto entre el Estado y las CCAA."
+    },
+    {
+        pregunta: "70. Los recursos que las CCAA tienen a su disposición para financiar sus competencias provienen de:",
+        opciones: ["Impuestos cedidos por el Estado.", "Impuestos propios.", "Transferencias del Fondo de Compensación.", "Todas son correctas."],
+        respuestaCorrecta: "Todas son correctas."
+    },
+    {
+        pregunta: "71. ¿Cuál de los siguientes NO es un principio que informe la actuación de la Administración, según el artículo 103.1 de la CE?",
+        opciones: ["Objetividad.", "Eficacia.", "Descentralización.", "Subsidiariedad."],
+        respuestaCorrecta: "Subsidiariedad."
+    },
+    {
+        pregunta: "72. ¿Qué implica el principio de **buena administración**?",
+        opciones: ["La eficacia y la economía en la gestión.", "El derecho a ser oído y a obtener respuesta.", "La responsabilidad patrimonial de la Administración.", "La transparencia en la gestión."],
+        respuestaCorrecta: "El derecho a ser oído y a obtener respuesta."
+    },
+    {
+        pregunta: "73. ¿Cuál es la forma de organización que permite a un órgano superior asumir competencias de un órgano inferior (salvo que sea Ley) en casos excepcionales?",
+        opciones: ["Delegación.", "Avocación.", "Desconcentración.", "Descentralización."],
+        respuestaCorrecta: "Avocación."
+    },
+    {
+        pregunta: "74. La **encomienda de gestión** implica:",
+        opciones: ["La transferencia de la titularidad de una competencia.", "El ejercicio de actividades de carácter material, técnico o de servicios.", "La delegación de la potestad reglamentaria.", "La colaboración entre entes territoriales."],
+        respuestaCorrecta: "El ejercicio de actividades de carácter material, técnico o de servicios."
+    },
+    {
+        pregunta: "75. El control de constitucionalidad de las Leyes autonómicas se realiza a través de:",
+        opciones: ["Recurso de Amparo.", "Recurso de Inconstitucionalidad.", "Cuestión de Inconstitucionalidad.", "Ambas (Recurso y Cuestión) son correctas."],
+        respuestaCorrecta: "Ambas (Recurso y Cuestión) son correctas."
+    },
+    {
+        pregunta: "76. Las CCAA que no accedieron por el Artículo 151 (vía rápida), se rigen por el procedimiento del Artículo:",
+        opciones: ["143 (vía lenta).", "144.", "145.", "150."],
+        respuestaCorrecta: "143 (vía lenta)."
+    },
+    {
+        pregunta: "77. ¿Cuál de estas materias es competencia **exclusiva** del Estado (Art. 149.1)?",
+        opciones: ["Ordenación del territorio.", "Legislación laboral.", "Agricultura y ganadería.", "Turismo."],
+        respuestaCorrecta: "Legislación laboral."
+    },
+    {
+        pregunta: "78. La previsión de creación de órganos de colaboración entre CCAA se recoge en el Artículo:",
+        opciones: ["140", "141", "142", "145"],
+        respuestaCorrecta: "145"
+    },
+    {
+        pregunta: "79. ¿Qué establece la CE respecto a la participación de las CCAA en la organización de la Justicia?",
+        opciones: ["Pueden crear su propio Tribunal Superior de Justicia.", "Pueden dictar normas de procedimiento.", "Solo pueden intervenir en la demarcación territorial.", "Tienen competencia en la administración de la Justicia."],
+        respuestaCorrecta: "Solo pueden intervenir en la demarcación territorial."
+    },
+    {
+        pregunta: "80. El derecho de los municipios a tener sus propios ingresos para el cumplimiento de sus fines se garantiza en el Artículo:",
+        opciones: ["140", "141", "142", "143"],
+        respuestaCorrecta: "142"
+    },
+    {
+        pregunta: "81. La Administración Pública está sometida al control de:",
+        opciones: ["Las Cortes Generales.", "Los Tribunales.", "El Defensor del Pueblo.", "Todas las anteriores."],
+        respuestaCorrecta: "Todas las anteriores."
+    },
+    {
+        pregunta: "82. ¿Qué significa el principio de **descentralización** funcional?",
+        opciones: ["Traspaso de funciones a órganos periféricos del Estado.", "Traspaso de competencias a otras Administraciones territoriales.", "Traspaso de funciones a entes instrumentales con personalidad jurídica propia.", "Traspaso de funciones al Gobierno."],
+        respuestaCorrecta: "Traspaso de funciones a entes instrumentales con personalidad jurídica propia."
+    },
+    {
+        pregunta: "83. ¿Cuál es el principal instrumento de colaboración financiera entre el Estado y las CCAA?",
+        opciones: ["El Fondo de Compensación Interterritorial.", "La Ley de Presupuestos Generales del Estado.", "El Consejo de Política Fiscal y Financiera.", "Los Convenios de Colaboración."],
+        respuestaCorrecta: "El Consejo de Política Fiscal y Financiera."
+    },
+    {
+        pregunta: "84. El nombramiento del Presidente de la Comunidad Autónoma se realiza por:",
+        opciones: ["El Rey, a propuesta del Gobierno.", "El Rey, a propuesta de la Asamblea Legislativa.", "El Presidente del Gobierno.", "La Asamblea Legislativa."],
+        respuestaCorrecta: "El Rey, a propuesta de la Asamblea Legislativa."
+    },
+    {
+        pregunta: "85. La Ley que autoriza la celebración de un convenio de colaboración entre CCAA (Art. 145.2) es una Ley:",
+        opciones: ["Orgánica.", "Ordinaria.", "De Bases.", "De Armonización."],
+        respuestaCorrecta: "Ordinaria."
+    },
+    {
+        pregunta: "86. ¿Qué órgano de la Administración Central dirige la política interior y exterior?",
+        opciones: ["El Rey.", "El Presidente del Gobierno.", "El Consejo de Ministros.", "Las Cortes Generales."],
+        respuestaCorrecta: "El Gobierno."
+    },
+    {
+        pregunta: "87. Los **organismos autónomos** se caracterizan por:",
+        opciones: ["Tener personalidad jurídica propia y patrimonio propio.", "Estar sometidos a un régimen de autonomía funcional.", "Realizar actividades de gestión o prestación de servicios.", "Todas son correctas."],
+        respuestaCorrecta: "Todas son correctas."
+    },
+    {
+        pregunta: "88. ¿Cuál de los siguientes órganos NO tiene potestad reglamentaria en el ámbito estatal?",
+        opciones: ["El Consejo de Ministros.", "El Presidente del Gobierno.", "Los Ministros.", "El Consejo de Estado."],
+        respuestaCorrecta: "El Consejo de Estado."
+    },
+    {
+        pregunta: "89. La **Comisión Delegada del Gobierno** es un órgano:",
+        opciones: ["Consultivo.", "De colaboración interministerial.", "De control parlamentario.", "De apoyo al Consejo de Ministros."],
+        respuestaCorrecta: "De colaboración interministerial."
+    },
+    {
+        pregunta: "90. La **delegación de firma** supone:",
+        opciones: ["La transferencia de la titularidad de una competencia.", "La autorización para que un órgano inferior firme un acto.", "La asunción de competencias por el órgano superior.", "La delegación de potestad reglamentaria."],
+        respuestaCorrecta: "La autorización para que un órgano inferior firme un acto."
+    },
+    {
+        pregunta: "91. El principio de **transparencia** en la Administración se relaciona con el derecho de los ciudadanos a:",
+        opciones: ["Ser oído en el procedimiento.", "Acceder a los archivos y registros.", "Obtener una indemnización.", "Recurrir los actos administrativos."],
+        respuestaCorrecta: "Acceder a los archivos y registros."
+    },
+    {
+        pregunta: "92. El **Consejo de Estado** es un órgano:",
+        opciones: ["Consultivo.", "De control.", "Ejecutivo.", "Legislativo."],
+        respuestaCorrecta: "Consultivo."
+    },
+    {
+        pregunta: "93. El **Plan de Estabilidad** (Art. 135 CE) implica una obligación del Estado para mantener el déficit:",
+        opciones: ["Por debajo del 3% del PIB.", "Por debajo del 5% del PIB.", "Dentro de los límites de la UE.", "En el marco de la Ley de Presupuestos."],
+        respuestaCorrecta: "Dentro de los límites de la UE."
+    },
+    {
+        pregunta: "94. ¿Cuál de los siguientes NO es un principio de la Justicia, según el artículo 117 de la CE?",
+        opciones: ["Independencia.", "Inamovilidad.", "Unidad.", "Objetividad."],
+        respuestaCorrecta: "Objetividad."
+    },
+    {
+        pregunta: "95. La **descentralización** es una técnica de organización que se produce entre:",
+        opciones: ["Órganos jerárquicamente relacionados.", "Entes territoriales distintos.", "Diferentes departamentos ministeriales.", "Órganos periféricos del Estado."],
+        respuestaCorrecta: "Entes territoriales distintos."
+    },
+    {
+        pregunta: "96. ¿Qué función corresponde a los **Subdelegados del Gobierno**?",
+        opciones: ["Representar al Gobierno en las Comunidades Autónomas.", "Dirigir la Administración General del Estado en la provincia.", "Coordinar la Administración Periférica.", "Ejercer la Alta Inspección."],
+        respuestaCorrecta: "Dirigir la Administración General del Estado en la provincia."
+    },
+    {
+        pregunta: "97. ¿Qué implica la **cláusula de supletoriedad** del Derecho estatal (Art. 149.3)?",
+        opciones: ["Que el Derecho estatal prevalece sobre el autonómico.", "Que el Derecho estatal se aplica en defecto de Derecho autonómico.", "Que el Derecho estatal es superior jerárquicamente.", "Que el Derecho autonómico debe armonizar con el estatal."],
+        respuestaCorrecta: "Que el Derecho estatal se aplica en defecto de Derecho autonómico."
+    },
+    {
+        pregunta: "98. El sistema de fuentes del Derecho en el ámbito autonómico se rige por el principio de:",
+        opciones: ["Jerarquía.", "Competencia.", "Prevalencia.", "Legalidad."],
+        respuestaCorrecta: "Competencia."
+    },
+    {
+        pregunta: "99. ¿Cuál de estos NO es un principio de la acción exterior de la Administración del Estado?",
+        opciones: ["Principio de unidad.", "Principio de coordinación.", "Principio de lealtad constitucional.", "Principio de soberanía."],
+        respuestaCorrecta: "Principio de soberanía."
+    },
+    {
+        pregunta: "100. El **Recurso de Amparo** protege los derechos de la Sección 1ª del Capítulo II del Título I, pero NO protege los derechos recogidos en el Capítulo:",
+        opciones: ["Capítulo I.", "Capítulo II, Sección 2ª.", "Capítulo III.", "Capítulo IV."],
+        respuestaCorrecta: "Capítulo III."
+    },
+    {
+        pregunta: "101. ¿Qué tipo de acto puede ser objeto de **recurso de alzada**?",
+        opciones: ["Actos que ponen fin a la vía administrativa.", "Actos de trámite cualificado.", "Actos de mero trámite.", "Actos definitivos que no ponen fin a la vía administrativa."],
+        respuestaCorrecta: "Actos definitivos que no ponen fin a la vía administrativa."
+    },
+    {
+        pregunta: "102. El **recurso de reposición** es un recurso:",
+        opciones: ["Potestativo.", "Obligatorio.", "Jerárquico.", "Especial."],
+        respuestaCorrecta: "Potestativo."
+    },
+    {
+        pregunta: "103. ¿Qué implica el principio de **ejecutividad** de los actos administrativos?",
+        opciones: ["Que deben ser cumplidos por los ciudadanos.", "Que la Administración puede imponer su cumplimiento forzoso.", "Que el acto es eficaz desde su notificación.", "Que el acto es válido."],
+        respuestaCorrecta: "Que deben ser cumplidos por los ciudadanos."
+    },
+    {
+        pregunta: "104. El **silencio administrativo** en los procedimientos iniciados a solicitud del interesado se considera, por regla general, de carácter:",
+        opciones: ["Estimatorio.", "Desestimatorio.", "Nulo.", "Suspensivo."],
+        respuestaCorrecta: "Estimatorio."
+    },
+    {
+        pregunta: "105. ¿Cuál es el plazo máximo para dictar y notificar la resolución expresa en un procedimiento administrativo, si no hay Ley que lo fije?",
+        opciones: ["Un mes.", "Dos meses.", "Tres meses.", "Seis meses."],
+        respuestaCorrecta: "Tres meses."
+    },
+    {
+        pregunta: "106. El **Plan Hidrológico Nacional** es un ejemplo de competencia:",
+        opciones: ["Exclusiva del Estado.", "Compartida con las CCAA.", "Exclusiva de las CCAA.", "De colaboración con los municipios."],
+        respuestaCorrecta: "Exclusiva del Estado."
+    },
+    {
+        pregunta: "107. ¿Qué órgano de la CCAA representa al Estado a nivel autonómico?",
+        opciones: ["El Presidente de la CCAA.", "La Asamblea Legislativa.", "El Delegado del Gobierno.", "El Consejo de Gobierno."],
+        respuestaCorrecta: "El Delegado del Gobierno."
+    },
+    {
+        pregunta: "108. ¿Cuál es la institución que debe informar preceptivamente sobre los Anteproyectos de Ley y los Proyectos de Decretos Legislativos?",
+        opciones: ["El Consejo de Estado.", "El Consejo General del Poder Judicial.", "El Tribunal de Cuentas.", "El Tribunal Constitucional."],
+        respuestaCorrecta: "El Consejo de Estado."
+    },
+    {
+        pregunta: "109. ¿Qué Ley debe aprobar el Gobierno para que el Estado pueda transferir o delegar facultades a las Comunidades Autónomas?",
+        opciones: ["Ley Ordinaria.", "Ley Orgánica (Artículo 150.2).", "Ley de Bases.", "Decreto Legislativo."],
+        respuestaCorrecta: "Ley Orgánica (Artículo 150.2)."
+    },
+    {
+        pregunta: "110. La **autonomía financiera** de las CCAA se regula en el Artículo:",
+        opciones: ["156", "157", "158", "159"],
+        respuestaCorrecta: "156"
+    },
+    {
+        pregunta: "111. ¿Qué principio rige la actuación de los Jueces y Magistrados, según el artículo 117 de la CE?",
+        opciones: ["Sometimiento a la Constitución y a la Ley.", "Responsabilidad penal.", "Incompatibilidad política.", "Objetividad en la impartición."],
+        respuestaCorrecta: "Sometimiento a la Constitución y a la Ley."
+    },
+    {
+        pregunta: "112. ¿Cuál es el ámbito territorial de la Ley Autonómica?",
+        opciones: ["Todo el territorio nacional.", "Solo el territorio de la CCAA.", "El territorio de la CCAA y los municipios limítrofes.", "Las competencias transferidas por el Estado."],
+        respuestaCorrecta: "Solo el territorio de la CCAA."
+    },
+    {
+        pregunta: "113. ¿Qué figura está prevista en el Artículo 154 de la CE?",
+        opciones: ["El Presidente de la CCAA.", "El Delegado del Gobierno.", "El Tribunal Superior de Justicia.", "El Consejo de Gobierno."],
+        respuestaCorrecta: "El Delegado del Gobierno."
+    },
+    {
+        pregunta: "114. ¿Cuál de los siguientes NO es un principio de la actuación del Defensor del Pueblo?",
+        opciones: ["Independencia.", "Neutralidad.", "Gratuidad.", "Jerarquía."],
+        respuestaCorrecta: "Jerarquía."
+    },
+    {
+        pregunta: "115. El **Principio de Subsidiariedad** es clave en la organización de la Unión Europea y se aplica en el Derecho interno en el ámbito de:",
+        opciones: ["La organización militar.", "La legislación laboral.", "Las competencias municipales.", "La Justicia."],
+        respuestaCorrecta: "Las competencias municipales."
+    },
+    {
+        pregunta: "116. La responsabilidad patrimonial de la Administración es:",
+        opciones: ["Objetiva.", "Subjetiva.", "Culpable.", "Solidaria."],
+        respuestaCorrecta: "Objetiva."
+    },
+    {
+        pregunta: "117. ¿Qué tipo de acto puede ser objeto de **recurso extraordinario de revisión**?",
+        opciones: ["Actos firmes en vía administrativa.", "Actos de mero trámite.", "Actos anulables.", "Actos que vulneran derechos fundamentales."],
+        respuestaCorrecta: "Actos firmes en vía administrativa."
+    },
+    {
+        pregunta: "118. El **principio de estabilidad presupuestaria** (Art. 135) obliga a las Administraciones Públicas a no incurrir en:",
+        opciones: ["Déficit estructural.", "Gasto excesivo.", "Deuda pública.", "Endeudamiento privado."],
+        respuestaCorrecta: "Déficit estructural."
+    },
+    {
+        pregunta: "119. ¿Cuál de estos órganos puede ser utilizado como técnica de cooperación **vertical** (Estado-CCAA)?",
+        opciones: ["Mancomunidad de Municipios.", "Consorcio entre municipios vecinos.", "Comisión Bilateral de Cooperación.", "Agrupación de Comarcas."],
+        respuestaCorrecta: "Comisión Bilateral de Cooperación."
+    },
+    {
+        pregunta: "120. ¿Qué técnica permite a una Administración realizar actuaciones propias de otra, previa autorización de esta?",
+        opciones: ["La delegación de competencias.", "La encomienda de gestión.", "La transferencia de titularidad.", "La coordinación forzosa."],
+        respuestaCorrecta: "La encomienda de gestión."
     }
 ];
 
 /**
  * =========================================================
- * EXPORTACIÓN: ESTRUCTURA PRINCIPAL DE TEMAS (CRÍTICO)
+ * ESTRUCTURA PRINCIPAL DE TEMAS (CRÍTICO)
  * =========================================================
  * Objeto principal 'temas' que enlaza la aplicación con los datos.
  */
@@ -1724,3 +1134,4 @@ const temas = {
         preguntas: tema2_preguntas
     }
 };
+
