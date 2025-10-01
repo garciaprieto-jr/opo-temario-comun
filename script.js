@@ -115,9 +115,11 @@ function mostrarExamenCompleto(){
         `;
     }).join('');
 
-    // Asegurar que el botón de corrección esté visible y funcione
+    // **IMPORTANTE**: Si el botón está dentro de un <form>, debemos adjuntar el listener al formulario para prevenir el submit, o asegurarnos de que el botón sea <button type="button">.
+    // Usaremos el listener de botón como antes. 
     const btnCorregir = document.getElementById('btn-corregir');
     if(btnCorregir) {
+        // Aseguramos que el botón llama a la función corregirExamen (el preventDefault se añade en la función)
         btnCorregir.onclick = corregirExamen;
         btnCorregir.style.display = 'block';
     }
@@ -127,7 +129,12 @@ function mostrarExamenCompleto(){
  * Procesa las respuestas, calcula la nota con penalización (3 fallos = 1 acierto).
  * IMPORTANTE: SÓLO RESTAN LAS RESPUESTAS ELEGIDAS INCORRECTAMENTE.
  */
-function corregirExamen(){
+function corregirExamen(event){
+    // **FIX CRÍTICO 1**: Prevenir el envío del formulario si el botón está dentro de uno, evitando que la página se recargue.
+    if(event && typeof event.preventDefault === 'function') {
+        event.preventDefault();
+    }
+    
     let correctas = 0;           // C: Aciertos
     let fallosPuntuables = 0;    // W: Respuestas elegidas que son incorrectas (penalizan)
     let sinResponder = 0;        // U: Preguntas no contestadas (no penalizan)
@@ -170,9 +177,6 @@ function corregirExamen(){
     // 2. Calcular la nota sobre 10. Math.max(0, ...) asegura que la nota nunca sea negativa.
     const notaFinal = Math.max(0, (aciertosNetos / total) * 10);
     
-    // Los fallos totales para la visualización (Fallos elegidos incorrectamente + Sin Responder)
-    const fallosTotalesVisual = fallosPuntuables + sinResponder;
-
     mostrarResultados(
         notaFinal, 
         correctas, 
@@ -189,20 +193,20 @@ function corregirExamen(){
 }
 
 /**
- * Muestra los resultados finales y la corrección detallada.
- * Se han añadido los parámetros fallosElegidos, noContestadas y penalizacionPuntos para el detalle.
+ * Muestra los resultados finales y la corrección detallada, haciendo scroll al final.
  */
 function mostrarResultados(nota, correctas, fallosElegidos, noContestadas, penalizacionPuntos, total, detalles){
-    document.getElementById('examen').style.display = 'none';
+    // Hacemos que el contenedor de examen sea 'block' para que el scroll funcione correctamente sobre toda la página si no queremos ocultar el examen.
     document.getElementById('contenedor-resultados').style.display = 'block';
     
     // --- 1. ACTUALIZAR EL RESUMEN DE RESULTADOS DETALLADO ---
     
-    // Seleccionar el contenedor principal del resumen (asumo que existe en index.html)
-    const resumenContainer = document.getElementById('contenedor-resultados').querySelector('.resumen-resultados');
+    // Seleccionar el contenedor principal del resumen
+    const resumenContainer = document.getElementById('contenedor-resultados');
     
     // Construir el nuevo contenido HTML con el desglose
     const resumenHTML = `
+        <h2>Resultados del Examen</h2>
         <div class="resumen-resultados">
             <h3>Puntuación Final: <span class="nota" id="resultado-nota">${nota.toFixed(2)}</span>/10</h3>
             <p>Preguntas Totales: <strong>${total}</strong></p>
@@ -218,18 +222,15 @@ function mostrarResultados(nota, correctas, fallosElegidos, noContestadas, penal
             <p>Penalización (1/3 por fallo): <strong>-${penalizacionPuntos.toFixed(2)}</strong> puntos.</p>
             <p>Netas antes de nota/10: <strong>${(correctas - penalizacionPuntos).toFixed(2)}</strong> puntos.</p>
         </div>
+
+        <button id="btn-reiniciar-selector" onclick="mostrarSelectorTemas()">Volver al Selector de Temas</button>
+
+        <h3>Detalle de la Corrección</h3>
+        <div id="detalles-correccion"></div>
     `;
 
-    // Reemplazar o actualizar el contenido del resumen
-    if (resumenContainer) {
-        resumenContainer.innerHTML = resumenHTML;
-    } else {
-        // Fallback: Si no existe el contenedor específico, actualizar los IDs existentes.
-        document.getElementById('resultado-nota').textContent = nota.toFixed(2);
-        document.getElementById('resultado-correctas').textContent = correctas;
-        document.getElementById('resultado-fallos').textContent = fallosElegidos + noContestadas; // Mostrar el total de fallos/sin responder
-        document.getElementById('resultado-total').textContent = total;
-    }
+    // Reemplazar el contenido completo del contenedor de resultados
+    resumenContainer.innerHTML = resumenHTML;
 
 
     // --- 2. ACTUALIZAR DETALLES DE CORRECCIÓN ---
@@ -273,6 +274,9 @@ function mostrarResultados(nota, correctas, fallosElegidos, noContestadas, penal
             </div>
         `;
     }).join('');
+    
+    // **FIX CRÍTICO 2**: Hacer scroll hasta el contenedor de resultados (que ahora está al final de la página)
+    resumenContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
 
@@ -291,9 +295,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
     
-    // Listener para el botón de Reiniciar/Volver al selector
-    const btnReiniciar = document.getElementById('btn-reiniciar-selector');
-    if(btnReiniciar) {
-        btnReiniciar.addEventListener('click', mostrarSelectorTemas);
-    }
+    // Nota: El listener para 'btn-reiniciar-selector' se ha movido dentro de mostrarResultados,
+    // ya que el contenido de #contenedor-resultados se regenera completamente.
 });
