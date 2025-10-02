@@ -1134,4 +1134,7 @@ const temas = {
         preguntas: tema2_preguntas
     }
 };
-
+'tema3': { 
+        titulo: 'Tema 3.- El Gobierno y la Administración.(120 Preguntas)', 
+        preguntas: tema3_preguntas 
+    }
