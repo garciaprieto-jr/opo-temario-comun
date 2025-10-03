@@ -57,12 +57,17 @@ function cargarRespuestasLocalmente(preguntasNuevas){
 
 /**
  * Muestra el selector de temas y oculta el examen/resultados.
+ * También reinicia el estado de la aplicación.
  */
 function mostrarSelectorTemas(){
     document.getElementById('selector-temas').style.display = 'block';
     document.getElementById('examen').style.display = 'none';
     document.getElementById('contenedor-resultados').style.display = 'none';
     
+    // Volver a mostrar el botón de corregir (si estaba oculto)
+    const btnCorregir = document.getElementById('btn-corregir');
+    if (btnCorregir) btnCorregir.style.display = 'block';
+
     // Limpiar el contenedor del examen anterior
     const cont = document.getElementById('contenedor-preguntas-completas');
     if(cont) cont.innerHTML = '';
@@ -78,8 +83,9 @@ function mostrarSelectorTemas(){
  * Inicia el examen para un tema específico, selecciona las preguntas y carga respuestas guardadas.
  */
 function iniciarExamen(temaId){
+    // 'temas' debe estar definido en data.js
     if(typeof temas === 'undefined' || !temas[temaId]){
-        alert('Error: no se han cargado los datos. Revisa data.js');
+        alert('Error: no se han cargado los datos o el tema no existe. Revisa data.js');
         return;
     }
 
@@ -98,6 +104,7 @@ function iniciarExamen(temaId){
     document.getElementById('examen').style.display = 'block';
     document.getElementById('titulo-examen').textContent = temaActualNombre;
     document.getElementById('contenedor-resultados').style.display = 'none';
+    document.getElementById('btn-corregir').style.display = 'block'; // Asegura que se muestre al iniciar
 }
 
 /**
@@ -140,13 +147,14 @@ function renderizarPreguntas(){
 }
 
 /**
- * Registra la respuesta seleccionada por el usuario.
+ * Registra la respuesta seleccionada por el usuario y la guarda.
  */
 function seleccionarRespuesta(preguntaIndex, opcionIndex){
+    // El índice de la opción (0, 1, 2, 3) se guarda como respuesta
     respuestasUsuario[preguntaIndex] = opcionIndex;
-    // --- ¡ESTA ES LA CORRECCIÓN CLAVE! ---
+    
+    // ** CORRECCIÓN: Llamada completa a la función de guardado **
     guardarRespuestasLocalmente(); 
-    // --- FIN DE LA CORRECCIÓN ---
 }
 
 /**
@@ -155,7 +163,6 @@ function seleccionarRespuesta(preguntaIndex, opcionIndex){
 function corregirExamen(){
     let correctas = 0;
     const preguntasContainer = document.getElementById('contenedor-preguntas-completas');
-    const resultadosHTML = [];
     
     // 1. Iterar sobre las preguntas para la corrección
     preguntasActuales.forEach((pregunta, index) => {
@@ -184,7 +191,7 @@ function corregirExamen(){
             feedbackHTML += `<p class="fuente">Fuente: ${pregunta.fuente}</p>`;
         }
 
-        // Marcar la pregunta en el examen
+        // Marcar la pregunta en el examen y deshabilitar opciones
         const preguntaElement = preguntasContainer.querySelector(`#pregunta-${index}`);
         if(preguntaElement){
             preguntaElement.classList.add(claseCorreccion);
@@ -220,10 +227,10 @@ function corregirExamen(){
 
     // 4. Desplazarse al contenedor de resultados (que ahora está al final del examen)
     resumenContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
-}
 
-// Renombrar la función mostrarResults a mostrarResultados para evitar errores de referencia
-const mostrarResultados = corregirExamen;
+    // 5. Limpiar el estado de guardado local, ya que ya está corregido
+    localStorage.removeItem(KEY_LOCAL_STORAGE);
+}
 
 
 // ----------------------------------------------------------------------
@@ -233,17 +240,16 @@ document.addEventListener('DOMContentLoaded', () => {
     // Inicializa el estado de la aplicación mostrando el selector de temas.
     mostrarSelectorTemas();
 
-    // Adjunta los listeners a los botones de inicio de examen.
-    // Esto hace que los botones del selector de temas funcionen.
+    // Adjunta los listeners a los botones de inicio de examen (.btn-tema).
     document.querySelectorAll('.btn-tema').forEach(button => {
         button.addEventListener('click', (e) => {
-            // Se usa e.currentTarget para asegurar que siempre obtenga el botón
+            // Asegúrate de usar e.currentTarget para obtener el botón que tiene el data-tema
             const temaId = e.currentTarget.dataset.tema;
             iniciarExamen(temaId);
         });
     });
 
-    // CORRECCIÓN: Agregar listener para el botón de corregir examen.
+    // Listener para el botón de corregir examen.
     const btnCorregir = document.getElementById('btn-corregir');
     if (btnCorregir) {
         btnCorregir.addEventListener('click', (e) => {
@@ -252,7 +258,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // CORRECCIÓN: Agregar listener para el botón de volver al selector
+    // Listener para el botón de volver al selector.
     const btnReiniciar = document.getElementById('btn-reiniciar-selector');
     if (btnReiniciar) {
         btnReiniciar.addEventListener('click', mostrarSelectorTemas);
