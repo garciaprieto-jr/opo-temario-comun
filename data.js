@@ -170,7 +170,7 @@ const tema1_preguntas = [
     {
         pregunta: "33. El derecho a la educación (Art. 27) establece la libertad de enseñanza y la obligación de los poderes públicos de garantizarla. ¿Hasta qué edad es obligatoria y gratuita la educación básica?",
         opciones: ["Hasta los 14 años.", "Hasta la mayoría de edad.", "Hasta la edad que fije la ley.", "Hasta los 16 años."],
-        respuestaCorrecta: "Hasta la edad que fije la ley."
+        respuestaCorrecta: "Hasta los 16 años."
     },
     {
         pregunta: "34. ¿En qué artículo se reconoce el derecho a la libertad sindical?",
@@ -385,7 +385,7 @@ const tema1_preguntas = [
     {
         pregunta: "76. ¿Qué Título de la CE se dedica a la Corona?",
         opciones: ["Título Preliminar.", "Título I.", "Título II.", "Título III."],
-        respuestaCorrecta: "Título II"
+        respuestaCorrecta: "Título II."
     },
     {
         pregunta: "77. La suspensión general e indiscriminada de los derechos fundamentales solo puede producirse en los siguientes estados, declarados por el Gobierno, salvo uno. ¿Cuál?",
