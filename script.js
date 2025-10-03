@@ -4,9 +4,11 @@ let preguntasActuales = [];
 let respuestasUsuario = [];
 let temaActualNombre = '';
 const CANTIDAD_PREGUNTAS = 25;
+const KEY_LOCAL_STORAGE = 'examen_respuestas';
 
 /**
  * Función para mezclar un array y seleccionar las primeras N preguntas.
+ * (Algoritmo de Fisher-Yates)
  */
 function mezclarYSeleccionar(array, n){
     const copia = [...array];
@@ -15,6 +17,42 @@ function mezclarYSeleccionar(array, n){
         [copia[i], copia[j]] = [copia[j], copia[i]];
     }
     return copia.slice(0, Math.min(n, copia.length));
+}
+
+/**
+ * Guarda el estado actual de las respuestas del usuario en el localStorage.
+ */
+function guardarRespuestasLocalmente(){
+    const estado = {
+        tema: temaActualNombre,
+        preguntas: preguntasActuales.map(p => p.pregunta), // Solo guarda la pregunta para referencia
+        respuestas: respuestasUsuario
+    };
+    localStorage.setItem(KEY_LOCAL_STORAGE, JSON.stringify(estado));
+}
+
+/**
+ * Carga respuestas guardadas del localStorage si coinciden con el tema actual.
+ */
+function cargarRespuestasLocalmente(preguntasNuevas){
+    const stored = localStorage.getItem(KEY_LOCAL_STORAGE);
+    if(stored){
+        const estadoGuardado = JSON.parse(stored);
+        
+        // Comprueba que sea el mismo tema Y que las preguntas coincidan (esto es clave si son aleatorias)
+        const preguntasCoinciden = estadoGuardado.preguntas.every((p, i) => p === preguntasNuevas[i].pregunta);
+
+        if(estadoGuardado.tema === temaActualNombre && preguntasCoinciden){
+            // Si el tema y las preguntas coinciden, cargamos las respuestas.
+            respuestasUsuario = estadoGuardado.respuestas;
+        } else {
+            // Si no coinciden, limpiamos el guardado (no tiene sentido)
+            localStorage.removeItem(KEY_LOCAL_STORAGE);
+            respuestasUsuario = Array(preguntasNuevas.length).fill(null);
+        }
+    } else {
+        respuestasUsuario = Array(preguntasNuevas.length).fill(null);
+    }
 }
 
 /**
@@ -28,6 +66,12 @@ function mostrarSelectorTemas(){
     // Limpiar el contenedor del examen anterior
     const cont = document.getElementById('contenedor-preguntas-completas');
     if(cont) cont.innerHTML = '';
+
+    // Limpiar el localStorage y el estado
+    localStorage.removeItem(KEY_LOCAL_STORAGE);
+    preguntasActuales = [];
+    respuestasUsuario = [];
+    temaActualNombre = '';
 }
 
 /**
@@ -39,44 +83,60 @@ function iniciarExamen(temaId){
         return;
     }
 
-    const preguntasTema = temas[temaId].preguntas;
-    // Seleccionar preguntas aleatorias
-    preguntasActuales = mezclarYSeleccionar(preguntasTema, CANTIDAD_PREGUNTAS);
-    respuestasUsuario = new Array(preguntasActuales.length).fill(null);
-    temaActualNombre = temas[temaId].titulo;
+    const tema = temas[temaId];
+    temaActualNombre = tema.titulo;
 
-    // Actualizar la interfaz
-    document.getElementById('titulo-examen').textContent = `Examen Aleatorio de ${preguntasActuales.length} preguntas — ${temaActualNombre}`;
+    // 1. Selecciona y mezcla las preguntas
+    preguntasActuales = mezclarYSeleccionar(tema.preguntas, CANTIDAD_PREGUNTAS);
+
+    // 2. Carga respuestas guardadas (o inicializa el array)
+    cargarRespuestasLocalmente(preguntasActuales);
+
+    // 3. Renderiza las preguntas y oculta el selector
+    renderizarPreguntas();
     document.getElementById('selector-temas').style.display = 'none';
     document.getElementById('examen').style.display = 'block';
-    // Ocultar resultados de un intento anterior
-    document.getElementById('contenedor-resultados').style.display = 'none'; 
-
-    // Intentar cargar respuestas guardadas (sesión previa)
-    const clave = `quiz_${temaId}`;
-    const almacenadas = localStorage.getItem(clave);
-    if(almacenadas){
-        try{
-            const obj = JSON.parse(almacenadas);
-            // Comprobar que el número de preguntas coincide con el de la sesión anterior
-            if(Array.isArray(obj) && obj.length === preguntasActuales.length){
-                respuestasUsuario = obj;
-            }
-        }catch(e){/* Ignorar errores de parseo */ }
-    }
-
-    mostrarExamenCompleto();
+    document.getElementById('titulo-examen').textContent = temaActualNombre;
+    document.getElementById('contenedor-resultados').style.display = 'none';
 }
 
 /**
- * Guarda el estado actual de las respuestas del usuario en el localStorage.
+ * Genera el HTML de la pregunta y sus opciones.
  */
-function guardarRespuestasLocalmente(){
-    const temaId = Object.keys(temas).find(id => temas[id].titulo === temaActualNombre);
-    if(temaId) {
-        const clave = `quiz_${temaId}`;
-        localStorage.setItem(clave, JSON.stringify(respuestasUsuario));
-    }
+function generarHTMLPregunta(pregunta, index){
+    let opcionesHTML = pregunta.opciones.map((opcion, i) => {
+        const isChecked = respuestasUsuario[index] === i;
+        const checkedAttr = isChecked ? 'checked' : '';
+        const id = `p${index}-op${i}`;
+        
+        return `
+            <label for="${id}" class="opcion">
+                <input type="radio" id="${id}" name="pregunta-${index}" value="${i}" ${checkedAttr} 
+                       onclick="seleccionarRespuesta(${index}, ${i})">
+                <span>${opcion}</span>
+            </label>
+        `;
+    }).join('');
+
+    return `
+        <div class="pregunta" id="pregunta-${index}">
+            <h3>${index + 1}. ${pregunta.pregunta}</h3>
+            <div class="opciones">
+                ${opcionesHTML}
+            </div>
+        </div>
+    `;
+}
+
+/**
+ * Renderiza todas las preguntas en el contenedor principal.
+ */
+function renderizarPreguntas(){
+    const contenedor = document.getElementById('contenedor-preguntas-completas');
+    if(!contenedor) return;
+
+    const html = preguntasActuales.map(generarHTMLPregunta).join('');
+    contenedor.innerHTML = html;
 }
 
 /**
@@ -84,209 +144,101 @@ function guardarRespuestasLocalmente(){
  */
 function seleccionarRespuesta(preguntaIndex, opcionIndex){
     respuestasUsuario[preguntaIndex] = opcionIndex;
-    guardarRespuestasLocalmente();
+    // --- ¡ESTA ES LA CORRECCIÓN CLAVE! ---
+    guardarRespuestasLocalmente(); 
+    // --- FIN DE LA CORRECCIÓN ---
 }
 
 /**
- * Renderiza el HTML de todas las preguntas con sus opciones.
+ * Muestra los resultados del examen al corregir.
  */
-function mostrarExamenCompleto(){
-    const contenedor = document.getElementById('contenedor-preguntas-completas');
-    if (!contenedor) return;
-
-    contenedor.innerHTML = preguntasActuales.map((p, pIndex) => {
-        const opcionesHTML = p.opciones.map((opcion, oIndex) => {
-            const id = `p${pIndex}o${oIndex}`;
-            // Comprueba si esta opción fue la seleccionada previamente
-            const checked = respuestasUsuario[pIndex] === oIndex ? 'checked' : '';
-            return `
-                <div class="opcion">
-                    <input type="radio" id="${id}" name="pregunta_${pIndex}" value="${oIndex}" ${checked} 
-                           onclick="seleccionarRespuesta(${pIndex}, ${oIndex})">
-                    <label for="${id}">${opcion}</label>
-                </div>
-            `;
-        }).join('');
-
-        return `
-            <div class="card pregunta-card">
-                <p class="pregunta-texto"><strong>${pIndex + 1}.</strong> ${p.pregunta}</p>
-                <div class="opciones-container">${opcionesHTML}</div>
-            </div>
-        `;
-    }).join('');
-
-    const btnCorregir = document.getElementById('btn-corregir');
-    if(btnCorregir) {
-        btnCorregir.onclick = corregirExamen;
-        btnCorregir.style.display = 'block';
-    }
-}
-
-/**
- * Procesa las respuestas, calcula la nota con penalización (3 fallos = 1 acierto).
- * La nota final se calcula SOBRE 25.
- */
-function corregirExamen(event){
-    // FIX CRÍTICO 1: Prevenir el envío del formulario.
-    if(event && typeof event.preventDefault === 'function') {
-        event.preventDefault();
-    }
+function corregirExamen(){
+    let correctas = 0;
+    const preguntasContainer = document.getElementById('contenedor-preguntas-completas');
+    const resultadosHTML = [];
     
-    let correctas = 0;           // C: Aciertos
-    let fallosPuntuables = 0;    // W: Respuestas elegidas que son incorrectas (penalizan)
-    let sinResponder = 0;        // U: Preguntas no contestadas (no penalizan)
-    let total = preguntasActuales.length; // total = 25
-    
-    // Generar un objeto detallado de los resultados
-    const resultadosDetallados = preguntasActuales.map((p, index) => {
-        const respuestaCorrectaIndex = p.opciones.indexOf(p.respuestaCorrecta);
-        const respuestaElegidaIndex = respuestasUsuario[index];
+    // 1. Iterar sobre las preguntas para la corrección
+    preguntasActuales.forEach((pregunta, index) => {
+        const respuestaCorrecta = pregunta.respuestaCorrecta;
+        const respuestaIndex = respuestasUsuario[index]; // null si no ha respondido
+        const opcionSeleccionada = respuestaIndex !== null ? pregunta.opciones[respuestaIndex] : null;
+
         let esCorrecta = false;
+        let claseCorreccion = 'sin-contestar';
+        let feedbackHTML = `<p><strong>Respuesta Correcta:</strong> ${respuestaCorrecta}</p>`;
         
-        if(respuestaElegidaIndex !== null){
-            if(respuestaElegidaIndex === respuestaCorrectaIndex){
-                esCorrecta = true;
-                correctas++;
-            } else {
-                fallosPuntuables++; 
-            }
+        if (opcionSeleccionada === respuestaCorrecta) {
+            esCorrecta = true;
+            correctas++;
+            claseCorreccion = 'correcta';
+            feedbackHTML = `<p class="verde"><strong>¡Correcto!</strong></p>` + feedbackHTML;
+        } else if (respuestaIndex !== null) {
+            claseCorreccion = 'incorrecta';
+            feedbackHTML = `<p class="rojo"><strong>Incorrecto. Tu respuesta:</strong> ${opcionSeleccionada}</p>` + feedbackHTML;
         } else {
-            sinResponder++; 
+            feedbackHTML = `<p class="gris"><strong>Sin contestar.</strong></p>` + feedbackHTML;
         }
         
-        return {
-            pregunta: p.pregunta,
-            opciones: p.opciones,
-            respuestaCorrecta: p.respuestaCorrecta,
-            respuestaElegidaIndex: respuestaElegidaIndex,
-            esCorrecta: esCorrecta,
-            indexCorrecta: respuestaCorrectaIndex
-        };
+        // Añadir fuente si existe
+        if (pregunta.fuente && pregunta.fuente.length > 0) {
+            feedbackHTML += `<p class="fuente">Fuente: ${pregunta.fuente}</p>`;
+        }
+
+        // Marcar la pregunta en el examen
+        const preguntaElement = preguntasContainer.querySelector(`#pregunta-${index}`);
+        if(preguntaElement){
+            preguntaElement.classList.add(claseCorreccion);
+            
+            // Deshabilitar todas las opciones después de corregir
+            preguntaElement.querySelectorAll('input[type="radio"]').forEach(radio => {
+                radio.disabled = true;
+            });
+
+            // Mostrar el feedback debajo de la pregunta
+            const feedbackDiv = document.createElement('div');
+            feedbackDiv.classList.add('feedback-correccion');
+            feedbackDiv.innerHTML = feedbackHTML;
+            preguntaElement.appendChild(feedbackDiv);
+        }
     });
 
-    // 1. APLICAR LA REGLA DE OPOSICIÓN: 3 fallos anulan 1 acierto.
-    const penalizacion = fallosPuntuables / 3;
-    const aciertosNetos = correctas - penalizacion;
-    
-    // 2. CALCULAR LA NOTA SOBRE 25.
-    const notaFinal = Math.max(0, aciertosNetos); 
-    
-    mostrarResultados(
-        notaFinal, 
-        correctas, 
-        fallosPuntuables, // Fallos Elegidos (penalizan)
-        sinResponder,     // No Contestadas (no penalizan)
-        penalizacion,     // Puntuación Negativa
-        total, 
-        resultadosDetallados
-    );
+    // 2. Cálculo de resultados y actualización del resumen
+    const fallos = preguntasActuales.length - correctas;
+    const nota = (correctas * 10) / preguntasActuales.length;
+    const apto = nota >= 5.0; // Asumiendo un 5 como aprobado
 
-    // Limpiar respuestas guardadas tras la corrección
-    const temaId = Object.keys(temas).find(id => temas[id].titulo === temaActualNombre);
-    if(temaId) localStorage.removeItem(`quiz_${temaId}`);
-}
+    document.getElementById('resumen-correctas').textContent = correctas;
+    document.getElementById('resumen-fallos').textContent = fallos;
+    document.getElementById('resumen-nota').textContent = nota.toFixed(2);
+    document.getElementById('resumen-estado').textContent = apto ? 'APTO' : 'NO APTO';
+    document.getElementById('resumen-estado').className = apto ? 'apto' : 'no-apto';
 
-/**
- * Muestra los resultados finales y la corrección detallada, haciendo scroll al final.
- */
-function mostrarResults(nota, correctas, fallosElegidos, noContestadas, penalizacionPuntos, total, detalles){
-    // Hacemos visible el contenedor de resultados (que está al final del examen).
+    // 3. Ocultar el botón de corregir y mostrar el resumen
+    document.getElementById('btn-corregir').style.display = 'none';
     const resumenContainer = document.getElementById('contenedor-resultados');
     resumenContainer.style.display = 'block';
 
-    // --- 1. ACTUALIZAR EL RESUMEN DE RESULTADOS DETALLADO ---
-    
-    // Construir el nuevo contenido HTML con el desglose.
-    const resumenHTML = `
-        <h2>Resultados del Examen</h2>
-        <div class="resumen-resultados">
-            <h3>Puntuación Final: <span class="nota" id="resultado-nota">${nota.toFixed(2)}</span>/<span style="font-size: 0.7em;">25</span></h3>
-            <p>Preguntas Totales: <strong>${total}</strong></p>
-            <hr style="border-top: 1px dashed #ccc;">
-            
-            <p style="color: var(--success);">✅ Aciertos: <strong>${correctas}</strong></p>
-            <p style="color: var(--danger);">❌ Fallos Elegidos: <strong>${fallosElegidos}</strong></p>
-            <p style="color: var(--muted);">➖ No Contestadas: <strong>${noContestadas}</strong></p>
-            <hr style="border-top: 1px dashed #ccc; margin-top: 15px; margin-bottom: 15px;">
-
-            <h4>Cálculo de la Nota (Netas)</h4>
-            <p>Puntuación Bruta (Aciertos): <strong>${correctas}</strong> puntos.</p>
-            <p>Penalización (1/3 por fallo): <strong>-${penalizacionPuntos.toFixed(2)}</strong> puntos.</p>
-            <p>Netas Finales (Nota/25): <strong>${(correctas - penalizacionPuntos).toFixed(2)}</strong> puntos.</p>
-        </div>
-
-        <button id="btn-reiniciar-selector" onclick="mostrarSelectorTemas()">Volver al Selector de Temas</button>
-
-        <h3>Detalle de la Corrección</h3>
-        <div id="detalles-correccion"></div>
-    `;
-
-    // Reemplazar el contenido completo del contenedor de resultados
-    resumenContainer.innerHTML = resumenHTML;
-
-
-    // --- 2. ACTUALIZAR DETALLES DE CORRECCIÓN ---
-    
-    const contenedorDetalles = document.getElementById('detalles-correccion');
-    if (!contenedorDetalles) return;
-
-    contenedorDetalles.innerHTML = detalles.map((d, index) => {
-        // Determinar la clase del card
-        const clase = d.esCorrecta ? 'correcta' : (d.respuestaElegidaIndex !== null ? 'fallo' : 'no-contestada');
-        // Determinar el icono
-        let icono = d.esCorrecta ? '✅' : '❌';
-        if (d.respuestaElegidaIndex === null) {
-            icono = '➖'; // Icono para no contestada
-        }
-        
-        const opcionesHTML = d.opciones.map((opcion, oIndex) => {
-            let marca = '';
-            const esRespuestaElegida = oIndex === d.respuestaElegidaIndex;
-            const esRespuestaCorrecta = oIndex === d.indexCorrecta;
-
-            if (esRespuestaCorrecta) {
-                marca = ' (Respuesta Correcta)';
-            }
-            // Marcar la opción elegida por el usuario si era incorrecta
-            if (esRespuestaElegida && !d.esCorrecta) {
-                marca = ' (Tu Respuesta: INCORRECTA)';
-            }
-            // Etiquetar si no se contestó
-            if (d.respuestaElegidaIndex === null && esRespuestaCorrecta) {
-                 marca = ' (No Contestada)';
-            }
-            
-            return `<li class="${esRespuestaCorrecta ? 'correcta-opcion' : ''} ${esRespuestaElegida && !d.esCorrecta ? 'fallo-opcion' : ''}">${opcion}${marca}</li>`;
-        }).join('');
-
-        return `
-            <div class="card ${clase}">
-                <p><strong>${index + 1}. ${icono} ${d.pregunta}</strong></p>
-                <ul class="opciones-correccion">${opcionesHTML}</ul>
-            </div>
-        `;
-    }).join('');
-    
-    // **ACCION CRÍTICA**: Hacer scroll hasta el contenedor de resultados (que ahora está al final del examen)
+    // 4. Desplazarse al contenedor de resultados (que ahora está al final del examen)
     resumenContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
 // Renombrar la función mostrarResults a mostrarResultados para evitar errores de referencia
-const mostrarResultados = mostrarResults;
+const mostrarResultados = corregirExamen;
 
 
 // ----------------------------------------------------------------------
-// --- PUNTO DE ARRANQUE DE LA APLICACIÓN ---
+// --- PUNTO DE ARRANQUE DE LA APLICACIÓN ---\
 // ----------------------------------------------------------------------
 document.addEventListener('DOMContentLoaded', () => {
     // Inicializa el estado de la aplicación mostrando el selector de temas.
     mostrarSelectorTemas();
 
     // Adjunta los listeners a los botones de inicio de examen.
+    // Esto hace que los botones del selector de temas funcionen.
     document.querySelectorAll('.btn-tema').forEach(button => {
         button.addEventListener('click', (e) => {
-            const temaId = e.target.dataset.tema;
+            // Se usa e.currentTarget para asegurar que siempre obtenga el botón
+            const temaId = e.currentTarget.dataset.tema;
             iniciarExamen(temaId);
         });
     });
