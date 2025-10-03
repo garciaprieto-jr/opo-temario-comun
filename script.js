@@ -290,4 +290,19 @@ document.addEventListener('DOMContentLoaded', () => {
             iniciarExamen(temaId);
         });
     });
+
+    // CORRECCIÓN: Agregar listener para el botón de corregir examen.
+    const btnCorregir = document.getElementById('btn-corregir');
+    if (btnCorregir) {
+        btnCorregir.addEventListener('click', (e) => {
+            e.preventDefault(); // Evita el envío de formulario por defecto
+            corregirExamen();
+        });
+    }
+
+    // CORRECCIÓN: Agregar listener para el botón de volver al selector
+    const btnReiniciar = document.getElementById('btn-reiniciar-selector');
+    if (btnReiniciar) {
+        btnReiniciar.addEventListener('click', mostrarSelectorTemas);
+    }
 });
