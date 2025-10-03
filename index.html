@@ -1,147 +1,167 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Asistente de Exámenes - Oposiciones</title>
-    <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asistente de Examen - Oposiciones</title>
+    
     <style>
-        /* Estilos generales */
-        :root{
-            --primary: #007bff;
-            --muted: #6c757d;
-            --bg: #f4f7f6;
-            --card: #ffffff;
-            --success: #28a745;
-            --danger: #dc3545;
-            --info: #17a2b8;
-        }
-        html, body { 
-            height: 100%; 
-            line-height: 1.6;
-        }
         body {
-            font-family: Inter, Arial, Helvetica, sans-serif;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 20px;
-            background-color: var(--bg);
-            color: #222;
-            -webkit-font-smoothing: antialiased;
-        }
-        .container {
-            max-width: 1000px;
-            margin: 24px auto;
-            padding: 0 15px;
-        }
-        h1, h2 {
-            text-align: center;
+            background-color: #f4f4f9;
             color: #333;
         }
 
-        /* Card Component */
-        .card {
-            background-color: var(--card);
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 30px;
             border-radius: 8px;
-            padding: 20px;
-            margin-bottom: 15px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        /* Botones y Selector de Temas */
-        .selector-botones {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            margin-top: 30px;
+        h1 {
+            color: #007bff;
+            text-align: center;
+            margin-bottom: 30px;
         }
-        button {
-            padding: 12px 25px;
+
+        h2 {
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+
+        /* --- Selector de Temas --- */
+        #selector-temas {
+            text-align: center;
+        }
+        
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 15px;
+            font-size: 18px;
+            color: #fff;
+            background-color: #28a745; /* Verde */
             border: none;
             border-radius: 5px;
-            font-size: 16px;
             cursor: pointer;
-            transition: background-color 0.3s ease;
-            color: var(--card);
-            background-color: var(--primary);
-        }
-        button:hover {
-            background-color: #0056b3;
+            transition: background-color 0.2s;
         }
 
-        /* Estilos del Examen (Preguntas) */
-        .pregunta-card {
-            border-left: 5px solid var(--primary);
+        .btn:hover {
+            background-color: #218838;
         }
-        .opciones-container {
-            margin-top: 15px;
+
+        /* --- Estructura de Preguntas (Examen) --- */
+        .pregunta {
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #fff;
         }
-        .opcion {
+        
+        .opciones label {
             display: flex;
             align-items: center;
             padding: 10px;
             margin-bottom: 5px;
             border-radius: 4px;
             cursor: pointer;
-            transition: background-color 0.2s;
-        }
-        .opcion:hover {
-            background-color: #f0f0f0;
-        }
-        .opcion input[type="radio"] {
-            margin-right: 10px;
-            accent-color: var(--primary);
+            border: 1px solid #eee;
+            transition: background-color 0.1s;
         }
 
-        /* Estilos de Resultados */
-        .resumen-resultados {
-            text-align: center;
-            margin-bottom: 30px;
+        .opciones label:hover {
+            background-color: #f8f9fa;
+        }
+
+        .opciones input[type="radio"] {
+            margin-right: 10px;
+        }
+        
+        /* --- Corrección y Resultados --- */
+        .feedback-correccion {
+            margin-top: 15px;
+            padding-top: 10px;
+            border-top: 1px dashed #ccc;
+        }
+
+        .pregunta.correcta {
+            background-color: #e6ffe6; /* Fondo verde claro */
+            border-color: #28a745;
+        }
+
+        .pregunta.incorrecta {
+            background-color: #ffe6e6; /* Fondo rojo claro */
+            border-color: #dc3545;
+        }
+
+        .pregunta.sin-contestar {
+            background-color: #f0f0f0; /* Fondo gris claro */
+            border-color: #6c757d;
+        }
+
+        .verde { color: #28a745; font-weight: bold; }
+        .rojo { color: #dc3545; font-weight: bold; }
+        .gris { color: #6c757d; }
+        .fuente { font-size: 0.9em; color: #6c757d; margin-top: 5px;}
+
+
+        /* Contenedor de Resultados */
+        #contenedor-resultados {
+            margin-top: 30px;
             padding: 20px;
-            background-color: #e9ecef;
             border-radius: 8px;
+            text-align: center;
+            background-color: #f8d7da; /* Color de fondo inicial */
         }
-        .resumen-resultados h3 {
-            margin: 0 0 10px;
-        }
-        .nota {
-            font-size: 3em;
+        #contenedor-resultados .apto {
+            color: #155724;
+            background-color: #d4edda;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 1.5em;
             font-weight: bold;
-            color: var(--success);
         }
-        .correcta {
-            border-left: 5px solid var(--success);
-        }
-        .fallo {
-            border-left: 5px solid var(--danger);
-        }
-        .opciones-correccion {
-            list-style: none;
-            padding: 0;
-            margin-top: 10px;
-        }
-        .opciones-correccion li {
-            padding: 5px 0;
-        }
-        .correcta-opcion {
+        #contenedor-resultados .no-apto {
+            color: #721c24;
+            background-color: #f8d7da;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 1.5em;
             font-weight: bold;
-            color: var(--success);
         }
-        .fallo-opcion {
-            font-style: italic;
-            color: var(--danger);
-        }
-        #btn-corregir {
+        
+        /* Botones de acción del examen */
+        #examen button {
+            margin-top: 20px;
             display: block;
             width: 100%;
-            margin-top: 20px;
-            background-color: var(--success);
+            padding: 12px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #btn-corregir {
+            background-color: #007bff;
+            color: white;
+            border: none;
         }
         #btn-corregir:hover {
-            background-color: #1e7e34;
+            background-color: #0056b3;
         }
         #btn-reiniciar-selector {
-            background-color: var(--muted);
-            margin-bottom: 20px;
+            background-color: #6c757d;
+            color: white;
+            border: none;
+            margin-top: 10px;
         }
         #btn-reiniciar-selector:hover {
             background-color: #5a6268;
@@ -152,45 +172,48 @@
 
     <div class="container">
         <h1>Simulador de Examen de Oposiciones</h1>
-        <hr>
 
         <div id="selector-temas">
-            <h2>Selecciona el Tema para Iniciar el Examen (25 Preguntas)</h2>
-            <div class="selector-botones">
-                <button class="btn-tema" data-tema="tema1">Tema 1: Constitución Española</button>
-                <button class="btn-tema" data-tema="tema2">Tema 2: Administración y Org. Territorial</button>
-                <button class="btn-tema" data-tema="tema3">Tema 3.- El Gobierno y la Administración.</button>
-            </div>
+            <h2>Selecciona un Tema para Iniciar la Prueba</h2>
+            
+            <button class="btn btn-tema" data-tema="tema1">
+                Tema 1: Constitución Española
+            </button>
+
+            <button class="btn btn-tema" data-tema="tema2">
+                Tema 2: Administración y Organización Territorial
+            </button>
+
+            <button class="btn btn-tema" data-tema="tema3">
+                Tema 3: El Gobierno y la Administración
+            </button>
+            
         </div>
 
         <div id="examen" style="display: none;">
             <h2 id="titulo-examen"></h2>
             
             <form id="formulario-examen">
-                <div id="contenedor-preguntas-completas"></div>
+                <div id="contenedor-preguntas-completas">
+                    </div>
+
+                <button type="button" id="btn-corregir">Corregir Examen y Ver Resultados</button>
             </form>
             
-            <button id="btn-corregir">Corregir Examen</button>
-        </div>
-
-        <div id="contenedor-resultados" style="display: none;">
-            <h2>Resultados del Examen</h2>
-            
-            <div class="resumen-resultados">
-                <h3>Nota Final: <span class="nota" id="resultado-nota"></span>/10</h3>
-                <p>Respuestas Correctas: <strong style="color: var(--success);"><span id="resultado-correctas"></span></strong> de <span id="resultado-total"></span></p>
-                <p>Respuestas Incorrectas o No Contestadas: <strong style="color: var(--danger);"><span id="resultado-fallos"></span></strong></p>
+            <div id="contenedor-resultados" style="display: none;">
+                <h3>Resumen de la Corrección</h3>
+                <p><strong>Preguntas Correctas:</strong> <span id="resumen-correctas">0</span></p>
+                <p><strong>Preguntas Falladas/Sin Contestar:</strong> <span id="resumen-fallos">0</span></p>
+                <p><strong>Nota Final (sobre 10):</strong> <span id="resumen-nota">0.00</span></p>
+                <p><strong>Resultado:</strong> <span id="resumen-estado">PENDIENTE</span></p>
+                
+                <button type="button" id="btn-reiniciar-selector">Volver a la Selección de Temas</button>
             </div>
-
-            <button id="btn-reiniciar-selector">Volver al Selector de Temas</button>
-
-            <h3>Detalle de la Corrección</h3>
-            <div id="detalles-correccion"></div>
         </div>
     </div>
 
-    <script src="data.js"></script>
-    <script src="script.js"></script>
+    <script src="data.js"></script> 
+    <script src="script.js"></script> 
 
 </body>
 </html>
