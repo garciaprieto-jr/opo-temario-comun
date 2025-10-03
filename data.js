@@ -1125,7 +1125,7 @@ const tema2_preguntas = [
  * Claves utilizadas: pregunta, opciones, respuestaCorrect
 */
 
-const preguntasTest = [
+const tema3_preguntas = [
     {
         pregunta: "¿Qué diferencia fundamental distingue a un Gobierno de la Administración, según la Constitución Española (CE)?",
         opciones: [
