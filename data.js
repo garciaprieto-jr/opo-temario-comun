@@ -2668,8 +2668,6 @@ const preguntasTest = [
     }
 ];
 
-
-
 /**
  * =========================================================
  * ESTRUCTURA PRINCIPAL DE TEMAS (CRÍTICO)
@@ -2685,8 +2683,8 @@ const temas = {
         titulo: 'Tema 2: Administración y Organización Territorial (120 Preguntas)',
         preguntas: tema2_preguntas
     },
-'tema3': { 
-        titulo: 'Tema 3.- El Gobierno y la Administración.(100 Preguntas)', 
+    'tema3': { 
+        titulo: 'Tema 3: El Gobierno y la Administración (100 Preguntas)', 
         preguntas: tema3_preguntas 
     }
 };
