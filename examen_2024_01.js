@@ -690,7 +690,7 @@ const examen_2024_01_Test = [
             "C) Riesgo alto.",
             "D) Riesgo nulo."
         ],
-        respuestaCorrecta: "B) Riesgo medio."
+        respuestaCorrecta: "A) Riesgo bajo."
     },
     {
         id: 64,
