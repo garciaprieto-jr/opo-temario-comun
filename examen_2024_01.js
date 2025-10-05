@@ -41,7 +41,7 @@ const examen_2024_01_Test = [
             "C) Para el ejercicio de una segunda actividad en el sector público, será indispensable la previa y expresa autorización de compatibilidad, que no supondrá la modificación de la jornada de trabajo, pero podrá autorizar la modificación del horario en razón del interés público.",
             "D) Para el ejercicio de una segunda actividad en el sector público, será indispensable la previa y expresa autorización de compatibilidad, que no supondrá la modificación de la jornada de trabajo y horario de los dos puestos."
         ],
-        respuestaCorrecta: "C) Para el ejercicio de una segunda actividad en el sector público, será indispensable la previa y expresa autorización de compatibilidad, que no supondrá la modificación de la jornada de trabajo, pero podrá autorizar la modificación del horario en razón del interés público."
+        respuestaCorrecta: "D) Para el ejercicio de una segunda actividad en el sector público, será indispensable la previa y expresa autorización de compatibilidad, que no supondrá la modificación de la jornada de trabajo y horario de los dos puestos."
     },
     {
         id: 5,
@@ -151,7 +151,7 @@ const examen_2024_01_Test = [
             "C) Nombramiento del personal laboral como personal funcionario en prácticas o para la realización de períodos de prueba como personal laboral fijo en el ámbito de una Administración Pública.",
             "D) La pena principal o accesoria de inhabilitación absoluta o especial para cargo público que tenga carácter firme."
         ],
-        respuestaCorrecta: "B) Invalidez permanente del trabajador o trabajadora."
+        respuestaCorrecta: "D) La pena principal o accesoria de inhabilitación absoluta o especial para cargo público que tenga carácter firme."
     },
     {
         id: 15,
@@ -184,7 +184,7 @@ const examen_2024_01_Test = [
             "C) Estarán legitimados la persona acosada y cualquier persona que sea testigo de los hechos.",
             "D) Únicamente estarán legitimados para persona acosada y sus familiares en primer grado."
         ],
-        respuestaCorrecta: "C) Estarán legitimados la persona acosada y cualquier persona que sea testigo de los hechos."
+        respuestaCorrecta: "A) La persona acosada será la única legitimada."
     },
     {
         id: 18,
@@ -580,7 +580,7 @@ const examen_2024_01_Test = [
             "C) 5º Centígrados.",
             "D) -5º Centígrados."
         ],
-        respuestaCorrecta: "C) 5º Centígrados."
+        respuestaCorrecta: "A) 0º Centígrados."
     },
     {
         id: 54,
@@ -602,7 +602,7 @@ const examen_2024_01_Test = [
             "C) Su volumen.",
             "D) Su peso."
         ],
-        respuestaCorrecta: "B) Su espesor."
+        respuestaCorrecta: "A) Su conductividad."
     },
     {
         id: 56,
@@ -679,7 +679,7 @@ const examen_2024_01_Test = [
             "C) 3%.",
             "D) 10%."
         ],
-        respuestaCorrecta: "C) 3%."
+        respuestaCorrecta: "A) 5%."
     },
     {
         id: 63,
@@ -701,7 +701,7 @@ const examen_2024_01_Test = [
             "C) 10° como mínimo.",
             "D) No necesitan tener pendiente porque están en la fachada."
         ],
-        respuestaCorrecta: "B) 5º como mínimo."
+        respuestaCorrecta: "C) 10° como mínimo."
     },
     {
         id: 65,
@@ -734,7 +734,7 @@ const examen_2024_01_Test = [
             "C) 10º como mínimo.",
             "D) No necesitan pendiente."
         ],
-        respuestaCorrecta: "A) 1º como mínimo."
+        respuestaCorrecta: "C) 10º como mínimo."
     },
     {
         id: 68,
@@ -778,7 +778,7 @@ const examen_2024_01_Test = [
             "C) R120.",
             "D) R180."
         ],
-        respuestaCorrecta: "C) R120."
+        respuestaCorrecta: "B) R90."
     },
     {
         id: 72,
@@ -822,7 +822,7 @@ const examen_2024_01_Test = [
             "C) 60 lux.",
             "D) 100 lux."
         ],
-        respuestaCorrecta: "B) 20 lux."
+        respuestaCorrecta: "D) 100 lux."
     },
     {
         id: 76,
