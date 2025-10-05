@@ -943,8 +943,8 @@ const tema2_preguntas = [
     },
     {
         pregunta: "86. ¿Qué órgano de la Administración Central dirige la política interior y exterior?",
-        opciones: ["El Rey.", "El Presidente del Gobierno.", "El Consejo de Ministros.", "Las Cortes Generales."],
-        respuestaCorrecta: "El Gobierno."
+        opciones: ["El Rey.", "El Presidente del Gobierno.", "El Consejo de Ministros. (Gobierno)", "Las Cortes Generales."],
+        respuestaCorrecta: "El Consejo de Ministros. (Gobierno)"
     },
     {
         pregunta: "87. Los **organismos autónomos** se caracterizan por:",
