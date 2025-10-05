@@ -882,7 +882,7 @@ const examen_2024_01_Test = [
 ];
 
 export const examen2024 = {
-    titulo: 'M1 Proyectos de Edificación 2024',
+    titulo: 'M1 Proyectos de Edificación Examen 2024',
     descripcion: 'Prueba con penalización de 1/3.',
     cantidadExamen: 80, // Cantidad específica de preguntas para el examen
     
