@@ -8,7 +8,7 @@ const examen_2024_01_Test = [
             "C) Imparcialidad y transparencia.",
             "D) Voluntariedad y profesionalidad."
         ],
-        respuestaCorrecta: "A"
+        respuestaCorrecta: "A) Imparcialidad y profesionalidad."
     },
     {
         id: 2,
@@ -19,7 +19,7 @@ const examen_2024_01_Test = [
             "C) Cuando así lo prevea la propia convocatoria.",
             "D) Cuando el número de aprobados sea inferior al de plazas convocadas."
         ],
-        respuestaCorrecta: "C"
+        respuestaCorrecta: "C) Cuando así lo prevea la propia convocatoria."
     },
     {
         id: 3,
@@ -30,7 +30,7 @@ const examen_2024_01_Test = [
             "C) El personal de elección o de designación política, los funcionarios interinos y el personal eventual.",
             "D) El personal de elección o de designación política, los funcionarios de carrera y los funcionarios interinos."
         ],
-        respuestaCorrecta: "C"
+        respuestaCorrecta: "C) El personal de elección o de designación política, los funcionarios interinos y el personal eventual."
     },
     {
         id: 4,
@@ -41,7 +41,7 @@ const examen_2024_01_Test = [
             "C) Para el ejercicio de una segunda actividad en el sector público, será indispensable la previa y expresa autorización de compatibilidad, que no supondrá la modificación de la jornada de trabajo, pero podrá autorizar la modificación del horario en razón del interés público.",
             "D) Para el ejercicio de una segunda actividad en el sector público, será indispensable la previa y expresa autorización de compatibilidad, que no supondrá la modificación de la jornada de trabajo y horario de los dos puestos."
         ],
-        respuestaCorrecta: "C"
+        respuestaCorrecta: "C) Para el ejercicio de una segunda actividad en el sector público, será indispensable la previa y expresa autorización de compatibilidad, que no supondrá la modificación de la jornada de trabajo, pero podrá autorizar la modificación del horario en razón del interés público."
     },
     {
         id: 5,
@@ -52,7 +52,7 @@ const examen_2024_01_Test = [
             "C) Como Profesor universitario asociado en régimen de dedicación no superior a la de tiempo parcial.",
             "D) Como Catedrático de Universidad en régimen de dedicación a tiempo completo."
         ],
-        respuestaCorrecta: "C"
+        respuestaCorrecta: "C) Como Profesor universitario asociado en régimen de dedicación no superior a la de tiempo parcial."
     },
     {
         id: 6,
@@ -63,7 +63,7 @@ const examen_2024_01_Test = [
             "C) Título clasificado en el Nivel 2 del Marco Español de Cualificaciones para la Educación Superior o equivalentes.",
             "D) Título clasificado en el Nivel 3 del Marco Español de Cualificaciones para la Educación Superior o equivalentes."
         ],
-        respuestaCorrecta: "D"
+        respuestaCorrecta: "D) Título clasificado en el Nivel 3 del Marco Español de Cualificaciones para la Educación Superior o equivalentes."
     },
     {
         id: 7,
@@ -74,7 +74,7 @@ const examen_2024_01_Test = [
             "C) El IV convenio no prevé la creación de una Comisión Paritaria.",
             "D) La Comisión Paritaria es el órgano máximo de interpretación, vigilancia, seguimiento, estudio y aplicación de lo pactado en el presente Convenio colectivo durante su vigencia. Estará compuesta por representantes de las partes firmantes del convenio."
         ],
-        respuestaCorrecta: "D"
+        respuestaCorrecta: "D) La Comisión Paritaria es el órgano máximo de interpretación, vigilancia, seguimiento, estudio y aplicación de lo pactado en el presente Convenio colectivo durante su vigencia. Estará compuesta por representantes de las partes firmantes del convenio."
     },
     {
         id: 8,
@@ -85,7 +85,7 @@ const examen_2024_01_Test = [
             "C) Intervenir en la solución de conflictos colectivos, que se susciten en el ámbito del Convenio, en los términos que se establecen en el mismo.",
             "D) Autorizar los reingresos al servicio activo realizados por el personal laboral en el marco del convenio."
         ],
-        respuestaCorrecta: "D"
+        respuestaCorrecta: "D) Autorizar los reingresos al servicio activo realizados por el personal laboral en el marco del convenio."
     },
     {
         id: 9,
@@ -96,7 +96,7 @@ const examen_2024_01_Test = [
             "C) Grupo de Trabajo de Aplicación del régimen disciplinario.",
             "D) Grupo de Trabajo de Concursos del personal laboral."
         ],
-        respuestaCorrecta: "B"
+        respuestaCorrecta: "B) Grupo de Trabajo de Interpretación del Convenio Único."
     },
     {
         id: 10,
@@ -107,7 +107,7 @@ const examen_2024_01_Test = [
             "C) Autorizar la realización de horas extraordinarias.",
             "D) Juzgar y evaluar los acuerdos de la Comisión Paritaria."
         ],
-        respuestaCorrecta: "A"
+        respuestaCorrecta: "A) Recibir comunicación y ser consultada sobre la distribución anual de la jornada y la fijación diaria y semanal de los horarios y turnos de trabajo."
     },
     {
         id: 11,
@@ -118,7 +118,7 @@ const examen_2024_01_Test = [
             "C) 90 días en el año natural.",
             "D) 180 días en un periodo de dos años."
         ],
-        respuestaCorrecta: "C"
+        respuestaCorrecta: "C) 90 días en el año natural."
     },
     {
         id: 12,
@@ -129,7 +129,7 @@ const examen_2024_01_Test = [
             "C) Contrato de prácticas.",
             "D) Contrato de formación en alternancia."
         ],
-        respuestaCorrecta: "D"
+        respuestaCorrecta: "D) Contrato de formación en alternancia."
     },
     {
         id: 13,
@@ -140,7 +140,7 @@ const examen_2024_01_Test = [
             "C) Personal laboral en activo.",
             "D) Personal laboral en excedencia voluntaria."
         ],
-        respuestaCorrecta: "C"
+        respuestaCorrecta: "C) Personal laboral en activo."
     },
     {
         id: 14,
@@ -151,7 +151,7 @@ const examen_2024_01_Test = [
             "C) Nombramiento del personal laboral como personal funcionario en prácticas o para la realización de períodos de prueba como personal laboral fijo en el ámbito de una Administración Pública.",
             "D) La pena principal o accesoria de inhabilitación absoluta o especial para cargo público que tenga carácter firme."
         ],
-        respuestaCorrecta: "B"
+        respuestaCorrecta: "B) Invalidez permanente del trabajador o trabajadora."
     },
     {
         id: 15,
@@ -162,7 +162,7 @@ const examen_2024_01_Test = [
             "C) El incumplimiento de sus obligaciones por parte del empresario, cuando medie causa de fuerza mayor.",
             "D) El reintegro al trabajador en sus anteriores condiciones de trabajo en los supuestos previstos en los artículos 40 y 41, cuando una sentencia judicial haya declarado los mismos injustificados."
         ],
-        respuestaCorrecta: "B"
+        respuestaCorrecta: "B) La falta de pago o retrasos continuados en el abono del salario pactado."
     },
     {
         id: 16,
@@ -173,7 +173,7 @@ const examen_2024_01_Test = [
             "C) Acoso indirecto.",
             "D) Agresión."
         ],
-        respuestaCorrecta: "A"
+        respuestaCorrecta: "A) Acoso por razón de sexo."
     },
     {
         id: 17,
@@ -184,7 +184,7 @@ const examen_2024_01_Test = [
             "C) Estarán legitimados la persona acosada y cualquier persona que sea testigo de los hechos.",
             "D) Únicamente estarán legitimados para persona acosada y sus familiares en primer grado."
         ],
-        respuestaCorrecta: "C"
+        respuestaCorrecta: "C) Estarán legitimados la persona acosada y cualquier persona que sea testigo de los hechos."
     },
     {
         id: 18,
@@ -195,7 +195,7 @@ const examen_2024_01_Test = [
             "C) Comité interterritorial de Servicios Sociales y del Sistema para la Autonomía y Atención a la Dependencia.",
             "D) Consejo Territorial de Servicios Sociales y del Sistema para la Autonomía y Atención a la Dependencia."
         ],
-        respuestaCorrecta: "D"
+        respuestaCorrecta: "D) Consejo Territorial de Servicios Sociales y del Sistema para la Autonomía y Atención a la Dependencia."
     },
     {
         id: 19,
@@ -206,7 +206,7 @@ const examen_2024_01_Test = [
             "C) Siempre y cuando haya prestado un tiempo mínimo de dos años de servicios previos y durante un tiempo máximo de 5 años.",
             "D) Sin necesidad de haber prestado un tiempo mínimo de servicios previos y durante un plazo mínimo de dos años."
         ],
-        respuestaCorrecta: "B"
+        respuestaCorrecta: "B) Sin necesidad de haber prestado un tiempo mínimo de servicios previos y sin que sea exigible un plazo de permanencia en la misma."
     },
     {
         id: 20,
@@ -217,7 +217,7 @@ const examen_2024_01_Test = [
             "C) Diversidad familiar.",
             "D) Libertad religiosa y de culto."
         ],
-        respuestaCorrecta: "D"
+        respuestaCorrecta: "D) Libertad religiosa y de culto."
     },
     {
         id: 21,
@@ -228,7 +228,7 @@ const examen_2024_01_Test = [
             "C) La Constitución española de 1978 reconoce el pluralismo político como valor superior del ordenamiento jurídico español.",
             "D) La Constitución española de 1978 no se puede modificar."
         ],
-        respuestaCorrecta: "C"
+        respuestaCorrecta: "C) La Constitución española de 1978 reconoce el pluralismo político como valor superior del ordenamiento jurídico español."
     },
     {
         id: 22,
@@ -239,7 +239,7 @@ const examen_2024_01_Test = [
             "C) Garantiza el principio de legalidad",
             "D) Garantiza el principio de irretroactividad de las disposiciones sancionadoras no favorables o restrictivas de derechos"
         ],
-        respuestaCorrecta: "A"
+        respuestaCorrecta: "A) Garantiza el principio de inseguridad jurídica"
     },
     {
         id: 23,
@@ -250,7 +250,7 @@ const examen_2024_01_Test = [
             "C) Son valores superiores del ordenamiento jurídico",
             "D) Ninguna de las anteriores"
         ],
-        respuestaCorrecta: "C"
+        respuestaCorrecta: "C) Son valores superiores del ordenamiento jurídico"
     },
     {
         id: 24,
@@ -261,7 +261,7 @@ const examen_2024_01_Test = [
             "C) Derecho de asociación.",
             "D) Derecho a la propiedad privada y a la herencia."
         ],
-        respuestaCorrecta: "D"
+        respuestaCorrecta: "D) Derecho a la propiedad privada y a la herencia."
     },
     {
         id: 25,
@@ -272,7 +272,7 @@ const examen_2024_01_Test = [
             "C) El recurso de amparo ante el Tribunal Constitucional.",
             "D) La acción directa de los ciudadanos."
         ],
-        respuestaCorrecta: "C"
+        respuestaCorrecta: "C) El recurso de amparo ante el Tribunal Constitucional."
     },
     {
         id: 26,
@@ -283,7 +283,7 @@ const examen_2024_01_Test = [
             "C) El mérito y la capacidad",
             "D) La afinidad política"
         ],
-        respuestaCorrecta: "C"
+        respuestaCorrecta: "C) El mérito y la capacidad"
     },
     {
         id: 27,
@@ -294,7 +294,7 @@ const examen_2024_01_Test = [
             "C) Sin ninguna organización territorial.",
             "D) A través de Ayuntamientos."
         ],
-        respuestaCorrecta: "B"
+        respuestaCorrecta: "B) A través de Delegaciones y Subdelegaciones del Gobierno."
     },
     {
         id: 28,
@@ -305,7 +305,7 @@ const examen_2024_01_Test = [
             "C) Elegir a los presidentes autonómicos.",
             "D) Gestionar los recursos económicos de las Comunidades Autónomas."
         ],
-        respuestaCorrecta: "B"
+        respuestaCorrecta: "B) Asesorar al Gobierno en asuntos relacionados con las Comunidades Autónomas."
     },
     {
         id: 29,
@@ -316,7 +316,7 @@ const examen_2024_01_Test = [
             "C) La cultura es una competencia exclusiva de las Comunidades Autónomas, sin perjuicio de que el Estado pueda emitir recomendaciones o sugerencias para marcar la estrategia de la política pública.",
             "D) Todas son falsas."
         ],
-        respuestaCorrecta: "B"
+        respuestaCorrecta: "B) Sin perjuicio de las competencias que podrán asumir las Comunidades Autónomas, el Estado considerará el servicio de la cultura como deber y atribución esencial y facilitará la comunicación cultural entre las Comunidades Autónomas, de acuerdo con ellas."
     },
     {
         id: 30,
@@ -327,7 +327,7 @@ const examen_2024_01_Test = [
             "C) Diputaciones u otras Corporaciones de carácter representativo.",
             "D) Los miembros del Consejo de gobierno correspondiente."
         ],
-        respuestaCorrecta: "C"
+        respuestaCorrecta: "C) Diputaciones u otras Corporaciones de carácter representativo."
     },
     {
         id: 31,
@@ -338,7 +338,7 @@ const examen_2024_01_Test = [
             "C) Lo elabora y lo presenta ante el Congreso de los Diputados.",
             "D) Solo supervisa su legalidad."
         ],
-        respuestaCorrecta: "C"
+        respuestaCorrecta: "C) Lo elabora y lo presenta ante el Congreso de los Diputados."
     },
     {
         id: 32,
@@ -349,7 +349,7 @@ const examen_2024_01_Test = [
             "C) El Presidente del Gobierno.",
             "D) La persona titular del Ministerio de Asuntos Exteriores."
         ],
-        respuestaCorrecta: "C"
+        respuestaCorrecta: "C) El Presidente del Gobierno."
     },
     {
         id: 33,
@@ -360,7 +360,7 @@ const examen_2024_01_Test = [
             "C) Aprobar Reales Decretos-Leyes.",
             "D) Impartir justicia."
         ],
-        respuestaCorrecta: "B"
+        respuestaCorrecta: "B) Establecer el programa político del Gobierno y determinar las directrices de la política interior y exterior y velar por su cumplimiento."
     },
     {
         id: 34,
@@ -371,7 +371,7 @@ const examen_2024_01_Test = [
             "C) Los Secretarios de Estado dependen jerárquicamente de los Ministros. Cuando estén adscritos a la Presidencia del Gobierno, actúan bajo la dirección del Presidente.",
             "D) Los Secretarios de Estado son designados por el Congreso."
         ],
-        respuestaCorrecta: "C"
+        respuestaCorrecta: "C) Los Secretarios de Estado dependen jerárquicamente de los Ministros. Cuando estén adscritos a la Presidencia del Gobierno, actúan bajo la dirección del Presidente."
     },
     {
         id: 35,
@@ -382,7 +382,7 @@ const examen_2024_01_Test = [
             "C) Nombrar y separar a los titulares de las Secretarías de Estado.",
             "D) Asistir a los órganos superiores en materia de relaciones de puestos de trabajo, planes de empleo y política de directivos del Ministerio y sus Organismos públicos, así como en la elaboración, ejecución y seguimiento de los presupuestos y la planificación de los sistemas de información y comunicación."
         ],
-        respuestaCorrecta: "C"
+        respuestaCorrecta: "C) Nombrar y separar a los titulares de las Secretarías de Estado."
     },
     {
         id: 36,
@@ -393,7 +393,7 @@ const examen_2024_01_Test = [
             "C) Únicamente temporal.",
             "D) Ninguno de los anteriores."
         ],
-        respuestaCorrecta: "A"
+        respuestaCorrecta: "A) Fijo, por tiempo indefinido o temporal."
     },
     {
         id: 37,
@@ -404,7 +404,7 @@ const examen_2024_01_Test = [
             "C) La intimidad en el uso de dispositivos digitales puestos a su disposición y frente al uso de dispositivos de videovigilancia y geolocalización, así como a la desconexión digital en los términos establecidos en la legislación vigente en materia de protección de datos personales y garantía de los derechos digitales.",
             "D) Utilizar recursos de la Administración para fines personales."
         ],
-        respuestaCorrecta: "D"
+        respuestaCorrecta: "D) Utilizar recursos de la Administración para fines personales."
     },
     {
         id: 38,
@@ -415,7 +415,7 @@ const examen_2024_01_Test = [
             "C) No requiere comunicación ni autorización, por ser la modalidad habitual de trabajo de los funcionarios.",
             "D) Ninguna de las anteriores es correcta."
         ],
-        respuestaCorrecta: "A"
+        respuestaCorrecta: "A) Habrá de ser expresamente autorizada y será compatible con la modalidad presencial."
     },
     {
         id: 39,
@@ -426,7 +426,7 @@ const examen_2024_01_Test = [
             "C) Tan solo con la Administración en la que presten sus servicios, y con sus superiores y subordinados.",
             "D) Los principios de lealtad y buena fe son principios éticos, no recogidos en el Texto refundido de la Ley del Estatuto Básico del Empleado Público."
         ],
-        respuestaCorrecta: "A"
+        respuestaCorrecta: "A) Con la Administración en la que presten sus servicios, y con sus superiores, compañeros, subordinados y con los ciudadanos."
     },
     {
         id: 40,
@@ -437,7 +437,7 @@ const examen_2024_01_Test = [
             "C) El derecho a participar, a través de las organizaciones sindicales, en los órganos de control y seguimiento de las entidades u organismos que legalmente se determine.",
             "D) Ninguna de las anteriores es correcta."
         ],
-        respuestaCorrecta: "C"
+        respuestaCorrecta: "C) El derecho a participar, a través de las organizaciones sindicales, en los órganos de control y seguimiento de las entidades u organismos que legalmente se determine."
     },
     {
         id: 41,
@@ -448,7 +448,7 @@ const examen_2024_01_Test = [
             "C) Las Normas Tecnológicas de la Construcción",
             "D) El Reglamento de Construcción"
         ],
-        respuestaCorrecta: "B"
+        respuestaCorrecta: "B) El Código Técnico de la Edificación"
     },
     {
         id: 42,
@@ -459,7 +459,7 @@ const examen_2024_01_Test = [
             "C) Cerramiento",
             "D) Muro de carga"
         ],
-        respuestaCorrecta: "C"
+        respuestaCorrecta: "C) Cerramiento"
     },
     {
         id: 43,
@@ -470,7 +470,7 @@ const examen_2024_01_Test = [
             "C) 420 x 594 mm.",
             "D) 297 x 215 mm."
         ],
-        respuestaCorrecta: "C"
+        respuestaCorrecta: "C) 420 x 594 mm."
     },
     {
         id: 44,
@@ -481,7 +481,7 @@ const examen_2024_01_Test = [
             "C) 5 centímetros.",
             "D) 0 centímetros."
         ],
-        respuestaCorrecta: "B" // 20 metros = 2000 cm. 2000 cm / 500 = 4 cm.
+        respuestaCorrecta: "B) 4 centímetros." // 20 metros = 2000 cm. 2000 cm / 500 = 4 cm.
     },
     {
         id: 45,
@@ -492,7 +492,7 @@ const examen_2024_01_Test = [
             "C) Los planos de situación o emplazamiento.",
             "D) Los planos us built."
         ],
-        respuestaCorrecta: "A"
+        respuestaCorrecta: "A) Los planos de sección o cortes transversales."
     },
     {
         id: 46,
@@ -503,7 +503,7 @@ const examen_2024_01_Test = [
             "C) Metacrilato.",
             "D) Plancha de policarbonato."
         ],
-        respuestaCorrecta: "B"
+        respuestaCorrecta: "B) Cartón pluma."
     },
     {
         id: 47,
@@ -514,7 +514,7 @@ const examen_2024_01_Test = [
             "C) La realización de un nuevo cálculo de los costes de las partidas y unidades de obra que integran el presupuesto del proyecto.",
             "D) El conjunto de planos que detallan los trazados de las instalaciones de un edificio."
         ],
-        respuestaCorrecta: "B"
+        respuestaCorrecta: "B) El traslado de las medidas de un proyecto u obra en papel al terreno para verificar su cabida y adecuación."
     },
     {
         id: 48,
@@ -525,7 +525,7 @@ const examen_2024_01_Test = [
             "C) Un nivel.",
             "D) Un astrolabio."
         ],
-        respuestaCorrecta: "A"
+        respuestaCorrecta: "A) Un taquímetro topográfico."
     },
     {
         id: 49,
@@ -536,7 +536,7 @@ const examen_2024_01_Test = [
             "C) La resistencia.",
             "D) El tamaño de las partículas."
         ],
-        respuestaCorrecta: "D"
+        respuestaCorrecta: "D) El tamaño de las partículas."
     },
     {
         id: 50,
@@ -547,7 +547,7 @@ const examen_2024_01_Test = [
             "C) A un ensayo de penetración de cono.",
             "D) Un ensayo de materiales."
         ],
-        respuestaCorrecta: "A"
+        respuestaCorrecta: "A) A un ensayo de penetración estándar, siendo un tipo de ensayo de penetración dinámica."
     },
     {
         id: 51,
@@ -558,7 +558,7 @@ const examen_2024_01_Test = [
             "C) Un tipo de pavimentación.",
             "D) Uno de los elementos estructurales del edificio que sirve de cimentación a pilares, muros y otros elementos superficiales."
         ],
-        respuestaCorrecta: "D"
+        respuestaCorrecta: "D) Uno de los elementos estructurales del edificio que sirve de cimentación a pilares, muros y otros elementos superficiales."
     },
     {
         id: 52,
@@ -569,7 +569,7 @@ const examen_2024_01_Test = [
             "C) Elementos que se construyen antes del vaciado de tierra y que transmiten los esfuerzos al terreno.",
             "D) Elementos de cerramiento en terrenos cohesionados."
         ],
-        respuestaCorrecta: "C"
+        respuestaCorrecta: "C) Elementos que se construyen antes del vaciado de tierra y que transmiten los esfuerzos al terreno."
     },
     {
         id: 53,
@@ -580,7 +580,7 @@ const examen_2024_01_Test = [
             "C) 5º Centígrados.",
             "D) -5º Centígrados."
         ],
-        respuestaCorrecta: "C"
+        respuestaCorrecta: "C) 5º Centígrados."
     },
     {
         id: 54,
@@ -591,7 +591,7 @@ const examen_2024_01_Test = [
             "C) La mitad de la longitud.",
             "D) No se necesita solape."
         ],
-        respuestaCorrecta: "B"
+        respuestaCorrecta: "B) Entre 70 y 150mm."
     },
     {
         id: 55,
@@ -602,7 +602,7 @@ const examen_2024_01_Test = [
             "C) Su volumen.",
             "D) Su peso."
         ],
-        respuestaCorrecta: "B"
+        respuestaCorrecta: "B) Su espesor."
     },
     {
         id: 56,
@@ -613,7 +613,7 @@ const examen_2024_01_Test = [
             "C) Pliego de prescripciones.",
             "D) Estudio geotécnico."
         ],
-        respuestaCorrecta: "D"
+        respuestaCorrecta: "D) Estudio geotécnico."
     },
     {
         id: 57,
@@ -624,7 +624,7 @@ const examen_2024_01_Test = [
             "C) Marcar el perímetro exterior de un edificio.",
             "D) Delimitar el solar sobre el que se edifica."
         ],
-        respuestaCorrecta: "A"
+        respuestaCorrecta: "A) Trasladar las cargas de la edificación al terreno."
     },
     {
         id: 58,
@@ -635,7 +635,7 @@ const examen_2024_01_Test = [
             "C) Contrafuerte.",
             "D) Encepado."
         ],
-        respuestaCorrecta: "D"
+        respuestaCorrecta: "D) Encepado."
     },
     {
         id: 59,
@@ -646,7 +646,7 @@ const examen_2024_01_Test = [
             "C) Losa.",
             "D) Tirante."
         ],
-        respuestaCorrecta: "B"
+        respuestaCorrecta: "B) Vigueta."
     },
     {
         id: 60,
@@ -657,7 +657,7 @@ const examen_2024_01_Test = [
             "C) Recubrimiento.",
             "D) Fratasado."
         ],
-        respuestaCorrecta: "B"
+        respuestaCorrecta: "B) Enlucido."
     },
     {
         id: 61,
@@ -668,7 +668,7 @@ const examen_2024_01_Test = [
             "C) 0ºC.",
             "D) -5ºC."
         ],
-        respuestaCorrecta: "B"
+        respuestaCorrecta: "B) 5°C."
     },
     {
         id: 62,
@@ -679,7 +679,7 @@ const examen_2024_01_Test = [
             "C) 3%.",
             "D) 10%."
         ],
-        respuestaCorrecta: "C"
+        respuestaCorrecta: "C) 3%."
     },
     {
         id: 63,
@@ -690,7 +690,7 @@ const examen_2024_01_Test = [
             "C) Riesgo alto.",
             "D) Riesgo nulo."
         ],
-        respuestaCorrecta: "B"
+        respuestaCorrecta: "B) Riesgo medio."
     },
     {
         id: 64,
@@ -701,7 +701,7 @@ const examen_2024_01_Test = [
             "C) 10° como mínimo.",
             "D) No necesitan tener pendiente porque están en la fachada."
         ],
-        respuestaCorrecta: "B"
+        respuestaCorrecta: "B) 5º como mínimo."
     },
     {
         id: 65,
@@ -712,7 +712,7 @@ const examen_2024_01_Test = [
             "C) Cumbrera",
             "D) Mansarda"
         ],
-        respuestaCorrecta: "B"
+        respuestaCorrecta: "B) Limahoya"
     },
     {
         id: 66,
@@ -723,7 +723,7 @@ const examen_2024_01_Test = [
             "C) Teja plana.",
             "D) Cinc."
         ],
-        respuestaCorrecta: "D"
+        respuestaCorrecta: "D) Cinc."
     },
     {
         id: 67,
@@ -734,7 +734,7 @@ const examen_2024_01_Test = [
             "C) 10º como mínimo.",
             "D) No necesitan pendiente."
         ],
-        respuestaCorrecta: "A"
+        respuestaCorrecta: "A) 1º como mínimo."
     },
     {
         id: 68,
@@ -745,7 +745,7 @@ const examen_2024_01_Test = [
             "C) 50 miliamperios (mA).",
             "D) 60 miliamperios (mA)."
         ],
-        respuestaCorrecta: "A"
+        respuestaCorrecta: "A) 30 miliamperios (mA)."
     },
     {
         id: 69,
@@ -756,7 +756,7 @@ const examen_2024_01_Test = [
             "C) 25mm.",
             "D) 40mm."
         ],
-        respuestaCorrecta: "D"
+        respuestaCorrecta: "D) 40mm."
     },
     {
         id: 70,
@@ -767,7 +767,7 @@ const examen_2024_01_Test = [
             "C) No existen prescripciones relativos a la colocación de las tuberías.",
             "D) Las tuberías de agua fría y caliente irán en paralelo separadas 20 cm como mínimo."
         ],
-        respuestaCorrecta: "A"
+        respuestaCorrecta: "A) Las tuberías de agua fría y caliente se separarán 4 cm como mínimo, colocando la de agua fría por debajo de la de agua caliente."
     },
     {
         id: 71,
@@ -778,7 +778,7 @@ const examen_2024_01_Test = [
             "C) R120.",
             "D) R180."
         ],
-        respuestaCorrecta: "C"
+        respuestaCorrecta: "C) R120."
     },
     {
         id: 72,
@@ -789,7 +789,7 @@ const examen_2024_01_Test = [
             "C) 120 y 130 cm.",
             "D) 70 y 80 cm."
         ],
-        respuestaCorrecta: "B"
+        respuestaCorrecta: "B) 90 y 110 cm."
     },
     {
         id: 73,
@@ -800,7 +800,7 @@ const examen_2024_01_Test = [
             "C) Una contrahuella de 25 cm como mínimo y 25 cm como máximo.",
             "D) No existen prescripciones al respecto."
         ],
-        respuestaCorrecta: "A"
+        respuestaCorrecta: "A) Una contrahuella de 13 cm como mínimo y 17,5 cm como máximo."
     },
     {
         id: 74,
@@ -811,7 +811,7 @@ const examen_2024_01_Test = [
             "C) 6%.",
             "D) 8%."
         ],
-        respuestaCorrecta: "C"
+        respuestaCorrecta: "C) 6%."
     },
     {
         id: 75,
@@ -822,7 +822,7 @@ const examen_2024_01_Test = [
             "C) 60 lux.",
             "D) 100 lux."
         ],
-        respuestaCorrecta: "B"
+        respuestaCorrecta: "B) 20 lux."
     },
     {
         id: 76,
@@ -833,7 +833,7 @@ const examen_2024_01_Test = [
             "C) 7500.",
             "D) 3,60."
         ],
-        respuestaCorrecta: "A" // Eficacia = Flujo Luminoso (lm) / Potencia (W) -> 750 lm / 10 W = 75 lm/W.
+        respuestaCorrecta: "A) 75." // Cálculo: 750 lm / 10 W = 75 lm/W.
     },
     {
         id: 77,
@@ -844,7 +844,7 @@ const examen_2024_01_Test = [
             "C) Fotodegradación.",
             "D) Radiación luminosa."
         ],
-        respuestaCorrecta: "A"
+        respuestaCorrecta: "A) Iluminancia."
     },
     {
         id: 78,
@@ -855,7 +855,7 @@ const examen_2024_01_Test = [
             "C) Al flujo luminoso que incide sobre una superficie.",
             "D) A la radiación ultravioleta por metro cuadrado."
         ],
-        respuestaCorrecta: "A"
+        respuestaCorrecta: "A) Al cociente entre el flujo luminoso emitido y la potencia eléctrica de la fuente."
     },
     {
         id: 79,
@@ -866,7 +866,7 @@ const examen_2024_01_Test = [
             "C) Deberá estar situado en la cubierta del edificio.",
             "D) Deberá contar con un ancho de puerta de 1,20 m mínimo."
         ],
-        respuestaCorrecta: "B"
+        respuestaCorrecta: "B) Deberá constar de elementos de compartimentación resistentes al fuego durante 120 minutos como mínimo."
     },
     {
         id: 80,
@@ -877,19 +877,25 @@ const examen_2024_01_Test = [
             "C) Elementos aislantes prefabricados",
             "D) Fachada ventilada"
         ],
-        respuestaCorrecta: "A"
+        respuestaCorrecta: "A) Envolvente térmica del edificio"
     }
 ];
 
 export const examen2024  = {
     titulo: 'Tema 3: El Gobierno y la Administración',
     descripcion: 'Prueba con penalización de 1/3.',
-    cantidadExamen: 80, // Cantidad específica de preguntas para el examen
+    // Usamos la longitud del array para la cantidad de preguntas (dinámico)
+    cantidadExamen: examen_2024_01_Test.length, 
     logicaPuntuacion: {
         valorCorrecta: 1.0,
-        valorIncorrecta: 1/3, 
+        // Usamos 1 / 3 para una precisión matemática exacta de la penalización.
+        valorIncorrecta: 1 / 3, 
         restaPorFallo: true
     },
+    
+    // Asignación de la variable con las preguntas corregidas
+    preguntas: examen_2024_01_Test
+};
     
     // 💥 CORRECCIÓN CRÍTICA: Debe usar la variable definida en este archivo.
     preguntas: examen_2024_01_Test
