@@ -1,9 +1,12 @@
-// script.js — lógica principal de la app (25 preguntas aleatorias)
+// script.js — lógica principal de la app (20 preguntas aleatorias con penalización)
 
 let preguntasActuales = [];
 let respuestasUsuario = [];
 let temaActualNombre = '';
-const CANTIDAD_PREGUNTAS = 25;
+// ----------------------------------------------------------------------
+// --- MODIFICACIÓN 1: Cambiar la cantidad de preguntas a 20 ---
+// ----------------------------------------------------------------------
+const CANTIDAD_PREGUNTAS = 20; 
 const KEY_LOCAL_STORAGE = 'examen_respuestas';
 
 /**
@@ -153,7 +156,7 @@ function seleccionarRespuesta(preguntaIndex, opcionIndex){
     // El índice de la opción (0, 1, 2, 3) se guarda como respuesta
     respuestasUsuario[preguntaIndex] = opcionIndex;
     
-    // ** CORRECCIÓN: Llamada completa a la función de guardado **
+    // Llamada completa a la función de guardado
     guardarRespuestasLocalmente(); 
 }
 
@@ -162,27 +165,29 @@ function seleccionarRespuesta(preguntaIndex, opcionIndex){
  */
 function corregirExamen(){
     let correctas = 0;
+    let fallos = 0; // Necesitamos contar los fallos por separado para la nueva lógica
     const preguntasContainer = document.getElementById('contenedor-preguntas-completas');
     
-    // 1. Iterar sobre las preguntas para la corrección
+    // 1. Iterar sobre las preguntas para la corrección y contar
     preguntasActuales.forEach((pregunta, index) => {
         const respuestaCorrecta = pregunta.respuestaCorrecta;
         const respuestaIndex = respuestasUsuario[index]; // null si no ha respondido
         const opcionSeleccionada = respuestaIndex !== null ? pregunta.opciones[respuestaIndex] : null;
 
-        let esCorrecta = false;
         let claseCorreccion = 'sin-contestar';
         let feedbackHTML = `<p><strong>Respuesta Correcta:</strong> ${respuestaCorrecta}</p>`;
         
         if (opcionSeleccionada === respuestaCorrecta) {
-            esCorrecta = true;
             correctas++;
             claseCorreccion = 'correcta';
             feedbackHTML = `<p class="verde"><strong>¡Correcto!</strong></p>` + feedbackHTML;
         } else if (respuestaIndex !== null) {
+            fallos++; // Contamos el fallo aquí
             claseCorreccion = 'incorrecta';
             feedbackHTML = `<p class="rojo"><strong>Incorrecto. Tu respuesta:</strong> ${opcionSeleccionada}</p>` + feedbackHTML;
         } else {
+            // Sin contestar, no suma ni resta.
+            claseCorreccion = 'sin-contestar';
             feedbackHTML = `<p class="gris"><strong>Sin contestar.</strong></p>` + feedbackHTML;
         }
         
@@ -210,8 +215,32 @@ function corregirExamen(){
     });
 
     // 2. Cálculo de resultados y actualización del resumen
-    const fallos = preguntasActuales.length - correctas;
-    const nota = (correctas * 10) / preguntasActuales.length;
+    // ----------------------------------------------------------------------
+    // --- MODIFICACIÓN 2: Nueva lógica de puntuación (Fallos restan 1/3) ---
+    // ----------------------------------------------------------------------
+    
+    const totalPreguntas = preguntasActuales.length;
+    
+    // Valor de una pregunta correcta (se usa 1.0 como base)
+    const valorCorrecta = 1.0; 
+    // Valor de una pregunta incorrecta (resta 1/3 del valor de la correcta)
+    const valorIncorrecta = 1/3; 
+
+    // Puntuación base (solo correctas)
+    let puntuacionBase = correctas * valorCorrecta;
+    // Penalización por fallos
+    let penalizacion = fallos * valorIncorrecta; 
+    
+    // Puntuación final: Aseguramos que no sea negativa
+    let puntuacionNeta = Math.max(0, puntuacionBase - penalizacion); 
+    
+    // El valor máximo posible (si todas son correctas)
+    const puntuacionMaxima = totalPreguntas * valorCorrecta;
+
+    // Calculamos la nota sobre 10
+    const nota = (puntuacionNeta * 10) / puntuacionMaxima;
+    
+    // La nota final se calcula en base a la puntuación neta sobre el máximo posible
     const apto = nota >= 5.0; // Asumiendo un 5 como aprobado
 
     document.getElementById('resumen-correctas').textContent = correctas;
@@ -219,6 +248,7 @@ function corregirExamen(){
     document.getElementById('resumen-nota').textContent = nota.toFixed(2);
     document.getElementById('resumen-estado').textContent = apto ? 'APTO' : 'NO APTO';
     document.getElementById('resumen-estado').className = apto ? 'apto' : 'no-apto';
+    // ----------------------------------------------------------------------
 
     // 3. Ocultar el botón de corregir y mostrar el resumen
     document.getElementById('btn-corregir').style.display = 'none';
@@ -261,6 +291,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Listener para el botón de volver al selector.
     const btnReiniciar = document.getElementById('btn-reiniciar-selector');
     if (btnReiniciar) {
+        btnReiniciar.addEventListener('click', mostrarSelectorTemas);
+    }
+});
         btnReiniciar.addEventListener('click', mostrarSelectorTemas);
     }
 });
