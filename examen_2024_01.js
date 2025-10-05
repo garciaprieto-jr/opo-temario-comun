@@ -881,10 +881,14 @@ const examen_2024_01_Test = [
     }
 ];
 
-export const examen2024  = {
+export const examen2024 = {
     titulo: 'M1 Proyectos de Edificación 2024',
     descripcion: 'Prueba con penalización de 1/3.',
     cantidadExamen: 80, // Cantidad específica de preguntas para el examen
+    
+    // ⭐⭐⭐ CRÍTICO: Definimos la puntuación máxima absoluta para este examen ⭐⭐⭐
+    puntajeMaximoTema: 40.0, // 👈 Este examen puntúa sobre 40.0
+    
     logicaPuntuacion: {
         valorCorrecta: 1.0,
         valorIncorrecta: 1/3, 
