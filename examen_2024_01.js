@@ -882,17 +882,15 @@ const examen_2024_01_Test = [
 ];
 
 export const examen2024  = {
-    titulo: 'Tema 3: El Gobierno y la Administración',
+    titulo: 'M1 Proyectos de Edificación 2024',
     descripcion: 'Prueba con penalización de 1/3.',
-    // Usamos la longitud del array para la cantidad de preguntas (dinámico)
-    cantidadExamen: examen_2024_01_Test.length, 
+    cantidadExamen: 80, // Cantidad específica de preguntas para el examen
     logicaPuntuacion: {
         valorCorrecta: 1.0,
-        // Usamos 1 / 3 para una precisión matemática exacta de la penalización.
-        valorIncorrecta: 1 / 3, 
+        valorIncorrecta: 1/3, 
         restaPorFallo: true
     },
     
-    // Asignación de la variable con las preguntas corregidas
+    // 💥 CORRECCIÓN CRÍTICA: Debe usar la variable definida en este archivo.
     preguntas: examen_2024_01_Test
 };
