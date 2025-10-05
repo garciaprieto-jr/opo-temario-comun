@@ -896,7 +896,3 @@ export const examen2024  = {
     // Asignación de la variable con las preguntas corregidas
     preguntas: examen_2024_01_Test
 };
-    
-    // 💥 CORRECCIÓN CRÍTICA: Debe usar la variable definida en este archivo.
-    preguntas: examen_2024_01_Test
-};
