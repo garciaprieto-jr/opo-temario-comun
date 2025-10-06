@@ -53,8 +53,8 @@ const comun_otros_años = [
                 "C) Del Fiscal General del Estado, designado por este para la defensa de los derechos comprendidos en este Título."
             ],
             answer: "B) De las Cortes Generales designado por estas para la defensa de los derechos comprendidos en este Título."
-        }
-    ],
+        },
+        {
     "Leyes del Gobierno y del Sector Público": [
         {
             question: "7. Señale la respuesta FALSA. De conformidad con la Ley 40/2015, de 1 de octubre, de Régimen Jurídico del Sector Público:",
