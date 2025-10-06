@@ -661,7 +661,7 @@ const comun_otros_años = [
 export const comun_otros_años  = {
     titulo: 'Preguntas M1 Parte Común otros años',
     descripcion: 'Prueba con penalización de 1/3.',
-    cantidadExamen: 80, // Cantidad específica de preguntas para el examen
+    cantidadExamen: 40, // Cantidad específica de preguntas para el examen
     logicaPuntuacion: {
         valorCorrecta: 1.0,
         valorIncorrecta: 1/3, 
