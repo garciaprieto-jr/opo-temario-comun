@@ -1,6 +1,6 @@
 const comun_otros_años_preguntas = [
-   "Constitución Española": [
-        {
+   //vonstitución española ///  
+   {
             question: "1. Señale la respuesta CORRECTA conforme al artículo 1 de la Constitución Española de 1978:",
             options: [
                 "A) España se constituye en un Estado social y democrático de Derecho.",
@@ -55,7 +55,7 @@ const comun_otros_años_preguntas = [
             answer: "B) De las Cortes Generales designado por estas para la defensa de los derechos comprendidos en este Título."
         },
         {
-    "Leyes del Gobierno y del Sector Público": [
+    //"Leyes del Gobierno y del Sector Público": //
         {
             question: "7. Señale la respuesta FALSA. De conformidad con la Ley 40/2015, de 1 de octubre, de Régimen Jurídico del Sector Público:",
             options: [
@@ -84,7 +84,7 @@ const comun_otros_años_preguntas = [
             answer: "B) Son órganos directivos los Secretarios generales técnicos y los Directores Generales."
         }
     ],
-    "Estatuto Básico del Empleado Público y Convenio Colectivo": [
+    // Estatuto Básico del Empleado Público y Convenio Colectivo": [
         {
             question: "10. De acuerdo con el artículo 55 del texto refundido de la Ley del Estatuto Básico del Empleado Público, aprobado por el Real Decreto Legislativo 5/2015, de 30 de octubre, los principios constitucionales por los que se rige el derecho al acceso al empleo público son:",
             options: [
@@ -140,7 +140,7 @@ const comun_otros_años_preguntas = [
             answer: "A) No devengarán retribuciones, ni les será computable el tiempo que permanezcan en tal situación a efectos de ascensos, trienios y derechos en el régimen de Seguridad Social que les sea de aplicación."
         }
     ],
-    "Prevención de Riesgos Laborales": [
+    ///"Prevención de Riesgos Laborales": [///
         {
             question: "22. Según la Ley de Prevención de Riesgos Laborales, los Delegados de Prevención serán:",
             options: [
@@ -169,7 +169,7 @@ const comun_otros_años_preguntas = [
             answer: "B) Cooperar con el empresario para que este pueda garantizar unas condiciones de trabajo que sean seguras."
         }
     ],
-    "Igualdad, Violencia de Género y Dependencia": [
+    //"Igualdad, Violencia de Género y Dependencia": [ ///
         {
             question: "25. Según el artículo 7.3 de la Ley Orgánica 3/2007, de 22 de marzo, para la igualdad efectiva de mujeres y hombres, el acoso sexual y el acoso por razón de sexo se considerarán discriminatorios:",
             options: [
