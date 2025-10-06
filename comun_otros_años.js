@@ -669,5 +669,5 @@ export const comun_otros_años  = {
     },
     
     // 💥 CORRECCIÓN CRÍTICA: Debe usar la variable definida en este archivo.
-    preguntas: comun_preguntas
+    preguntas: comun_otros_años
 };
