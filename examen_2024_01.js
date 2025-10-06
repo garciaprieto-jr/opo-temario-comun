@@ -1,4 +1,4 @@
-const examen2024 = [
+const examen2024_preguntas = [
     {
         id: 1,
         pregunta: "El artículo 60 del Texto Refundido de la Ley del Estatuto Básico del Empleado Público aprobado por Real Decreto Legislativo 5/2015, de 30 de octubre (en adelante TREBEP) establece que la composición de los órganos de selección deberá ajustarse a los principios de:",
@@ -896,5 +896,5 @@ export const examen2024 = {
     },
     
     // 💥 CORRECCIÓN CRÍTICA: Debe usar la variable definida en este archivo.
-    preguntas: Preguntas_otros_años
+    preguntas: examen2024_preguntas
 };
