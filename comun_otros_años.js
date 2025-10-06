@@ -659,7 +659,7 @@ const comun_otros_años = [
 ];
 
 export const comun_otros_años  = {
-    titulo: 'M1 Proyectos de Edificación 2024',
+    titulo: 'Preguntas M1 Parte Común otros años',
     descripcion: 'Prueba con penalización de 1/3.',
     cantidadExamen: 80, // Cantidad específica de preguntas para el examen
     logicaPuntuacion: {
