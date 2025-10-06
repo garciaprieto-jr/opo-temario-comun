@@ -896,5 +896,5 @@ export const examen2024 = {
     },
     
     // 💥 CORRECCIÓN CRÍTICA: Debe usar la variable definida en este archivo.
-    preguntas: examen_2024_01_Test
+    preguntas: Preguntas_otros_años
 };
