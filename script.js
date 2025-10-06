@@ -15,6 +15,7 @@ const temas = {
     'tema2': tema2,
     'tema3': tema3,
     'examen2024': Preguntas_otros_años,
+    'Preguntas_otros_años': Preguntas_otros_años,
 };
 
 // ----------------------------------------------------------------------
