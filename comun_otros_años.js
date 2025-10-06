@@ -1,15 +1,231 @@
-const examen_2024_01_Test = [
-    {
-        id: 1,
-        pregunta: "El artículo 60 del Texto Refundido de la Ley del Estatuto Básico del Empleado Público aprobado por Real Decreto Legislativo 5/2015, de 30 de octubre (en adelante TREBEP) establece que la composición de los órganos de selección deberá ajustarse a los principios de:",
-        opciones: [
-            "A) Imparcialidad y profesionalidad.",
-            "B) Capacidad y transparencia.",
-            "C) Imparcialidad y transparencia.",
-            "D) Voluntariedad y profesionalidad."
-        ],
-        respuestaCorrecta: "A) Imparcialidad y profesionalidad."
-    },
+const comun_otros_años = [
+   "Constitución Española": [
+        {
+            question: "1. Señale la respuesta CORRECTA conforme al artículo 1 de la Constitución Española de 1978:",
+            options: [
+                "A) España se constituye en un Estado social y democrático de Derecho.",
+                "B) España se constituye en un Estado liberal y democrático de Derecho.",
+                "C) España se constituye en una República social y democrática de Derecho."
+            ],
+            answer: "A) España se constituye en un Estado social y democrático de Derecho."
+        },
+        {
+            question: "2. El artículo 1 de la Constitución Española de 1978 propugna como valores superiores del ordenamiento jurídico:",
+            options: [
+                "A) La libertad, la fraternidad y la igualdad.",
+                "B) La libertad, la justicia, la igualdad y el pluralismo político.",
+                "C) La igualdad, la justicia, la libertad y la autonomía."
+            ],
+            answer: "B) La libertad, la justicia, la igualdad y el pluralismo político."
+        },
+        {
+            question: "3. De conformidad con el artículo 2 de la Constitución Española de 1978, la Constitución se fundamenta en la indisoluble unidad de la Nación española, patria común e indivisible de todos los españoles, y reconoce y garantiza el derecho a:",
+            options: [
+                "A) La autonomía de las nacionalidades y regiones que la integran y la desigualdad entre todas ellas.",
+                "B) La autodeterminación de las nacionalidades que la integran y la solidaridad entre las regiones.",
+                "C) La autonomía de las nacionalidades y regiones que la integran y la solidaridad entre todas ellas."
+            ],
+            answer: "C) La autonomía de las nacionalidades y regiones que la integran y la solidaridad entre todas ellas."
+        },
+        {
+            question: "4. Según el artículo 10 de la Constitución Española de 1978, las normas relativas a los derechos fundamentales y a las libertades que la Constitución reconoce se interpretarán de conformidad con:",
+            options: [
+                "A) La Declaración Universal de Derechos Humanos y los tratados y acuerdos internacionales sobre las mismas materias ratificados por España.",
+                "B) Los estatutos de autonomía de las Comunidades Autónomas.",
+                "C) El Tribunal Constitucional."
+            ],
+            answer: "A) La Declaración Universal de Derechos Humanos y los tratados y acuerdos internacionales sobre las mismas materias ratificados por España."
+        },
+        {
+            question: "5. El artículo 27 de la Constitución Española de 1978 establece que la enseñanza básica:",
+            options: [
+                "A) Es obligatoria y gratuita.",
+                "B) Es voluntaria y cofinanciada.",
+                "C) Es voluntaria y gratuita."
+            ],
+            answer: "A) Es obligatoria y gratuita."
+        },
+        {
+            question: "6. El artículo 54 de la Constitución Española de 1978 establece que una ley orgánica regulará la institución del Defensor del Pueblo, como alto comisionado:",
+            options: [
+                "A) Del Tribunal Supremo, designado por este para la defensa de los derechos comprendidos en este Título.",
+                "B) De las Cortes Generales designado por estas para la defensa de los derechos comprendidos en este Título.",
+                "C) Del Fiscal General del Estado, designado por este para la defensa de los derechos comprendidos en este Título."
+            ],
+            answer: "B) De las Cortes Generales designado por estas para la defensa de los derechos comprendidos en este Título."
+        }
+    ],
+    "Leyes del Gobierno y del Sector Público": [
+        {
+            question: "7. Señale la respuesta FALSA. De conformidad con la Ley 40/2015, de 1 de octubre, de Régimen Jurídico del Sector Público:",
+            options: [
+                "A) Los Ministros son los jefes superiores del Departamento.",
+                "B) Los Subsecretarios ostentan la representación ordinaria del Ministerio.",
+                "C) Los Secretarios generales técnicos están bajo la inmediata dependencia del Ministro."
+            ],
+            answer: "C) Los Secretarios generales técnicos están bajo la inmediata dependencia del Ministro."
+        },
+        {
+            question: "8. Señale la respuesta FALSA. De acuerdo con la Ley 50/1997, de 27 de noviembre, del Gobierno:",
+            options: [
+                "A) Las deliberaciones del Consejo de Ministros serán públicas.",
+                "B) El Consejo Ministros es un órgano colegiado del Gobierno.",
+                "C) Al Consejo de Ministros le corresponde aprobar el Proyecto de Ley de Presupuestos Generales del Estado."
+            ],
+            answer: "A) Las deliberaciones del Consejo de Ministros serán públicas."
+        },
+        {
+            question: "9. Según la Ley 40/2015, de 1 de octubre, de Régimen Jurídico del Sector Público, en la organización central de la Administración General del Estado:",
+            options: [
+                "A) Son órganos superiores los Ministros, los Secretarios de Estado y los Subsecretarios.",
+                "B) Son órganos directivos los Secretarios generales técnicos y los Directores Generales.",
+                "C) Son órganos superiores los Ministros y los Secretarios generales."
+            ],
+            answer: "B) Son órganos directivos los Secretarios generales técnicos y los Directores Generales."
+        }
+    ],
+    "Estatuto Básico del Empleado Público y Convenio Colectivo": [
+        {
+            question: "10. De acuerdo con el artículo 55 del texto refundido de la Ley del Estatuto Básico del Empleado Público, aprobado por el Real Decreto Legislativo 5/2015, de 30 de octubre, los principios constitucionales por los que se rige el derecho al acceso al empleo público son:",
+            options: [
+                "A) Buen aspecto físico y relaciones familiares.",
+                "B) Igualdad, mérito y capacidad.",
+                "C) Transparencia, honor y salud."
+            ],
+            answer: "B) Igualdad, mérito y capacidad."
+        },
+        {
+            question: "11. En virtud de lo establecido en el Reglamento General de Ingreso del Personal al servicio de la Administración general del Estado y de Provisión de Puestos de Trabajo y Promoción Profesional de los Funcionarios Civiles de la Administración general del Estado, aprobado por el Real Decreto 364/1995, de 10 de marzo, el ingreso del personal funcionario se llevará a cabo a través de los sistemas de:",
+            options: [
+                "A) Oposición exclusivamente.",
+                "B) Oposición, concurso oposición o concurso libres.",
+                "C) Concurso de méritos y excepcionalmente oposición."
+            ],
+            answer: "B) Oposición, concurso oposición o concurso libres."
+        },
+        {
+            question: "12. Señale en cuál de las siguientes circunstancias es posible el nombramiento de un funcionario interino, de acuerdo con el texto refundido de la Ley del Estatuto Básico del Empleado Público:",
+            options: [
+                "A) La sustitución transitoria de los titulares, durante el tiempo estrictamente necesario.",
+                "B) Para la sustitución definitiva de los titulares en los casos de ausencia por enfermedad profesional.",
+                "C) En todo caso, cuando así lo autorice el superior jerárquico."
+            ],
+            answer: "A) La sustitución transitoria de los titulares, durante el tiempo estrictamente necesario."
+        },
+        {
+            question: "13. De conformidad con lo dispuesto el artículo 96 del texto refundido de la Ley del Estatuto Básico del Empleado Público, escoja la opción correcta respecto de las sanciones impuestas por la comisión de faltas muy graves:",
+            options: [
+                "A) Conllevará en todo caso pena de prisión.",
+                "B) Despido disciplinario del personal laboral, que comportará la inhabilitación para ser titular de un nuevo contrato de trabajo con funciones similares a las que desempeñaban.",
+                "C) Únicamente, una amonestación verbal."
+            ],
+            answer: "B) Despido disciplinario del personal laboral, que comportará la inhabilitación para ser titular de un nuevo contrato de trabajo con funciones similares a las que desempeñaban."
+        },
+        {
+            question: "14. De acuerdo con lo establecido en el del texto refundido de la Ley del Estatuto Básico del Empleado Público, la obstaculización al ejercicio de las libertades públicas y derechos sindicales constituye:",
+            options: [
+                "A) Falta muy grave.",
+                "B) Un delito que, en todo caso, conlleva pena de prisión.",
+                "C) No constituye falta disciplinaria."
+            ],
+            answer: "A) Falta muy grave."
+        },
+        {
+            question: "15. De acuerdo con el artículo 89 del texto refundido de la Ley del Estatuto Básico del Empleado Público, quienes se encuentren en la situación de excedencia voluntaria por interés particular:",
+            options: [
+                "A) No devengarán retribuciones, ni les será computable el tiempo que permanezcan en tal situación a efectos de ascensos, trienios y derechos en el régimen de Seguridad Social que les sea de aplicación.",
+                "B) No devengarán retribuciones, pero les será computable el tiempo de permanencia a efectos de trienios, carrera y derechos en el régimen de Seguridad Social que sea de aplicación.",
+                "C) Devengarán retribuciones y les será computable el tiempo de permanencia a efectos de trienios, carrera y derechos en el régimen de Seguridad Social que sea de aplicación."
+            ],
+            answer: "A) No devengarán retribuciones, ni les será computable el tiempo que permanezcan en tal situación a efectos de ascensos, trienios y derechos en el régimen de Seguridad Social que les sea de aplicación."
+        }
+    ],
+    "Prevención de Riesgos Laborales": [
+        {
+            question: "22. Según la Ley de Prevención de Riesgos Laborales, los Delegados de Prevención serán:",
+            options: [
+                "A) Designados por y entre los representantes de los trabajadores.",
+                "B) Designados por la empresa para dicha ocupación.",
+                "C) Trabajadores fijos de la empresa."
+            ],
+            answer: "A) Designados por y entre los representantes de los trabajadores."
+        },
+        {
+            question: "23. Los principios de la acción preventiva por parte del empresario NO incluyen:",
+            options: [
+                "A) Adoptar medidas que antepongan la protección individual a la colectiva.",
+                "B) Adaptar el trabajo a la persona.",
+                "C) Evaluar los riesgos que no se puedan evitar."
+            ],
+            answer: "A) Adoptar medidas que antepongan la protección individual a la colectiva."
+        },
+        {
+            question: "24. Según el artículo 29 de la Ley de Prevención de Riesgos Laborales, es obligación del trabajador:",
+            options: [
+                "A) Proveerse de los medios y equipos de protección necesarios para su seguridad.",
+                "B) Cooperar con el empresario para que este pueda garantizar unas condiciones de trabajo que sean seguras.",
+                "C) No existen obligaciones de los trabajadores, estas son del empresario."
+            ],
+            answer: "B) Cooperar con el empresario para que este pueda garantizar unas condiciones de trabajo que sean seguras."
+        }
+    ],
+    "Igualdad, Violencia de Género y Dependencia": [
+        {
+            question: "25. Según el artículo 7.3 de la Ley Orgánica 3/2007, de 22 de marzo, para la igualdad efectiva de mujeres y hombres, el acoso sexual y el acoso por razón de sexo se considerarán discriminatorios:",
+            options: [
+                "A) En todo caso.",
+                "B) Solamente cuando sean directos.",
+                "C) Solamente cuando sean indirectos."
+            ],
+            answer: "A) En todo caso."
+        },
+        {
+            question: "26. Conforme dispone el artículo 6 de la Ley Orgánica 3/2007, de 22 de marzo, para la igualdad efectiva de mujeres y hombres, se considera discriminación directa por razón de sexo:",
+            options: [
+                "A) La situación en que se encuentra una persona que pudiera ser tratada, en atención a su sexo, de manera menos favorable que otra en situación comparable.",
+                "B) La práctica aparentemente neutra que pone a personas de un sexo en desventaja particular con respecto a personas del otro, salvo una justificación objetiva.",
+                "C) La situación en que se encuentra una persona que sea tratada, en atención a su sexo, de manera claramente desfavorable que otra en situación distinta."
+            ],
+            answer: "A) La situación en que se encuentra una persona que pudiera ser tratada, en atención a su sexo, de manera menos favorable que otra en situación comparable."
+        },
+        {
+            question: "27. De conformidad con el artículo 30 de la Ley Orgánica 1/2004, de 28 de diciembre, de Medidas de Protección Integral contra la Violencia de Género, las tareas de asesoramiento, evaluación, colaboración institucional, elaboración de informes y estudios y propuestas de actuación en materia de violencia de género, corresponderán:",
+            options: [
+                "A) Al Ministerio de Igualdad.",
+                "B) A los Juzgados de Violencia sobre la Mujer.",
+                "C) Al Observatorio Estatal de Violencia sobre la Mujer."
+            ],
+            answer: "C) Al Observatorio Estatal de Violencia sobre la Mujer."
+        },
+        {
+            question: "28. Según el artículo 26 de la Ley 39/2006, de 14 de diciembre, de Promoción de la Autonomía Personal y Atención a las personas en situación de dependencia, ¿cuántos grados de dependencia existen?:",
+            options: [
+                "A) Tres, dependencia moderada, dependencia severa y dependencia absoluta.",
+                "B) Dos, dependencia severa y gran dependencia.",
+                "C) Tres, dependencia moderada, dependencia severa y gran dependencia."
+            ],
+            answer: "C) Tres, dependencia moderada, dependencia severa y gran dependencia."
+        },
+        {
+            question: "29. El artículo 2 de la Ley 39/2006, de 14 de diciembre, de Promoción de la Autonomía Personal y atención a las personas en situación de dependencia, establece que, a efectos de esta Ley, se entiende por “necesidades de apoyo para la autonomía personal”:",
+            options: [
+                "A) Las que requieren las personas que tienen discapacidad intelectual o mental para hacer efectivo un grado satisfactorio de autonomía personal en el seno de la comunidad.",
+                "B) Las que requieren las personas que tienen una discapacidad física para hacer efectivo un grado satisfactorio de autonomía personal en el seno de la comunidad.",
+                "C) Las que requieren las personas que no pueden realizar las actividades básicas de la vida diaria."
+            ],
+            answer: "A) Las que requieren las personas que tienen discapacidad intelectual o mental para hacer efectivo un grado satisfactorio de autonomía personal en el seno de la comunidad."
+        },
+        {
+            question: "30. Según el artículo 14.1 de la Ley 19/2013, de 9 de diciembre, de transparencia, acceso a la información pública y buen gobierno, el derecho de acceso podrá ser limitado cuando acceder a la información suponga un perjuicio para:",
+            options: [
+                "A) La protección de la infancia.",
+                "B) La política de la Unión Europea.",
+                "C) La protección del medio ambiente."
+            ],
+            answer: "A) La protección de la infancia."
+        },
+
+    
     {
         id: 2,
         pregunta: "Según el artículo 61 del TREBEP, los órganos de selección no podrán proponer el acceso a la condición de funcionario de un número superior de aprobados al de plazas convocadas, excepto:",
@@ -439,449 +655,10 @@ const examen_2024_01_Test = [
         ],
         respuestaCorrecta: "C) El derecho a participar, a través de las organizaciones sindicales, en los órganos de control y seguimiento de las entidades u organismos que legalmente se determine."
     },
-    {
-        id: 41,
-        pregunta: "El marco normativo que establece las exigencias básicas de calidad que deben cumplir los edificios en relación con los requisitos básicos de seguridad y habitabilidad establecidos en la Ley 38/1999 de 5 de noviembre, de Ordenación de la Edificación (LOE), se denomina:",
-        opciones: [
-            "A) El manual de uso del Edificio",
-            "B) El Código Técnico de la Edificación",
-            "C) Las Normas Tecnológicas de la Construcción",
-            "D) El Reglamento de Construcción"
-        ],
-        respuestaCorrecta: "B) El Código Técnico de la Edificación"
-    },
-    {
-        id: 42,
-        pregunta: "El elemento constructivo del edificio que lo separa del exterior, ya sea aire, terreno u otros edificios, se denomina:",
-        opciones: [
-            "A) Fachada",
-            "B) Cubierta",
-            "C) Cerramiento",
-            "D) Muro de carga"
-        ],
-        respuestaCorrecta: "C) Cerramiento"
-    },
-    {
-        id: 43,
-        pregunta: "La Norma ISO 216, en su versión española UNE, determina que las dimensiones de un papel tamaño A2 serán:",
-        opciones: [
-            "A) 594 x 841 mm.",
-            "B) 297 x 420 mm.",
-            "C) 420 x 594 mm.",
-            "D) 297 x 215 mm."
-        ],
-        respuestaCorrecta: "C) 420 x 594 mm."
-    },
-    {
-        id: 44,
-        pregunta: "En un plano representado a escala 1:500, ¿cuántos centímetros en papel equivaldrían a 20 metros en la realidad?",
-        opciones: [
-            "A) 2 centímetros.",
-            "B) 4 centímetros.",
-            "C) 5 centímetros.",
-            "D) 0 centímetros."
-        ],
-        respuestaCorrecta: "B) 4 centímetros." // 20 metros = 2000 cm. 2000 cm / 500 = 4 cm.
-    },
-    {
-        id: 45,
-        pregunta: "La altura de las plantas, techos, forjados, etc. de una edificación quedará reflejada en:",
-        opciones: [
-            "A) Los planos de sección o cortes transversales.",
-            "B) Los planos de replanteo de las obras.",
-            "C) Los planos de situación o emplazamiento.",
-            "D) Los planos us built."
-        ],
-        respuestaCorrecta: "A) Los planos de sección o cortes transversales."
-    },
-    {
-        id: 46,
-        pregunta: "Cómo se denomina el material para la elaboración de maquetas de proyectos arquitectónicos que dispone de dos capas de cartulina y una capa de espuma entre ellas?",
-        opciones: [
-            "A) Madera de balsa.",
-            "B) Cartón pluma.",
-            "C) Metacrilato.",
-            "D) Plancha de policarbonato."
-        ],
-        respuestaCorrecta: "B) Cartón pluma."
-    },
-    {
-        id: 47,
-        pregunta: "En el ámbito de la edificación, el término “replanteo” se refiere a:",
-        opciones: [
-            "A) La medición y ubicación de los lindes de separación de varias fincas.",
-            "B) El traslado de las medidas de un proyecto u obra en papel al terreno para verificar su cabida y adecuación.",
-            "C) La realización de un nuevo cálculo de los costes de las partidas y unidades de obra que integran el presupuesto del proyecto.",
-            "D) El conjunto de planos que detallan los trazados de las instalaciones de un edificio."
-        ],
-        respuestaCorrecta: "B) El traslado de las medidas de un proyecto u obra en papel al terreno para verificar su cabida y adecuación."
-    },
-    {
-        id: 48,
-        pregunta: "Un instrumento que permite medir rápidamente ángulos, distancias, posiciones relativas y elevaciones de objetos distantes con gran precisión es:",
-        opciones: [
-            "A) Un taquímetro topográfico.",
-            "B) Un dinamómetro.",
-            "C) Un nivel.",
-            "D) Un astrolabio."
-        ],
-        respuestaCorrecta: "A) Un taquímetro topográfico."
-    },
-    {
-        id: 49,
-        pregunta: "Los suelos se clasifican en cuatro tipos: (1) arenosos; (2) limos; (3) arcillosos o barros. Esta clasificación se basa en:",
-        opciones: [
-            "A) La densidad.",
-            "B) El PH.",
-            "C) La resistencia.",
-            "D) El tamaño de las partículas."
-        ],
-        respuestaCorrecta: "D) El tamaño de las partículas."
-    },
-    {
-        id: 50,
-        pregunta: "Cuando estudiamos las características geotécnicas de un suelo, ¿a qué nos referimos cuando hacemos referencia a un SPT (Standard Penetration Test)?",
-        opciones: [
-            "A) A un ensayo de penetración estándar, siendo un tipo de ensayo de penetración dinámica.",
-            "B) A un ensayo de penetración estándar, siendo un tipo de ensayo de penetración estática.",
-            "C) A un ensayo de penetración de cono.",
-            "D) Un ensayo de materiales."
-        ],
-        respuestaCorrecta: "A) A un ensayo de penetración estándar, siendo un tipo de ensayo de penetración dinámica."
-    },
-    {
-        id: 51,
-        pregunta: "En el proceso de construcción de un edificio se pueden recurrir a la ejecución de zapatas, elementos que pueden definirse como:",
-        opciones: [
-            "A) Una parte de la instalación de saneamiento del edificio.",
-            "B) Uno de los elementos de coronación del edificio.",
-            "C) Un tipo de pavimentación.",
-            "D) Uno de los elementos estructurales del edificio que sirve de cimentación a pilares, muros y otros elementos superficiales."
-        ],
-        respuestaCorrecta: "D) Uno de los elementos estructurales del edificio que sirve de cimentación a pilares, muros y otros elementos superficiales."
-    },
-    {
-        id: 52,
-        pregunta: "Los muros pantalla se pueden definir como:",
-        opciones: [
-            "A) Elementos estructurales sobre rasante que ayudan a soportar las cargas de los forjados.",
-            "B) Elementos estructurales de una cimentación de tipo puntual.",
-            "C) Elementos que se construyen antes del vaciado de tierra y que transmiten los esfuerzos al terreno.",
-            "D) Elementos de cerramiento en terrenos cohesionados."
-        ],
-        respuestaCorrecta: "C) Elementos que se construyen antes del vaciado de tierra y que transmiten los esfuerzos al terreno."
-    },
-    {
-        id: 53,
-        pregunta: "Conforme a lo establecido en el Código Estructural, aprobado por Real Decreto 470/2021, de 29 de junio, el hormigonado en tiempo frío, en general, se prohíbe verter el hormigón sobre elementos (armaduras, moldes, etc.) cuya temperatura sea inferior a:",
-        opciones: [
-            "A) 0º Centígrados.",
-            "B) 0º Kelvin.",
-            "C) 5º Centígrados.",
-            "D) -5º Centígrados."
-        ],
-        respuestaCorrecta: "A) 0º Centígrados."
-    },
-    {
-        id: 54,
-        pregunta: "La colocación de las tejas curvas en una cubierta inclinada deberá tener un solape de:",
-        opciones: [
-            "A) Menos de 50mm.",
-            "B) Entre 70 y 150mm.",
-            "C) La mitad de la longitud.",
-            "D) No se necesita solape."
-        ],
-        respuestaCorrecta: "B) Entre 70 y 150mm."
-    },
-    {
-        id: 55,
-        pregunta: "La “masa térmica” es la capacidad de los materiales de absorber y almacenar calor. Esta depende de tres factores: la densidad del material, su calor específico y… (señale la correcta):",
-        opciones: [
-            "A) Su conductividad.",
-            "B) Su espesor.",
-            "C) Su volumen.",
-            "D) Su peso."
-        ],
-        respuestaCorrecta: "A) Su conductividad."
-    },
-    {
-        id: 56,
-        pregunta: "El compendio de información cuantificada, en cuanto a las características del terreno en relación con el tipo de edificio previsto y el entorno donde se ubica, que es necesaria para proceder al análisis y dimensionado de los cimientos de éste u otras obras, se denomina:",
-        opciones: [
-            "A) Proyecto de cimentación.",
-            "B) Cálculo estructural.",
-            "C) Pliego de prescripciones.",
-            "D) Estudio geotécnico."
-        ],
-        respuestaCorrecta: "D) Estudio geotécnico."
-    },
-    {
-        id: 57,
-        pregunta: "¿Cuál es la función de las cimentaciones?",
-        opciones: [
-            "A) Trasladar las cargas de la edificación al terreno.",
-            "B) Evitar que la edificación proyectada se deslice por el terreno.",
-            "C) Marcar el perímetro exterior de un edificio.",
-            "D) Delimitar el solar sobre el que se edifica."
-        ],
-        respuestaCorrecta: "A) Trasladar las cargas de la edificación al terreno."
-    },
-    {
-        id: 58,
-        pregunta: "El macizo de hormigón armado que se utiliza en cimentación para recoger las cabezas de los pilotes y enlazar grupos de ellos, se denomina:",
-        opciones: [
-            "A) Zapata.",
-            "B) Losa armada.",
-            "C) Contrafuerte.",
-            "D) Encepado."
-        ],
-        respuestaCorrecta: "D) Encepado."
-    },
-    {
-        id: 59,
-        pregunta: "El elemento longitudinal resistente, prefabricado en una instalación fija exterior a la obra, diseñado para soportar cargas producidas en forjados de pisos o de cubiertas (pudiendo ser armadas o pretensadas), se denominan:",
-        opciones: [
-            "A) Bovedilla.",
-            "B) Vigueta.",
-            "C) Losa.",
-            "D) Tirante."
-        ],
-        respuestaCorrecta: "B) Vigueta."
-    },
-    {
-        id: 60,
-        pregunta: "La capa de yeso, que se da a las paredes de una construcción, con objeto de obtener una superficie tersa se denomina:",
-        opciones: [
-            "A) Enfoscado.",
-            "B) Enlucido.",
-            "C) Recubrimiento.",
-            "D) Fratasado."
-        ],
-        respuestaCorrecta: "B) Enlucido."
-    },
-    {
-        id: 61,
-        pregunta: "NO se realizará el guarnecido de un paramento, cuando la temperatura ambiente en el lugar de la utilización de la pasta sea inferior a:",
-        opciones: [
-            "A) 15ºC.",
-            "B) 5°C.",
-            "C) 0ºC.",
-            "D) -5ºC."
-        ],
-        respuestaCorrecta: "B) 5°C."
-    },
-    {
-        id: 62,
-        pregunta: "De conformidad con el CTE-DB-HS 1 Protección frente a la humedad, la pendiente máxima que deben tener las cubiertas planas, con solado fijo, transitables por peatones es del:",
-        opciones: [
-            "A) 5%.",
-            "B) 1%.",
-            "C) 3%.",
-            "D) 10%."
-        ],
-        respuestaCorrecta: "A) 5%."
-    },
-    {
-        id: 63,
-        pregunta: "Una sala de calderas con potencia útil nominal P 70<P≤200 kW, es un local clasificado, según el Código Técnico de la Edificación/Documento Básico SI Seguridad en caso de incendio, como:",
-        opciones: [
-            "A) Riesgo bajo.",
-            "B) Riesgo medio.",
-            "C) Riesgo alto.",
-            "D) Riesgo nulo."
-        ],
-        respuestaCorrecta: "A) Riesgo bajo."
-    },
-    {
-        id: 64,
-        pregunta: "Con el fin de evacuar eficazmente el agua que reciben y apartarlo de la fachada, las albardillas deben tener una inclinación de:",
-        opciones: [
-            "A) 2º como mínimo.",
-            "B) 5º como mínimo.",
-            "C) 10° como mínimo.",
-            "D) No necesitan tener pendiente porque están en la fachada."
-        ],
-        respuestaCorrecta: "C) 10° como mínimo."
-    },
-    {
-        id: 65,
-        pregunta: "La línea de intersección de dos vertientes de cubierta que se juntan formando un ángulo cóncavo se denomina:",
-        opciones: [
-            "A) Limatesa",
-            "B) Limahoya",
-            "C) Cumbrera",
-            "D) Mansarda"
-        ],
-        respuestaCorrecta: "B) Limahoya"
-    },
-    {
-        id: 66,
-        pregunta: "Al proyectar la cubierta inclinada de un edificio, esta debe tener una pendiente hacia los elementos de evacuación de agua determinado por el material elegido. ¿Cuál de los citados a continuación requiere una menor pendiente?",
-        opciones: [
-            "A) Pizarra.",
-            "B) Teja curva.",
-            "C) Teja plana.",
-            "D) Cinc."
-        ],
-        respuestaCorrecta: "D) Cinc."
-    },
-    {
-        id: 67,
-        pregunta: "Los aleros y las cornisas de constitución continua deben tener una pendiente hacia el exterior para evacuar el agua de:",
-        opciones: [
-            "A) 1º como mínimo.",
-            "B) 5º como mínimo.",
-            "C) 10º como mínimo.",
-            "D) No necesitan pendiente."
-        ],
-        respuestaCorrecta: "C) 10º como mínimo."
-    },
-    {
-        id: 68,
-        pregunta: "De acuerdo con lo dispuesto en el Reglamento Eléctrico de Baja Tensión (REBT) de 2017, un interruptor diferencial de alta sensibilidad tiene un valor de intensidad de corriente eléctrica igual o inferior a:",
-        opciones: [
-            "A) 30 miliamperios (mA).",
-            "B) 40 miliamperios (mA).",
-            "C) 50 miliamperios (mA).",
-            "D) 60 miliamperios (mA)."
-        ],
-        respuestaCorrecta: "A) 30 miliamperios (mA)."
-    },
-    {
-        id: 69,
-        pregunta: "El espesor mínimo de aislamiento (mm) de tuberías de diámetro inferior a 35mm y accesorios que transportan ACS que discurren por el exterior de los edificios, será:",
-        opciones: [
-            "A) 10mm.",
-            "B) 15mm.",
-            "C) 25mm.",
-            "D) 40mm."
-        ],
-        respuestaCorrecta: "D) 40mm."
-    },
-    {
-        id: 70,
-        pregunta: "En el diseño de las redes de fontanería, se dispondrán:",
-        opciones: [
-            "A) Las tuberías de agua fría y caliente se separarán 4 cm como mínimo, colocando la de agua fría por debajo de la de agua caliente.",
-            "B) Las tuberías de agua fría y caliente no se separarán, pero deberán identificarse colocando la de agua fría por debajo de la de agua caliente.",
-            "C) No existen prescripciones relativos a la colocación de las tuberías.",
-            "D) Las tuberías de agua fría y caliente irán en paralelo separadas 20 cm como mínimo."
-        ],
-        respuestaCorrecta: "A) Las tuberías de agua fría y caliente se separarán 4 cm como mínimo, colocando la de agua fría por debajo de la de agua caliente."
-    },
-    {
-        id: 71,
-        pregunta: "La resistencia al fuego de la estructura portante de una sala de calderas con potencia útil nominal P 70<P≤200 kW, deberá ser, al menos:",
-        opciones: [
-            "A) R60.",
-            "B) R90.",
-            "C) R120.",
-            "D) R180."
-        ],
-        respuestaCorrecta: "B) R90."
-    },
-    {
-        id: 72,
-        pregunta: "El pasamanos de una escalera se dispondrá a una altura comprendida entre:",
-        opciones: [
-            "A) 60 y 80 cm.",
-            "B) 90 y 110 cm.",
-            "C) 120 y 130 cm.",
-            "D) 70 y 80 cm."
-        ],
-        respuestaCorrecta: "B) 90 y 110 cm."
-    },
-    {
-        id: 73,
-        pregunta: "Una escalera de uso público tendrá las siguientes medidas en los tramos rectos:",
-        opciones: [
-            "A) Una contrahuella de 13 cm como mínimo y 17,5 cm como máximo.",
-            "B) Una contrahuella de 20 cm como mínimo y 25 cm como máximo.",
-            "C) Una contrahuella de 25 cm como mínimo y 25 cm como máximo.",
-            "D) No existen prescripciones al respecto."
-        ],
-        respuestaCorrecta: "A) Una contrahuella de 13 cm como mínimo y 17,5 cm como máximo."
-    },
-    {
-        id: 74,
-        pregunta: "Cuando la longitud de una rampa sea superior a 16 m, la pendiente máxima admisible de la rampa será del:",
-        opciones: [
-            "A) 10%.",
-            "B) 12%.",
-            "C) 6%.",
-            "D) 8%."
-        ],
-        respuestaCorrecta: "C) 6%."
-    },
-    {
-        id: 75,
-        pregunta: "En el cálculo de alumbrado de las zonas de circulación del interior de un edificio (excepto garajes) se ha de prever que la instalación sea capaz de proporcionar, una iluminancia mínima de:",
-        opciones: [
-            "A) 5 lux.",
-            "B) 20 lux.",
-            "C) 60 lux.",
-            "D) 100 lux."
-        ],
-        respuestaCorrecta: "D) 100 lux."
-    },
-    {
-        id: 76,
-        pregunta: "Si la caja de una bombilla contiene los siguientes valores: 10w, 750lm, 2700k, ¿cuál será su eficacia luminosa?",
-        opciones: [
-            "A) 75.",
-            "B) 270.",
-            "C) 7500.",
-            "D) 3,60."
-        ],
-        respuestaCorrecta: "A) 75." // Cálculo: 750 lm / 10 W = 75 lm/W.
-    },
-    {
-        id: 77,
-        pregunta: "El flujo luminoso por unidad de área de la superficie iluminada se denomina:",
-        opciones: [
-            "A) Iluminancia.",
-            "B) Fotoluminiscencia.",
-            "C) Fotodegradación.",
-            "D) Radiación luminosa."
-        ],
-        respuestaCorrecta: "A) Iluminancia."
-    },
-    {
-        id: 78,
-        pregunta: "¿A qué se denomina eficacia luminosa?",
-        opciones: [
-            "A) Al cociente entre el flujo luminoso emitido y la potencia eléctrica de la fuente.",
-            "B) A la eficiencia energética de una instalación de iluminación de un espacio o local con un determinado uso.",
-            "C) Al flujo luminoso que incide sobre una superficie.",
-            "D) A la radiación ultravioleta por metro cuadrado."
-        ],
-        respuestaCorrecta: "A) Al cociente entre el flujo luminoso emitido y la potencia eléctrica de la fuente."
-    },
-    {
-        id: 79,
-        pregunta: "Los recintos destinados a alojar en su interior grupos electrógenos, deben cumplir la siguiente condición:",
-        opciones: [
-            "A) Deberá tener una superficie mínima de 15m².",
-            "B) Deberá constar de elementos de compartimentación resistentes al fuego durante 120 minutos como mínimo.",
-            "C) Deberá estar situado en la cubierta del edificio.",
-            "D) Deberá contar con un ancho de puerta de 1,20 m mínimo."
-        ],
-        respuestaCorrecta: "B) Deberá constar de elementos de compartimentación resistentes al fuego durante 120 minutos como mínimo."
-    },
-    {
-        id: 80,
-        pregunta: "La suma de todos aquellos cerramientos y particiones interiores por los que el edificio puede ganar o perder calor de forma significativa se denomina:",
-        opciones: [
-            "A) Envolvente térmica del edificio",
-            "B) Cerramiento exterior",
-            "C) Elementos aislantes prefabricados",
-            "D) Fachada ventilada"
-        ],
-        respuestaCorrecta: "A) Envolvente térmica del edificio"
-    }
+    
 ];
 
-export const examen2024  = {
+export const comun_otros_años  = {
     titulo: 'M1 Proyectos de Edificación 2024',
     descripcion: 'Prueba con penalización de 1/3.',
     cantidadExamen: 80, // Cantidad específica de preguntas para el examen
@@ -892,5 +669,5 @@ export const examen2024  = {
     },
     
     // 💥 CORRECCIÓN CRÍTICA: Debe usar la variable definida en este archivo.
-    preguntas: examen_2024_01_Test
+    preguntas: comun_otros_años
 };
