@@ -14,7 +14,7 @@ const temas = {
     'tema1': tema1,
     'tema2': tema2,
     'tema3': tema3,
-    'examen2024': Preguntas_otros_años,
+    'examen2024': examen2024,
     'comun_otros_años': comun_otros_años,
 };
 
