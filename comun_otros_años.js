@@ -224,8 +224,6 @@ const comun_otros_años_preguntas = [
             ],
             answer: "A) La protección de la infancia."
         },
-
-    
     {
         id: 2,
         pregunta: "Según el artículo 61 del TREBEP, los órganos de selección no podrán proponer el acceso a la condición de funcionario de un número superior de aprobados al de plazas convocadas, excepto:",
@@ -658,7 +656,7 @@ const comun_otros_años_preguntas = [
     
 ];
 
-export const comun_otros_años  = {
+export const comun_otros_años = {
     titulo: 'Preguntas M1 Parte Común otros años',
     descripcion: 'Prueba con penalización de 1/3.',
     cantidadExamen: 40, // Cantidad específica de preguntas para el examen
