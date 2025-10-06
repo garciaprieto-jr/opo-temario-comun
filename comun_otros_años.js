@@ -1,4 +1,4 @@
-const comun_otros_años_preguntas = [
+const comun_otros_años = [
    "Constitución Española": [
         {
             question: "1. Señale la respuesta CORRECTA conforme al artículo 1 de la Constitución Española de 1978:",
