@@ -5,37 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test de Oposición</title>
     <link rel="stylesheet" href="style.css">
-</head>
+  </head>
 <body>
-    <div class="app-container">
+
+    <div class="container">
+        <h1>Simulador de Examen Proyectos de Edificación M1 </h1>
+
         <div id="selector-temas">
-            <h1>Selecciona un Tema</h1>
-            <div class="tema-botones">
-                <button class="btn-tema" data-tema="tema1">Tema 1: Constitución y Organización</button>
-                </div>
+            <h2>Selecciona un Tema para Iniciar la Prueba</h2>
+            
+            <button class="btn btn-tema" data-tema="tema1">
+                Tema 1: Constitución Española
+            </button>
+
+            <button class="btn btn-tema" data-tema="tema2">
+                Tema 2: Administración y Organización Territorial
+            </button>
+
+            <button class="btn btn-tema" data-tema="tema3">
+                Tema 3: El Gobierno y la Administración
+            </button>
+
+            <button class="btn btn-tema" data-tema="examen2024">
+                Examen 2024: 80 preguntas (Comun y Expecifico)
+            </button>
+
+            <button class="btn btn-tema" data-tema="comun_otros_años">
+                Preguntas de otros Examenes parte comun
+            </button>
         </div>
 
         <div id="examen" style="display: none;">
-            <h1 id="titulo-examen">Título del Examen</h1>
-            <div id="contenedor-preguntas-completas">
-                </div>
-            <div class="acciones-examen">
-                <button id="btn-corregir">Corregir Examen</button>
-                <button id="btn-reiniciar-selector">Volver a Temas</button>
-            </div>
+            <h2 id="titulo-examen"></h2>
             
-            <div id="contenedor-resultados" style="display: none;">
-                <h3>Resumen de la Corrección</h3>
-                <p><strong>Preguntas Correctas:</strong> <span id="resumen-correctas">0</span></p>
-                <p><strong>Preguntas Falladas:</strong> <span id="resumen-falladas">0</span></p>
-                <p><strong>Preguntas Sin Contestar:</strong> <span id="resumen-sin-contestar">0</span></p>
-                <hr>
-                <p><strong>Nota Final (sobre 10):</strong> <span id="resumen-nota">0.00</span></p>
-                <p><strong>Resultado:</strong> <span id="resumen-estado" class="">PENDIENTE</span></p>
+            <form id="formulario-examen">
+                <div id="contenedor-preguntas-completas">
+                    </div>
+
+                <button type="button" id="btn-corregir">Corregir Examen y Ver Resultados</button>
+            </form>
+            
+            div id="contenedor-resultados" style="display: none;">
+    <h3>Resumen de la Corrección</h3>
+    <p><strong>Preguntas Correctas:</strong> <span id="resumen-correctas">0</span></p>
+    <p><strong>Preguntas Falladas:</strong> <span id="resumen-falladas">0</span></p>
+    <p><strong>Preguntas Sin Contestar:</strong> <span id="resumen-sin-contestar">0</span></p>
+    <hr>
+    <p><strong>Nota Final (sobre 10):</strong> <span id="resumen-nota">0.00</span></p>
+    <p><strong>Resultado:</strong> <span id="resumen-estado">PENDIENTE</span></p>
+</div>
+                
+                <button type="button" id="btn-reiniciar-selector">Volver a la Selección de Temas</button>
             </div>
         </div>
     </div>
 
     <script type="module" src="script.js"></script>
+
 </body>
 </html>
+  
