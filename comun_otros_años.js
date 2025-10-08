@@ -559,4 +559,394 @@ export const comun_otros_años = {
         opciones: [ "A) 2019.", "B) 2020.", "C) 2021.", "D) 2022." ],
         respuestaCorrecta: "B) 2020."
     },
+       {
+        pregunta: "Según el art. 1.2 de la Constitución Española de 1978 (en adelante CE), ¿en quién reside la Soberanía Nacional?",
+        opciones: [
+            "A) Las Cortes Generales.",
+            "B) Las Cortes Generales y el Gobierno.",
+            "C) Reside en el pueblo español, del que emanan los poderes del Estado.",
+            "D) Únicamente el Gobierno."
+        ],
+        respuestaCorrecta: "C) Reside en el pueblo español, del que emanan los poderes del Estado."
+    },
+    {
+        pregunta: "Según el art. 10.2 CE, ¿cómo se interpretarán las normas relativas a los derechos fundamentales?",
+        opciones: [
+            "A) De conformidad con la Declaración Universal de Derechos Humanos exclusivamente.",
+            "B) Según el derecho del que se trate.",
+            "C) Según se dictamine por el Tribunal Supremo.",
+            "D) De conformidad con la Declaración Universal de Derechos Humanos y los tratados y acuerdos internacionales sobre las mismas materias ratificados por España."
+        ],
+        respuestaCorrecta: "D) De conformidad con la Declaración Universal de Derechos Humanos y los tratados y acuerdos internacionales sobre las mismas materias ratificados por España."
+    },
+    {
+        pregunta: "De acuerdo con el artículo 141.1 CE, la provincia es una entidad:",
+        opciones: [
+            "A) Local con personalidad jurídica propia, determinada por la agrupación de municipios y división territorial para el cumplimiento de las actividades del Estado.",
+            "B) Estatal con personalidad jurídica propia, determinada por la agrupación de municipios y división territorial para el cumplimiento de las actividades del Estado.",
+            "C) Local con personalidad jurídica propia, determinada por la agrupación de municipios y división territorial para el cumplimiento de las actividades de la Comunidad Autónoma.",
+            "D) Local con personalidad jurídica propia, determinada por la agrupación de municipios y división territorial para el cumplimiento de las actividades de la Diputación Provincial."
+        ],
+        respuestaCorrecta: "A) Local con personalidad jurídica propia, determinada por la agrupación de municipios y división territorial para el cumplimiento de las actividades del Estado."
+    },
+    {
+        pregunta: "Dentro de los términos de la Constitución Española, los Estatutos serán:",
+        opciones: [
+            "A) La norma institucional básica de cada Comunidad Autónoma y el Estado no los reconocerá como parte integrante de su ordenamiento jurídico.",
+            "B) La norma institucional básica de cada Comunidad Autónoma y el Estado los reconocerá y amparará como parte integrante de su ordenamiento jurídico.",
+            "C) Una norma más de cada Comunidad Autónoma y el Estado los reconocerá y amparará como parte integrante del ordenamiento jurídico.",
+            "D) Una norma que el Estado los reconocerá."
+        ],
+        respuestaCorrecta: "B) La norma institucional básica de cada Comunidad Autónoma y el Estado los reconocerá y amparará como parte integrante de su ordenamiento jurídico."
+    },
+    {
+        pregunta: "Las materias sobre las que el Estado tiene competencia exclusiva, vienen recogidas en la Constitución Española de 1978, en que artículo:",
+        opciones: [
+            "A) 150",
+            "B) 148",
+            "C) 149.1",
+            "D) 149.3"
+        ],
+        respuestaCorrecta: "C) 149.1"
+    },
+    {
+        pregunta: "Según el artículo 148 de la CE, las Comunidades Autónomas podrán asumir competencias en materia de:",
+        opciones: [
+            "A) Defensa y Fuerzas Armadas.",
+            "B) Régimen aduanero y arancelario; comercio exterior.",
+            "C) Ordenación del territorio, urbanismo y vivienda.",
+            "D) Hacienda general y Deuda del Estado."
+        ],
+        respuestaCorrecta: "C) Ordenación del territorio, urbanismo y vivienda."
+    },
+    {
+        pregunta: "Entre los principios de las relaciones interadministrativas que recoge el artículo 140.1 de la Ley 40/2015 de Régimen Jurídico del Sector Público (en adelante LRJSP), se encuentra:",
+        opciones: [
+            "A) Responsabilidad de una sola administración.",
+            "B) Coordinación.",
+            "C) Solidaridad intergeneracional.",
+            "D) Adecuación al orden de distribución de competencias establecido por los tribunales."
+        ],
+        respuestaCorrecta: "B) Coordinación."
+    },
+    {
+        pregunta: "¿Quién dirige la Administración civil y militar y la defensa del Estado, según la Ley 50/1997, de 27 de noviembre, Ley del Gobierno (en adelante Ley de Gobierno)?:",
+        opciones: [
+            "A) Las Fuerzas Armadas.",
+            "B) El Congreso de los Diputados.",
+            "C) Las Cortes Generales.",
+            "D) El Gobierno."
+        ],
+        respuestaCorrecta: "D) El Gobierno."
+    },
+    {
+        pregunta: "¿Cómo son nombrados y separados los Secretarios de Estado, de acuerdo a lo recogido en el artículo 15 de la Ley del Gobierno?",
+        opciones: [
+            "A) Por Real Decreto del Presidente del Gobierno.",
+            "B) Por Real Decreto del Consejo de Ministros.",
+            "C) Por Orden Ministerial, previo conocimiento del Consejo de Ministros.",
+            "D) Por el Rey, a propuesta del Presidente del Gobierno."
+        ],
+        respuestaCorrecta: "B) Por Real Decreto del Consejo de Ministros."
+    },
+    {
+        pregunta: "El artículo 21 de la Ley del Gobierno, establece una serie de facultades que no podrá ejercer el Presidente del Gobierno en funciones. De las indicadas, ¿cuál es INCORRECTA?",
+        opciones: [
+            "A) Aprobar el Proyecto de Ley de Presupuestos Generales del Estado.",
+            "B) Proponer al Rey la disolución de alguna de las Cámaras, o de las Cortes Generales.",
+            "C) Plantear la cuestión de confianza.",
+            "D) Proponer al Rey la convocatoria de un referéndum consultivo."
+        ],
+        respuestaCorrecta: "A) Aprobar el Proyecto de Ley de Presupuestos Generales del Estado."
+    },
+    {
+        pregunta: "Según el artículo 56 de la LRJSP, los elementos organizativos básicos de las estructuras orgánicas son:",
+        opciones: [
+            "A) Los órganos administrativos.",
+            "B) Las unidades de servicios integrados.",
+            "C) Las unidades administrativas.",
+            "D) Las unidades de servicios comunes."
+        ],
+        respuestaCorrecta: "C) Las unidades administrativas."
+    },
+    {
+        pregunta: "¿Cuál de los siguientes NO es un principio que las Administraciones Públicas deban respetar en su actuación y relaciones, según el artículo 3.1 LRJSP?",
+        opciones: [
+            "A) Eficacia en el cumplimiento de los objetivos fijados.",
+            "B) Participación, subjetividad y transparencia de la actuación administrativa.",
+            "C) Buena fe, confianza legítima y lealtad institucional.",
+            "D) Servicio efectivo a los ciudadanos."
+        ],
+        respuestaCorrecta: "B) Participación, subjetividad y transparencia de la actuación administrativa."
+    },
+    {
+        pregunta: "Señale cómo se clasifican los empleados públicos de acuerdo con el Real Decreto Legislativo 5/2015, de 30 de octubre, por el que se aprueba el Texto Refundido de la Ley del Estatuto Básico del Empleado Público (en adelante TREBEP):",
+        opciones: [
+            "A) Funcionarios de carrera, funcionarios interinos, personal laboral y personal eventual.",
+            "B) Funcionarios de carrera, personal laboral y personal estatutario.",
+            "C) Funcionarios de carrera, funcionarios interinos y personal estatutario.",
+            "D) Funcionarios de carrera, funcionarios interinos, personal laboral, personal eventual y personal estatutario."
+        ],
+        respuestaCorrecta: "A) Funcionarios de carrera, funcionarios interinos, personal laboral y personal eventual."
+    },
+    {
+        pregunta: "Según regula el TREBEP, por ser preciso atender el cuidado de un familiar de primer grado, por razones de enfermedad muy grave, el funcionario tendrá derecho a solicitar:",
+        opciones: [
+            "A) Una reducción de hasta el cincuenta por ciento de la jornada laboral, con la correspondiente reducción proporcional de retribuciones, por el plazo máximo de un mes.",
+            "B) Una reducción de hasta el cincuenta por ciento de la jornada laboral, con la correspondiente reducción proporcional de retribuciones, por el plazo máximo de tres meses.",
+            "C) Una reducción de hasta el cincuenta por ciento de la jornada laboral, con carácter retribuido, por el plazo máximo de un mes.",
+            "D) Una reducción de hasta el cincuenta por ciento de la jornada laboral, con carácter retribuido, por el plazo máximo de tres meses."
+        ],
+        respuestaCorrecta: "C) Una reducción de hasta el cincuenta por ciento de la jornada laboral, con carácter retribuido, por el plazo máximo de un mes."
+    },
+    {
+        pregunta: "De conformidad con el TREBEP, la prestación del servicio mediante teletrabajo, en general, tendrá carácter:",
+        opciones: [
+            "A) Obligatorio.",
+            "B) Irreversible.",
+            "C) Voluntario y reversible.",
+            "D) Voluntario e irreversible."
+        ],
+        respuestaCorrecta: "C) Voluntario y reversible."
+    },
+    {
+        pregunta: "Según el TREBEP, si fuera necesario el desplazamiento previo de los progenitores al país de origen del adoptado, en los casos de adopción internacional, se tendrá derecho, además de al permiso ordinario por adopción, a un permiso de:",
+        opciones: [
+            "A) Hasta dos meses de duración, percibiendo durante este periodo exclusivamente las retribuciones básicas.",
+            "B) Hasta cuatro semanas de duración, percibiendo durante este periodo exclusivamente las retribuciones básicas.",
+            "C) Hasta dos semanas de duración, percibiendo durante este periodo exclusivamente las retribuciones básicas.",
+            "D) Hasta cuatro meses de duración, percibiendo durante este periodo exclusivamente las retribuciones básicas."
+        ],
+        respuestaCorrecta: "A) Hasta dos meses de duración, percibiendo durante este periodo exclusivamente las retribuciones básicas."
+    },
+    {
+        pregunta: "De conformidad con el TREBEP, por fallecimiento, accidente o enfermedad grave, hospitalización o intervención quirúrgica sin hospitalización que precise de reposo domiciliario de un familiar, el funcionario tiene derecho a un permiso de:",
+        opciones: [
+            "A) Tres días hábiles cuando se trate de un familiar dentro del segundo grado de consanguinidad o afinidad y el suceso se produzca en la misma localidad.",
+            "B) Cuatro días hábiles cuando se trata de un familiar dentro del segundo grado de consanguinidad.",
+            "C) Cinco días hábiles cuando se trate de un familiar dentro del segundo grado de consanguinidad o afinidad y el suceso se produzca en distinta localidad.",
+            "D) Dos días hábiles cuando se trate de un familiar dentro del segundo grado de consanguinidad o afinidad y el suceso se produzca en la misma localidad."
+        ],
+        respuestaCorrecta: "D) Dos días hábiles cuando se trate de un familiar dentro del segundo grado de consanguinidad o afinidad y el suceso se produzca en la misma localidad."
+    },
+    {
+        pregunta: "Según el art. 13 de la Ley 53/1984, de 26 de diciembre, de Incompatibilidades del personal al servicio de las Administraciones Públicas: \"No podrá reconocerse compatibilidad alguna para actividades privadas a quienes se les hubiere autorizado la compatibilidad para\":",
+        opciones: [
+            "A) Un segundo puesto o actividad públicos, siempre que la suma de jornadas de ambos sea igual o superior a la máxima en las Administraciones Públicas.",
+            "B) Un tercer puesto o actividad públicos, siempre que la suma de jornadas de ambos sea igual o superior a la máxima en las Administraciones Públicas.",
+            "C) Un segundo puesto o actividad públicos, siempre que la suma de jornadas de ambos sea igual o inferior a la máxima en las Administraciones Públicas.",
+            "D) No se reconoce, en ningún caso, compatibilidad alguna."
+        ],
+        respuestaCorrecta: "A) Un segundo puesto o actividad públicos, siempre que la suma de jornadas de ambos sea igual o superior a la máxima en las Administraciones Públicas."
+    },
+    {
+        pregunta: "De acuerdo con el artículo catorce de la Ley 53/1984, de 26 de diciembre, de Incompatibilidades del personal al servicio de las Administraciones Públicas, la resolución motivada reconociendo la compatibilidad o declarando la incompatibilidad, se dictará en el plazo de:",
+        opciones: [
+            "A) Tres semanas.",
+            "B) Dos semanas.",
+            "C) Dos meses.",
+            "D) 20 días."
+        ],
+        respuestaCorrecta: "C) Dos meses."
+    },
+    {
+        pregunta: "De acuerdo con el TREBEP, los puestos de trabajo en la Administración se proveerán mediante procedimientos basados en los principios de:",
+        opciones: [
+            "A) Libertad, igualdad y publicidad.",
+            "B) Igualdad, transparencia y paridad.",
+            "C) Capacidad, publicidad y mérito.",
+            "D) Igualdad, mérito, capacidad y publicidad."
+        ],
+        respuestaCorrecta: "D) Igualdad, mérito, capacidad y publicidad."
+    },
+    {
+        pregunta: "De acuerdo con el artículo 70 TREBEP, la Oferta de Empleo Público recoge:",
+        opciones: [
+            "A) Las necesidades de material para llevar a cabo el correcto trabajo en la Administración Pública.",
+            "B) Las necesidades de recursos humanos, con asignación presupuestaria, que deban proveerse mediante la incorporación de personal laboral.",
+            "C) Las necesidades de recursos humanos, con asignación presupuestaria, que deban proveerse mediante la incorporación de personal de nuevo ingreso.",
+            "D) Los puestos disponibles en las distintas Administraciones Públicas."
+        ],
+        respuestaCorrecta: "C) Las necesidades de recursos humanos, con asignación presupuestaria, que deban proveerse mediante la incorporación de personal de nuevo ingreso."
+    },
+    {
+        pregunta: "Qué organizaciones sindicales están representadas en las Subcomisiones Paritarias de los Ministerios, según el IV Convenio colectivo único para el personal laboral de la Administración General del Estado (en adelante CUAGE):",
+        opciones: [
+            "A) Las organizaciones sindicales con representación en el Comité de Empresa de los Ministerios.",
+            "B) Las organizaciones sindicales firmantes del IV Convenio Único para el personal laboral de la Administración General del Estado.",
+            "C) Las organizaciones sindicales con representación a nivel nacional dentro de la Administración General del Estado.",
+            "D) Las organizaciones sindicales con mayor número de representantes en el Comité de Empresa del Ministerio."
+        ],
+        respuestaCorrecta: "B) Las organizaciones sindicales firmantes del IV Convenio Único para el personal laboral de la Administración General del Estado."
+    },
+    {
+        pregunta: "De conformidad con el CUAGE, ¿qué órgano de seguimiento y aplicación del convenio tiene competencias para aprobar la creación o modificación de especialidades?",
+        opciones: [
+            "A) La Comisión Paritaria.",
+            "B) La Comisión Negociadora.",
+            "C) La Subcomisión Paritaria en el ámbito de cada Ministerio.",
+            "D) El Ministerio de Educación, Formación Profesional y Deportes."
+        ],
+        respuestaCorrecta: "A) La Comisión Paritaria."
+    },
+    {
+        pregunta: "¿Cuántas personas constituyen la Comisión Paritaria, según regula el CUAGE?",
+        opciones: [
+            "A) Quince personas.",
+            "B) Quince personas, en representación de cada una de las partes.",
+            "C) Quince personas, ocho en representación de la Administración y siete en representación de la parte social.",
+            "D) Treinta personas, catorce en representación de la parte social, quince en representación de la parte social y el Presidente de la Comisión Paritaria sin voto."
+        ],
+        respuestaCorrecta: "B) Quince personas, en representación de cada una de las partes."
+    },
+    {
+        pregunta: "Tal como regula el CUAGE, las aptitudes profesionales, las titulaciones académicas y el contenido general de la prestación laboral determina:",
+        opciones: [
+            "A) La especialidad.",
+            "B) La familia profesional.",
+            "C) El grupo profesional.",
+            "D) El área funcional."
+        ],
+        respuestaCorrecta: "C) El grupo profesional."
+    },
+    {
+        pregunta: "¿Qué estructura de clasificación profesional se establece en el IV Convenio Único para el personal laboral de la Administración General del Estado?",
+        opciones: [
+            "A) Grupo profesional y especialidad.",
+            "B) Grupo profesional, familia profesional y/o especialidad.",
+            "C) Grupo profesional y familia profesional.",
+            "D) Grupo profesional y área funcional."
+        ],
+        respuestaCorrecta: "B) Grupo profesional, familia profesional y/o especialidad."
+    },
+    {
+        pregunta: "En relación con los supuestos de suspensión del contrato de trabajo para personal laboral fijo contemplados en el artículo 94 del CUAGE, indique la respuesta FALSA:",
+        opciones: [
+            "A) El trabajador o trabajadora deberá solicitar su reincorporación a la Administración en el plazo de un mes desde la finalización de la situación que dio origen a la suspensión del contrato de trabajo.",
+            "B) La reincorporación se realizará a un puesto de trabajo de su mismo grupo, familia profesional y/o especialidad, en el mismo Departamento u organismo y en la localidad de su puesto de origen.",
+            "C) Hasta que se haga efectiva su incorporación a un puesto de trabajo mantendrá la situación de suspensión regulada en este artículo.",
+            "D) Si el trabajador o trabajadora fijos no solicitaran la reincorporación a la Administración se procederá de oficio a declararles en excedencia voluntaria por interés particular con un periodo mínimo de permanencia de un año."
+        ],
+        respuestaCorrecta: "D) Si el trabajador o trabajadora fijos no solicitaran la reincorporación a la Administración se procederá de oficio a declararles en excedencia voluntaria por interés particular con un periodo mínimo de permanencia de un año."
+    },
+    {
+        pregunta: "Según el artículo 27.2 del CUAGE, los puestos de trabajo vacantes de personal laboral cuya cobertura sea necesaria, de acuerdo con la planificación de recursos humanos de la organización, NO se proveerán:",
+        opciones: [
+            "A) Mediante concurso abierto y permanente.",
+            "B) Mediante libre designación.",
+            "C) Mediante promoción profesional.",
+            "D) Mediante ingreso libre."
+        ],
+        respuestaCorrecta: "C) Mediante promoción profesional."
+    },
+    {
+        pregunta: "Por la comisión de faltas disciplinarias del personal laboral incluido en el ámbito del IV Convenio Único del Personal Laboral de la AGE se pueden imponer las siguientes sanciones. Indique la FALSA:",
+        opciones: [
+            "A) Suspensión de empleo y sueldo de tres meses y un día a dos años, para el caso de faltas muy graves.",
+            "B) Suspensión de empleo y sueldo por un período de tres días a tres meses, para el caso de faltas graves.",
+            "C) Suspensión de empleo y sueldo de hasta dos días, para el caso de faltas leves.",
+            "D) No cabe suspensión de empleo y sueldo, para el caso de faltas leves."
+        ],
+        respuestaCorrecta: "D) No cabe suspensión de empleo y sueldo, para el caso de faltas leves."
+    },
+    {
+        pregunta: "En relación con la extinción del contrato de trabajo, recogida en el artículo 97 CUAGE, señale la respuesta INCORRECTA:",
+        opciones: [
+            "A) El contrato de trabajo se extinguirá por las causas señaladas al respecto en el texto refundido de la Ley del Estatuto de los Trabajadores y normas de desarrollo y concordantes.",
+            "B) En el caso de extinción del contrato de trabajo por despido colectivo fundado en causas económicas, técnicas, organizativas o de producción se priorizará la permanencia del personal en el ámbito del Convenio.",
+            "C) El contrato de trabajo se extinguirá por las causas consignadas válidamente en el contrato, aunque las mismas constituyan abuso de derecho manifiesto por parte del empresario.",
+            "D) El contrato de trabajo se extinguirá por dimisión del trabajador, debiendo mediar el preaviso que señalen los convenios colectivos o la costumbre del lugar."
+        ],
+        respuestaCorrecta: "C) El contrato de trabajo se extinguirá por las causas consignadas válidamente en el contrato, aunque las mismas constituyan abuso de derecho manifiesto por parte del empresario."
+    },
+    {
+        pregunta: "Señale la respuesta CORRECTA, teniendo en cuenta lo establecido en el artículo 86 CUAGE, relativo a los derechos e infraestructura de los Comités de Empresa y de los Delegados y Delegadas de Personal:",
+        opciones: [
+            "A) Los Comités de Empresa dispondrán, en su ámbito, de un local adecuado y apto para desarrollar las actividades propias de su representación, provisto de teléfono y el correspondiente mobiliario y material informático y de oficina, así como la utilización de fotocopiadora.",
+            "B) En el desarrollo de su función representativa, las personas que conforman los Comités y Delegados y Delegadas de personal no tendrán derecho a percibir las dietas y gastos de locomoción por la asistencia a reuniones convocadas por la Administración.",
+            "C) El tiempo de la asistencia a reuniones convocadas por la Administración se computará a efectos de crédito horario.",
+            "D) Los Comités de Empresa y Delegados y Delegadas de personal podrán acordar la acumulación de todas o parte de las horas sindicales que les correspondan exclusivamente en uno de ellos."
+        ],
+        respuestaCorrecta: "A) Los Comités de Empresa dispondrán, en su ámbito, de un local adecuado y apto para desarrollar las actividades propias de su representación, provisto de teléfono y el correspondiente mobiliario y material informático y de oficina, así como la utilización de fotocopiadora."
+    },
+    {
+        pregunta: "Indique la respuesta CORRECTA, teniendo en cuenta lo establecido en el artículo 11 del Real Decreto Legislativo 5/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley del Estatuto Básico del Empleado Público (en adelante TREBEP), respecto al personal laboral:",
+        opciones: [
+            "A) Es personal laboral el que, en virtud de contrato de trabajo formalizado por escrito, en cualquiera de las modalidades de contratación de personal previstas en la legislación laboral, presta servicios retribuidos por las Administraciones Públicas.",
+            "B) Las leyes de Función Pública que se dicten en desarrollo de este Estatuto establecerán los criterios para la determinación de los puestos de trabajo que no pueden ser desempeñados por personal laboral.",
+            "C) En función de la duración del contrato éste podrá ser fijo, por tiempo definido o temporal.",
+            "D) Los procedimientos de selección del personal laboral no serán públicos, rigiéndose en todo caso por los principios de igualdad, mérito y capacidad. En el caso del personal laboral temporal se regirá igualmente por el principio de celeridad, teniendo por finalidad atender razones expresamente justificadas de necesidad y urgencia."
+        ],
+        respuestaCorrecta: "A) Es personal laboral el que, en virtud de contrato de trabajo formalizado por escrito, en cualquiera de las modalidades de contratación de personal previstas en la legislación laboral, presta servicios retribuidos por las Administraciones Públicas."
+    },
+    {
+        pregunta: "Según la Ley Orgánica 1/2004, de 28 de diciembre, de Medidas de Protección Integral contra la Violencia de Género, la Violencia de Género se ejerce sobre las mujeres por parte de quienes:",
+        opciones: [
+            "A) No sean o hayan sido sus cónyuges.",
+            "B) Convivan con ellas.",
+            "C) Sean o hayan sido sus cónyuges.",
+            "D) Estén ligados a ellas familiarmente."
+        ],
+        respuestaCorrecta: "C) Sean o hayan sido sus cónyuges."
+    },
+    {
+        pregunta: "Según la Ley 4/2023, de 28 de febrero, para la igualdad real y efectiva de las personas trans y para la garantía de los derechos de las personas LGTBI, se entiende por transfobia:",
+        opciones: [
+            "A) Toda actitud, conducta o discurso de rechazo, repudio, prejuicio, discriminación o intolerancia hacia las personas homosexuales por el hecho de serlo, o ser percibidas como tales.",
+            "B) Toda actitud, conducta o discurso de rechazo, repudio, prejuicio, discriminación o intolerancia hacia las personas bisexuales por el hecho de serlo, o ser percibidas como tales.",
+            "C) Atracción física, sexual o afectiva hacia una persona.",
+            "D) Toda actitud, conducta o discurso de rechazo, repudio, prejuicio, discriminación o intolerancia hacia las personas trans por el hecho de serlo, o ser percibidas como tales."
+        ],
+        respuestaCorrecta: "D) Toda actitud, conducta o discurso de rechazo, repudio, prejuicio, discriminación o intolerancia hacia las personas trans por el hecho de serlo, o ser percibidas como tales."
+    },
+    {
+        pregunta: "En base al artículo 49 CE, ¿quién impulsará las políticas que garanticen la plena autonomía personal y la inclusión social de las personas con discapacidad, en entornos universalmente accesibles?",
+        opciones: [
+            "A) Los poderes públicos.",
+            "B) El Ministerio de Inclusión, Seguridad Social y Migraciones, exclusively.",
+            "C) Las Comunidades Autónomas/Ciudades Autónomas, exclusively.",
+            "D) El Presidente del Gobierno."
+        ],
+        respuestaCorrecta: "A) Los poderes públicos."
+    },
+    {
+        pregunta: "¿En qué grados se clasifica la dependencia según lo establecido por la Ley 39/2006, de 14 de diciembre, de Promoción de la Autonomía Personal y Atención a las personas en situación de dependencia?",
+        opciones: [
+            "A) Los grados de clasificación de la dependencia son: Grado I. Dependencia leve Grado ll. Dependencia moderada. Y Grado III. Gran dependencia.",
+            "B) Los grados de clasificación de la dependencia son: Grado I. Dependencia moderada Grado Il. Dependencia severa. Y Grado III. Gran dependencia.",
+            "C) Los grados de clasificación de la dependencia son: Grado I (grave) y Grado ll (muy grave).",
+            "D) Los grados de clasificación de la dependencia son: Grado 0, (leve), Grado I (grave) y Grado ll (muy grave)."
+        ],
+        respuestaCorrecta: "B) Los grados de clasificación de la dependencia son: Grado I. Dependencia moderada Grado Il. Dependencia severa. Y Grado III. Gran dependencia."
+    },
+    {
+        pregunta: "El ámbito de aplicación de la Ley 4/2023, de 28 de febrero, para la igualdad real y efectiva de las personas trans y para la garantía de los derechos de las personas LGTBI se extiende a:",
+        opciones: [
+            "A) Exclusivamente a las personas físicas o jurídicas de carácter público.",
+            "B) A las personas de nacionalidad española que no se encuentren en territorio español.",
+            "C) No incluye a las personas menores de edad.",
+            "D) Esta Ley será de aplicación a toda persona física o jurídica, de carácter público o privado, que resida, se encuentre o actúe en territorio español, cualquiera que fuera su nacionalidad, origen racial o étnico, religión, domicilio, residencia, edad, estado civil o situación administrativa, en los términos y con el alcance que se contemplan en esta ley y en el resto del ordenamiento jurídico."
+        ],
+        respuestaCorrecta: "D) Esta Ley será de aplicación a toda persona física o jurídica, de carácter público o privado, que resida, se encuentre o actúe en territorio español, cualquiera que fuera su nacionalidad, origen racial o étnico, religión, domicilio, residencia, edad, estado civil o situación administrativa, en los términos y con el alcance que se contemplan en esta ley y en el resto del ordenamiento jurídico."
+    },
+    {
+        pregunta: "Según lo dispuesto en el artículo 6 de la Ley Orgánica 3/2007, de 22 de marzo, para la igualdad efectiva de mujeres y hombres, se considera discriminación indirecta por razón de sexo:",
+        opciones: [
+            "A) La situación en que se encuentra una persona que sea, haya sido o pudiera ser tratada, en atención a su sexo, de manera menos favorable que otra en situación comparable.",
+            "B) No puede justificarse objetivamente en atención a una finalidad legítima.",
+            "C) La situación en que una disposición, criterio o práctica aparentemente neutros pone a personas de un sexo en desventaja particular con respecto a personas del otro.",
+            "D) Todo trato desfavorable a las mujeres relacionado con el embarazo o la maternidad."
+        ],
+        respuestaCorrecta: "C) La situación en que una disposición, criterio o práctica aparentemente neutros pone a personas de un sexo en desventaja particular con respecto a personas del otro."
+    },
+    {
+        pregunta: "La Ley Orgánica 3/2007, de 22 de marzo, para la igualdad efectiva de mujeres y hombres, obliga a elaborar y aplicar un plan de igualdad a:",
+        opciones: [
+            "A) Empresas de cincuenta o más trabajadores.",
+            "B) Todas las empresas.",
+            "C) Empresas de doscientos cincuenta o más trabajadores.",
+            "D) Empresas de ciento cincuenta o más trabajadores."
+        ],
+        respuestaCorrecta: "A) Empresas de cincuenta o más trabajadores."
+    }
 ];
