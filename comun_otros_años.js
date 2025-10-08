@@ -1740,8 +1740,8 @@ export const comun_otros_años = {
         ],
         respuestaCorrecta: "B) Acoso por razón de sexo."
     },
-    {
-        pregunta: "Conforme dispone el artículo 9 del Real Decreto Legislativo 1/2013, de 29 de noviembre, por el que se aprueba el texto refundido de la Ley General de derechos de las personas con discapacidad y de su inclusión social, los beneficiarios de la prestación farmacéutica, del sistema especial de prestaciones sociales y económicas para las personas con discapacidad, ¿qué cantidad deberán aportar por el consumo de especialidades farmacéuticas?",
+     {
+        pregunta: "Conforme dispone el artículo 9 del Real Decreto ... ¿qué aportación deberán aportar por el consumo de especialidades farmacéuticas?",
         opciones: [
             "A) En general, aportarán un mínimo del 1%.",
             "B) Estarán exentas de aportación en el caso de prestaciones ortopédicas.",
@@ -1750,6 +1750,5 @@ export const comun_otros_años = {
         ],
         respuestaCorrecta: "C) Estarán exentas de aportación."
     }
- // 💥 CORRECCIÓN CRÍTICA: Debe usar la variable definida en este archivo.
-    preguntas: comun_otros_años 
+]
 };

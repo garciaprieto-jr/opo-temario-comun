@@ -1,285 +1,260 @@
-// script.js (Módulo principal)
+// script.js
 
-// ----------------------------------------------------------------------
-// --- 1. IMPORTACIÓN DE MÓDULOS DE TEMA (DEBE SER LO PRIMERO) ---
-// ----------------------------------------------------------------------
-import { tema1 } from './tema_1.js';
-import { tema2 } from './tema_2.js';
-import { tema3 } from './tema_3.js';
-import { examen2024 } from './examen_2024_01.js';
-import { comun_otros_años } from './comun_otros_años.js';
+// Clave para almacenamiento local
+const KEY_LOCAL_STORAGE = 'estadoSimuladorExamen';
 
-// Consolidación de temas: Mapea los data-tema del HTML a los objetos importados.
-const temas = {
-    'tema1': tema1,
-    'tema2': tema2,
-    'tema3': tema3,
-    'examen2024': examen2024,
-    'comun_otros_años': comun_otros_años,
-};
+// Variables globales
+let temaActualNombre = null;          // Título del tema actual
+let preguntasActuales = [];           // Array con las preguntas mostradas
+let respuestasUsuario = [];           // Índices de respuestas del usuario
 
-// ----------------------------------------------------------------------
-// --- 2. VARIABLES GLOBALES DEL MÓDULO ---
-// ----------------------------------------------------------------------
-let preguntasActuales = [];
-let respuestasUsuario = [];
-let temaActualNombre = '';
-const KEY_LOCAL_STORAGE = 'examen_respuestas';
+// Ref a contenedores
+const selectorTemasEl = document.getElementById('selector-temas');
+const examenEl = document.getElementById('examen');
+const contenedorPreguntas = document.getElementById('contenedor-preguntas-completas');
 
-
-// ----------------------------------------------------------------------
-// --- 3. FUNCIONES DE LÓGICA (mezclarYSeleccionar, etc.) ---
-// ----------------------------------------------------------------------
-
-/**
- * Función para mezclar un array y seleccionar las primeras N preguntas.
- */
-function mezclarYSeleccionar(array, n){
-    const copia = [...array];
-    for(let i=copia.length-1;i>0;i--){
-        const j = Math.floor(Math.random()*(i+1));
-        [copia[i], copia[j]] = [copia[j], copia[i]];
-    }
-    return copia.slice(0, Math.min(n, copia.length));
-}
-
-/**
- * Guarda el estado actual de las respuestas del usuario en el localStorage.
- */
-function guardarRespuestasLocalmente(){
-    const estado = {
-        tema: temaActualNombre,
-        preguntas: preguntasActuales.map(p => p.pregunta), 
-        respuestas: respuestasUsuario
-    };
-    localStorage.setItem(KEY_LOCAL_STORAGE, JSON.stringify(estado));
-}
-
-/**
- * Carga respuestas guardadas del localStorage.
- */
-function cargarRespuestasLocalmente(preguntasNuevas){
-    const stored = localStorage.getItem(KEY_LOCAL_STORAGE);
-    if(stored){
-        const estadoGuardado = JSON.parse(stored);
-        
-        // Comprueba que las preguntas coincidan
-        const preguntasCoinciden = estadoGuardado.preguntas.every((p, i) => p === preguntasNuevas[i].pregunta);
-
-        if(estadoGuardado.tema === temaActualNombre && preguntasCoinciden){
-            respuestasUsuario = estadoGuardado.respuestas;
-        } else {
-            localStorage.removeItem(KEY_LOCAL_STORAGE);
-            respuestasUsuario = Array(preguntasNuevas.length).fill(null);
-        }
-    } else {
-        respuestasUsuario = Array(preguntasNuevas.length).fill(null);
-    }
-}
-
-/**
- * Muestra el selector de temas y reinicia el estado.
- */
-function mostrarSelectorTemas(){
-    document.getElementById('selector-temas').style.display = 'block';
-    document.getElementById('examen').style.display = 'none';
-    document.getElementById('contenedor-resultados').style.display = 'none';
-    
-    const btnCorregir = document.getElementById('btn-corregir');
-    if (btnCorregir) btnCorregir.style.display = 'block';
-
-    const cont = document.getElementById('contenedor-preguntas-completas');
-    if(cont) cont.innerHTML = '';
-
-    localStorage.removeItem(KEY_LOCAL_STORAGE);
-    preguntasActuales = [];
-    respuestasUsuario = [];
-    temaActualNombre = '';
-}
-
-/**
- * Genera el HTML de la pregunta y sus opciones.
- */
-function generarHTMLPregunta(pregunta, index){
-    let opcionesHTML = pregunta.opciones.map((opcion, i) => {
-        const isChecked = respuestasUsuario[index] === i;
-        const checkedAttr = isChecked ? 'checked' : '';
-        const id = `p${index}-op${i}`;
-        
-        return `
-            <label for="${id}" class="opcion">
-                <input type="radio" id="${id}" name="pregunta-${index}" value="${i}" ${checkedAttr} 
-                       onclick="seleccionarRespuesta(${index}, ${i})">
-                <span>${opcion}</span>
-            </label>
-        `;
-    }).join('');
-
-    return `
-        <div class="pregunta" id="pregunta-${index}">
-            <h3>${index + 1}. ${pregunta.pregunta}</h3>
-            <div class="opciones">
-                ${opcionesHTML}
-            </div>
-        </div>
-    `;
-}
-
-/**
- * Renderiza todas las preguntas en el contenedor principal.
- */
-function renderizarPreguntas(){
-    const contenedor = document.getElementById('contenedor-preguntas-completas');
-    if(!contenedor) return;
-
-    const html = preguntasActuales.map(generarHTMLPregunta).join('');
-    contenedor.innerHTML = html;
-}
-
-/**
- * CRÍTICO: Registra la respuesta seleccionada.
- * Se hace global (window.) para que pueda ser llamada desde el atributo 'onclick' del HTML dinámico.
- */
-window.seleccionarRespuesta = function(preguntaIndex, opcionIndex){
-    respuestasUsuario[preguntaIndex] = opcionIndex;
-    guardarRespuestasLocalmente(); 
-}
-
-/**
- * Inicia el examen, selecciona las preguntas y carga respuestas.
- */
-function iniciarExamen(temaId){
-    if(!temas[temaId]){
-        alert(`Error: El tema con ID '${temaId}' no existe. Revisa el HTML o la consolidación de temas.`);
-        return;
-    }
-
-    const tema = temas[temaId];
-    temaActualNombre = tema.titulo;
-
-    // Obtener la cantidad de preguntas del tema (o usar 20 por defecto)
-    const cantidadASeleccionar = tema.cantidadExamen || 20;
-
-    // 1. Selecciona y mezcla las preguntas
-    preguntasActuales = mezclarYSeleccionar(tema.preguntas, cantidadASeleccionar);
-
-    // 2. Carga respuestas guardadas (o inicializa el array)
-    cargarRespuestasLocalmente(preguntasActuales);
-
-    // 3. Renderiza las preguntas y oculta el selector
-    renderizarPreguntas();
-    document.getElementById('selector-temas').style.display = 'none';
-    document.getElementById('examen').style.display = 'block';
-    document.getElementById('titulo-examen').textContent = temaActualNombre;
-    document.getElementById('contenedor-resultados').style.display = 'none';
-    document.getElementById('btn-corregir').style.display = 'block'; 
-}
-
-/**
- * Muestra los resultados del examen al corregir.
- */
-function corregirExamen(){
-    // ... (El cuerpo de esta función se mantiene igual a tu versión más reciente) ...
-
-    let correctas = 0;
-    let fallos = 0; 
-    const preguntasContainer = document.getElementById('contenedor-preguntas-completas');
-    
-    // Buscar el tema actual por título para obtener su lógica de puntuación
-    const temaId = Object.keys(temas).find(key => temas[key].titulo === temaActualNombre);
-    const tema = temas[temaId];
-    if (!tema || !tema.logicaPuntuacion) return; 
-
-    // Asignar los valores de la lógica de puntuación del tema
-    const logica = tema.logicaPuntuacion;
-    const valorCorrecta = logica.valorCorrecta;
-    const valorIncorrecta = logica.valorIncorrecta; 
-    
-    // 1. Iterar sobre las preguntas para la corrección y contar
-    preguntasActuales.forEach((pregunta, index) => {
-        const respuestaCorrecta = pregunta.respuestaCorrecta;
-        const respuestaIndex = respuestasUsuario[index]; 
-        const preguntaElement = preguntasContainer.querySelector(`#pregunta-${index}`);
-        
-        // Lógica de corrección
-        // ... (El resto de la lógica de corrección que ya tenías)
-        if (respuestaIndex !== null) {
-            const respuestaUsuarioTexto = pregunta.opciones[respuestaIndex];
-            
-            if (respuestaUsuarioTexto === respuestaCorrecta) {
-                correctas++;
-                if (preguntaElement) preguntaElement.classList.add('correcta');
-            } else {
-                fallos++;
-                if (preguntaElement) preguntaElement.classList.add('incorrecta');
-            }
-        } else {
-            if (preguntaElement) preguntaElement.classList.add('sin-contestar');
-        }
-
-        // Mostrar feedback de corrección (la respuesta correcta siempre se muestra)
-        if (preguntaElement) {
-            const feedbackHTML = `
-                <div class="feedback-correccion">
-                    <p><strong>Respuesta Correcta:</strong> <span class="verde">${respuestaCorrecta}</span></p>
-                    ${pregunta.fuente ? `<p class="fuente">Fuente: ${pregunta.fuente}</p>` : ''}
-                </div>
-            `;
-            preguntaElement.insertAdjacentHTML('beforeend', feedbackHTML);
-            
-            // Deshabilitar botones de radio
-            preguntaElement.querySelectorAll('input[type="radio"]').forEach(radio => radio.disabled = true);
-        }
-    });
-
-
-    // 2. Cálculo de resultados y actualización del resumen
-    const totalPreguntas = preguntasActuales.length;
-    
-    let puntuacionBase = correctas * valorCorrecta;
-    let penalizacion = fallos * valorIncorrecta; 
-    let puntuacionNeta = Math.max(0, puntuacionBase - penalizacion); 
-    
-    const puntuacionMaxima = totalPreguntas * valorCorrecta;
-    const nota = (puntuacionNeta * 10) / puntuacionMaxima;
-    
-    const apto = nota >= 5.0; 
-
-    document.getElementById('resumen-correctas').textContent = correctas;
-    document.getElementById('resumen-fallos').textContent = fallos;
-    document.getElementById('resumen-nota').textContent = nota.toFixed(2);
-    document.getElementById('resumen-estado').textContent = apto ? 'APTO' : 'NO APTO';
-    document.getElementById('resumen-estado').className = apto ? 'apto' : 'no-apto';
-
-    // 3. Ocultar el botón de corregir y mostrar el resumen
-    document.getElementById('btn-corregir').style.display = 'none';
-    const resumenContainer = document.getElementById('contenedor-resultados');
-    resumenContainer.style.display = 'block';
-
-    // 4. Desplazarse al contenedor de resultados
-    resumenContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
-
-    // 5. Limpiar el estado de guardado local
-    localStorage.removeItem(KEY_LOCAL_STORAGE);
-}
-
-
-// ----------------------------------------------------------------------
-// --- PUNTO DE ARRANQUE DE LA APLICACIÓN ---
-// ----------------------------------------------------------------------
+// Render inicial
 document.addEventListener('DOMContentLoaded', () => {
-    // Inicializa el estado de la aplicación mostrando el selector de temas.
     mostrarSelectorTemas();
 
-    // Adjunta los listeners a los botones de inicio de examen (.btn-tema).
-    document.querySelectorAll('.btn-tema').forEach(button => {
-        button.addEventListener('click', (e) => {
-            const temaId = e.currentTarget.dataset.tema;
-            iniciarExamen(temaId);
-        });
+    // Cargar estado si quedara algo en localStorage (tema/preguntas cambian -> se limpia)
+    const guardado = localStorage.getItem(KEY_LOCAL_STORAGE);
+    if (guardado) {
+        try {
+            const data = JSON.parse(guardado);
+            if (data.tema && data.preguntas && Array.isArray(data.preguntas)) {
+                // No restauramos automáticamente, solo dejamos la info
+                // para que cargarRespuestasLocalmente lo gestione cuando inicie un tema.
+            }
+        } catch {}
+    }
+});
+
+// ---------------------------------------------
+// Utilidades de UI
+// ---------------------------------------------
+function mostrarSelectorTemas() {
+    examenEl.style.display = 'none';
+    selectorTemasEl.style.display = 'grid';
+    contenedorPreguntas.innerHTML = '';
+    document.getElementById('btn-corregir')?.style.setProperty('display', 'inline-block');
+    document.getElementById('contenedor-resultados')?.style.setProperty('display', 'none');
+}
+
+function mostrarExamen(titulo) {
+    selectorTemasEl.style.display = 'none';
+    examenEl.style.display = 'block';
+    document.getElementById('titulo-examen').textContent = titulo;
+}
+
+// ---------------------------------------------
+// Carga/Inició de temas
+// ---------------------------------------------
+function iniciarExamen(temaId) {
+    const tema = window.temas[temaId];
+    if (!tema) return;
+
+    temaActualNombre = tema.titulo;
+    preguntasActuales = seleccionarPreguntas(tema);
+    cargarRespuestasLocalmente(preguntasActuales);
+
+    renderPreguntas(preguntasActuales);
+    mostrarExamen(tema.titulo);
+
+    // Reset resumen
+    const resumen = document.getElementById('contenedor-resultados');
+    if (resumen) {
+        resumen.style.display = 'none';
+        document.getElementById('resumen-correctas').textContent = '0';
+        document.getElementById('resumen-falladas').textContent = '0';
+        document.getElementById('resumen-sin-contestar').textContent = '0';
+        document.getElementById('resumen-nota').textContent = '0.00';
+        const est = document.getElementById('resumen-estado');
+        est.textContent = 'PENDIENTE';
+        est.className = '';
+    }
+
+    const btnCorregir = document.getElementById('btn-corregir');
+    if (btnCorregir) btnCorregir.style.display = 'inline-block';
+}
+
+// Selección (aleatoria o limitada) según cantidadExamen si aplica
+function seleccionarPreguntas(tema) {
+    const lista = tema.preguntas || [];
+    const n = typeof tema.cantidadExamen === 'number' ? tema.cantidadExamen : lista.length;
+    if (n >= lista.length) return lista.slice();
+
+    const copia = lista.slice();
+    const seleccion = [];
+    while (seleccion.length < n && copia.length) {
+        const idx = Math.floor(Math.random() * copia.length);
+        seleccion.push(copia.splice(idx, 1)[0]);
+    }
+    return seleccion;
+}
+
+// Render de preguntas
+function renderPreguntas(preguntas) {
+    contenedorPreguntas.innerHTML = '';
+    preguntas.forEach((p, i) => {
+        const idBase = `pregunta-${i}`;
+        const opcionesHTML = p.opciones.map((op, idx) => {
+            const checked = respuestasUsuario[i] === idx ? 'checked' : '';
+            return `
+                <label style="display:block;margin:6px 0;">
+                    <input type="radio" name="${idBase}" value="${idx}" ${checked} />
+                    ${op}
+                </label>
+            `;
+        }).join('');
+
+        const html = `
+            <div class="pregunta" id="${idBase}">
+                <p><strong>${i + 1}.</strong> ${p.pregunta}</p>
+                <div class="opciones">
+                    ${opcionesHTML}
+                </div>
+            </div>
+        `;
+        contenedorPreguntas.insertAdjacentHTML('beforeend', html);
     });
 
-    // Listener para el botón de corregir examen.
+    // Radios -> guardar selección en memoria y en localStorage
+    contenedorPreguntas.querySelectorAll('input[type="radio"]').forEach(radio => {
+        radio.addEventListener('change', (e) => {
+            const name = e.target.name; // pregunta-#
+            const idx = parseInt(name.split('-')[1], 10);
+            const val = parseInt(e.target.value, 10);
+            respuestasUsuario[idx] = val;
+            guardarEstadoLocalmente();
+        });
+    });
+}
+
+// Guardar estado mínimo en localStorage
+function guardarEstadoLocalmente() {
+    const estado = {
+        tema: temaActualNombre,
+        preguntas: preguntasActuales.map(p => p.pregunta),
+        respuestas: respuestasUsuario
+    };
+    try {
+        localStorage.setItem(KEY_LOCAL_STORAGE, JSON.stringify(estado));
+    } catch {}
+}
+
+// =======================
+// PATCH: funciones robustas
+// =======================
+function cargarRespuestasLocalmente(preguntasNuevas){
+  const stored = localStorage.getItem(KEY_LOCAL_STORAGE);
+  if (!stored) {
+    respuestasUsuario = Array(preguntasNuevas.length).fill(null);
+    return;
+  }
+
+  try {
+    const estadoGuardado = JSON.parse(stored);
+    const mismasPreguntas =
+      Array.isArray(estadoGuardado.preguntas) &&
+      estadoGuardado.preguntas.length === preguntasNuevas.length &&
+      estadoGuardado.preguntas.every((p, i) => p === (preguntasNuevas[i]?.pregunta));
+
+    if (estadoGuardado.tema === temaActualNombre && mismasPreguntas) {
+      respuestasUsuario = estadoGuardado.respuestas;
+    } else {
+      localStorage.removeItem(KEY_LOCAL_STORAGE);
+      respuestasUsuario = Array(preguntasNuevas.length).fill(null);
+    }
+  } catch (e) {
+    localStorage.removeItem(KEY_LOCAL_STORAGE);
+    respuestasUsuario = Array(preguntasNuevas.length).fill(null);
+  }
+}
+
+function corregirExamen(){
+  let correctas = 0;
+  let fallos = 0;
+  let sinContestar = 0;
+
+  const preguntasContainer = document.getElementById('contenedor-preguntas-completas');
+
+  // Localiza el tema actual
+  const temaId = Object.keys(temas).find(key => temas[key].titulo === temaActualNombre);
+  const tema = temas[temaId];
+  if (!tema || !tema.logicaPuntuacion) return;
+
+  const { valorCorrecta = 1, valorIncorrecta = 0, restaPorFallo = false } = tema.logicaPuntuacion;
+
+  preguntasActuales.forEach((pregunta, index) => {
+    const respuestaCorrecta = pregunta.respuestaCorrecta;
+    const respuestaIndex = respuestasUsuario[index];
+    const preguntaElement = preguntasContainer.querySelector(`#pregunta-${index}`);
+
+    if (respuestaIndex != null) {
+      const respuestaUsuarioTexto = pregunta.opciones[respuestaIndex];
+      if (respuestaUsuarioTexto === respuestaCorrecta) {
+        correctas++;
+        if (preguntaElement) preguntaElement.classList.add('correcta');
+      } else {
+        fallos++;
+        if (preguntaElement) preguntaElement.classList.add('incorrecta');
+      }
+    } else {
+      sinContestar++;
+      if (preguntaElement) preguntaElement.classList.add('sin-contestar');
+    }
+
+    if (preguntaElement) {
+      const feedbackHTML = `
+        <div class="feedback-correccion">
+          <p><strong>Respuesta Correcta:</strong> <span class="verde">${respuestaCorrecta}</span></p>
+          ${pregunta.fuente ? `<p class="fuente">Fuente: ${pregunta.fuente}</p>` : ''}
+        </div>`;
+      preguntaElement.insertAdjacentHTML('beforeend', feedbackHTML);
+      preguntaElement.querySelectorAll('input[type="radio"]').forEach(radio => radio.disabled = true);
+    }
+  });
+
+  const totalPreguntas = preguntasActuales.length;
+  const penalizacion = restaPorFallo ? (fallos * valorIncorrecta) : 0;
+  const puntuacionNeta = Math.max(0, correctas * valorCorrecta - penalizacion);
+
+  const maxTema = (typeof tema.puntajeMaximoTema === 'number')
+    ? tema.puntajeMaximoTema
+    : totalPreguntas * valorCorrecta;
+
+  const nota = (puntuacionNeta * 10) / maxTema;
+  const apto = nota >= 5;
+
+  // Mostrar resumen
+  const el = (id) => document.getElementById(id);
+  el('resumen-correctas').textContent = String(correctas);
+  el('resumen-falladas').textContent = String(fallos);
+  el('resumen-sin-contestar').textContent = String(sinContestar);
+  el('resumen-nota').textContent = isFinite(nota) ? nota.toFixed(2) : '0.00';
+
+  const estadoEl = el('resumen-estado');
+  estadoEl.textContent = apto ? 'APTO' : 'NO APTO';
+  estadoEl.className = apto ? 'apto' : 'no-apto';
+
+  const btnCorregir = document.getElementById('btn-corregir');
+  if (btnCorregir) btnCorregir.style.display = 'none';
+
+  const resumenContainer = document.getElementById('contenedor-resultados');
+  if (resumenContainer) {
+    resumenContainer.style.display = 'block';
+    resumenContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  localStorage.removeItem(KEY_LOCAL_STORAGE);
+}
+
+// ---------------------------------------------
+// Eventos
+// ---------------------------------------------
+document.addEventListener('DOMContentLoaded', () => {
+    // Listener botón corregir
     const btnCorregir = document.getElementById('btn-corregir');
     if (btnCorregir) {
         btnCorregir.addEventListener('click', (e) => {
