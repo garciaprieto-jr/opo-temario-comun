@@ -1750,4 +1750,6 @@ export const comun_otros_años = {
         ],
         respuestaCorrecta: "C) Estarán exentas de aportación."
     }
+ // 💥 CORRECCIÓN CRÍTICA: Debe usar la variable definida en este archivo.
+    preguntas: comun_otros_años 
 };
