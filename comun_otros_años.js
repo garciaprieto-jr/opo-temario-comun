@@ -1349,5 +1349,406 @@ export const comun_otros_años = {
         ],
         respuestaCorrecta: "C) Una red de utilización pública que integra, de forma coordinada, centros y servicios, públicos y privados."
     }
+       
+       {
+        pregunta: "¿En qué Título de la Constitución Española de 1978 se encuentran recogidos los derechos y deberes fundamentales?",
+        opciones: [
+            "A) En el Título I.",
+            "B) En el Título III.",
+            "C) En el Título IV.",
+            "D) En el Título VII."
+        ],
+        respuestaCorrecta: "A) En el Título I."
+    },
+    {
+        pregunta: "Conforme a lo establecido en el artículo 81 de la Constitución Española de 1978 son leyes orgánicas:",
+        opciones: [
+            "A) Las que se aprueban con mayoría absoluta del Congreso y del Senado.",
+            "B) Las que aprueben los Estatutos de Autonomía.",
+            "C) Los Decretos-leyes aprobados por el Gobierno.",
+            "D) Las que se aprueban con mayoría simple del Congreso."
+        ],
+        respuestaCorrecta: "B) Las que aprueben los Estatutos de Autonomía."
+    },
+    {
+        pregunta: "Según el artículo 62 de la Constitución Española de 1978, corresponde al Rey:",
+        opciones: [
+            "A) Plantear ante el Congreso de los Diputados la cuestión de confianza.",
+            "B) Exigir la responsabilidad política del Gobierno mediante la moción de censura.",
+            "C) Sancionar y promulgar las leyes.",
+            "D) Proponer la disolución de las Cortes Generales."
+        ],
+        respuestaCorrecta: "C) Sancionar y promulgar las leyes."
+    },
+    {
+        pregunta: "De acuerdo con el artículo 22.4 de la Constitución Española de 1978, ¿las asociaciones podrán ser disueltas o suspendidas en sus actividades?",
+        opciones: [
+            "A) No.",
+            "B) Sí, en virtud de resolución judicial motivada.",
+            "C) Sí, en virtud de resolución administrativa motivada.",
+            "D) Sí, en virtud de resolución administrativa o judicial."
+        ],
+        respuestaCorrecta: "B) Sí, en virtud de resolución judicial motivada."
+    },
+    {
+        pregunta: "El artículo 9.1 de la Constitución Española de 1978, menciona que los ciudadanos y los poderes públicos están sujetos:",
+        opciones: [
+            "A) A la Constitución y al resto del ordenamiento jurídico.",
+            "B) A la Constitución y al resto del ordenamiento legislativo.",
+            "C) A la Constitución y al resto del ordenamiento ejecutivo.",
+            "D) A la Constitución y al resto del ordenamiento reglamentario."
+        ],
+        respuestaCorrecta: "A) A la Constitución y al resto del ordenamiento jurídico."
+    },
+    {
+        pregunta: "El artículo 10.2 de la Constitución Española de 1978 establece que, las normas relativas a los derechos fundamentales y a las libertades que la Constitución reconoce se interpretarán de conformidad con la Declaración Universal de Derechos Humanos y:",
+        opciones: [
+            "A) La totalidad de las normas de la Unión Europea.",
+            "B) Los tratados y acuerdos internacionales ratificados por España en general.",
+            "C) Los tratados y acuerdos internacionales sobre las mismas materias ratificados por España.",
+            "D) Los tratados y acuerdos internacionales sobre las mismas materias ratificados por el Consejo Europeo."
+        ],
+        respuestaCorrecta: "C) Los tratados y acuerdos internacionales sobre las mismas materias ratificados por España."
+    },
+    {
+        pregunta: "Según lo dispuesto en artículo 17.4 de la Constitución Española de 1978, la Ley regulará un procedimiento de “habeas corpus” para:",
+        opciones: [
+            "A) Producir la inmediata puesta a disposición judicial de toda persona detenida legalmente.",
+            "B) Producir la inmediata puesta en libertad de todo detenido ilegalmente.",
+            "C) Producir la inmediata puesta a disposición judicial de toda persona detenida ilegalmente.",
+            "D) Producir el inmediato ingreso en prisión de toda persona detenida legalmente."
+        ],
+        respuestaCorrecta: "C) Producir la inmediata puesta a disposición judicial de toda persona detenida ilegalmente."
+    },
+    {
+        pregunta: "De acuerdo con el artículo 3 de la Ley 40/2015, de 1 de octubre, de Régimen Jurídico del Sector Público, señale la opción correcta: Las Administraciones Públicas actúan de acuerdo con los principios de:",
+        opciones: [
+            "A) Eficacia, jerarquía, descentralización, desconcentración y coordinación.",
+            "B) Eficacia, jerarquía, centralización, concentración y coordinación.",
+            "C) Eficacia, centralización, concentración y coordinación.",
+            "D) Jerarquía, descentralización, desconcentración y descoordinación."
+        ],
+        respuestaCorrecta: "A) Eficacia, jerarquía, descentralización, desconcentración y coordinación."
+    },
+    {
+        pregunta: "Según el artículo 55 de la Ley 40/2015, de 1 de octubre, de Régimen Jurídico del Sector Público, en la organización territorial de la Administración General del Estado son órganos directivos:",
+        opciones: [
+            "A) Solamente los Delegados del Gobierno en las Comunidades Autónomas.",
+            "B) Únicamente los Subdelegados del Gobierno en las provincias.",
+            "C) Tanto los Delegados del Gobierno en las Comunidades Autónomas, que tendrán rango de Subsecretario, como los Subdelegados del Gobierno en las provincias, los cuales tendrán nivel de Subdirector general.",
+            "D) Tanto los Delegados del Gobierno en las Comunidades Autónomas, que tendrán rango de Subsecretario, como los Subdelegados del Gobierno en las provincias, los cuales tendrán nivel de Director general."
+        ],
+        respuestaCorrecta: "C) Tanto los Delegados del Gobierno en las Comunidades Autónomas, que tendrán rango de Subsecretario, como los Subdelegados del Gobierno en las provincias, los cuales tendrán nivel de Subdirector general."
+    },
+    {
+        pregunta: "De acuerdo con el artículo 69 de la Ley 40/2015, de 1 de octubre, de Régimen Jurídico del Sector Público, indique la opción correcta en relación con las Delegaciones del Gobierno:",
+        opciones: [
+            "A) Existirá una Delegación del Gobierno en cada una de las Comunidades Autónomas, salvo en las uniprovinciales.",
+            "B) Existirá una Delegación del Gobierno en cada una de las Comunidades Autónomas.",
+            "C) Las Delegaciones del Gobierno están adscritas orgánicamente al Ministerio del Interior.",
+            "D) En las Comunidades Autónomas pluriprovinciales podrá existir más de una Delegación del Gobierno."
+        ],
+        respuestaCorrecta: "B) Existirá una Delegación del Gobierno en cada una de las Comunidades Autónomas."
+    },
+    {
+        pregunta: "Según el artículo 74 de la Ley 40/2015, de 1 de octubre, de Régimen Jurídico del Sector Público, los Subdelegados del Gobierno:",
+        opciones: [
+            "A) Tienen nivel de Subsecretario.",
+            "B) Tienen nivel de Subdirector General.",
+            "C) Tienen nivel de Secretario General.",
+            "D) Tienen nivel de Secretario de Estado."
+        ],
+        respuestaCorrecta: "B) Tienen nivel de Subdirector General."
+    },
+    {
+        pregunta: "¿Qué artículo de la Constitución Española de 1978 establece que “El Estado se organiza territorialmente en municipios, en provincias y en las Comunidades Autónomas que se constituyan. Todas estas entidades gozan de autonomía para la gestión de sus respectivos intereses.”?",
+        opciones: [
+            "A) El artículo 14.",
+            "B) El artículo 120.",
+            "C) El artículo 139.",
+            "D) El artículo 137."
+        ],
+        respuestaCorrecta: "D) El artículo 137."
+    },
+    {
+        pregunta: "Según el artículo 108 de la Constitución Española de 1978, el Gobierno responde solidariamente en su gestión política ante:",
+        opciones: [
+            "A) El Tribunal de Cuentas.",
+            "B) El Consejo General del Poder Judicial.",
+            "C) El Congreso de los Diputados.",
+            "D) Las Asambleas de las Comunidades Autónomas."
+        ],
+        respuestaCorrecta: "C) El Congreso de los Diputados."
+    },
+    {
+        pregunta: "Según el artículo 5 de la Ley 50/1997, de 27 de noviembre, del Gobierno, ¿a quién le corresponde aprobar los proyectos de ley y su remisión al Congreso de los Diputados o, en su caso, al Senado?",
+        opciones: [
+            "A) Al Consejo de Ministros.",
+            "B) A las Comisiones Delegadas del Gobierno.",
+            "C) Al Presidente del Gobierno.",
+            "D) Al Ministro que corresponda según su esfera específica de actuación."
+        ],
+        respuestaCorrecta: "A) Al Consejo de Ministros."
+    },
+    {
+        pregunta: "Según el artículo 59.1 de la Ley 40/2015, de 1 de octubre, de Régimen Jurídico del Sector Público, las Subsecretarías y Secretarías Generales se crean, modifican y suprimen por:",
+        opciones: [
+            "A) Ley.",
+            "B) Real Decreto.",
+            "C) Orden Ministerial.",
+            "D) Todas las anteriores son falsas."
+        ],
+        respuestaCorrecta: "B) Real Decreto."
+    },
+    {
+        pregunta: "Según el artículo 5 de la Ley 50/1997, de 27 de noviembre, del Gobierno, ¿cuál de las siguientes funciones corresponde al Consejo de Ministros?",
+        opciones: [
+            "A) Declarar el estado de sitio y proponer al Congreso de los Diputados la declaración del estado de alarma.",
+            "B) Disponer la emisión de Deuda Pública o contraer crédito, cuando haya sido autorizado por una Ley.",
+            "C) Plantear, ante el Congreso de los Diputados, la cuestión de confianza.",
+            "D) Resolver los conflictos de atribuciones que puedan surgir entre los diferentes Ministerios."
+        ],
+        respuestaCorrecta: "B) Disponer la emisión de Deuda Pública o contraer crédito, cuando haya sido autorizado por una Ley."
+    },
+    {
+        pregunta: "Conforme al artículo 2 de la Ley 50/1997, de 27 de noviembre, del Gobierno, ¿quién resuelve los conflictos de atribuciones que puedan surgir entre los diferentes Ministerios?",
+        opciones: [
+            "A) El Consejo de Ministros.",
+            "B) El Ministro de la Presidencia.",
+            "C) La Comisión General de Secretarios de Estado y Subsecretarios.",
+            "D) El Presidente del Gobierno."
+        ],
+        respuestaCorrecta: "D) El Presidente del Gobierno."
+    },
+    {
+        pregunta: "De acuerdo con el artículo 95 del IV Convenio colectivo único para el personal laboral de la Administración General del Estado, ¿cuál es el periodo máximo de duración de la excedencia para el cuidado de hijos o hijas, cónyuge, pareja de hecho acreditada y otros familiares?",
+        opciones: [
+            "A) 2 años.",
+            "B) 1 año.",
+            "C) 3 años.",
+            "D) 5 años."
+        ],
+        respuestaCorrecta: "C) 3 años."
+    },
+    {
+        pregunta: "De acuerdo con el artículo 16 del Real Decreto Legislativo 5/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley del Estatuto Básico del Empleado Público, ¿cómo se denomina al conjunto ordenado de oportunidades de ascenso y expectativas de progreso profesional conforme a los principios de igualdad, mérito y capacidad?",
+        opciones: [
+            "A) Promoción interna.",
+            "B) Carrera profesional.",
+            "C) Carrera horizontal.",
+            "D) Progreso profesional."
+        ],
+        respuestaCorrecta: "B) Carrera profesional."
+    },
+    {
+        pregunta: "De acuerdo con el artículo 22 del Real Decreto Legislativo 5/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley del Estatuto Básico del Empleado Público, las retribuciones de los funcionarios de carrera se clasifican en:",
+        opciones: [
+            "A) Básicas, complementarias y extraordinarias.",
+            "B) Básicas y extraordinarias.",
+            "C) Básicas y complementarias.",
+            "D) Sueldo y trienios."
+        ],
+        respuestaCorrecta: "C) Básicas y complementarias."
+    },
+    {
+        pregunta: "De acuerdo con el artículo 36.3 del Real Decreto Legislativo 5/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley del Estatuto Básico del Empleado Público, ¿qué porcentaje de representantes necesitan haber obtenido las organizaciones sindicales para formar parte de la Mesa General de Negociación de las Administraciones Públicas?",
+        opciones: [
+            "A) 5 por 100.",
+            "B) 10 por 200.",
+            "C) 15 por 100.",
+            "D) 10 por 100."
+        ],
+        respuestaCorrecta: "D) 10 por 100."
+    },
+    {
+        pregunta: "De acuerdo con el artículo 22 del Real Decreto Legislativo 5/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley del Estatuto Básico del Empleado Público, ¿qué tipo de retribuciones son las que retribuyen las características de los puestos de trabajo, la carrera profesional o el desempeño, rendimientos o resultados alcanzados por el personal funcionario?",
+        opciones: [
+            "A) Las retribuciones básicas.",
+            "B) Las retribuciones específicas.",
+            "C) Las retribuciones complementarias.",
+            "D) Las retribuciones profesionales."
+        ],
+        respuestaCorrecta: "C) Las retribuciones complementarias."
+    },
+    {
+        pregunta: "De acuerdo con el artículo 46 del Real Decreto Legislativo 5/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley del Estatuto Básico del Empleado Público, ¿quién no está legitimado para convocar una reunión?",
+        opciones: [
+            "A) Los Delegados de Personal.",
+            "B) Las Juntas de Personal.",
+            "C) Cualquier trabajador.",
+            "D) Los Comités de Empresa."
+        ],
+        respuestaCorrecta: "C) Cualquier trabajador."
+    },
+    {
+        pregunta: "De acuerdo con lo dispuesto en el artículo 59 del Real Decreto Legislativo 5/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley del Estatuto Básico del Empleado Público:",
+        opciones: [
+            "A) En las ofertas de empleo público se reservará un cupo no inferior al dos por ciento de las vacantes para ser cubiertas entre personas con discapacidad.",
+            "B) En las ofertas de empleo público se reservará un cupo no inferior al cinco por ciento de las vacantes para ser cubiertas entre personas con discapacidad.",
+            "C) En las ofertas de empleo público se reservará un cupo no inferior al cuatro por ciento de las vacantes para ser cubiertas entre personas con discapacidad.",
+            "D) En las ofertas de empleo público se reservará un cupo no inferior al siete por ciento de las vacantes para ser cubiertas entre personas con discapacidad."
+        ],
+        respuestaCorrecta: "D) En las ofertas de empleo público se reservará un cupo no inferior al siete por ciento de las vacantes para ser cubiertas entre personas con discapacidad."
+    },
+    {
+        pregunta: "Según lo dispuesto en el artículo 57 del Real Decreto Legislativo 5/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley del Estatuto Básico del Empleado Público, podrán acceder a las Administraciones Públicas como personal laboral:",
+        opciones: [
+            "A) Los extranjeros con residencia legal en España.",
+            "B) Sólo los españoles.",
+            "C) Todos los extranjeros.",
+            "D) Los descendientes de los españoles, cualquiera que sea su nacionalidad, sean menores de veinte años o mayores de esa edad dependientes."
+        ],
+        respuestaCorrecta: "A) Los extranjeros con residencia legal en España."
+    },
+    {
+        pregunta: "Según lo dispuesto en el artículo 70 del Real Decreto Legislativo 5/2015, de 30 de octubre, por el que se aprueba el texto refundido de la Ley del Estatuto Básico del Empleado Público:",
+        opciones: [
+            "A) En todo caso, la ejecución de la oferta de empleo público o instrumento similar deberá desarrollarse dentro del plazo improrrogable de un año.",
+            "B) En todo caso, la ejecución de la oferta de empleo público o instrumento similar deberá desarrollarse dentro del plazo improrrogable de tres años.",
+            "C) En todo caso, la ejecución de la oferta de empleo público o instrumento similar deberá desarrollarse dentro del plazo improrrogable de dos años.",
+            "D) En todo caso, la ejecución de la oferta de empleo público o instrumento similar deberá desarrollarse dentro del plazo improrrogable de cuatro años."
+        ],
+        respuestaCorrecta: "B) En todo caso, la ejecución de la oferta de empleo público o instrumento similar deberá desarrollarse dentro del plazo improrrogable de tres años."
+    },
+    {
+        pregunta: "En todo caso, el personal comprendido en el ámbito de aplicación de la Ley 53/1984, de 26 de diciembre, de Incompatibilidades del personal al servicio de las Administraciones Públicas, NO podrá ejercer las actividades siguientes:",
+        opciones: [
+            "A) El desempeño de actividades privadas, incluidas las de carácter profesional, sea por cuenta propia o bajo la dependencia o al servicio de Entidades o particulares, en los asuntos en que esté interviniendo, haya intervenido en los dos últimos años o tenga que intervenir por razón del puesto público.",
+            "B) La colaboración y la asistencia ocasional a Congresos, seminarios, conferencias o cursos de carácter profesional.",
+            "C) La participación ocasional en coloquios y programas en cualquier medio de comunicación social.",
+            "D) La participación en Tribunales calificadores de pruebas selectivas para ingreso en las Administraciones Públicas."
+        ],
+        respuestaCorrecta: "A) El desempeño de actividades privadas, incluidas las de carácter profesional, sea por cuenta propia o bajo la dependencia o al servicio de Entidades o particulares, en los asuntos en que esté interviniendo, haya intervenido en los dos últimos años o tenga que intervenir por razón del puesto público."
+    },
+    {
+        pregunta: "Según lo dispuesto en el artículo 10 de la Ley 53/1984, de 26 de diciembre, de Incompatibilidades del personal al servicio de las Administraciones Públicas, quienes accedan por cualquier título a un nuevo puesto del sector público que con arreglo a esta Ley resulte incompatible con el que vinieran desempeñando:",
+        opciones: [
+            "A) Habrán de optar por uno de ellos dentro del plazo de toma de posesión.",
+            "B) Habrán de optar por uno de ellos en los diez primeros días de la toma de posesión.",
+            "C) A falta de opción en el plazo señalado se entenderá que optan por el anterior puesto.",
+            "D) Habrán de optar por uno de ellos en los cinco primeros días de la toma de posesión."
+        ],
+        respuestaCorrecta: "A) Habrán de optar por uno de ellos dentro del plazo de toma de posesión."
+    },
+    {
+        pregunta: "Señala la respuesta correcta con relación al sistema de clasificación que se contempla en el artículo 7 del IV Convenio colectivo único para el personal laboral de la Administración General del Estado.",
+        opciones: [
+            "A) Se estructura en grupos profesionales, áreas funcionales, categorías profesionales, y/o especialidades profesionales.",
+            "B) Se estructura en familias profesionales y especialidades profesionales.",
+            "C) Se estructura en grupos profesionales, familias profesionales y/o especialidades profesionales.",
+            "D) Se establece en relación con el Sistema Nacional de Empleo."
+        ],
+        respuestaCorrecta: "C) Se estructura en grupos profesionales, familias profesionales y/o especialidades profesionales."
+    },
+    {
+        pregunta: "De conformidad con el artículo 12 del IV Convenio colectivo único para el personal laboral de la Administración General del Estado, ¿cuál es el órgano máximo de interpretación, vigilancia, seguimiento, estudio y aplicación de lo pactado en el convenio colectivo durante su vigencia?",
+        opciones: [
+            "A) La Comisión Negociadora.",
+            "B) Las Subcomisiones Paritarias de cada Departamento Ministerial.",
+            "C) La Comisión de Interpretación, Vigilancia, Estudio y Aplicación (CIVEA).",
+            "D) La Comisión Paritaria."
+        ],
+        respuestaCorrecta: "D) La Comisión Paritaria."
+    },
+    {
+        pregunta: "Según el artículo 19 del IV Convenio colectivo único para el personal laboral de la Administración General del Estado, recibir comunicación previa en lo relativo a movilidad funcional y geográfica es función de:",
+        opciones: [
+            "A) La Dirección Generala de Función Publica.",
+            "B) La Comisión Negociadora.",
+            "C) La Comisión Paritaria.",
+            "D) La Subcomisión Paritaria del Departamento correspondiente."
+        ],
+        respuestaCorrecta: "D) La Subcomisión Paritaria del Departamento correspondiente."
+    },
+    {
+        pregunta: "De conformidad con el artículo 2 del IV Convenio colectivo único para el personal laboral de la Administración General del Estado, ¿cuál de las siguientes opciones queda excluida de su ámbito de aplicación?",
+        opciones: [
+            "A) El Consejo de Seguridad Nuclear.",
+            "B) El Museo Nacional Centro de Arte Reina Sofía.",
+            "C) La Agencia Española de Protección de Datos.",
+            "D) El personal laboral que presta servicio en el exterior."
+        ],
+        respuestaCorrecta: "D) El personal laboral que presta servicio en el exterior."
+    },
+    {
+        pregunta: "De conformidad con el artículo 93 del IV Convenio colectivo único para el personal laboral de la Administración General del Estado, ¿cuál de las siguientes es causa de suspensión del contrato de trabajo para el personal laboral temporal?",
+        opciones: [
+            "A) Nombramiento como alto cargo del personal laboral fijo por el Gobierno de la Nación o por los órganos de gobierno de las Comunidades Autónomas y de las Ciudades de Ceuta y Melilla o de las Corporaciones Locales.",
+            "B) Prestación de servicios de carácter temporal en organismos internacionales o en programas de cooperación internacional.",
+            "C) Nombramiento como personal eventual del personal laboral fijo para ocupar puestos de trabajo con funciones expresamente calificadas como de confianza o asesoramiento político.",
+            "D) Nacimiento, adopción, del progenitor diferente de la madre biológica, y riesgo durante el embarazo o la lactancia natural de la mujer trabajadora."
+        ],
+        respuestaCorrecta: "D) Nacimiento, adopción, del progenitor diferente de la madre biológica, y riesgo durante el embarazo o la lactancia natural de la mujer trabajadora."
+    },
+    {
+        pregunta: "De conformidad con el artículo 49 del Real Decreto Legislativo 2/2015, de 23 de octubre, por el que se aprueba el texto refundido de la Ley del Estatuto de los Trabajadores, ¿cuál de las siguientes opciones NO es una causa de extinción del contrato de trabajo?",
+        opciones: [
+            "A) Por despido colectivo, siempre que no sea fundado en causas económicas, técnicas, organizativas o de producción.",
+            "B) Por jubilación del trabajador.",
+            "C) Por dimisión del trabajador, debiendo mediar el preaviso que señalen los convenios colectivos o la costumbre del lugar.",
+            "D) Por voluntad del trabajador, fundamentada en un incumplimiento contractual del contrato."
+        ],
+        respuestaCorrecta: "A) Por despido colectivo, siempre que no sea fundado en causas económicas, técnicas, organizativas o de producción."
+    },
+    {
+        pregunta: "De conformidad con el Real Decreto Legislativo 2/2015, de 23 de octubre, por el que se aprueba el texto refundido de la Ley del Estatuto de los Trabajadores y el IV Convenio colectivo único para el personal laboral de la Administración General del Estado, ¿a quién corresponderá la representación colectiva de los trabajadores en aquellos centros de trabajo que tengan cincuenta o más trabajadores y trabajadoras?",
+        opciones: [
+            "A) A los Delegados de Personal.",
+            "B) A los Comités de empresa.",
+            "C) A los Delegados de Personal o a los Comités de empresa, según lo que consigne el centro de trabajo en el preaviso de elecciones.",
+            "D) A los Comités de Seguridad y Salud Laboral."
+        ],
+        respuestaCorrecta: "B) A los Comités de empresa."
+    },
+    {
+        pregunta: "De conformidad con el artículo 3 de la Ley 4/2023, de 28 de febrero, para la igualdad real y efectiva de las personas trans y para la garantía de los derechos de las personas LGTBI, cuando una disposición, criterio o práctica aparentemente neutros ocasiona o puede ocasionar a una o varias personas una desventaja particular con respecto a otras por razón de orientación sexual, e identidad sexual, expresión de género o características generales, se produce:",
+        opciones: [
+            "A) Discriminación directa.",
+            "B) Discriminación por asociación.",
+            "C) Discriminación por error.",
+            "D) Discriminación indirecta."
+        ],
+        respuestaCorrecta: "D) Discriminación indirecta."
+    },
+    {
+        pregunta: "De acuerdo con el artículo 6.2 b) de la Ley 15/2022, de 12 de julio, integral para la igualdad de trato y la no discriminación, la discriminación por error es:",
+        opciones: [
+            "A) Cuando una persona es discriminada de manera simultánea o consecutiva por dos o más causas.",
+            "B) Aquella que se funda en una apreciación incorrecta sobre las normas reguladoras de la discriminación.",
+            "C) Cuando una persona o grupo en que se integra, debido a su relación con otra, es objeto de un trato discriminatorio.",
+            "D) Aquella que se funda en una apreciación incorrecta acerca de las características de la persona o personas discriminadas."
+        ],
+        respuestaCorrecta: "D) Aquella que se funda en una apreciación incorrecta acerca de las características de la persona o personas discriminadas."
+    },
+    {
+        pregunta: "Según el artículo 21.3 de la Ley Orgánica 1/2004, de 28 de diciembre, de Medidas de Protección Integral contra la Violencia de Género, las empresas que formalicen contratos de interinidad, para sustituir a trabajadoras víctimas de violencia de género que hayan suspendido su contrato de trabajo o ejercitado su derecho a la movilidad geográfica o al cambio de centro de trabajo, tendrán derecho a una bonificación del:",
+        opciones: [
+            "A) 25% de las cuotas empresariales a la Seguridad Social por contingencias comunes.",
+            "B) 50% de las cuotas empresariales a la Seguridad Social por contingencias comunes.",
+            "C) 75% de las cuotas empresariales a la Seguridad Social por contingencias comunes.",
+            "D) 100% de las cuotas empresariales a la Seguridad Social por contingencias comunes."
+        ],
+        respuestaCorrecta: "D) 100% de las cuotas empresariales a la Seguridad Social por contingencias comunes."
+    },
+    {
+        pregunta: "De acuerdo con el artículo 7.2 de la Ley Orgánica 3/2007, de 22 de marzo, para la igualdad efectiva de mujeres y hombres, cualquier comportamiento realizado en función del sexo de una persona, con el propósito o el efecto de atentar contra su dignidad y de crear un entorno intimidatorio, degradante u ofensivo, constituye:",
+        opciones: [
+            "A) Acoso sexual.",
+            "B) Acoso por razón de sexo.",
+            "C) Discriminación directa por razón de sexo.",
+            "D) Discriminación indirecta por razón de sexo."
+        ],
+        respuestaCorrecta: "B) Acoso por razón de sexo."
+    },
+    {
+        pregunta: "Conforme dispone el artículo 9 del Real Decreto Legislativo 1/2013, de 29 de noviembre, por el que se aprueba el texto refundido de la Ley General de derechos de las personas con discapacidad y de su inclusión social, los beneficiarios de la prestación farmacéutica, del sistema especial de prestaciones sociales y económicas para las personas con discapacidad, ¿qué cantidad deberán aportar por el consumo de especialidades farmacéuticas?",
+        opciones: [
+            "A) En general, aportarán un mínimo del 1%.",
+            "B) Estarán exentas de aportación en el caso de prestaciones ortopédicas.",
+            "C) Estarán exentas de aportación.",
+            "D) En general, aportarán un máximo del 1%."
+        ],
+        respuestaCorrecta: "C) Estarán exentas de aportación."
+    }
 ]
 ];
