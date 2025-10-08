@@ -948,5 +948,406 @@ export const comun_otros_años = {
             "D) Empresas de ciento cincuenta o más trabajadores."
         ],
         respuestaCorrecta: "A) Empresas de cincuenta o más trabajadores."
+    },
+       {
+        pregunta: "La Constitución Española de 1978 se estructura:",
+        opciones: [
+            "A) En 168 artículos y 2 disposiciones finales.",
+            "B) En 168 artículos, 1 preámbulo y 3 disposiciones adicionales, 9 disposiciones transitorias, 1 disposición derogatoria y 1 disposición final.",
+            "C) En un preámbulo, 169 artículos y 4 disposiciones adicionales, 9 disposiciones transitorias, 1 disposición derogatoria y 1 disposición final.",
+            "D) En 169 capítulos, un preámbulo y 2 disposiciones adicionales."
+        ],
+        respuestaCorrecta: "C) En un preámbulo, 169 artículos y 4 disposiciones adicionales, 9 disposiciones transitorias, 1 disposición derogatoria y 1 disposición final."
+    },
+    {
+        pregunta: "El artículo 15 de la Constitución Española establece que:",
+        opciones: [
+            "A) Nadie podrá ser obligado a declarar sobre su ideología, religión o creencias.",
+            "B) Todos tienen derecho a la vida y a la integridad física y moral, sin que, en ningún caso, puedan ser sometidos a tortura ni a penas o tratos inhumanos o degradantes.",
+            "C) Toda persona tiene derecho a la libertad y a la seguridad. Nadie puede ser privado de su libertad, sino con la observancia de lo establecido en este artículo y en los casos y en la forma previstos en la ley.",
+            "D) Los españoles tienen derecho a elegir libremente su residencia y a circular por el territorio nacional."
+        ],
+        respuestaCorrecta: "B) Todos tienen derecho a la vida y a la integridad física y moral, sin que, en ningún caso, puedan ser sometidos a tortura ni a penas o tratos inhumanos o degradantes."
+    },
+    {
+        pregunta: "¿Qué derecho reconocido en el artículo 29 de la Constitución ha de realizarse por escrito, en la forma y con los efectos que determine la ley?",
+        opciones: [
+            "A) El derecho de huelga.",
+            "B) El derecho de petición individual y colectiva.",
+            "C) El derecho de petición individual exclusivamente.",
+            "D) El derecho de petición colectiva exclusivamente."
+        ],
+        respuestaCorrecta: "B) El derecho de petición individual y colectiva."
+    },
+    {
+        pregunta: "El derecho a la protección de la salud en la Constitución Española:",
+        opciones: [
+            "A) Es un derecho fundamental y los ciudadanos pueden recabar la tutela de ese derecho ante los tribunales.",
+            "B) Es un derecho recogido en el Capítulo Segundo del Título I de la Constitución.",
+            "C) Está reconocido entre los principios rectores de la política social y económica.",
+            "D) No aparece en la Constitución Española vigente."
+        ],
+        respuestaCorrecta: "C) Está reconocido entre los principios rectores de la política social y económica."
+    },
+    {
+        pregunta: "El nombramiento y cese de los Subdelegados del Gobierno en las provincias se efectuará por:",
+        opciones: [
+            "A) Real Decreto del Presidente del Gobierno.",
+            "B) Real Decreto del Consejo de Ministros.",
+            "C) Resolución del Delegado del Gobierno.",
+            "D) Orden del Ministro del Política Territorial."
+        ],
+        respuestaCorrecta: "C) Resolución del Delegado del Gobierno."
+    },
+    {
+        pregunta: "Conforme a la Ley 40/2015, de 1 de octubre, tienen la consideración de órganos administrativos:",
+        opciones: [
+            "A) Todas las unidades administrativas.",
+            "B) Las unidades administrativas a las que se atribuyan funciones con efectos jurídicos frente a terceros o cuya actuación tenga carácter preceptivo.",
+            "C) Únicamente las unidades administrativas a las que se atribuyan funciones con efectos jurídicos frente a terceros.",
+            "D) Las unidades administrativas que dupliquen la competencia de otras que ya existe."
+        ],
+        respuestaCorrecta: "B) Las unidades administrativas a las que se atribuyan funciones con efectos jurídicos frente a terceros o cuya actuación tenga carácter preceptivo."
+    },
+    {
+        pregunta: "Según el artículo 137 de la Constitución Española, el Estado se organiza territorialmente:",
+        opciones: [
+            "A) En municipios, territorios insulares, provincias y Comunidades Autónomas.",
+            "B) En municipios, mancomunidades, provincias y Comunidades Autónomas.",
+            "C) En municipios, provincias y en las Comunidades Autónomas que se constituyan.",
+            "D) En entidades locales y Comunidades Autónomas."
+        ],
+        respuestaCorrecta: "C) En municipios, provincias y en las Comunidades Autónomas que se constituyan."
+    },
+    {
+        pregunta: "Es competencia exclusiva del Estado, según el artículo 149 de la Constitución Española de 1978:",
+        opciones: [
+            "A) Los museos, bibliotecas y conservatorios de música.",
+            "B) La promoción del deporte y de la adecuada utilización del ocio.",
+            "C) La legislación laboral; sin perjuicio de su ejecución por los órganos de las Comunidades Autónomas.",
+            "D) La asistencia social."
+        ],
+        respuestaCorrecta: "C) La legislación laboral; sin perjuicio de su ejecución por los órganos de las Comunidades Autónomas."
+    },
+    {
+        pregunta: "Según el artículo 148 de la Constitución Española de 1978, las Comunidades Autónomas podrán asumir competencias en materia de:",
+        opciones: [
+            "A) Ordenación del territorio, urbanismo y vivienda.",
+            "B) La Legislación sobre propiedad intelectual e industrial.",
+            "C) Nacionalidad, inmigración, emigración, extranjería y derecho de asilo.",
+            "D) Régimen aduanero y arancelario; comercio exterior."
+        ],
+        respuestaCorrecta: "A) Ordenación del territorio, urbanismo y vivienda."
+    },
+    {
+        pregunta: "Corresponde al Presidente del Gobierno (artículo 2, Ley 50/97):",
+        opciones: [
+            "A) Plantear la cuestión de confianza ante el Congreso de los Diputados, previa deliberación del Consejo de Ministros.",
+            "B) Proponer al Senado la convocatoria de un referéndum consultivo, previa autorización del Congreso de los Diputados.",
+            "C) Establecer el programa político del Senado y determinar las directrices de la política correspondiente a las antiguas colonias españolas.",
+            "D) Declarar los estados de alarma y de excepción y proponer al Congreso de los Diputados la declaración del estado de sitio."
+        ],
+        respuestaCorrecta: "A) Plantear la cuestión de confianza ante el Congreso de los Diputados, previa deliberación del Consejo de Ministros."
+    },
+    {
+        pregunta: "Corresponde al Presidente del Gobierno:",
+        opciones: [
+            "A) Representar al Gobierno.",
+            "B) Aprobar los proyectos de ley.",
+            "C) Aprobar los Reales Decretos-leyes y los Reales Decretos Legislativos.",
+            "D) Acordar la negociación y firma de Tratados internacionales, así como su aplicación provisional."
+        ],
+        respuestaCorrecta: "A) Representar al Gobierno."
+    },
+    {
+        pregunta: "Según la Ley 40/2015, de 1 de octubre, de Régimen Jurídico del Sector Público, las Direcciones Generales en un Ministerio se crean, modifican y suprimen:",
+        opciones: [
+            "A) A través de las relaciones de puestos de trabajo.",
+            "B) Por Orden del Ministro respectivo.",
+            "C) Por Real Decreto del Consejo de Ministros.",
+            "D) Por Real Decreto del Presidente del Gobierno."
+        ],
+        respuestaCorrecta: "C) Por Real Decreto del Consejo de Ministros."
+    },
+    {
+        pregunta: "De acuerdo con el artículo 5 de la Ley 40/2015, de 1 de octubre, de Régimen Jurídico del Sector Público, los órganos administrativos:",
+        opciones: [
+            "A) No podrán elaborar instrucciones y órdenes de servicio para dirigir la actividad de sus órganos jerárquicamente dependientes.",
+            "B) Son las unidades administrativas a las que se les atribuye funciones que tengan efectos jurídicos frente a terceros o cuya actuación tenga carácter preceptivo.",
+            "C) Solo pueden ser creados por el poder legislativo mediante Ley.",
+            "D) Podrán crearse tantos como se necesiten."
+        ],
+        respuestaCorrecta: "B) Son las unidades administrativas a las que se les atribuye funciones que tengan efectos jurídicos frente a terceros o cuya actuación tenga carácter preceptivo."
+    },
+    {
+        pregunta: "Los órganos directivos encargados de la gestión de una o varias áreas funcionalmente homogéneas del Ministerio son:",
+        opciones: [
+            "A) Las Secretarías de Estado.",
+            "B) Las Direcciones Generales.",
+            "C) Las Subsecretarías.",
+            "D) Las Subdirecciones Generales."
+        ],
+        respuestaCorrecta: "B) Las Direcciones Generales."
+    },
+    {
+        pregunta: "El ejercicio de las funciones que impliquen la participación directa o indirecta en el ejercicio de las potestades públicas o en la salvaguardia de los intereses generales del Estado y de las Administraciones Públicas corresponde, de acuerdo con el artículo 9 del texto refundido de la Ley del Estatuto Básico del Empleado Público, aprobado por el Real Decreto Legislativo 5/2015, de 30 de octubre:",
+        opciones: [
+            "A) Al personal laboral fijo exclusivamente.",
+            "B) A los funcionarios públicos exclusivamente.",
+            "C) Al personal funcionario y laboral indistintamente.",
+            "D) Al personal eventual exclusivamente."
+        ],
+        respuestaCorrecta: "B) A los funcionarios públicos exclusivamente."
+    },
+    {
+        pregunta: "Señale la respuesta correcta respecto de los funcionarios de carrera, de acuerdo con el artículo 9 del texto refundido de la Ley del Estatuto Básico del Empleado Público, aprobado por el Real Decreto Legislativo 5/2015, de 30 de octubre:",
+        opciones: [
+            "A) Solo realizan funciones expresamente calificadas como de confianza o asesoramiento especial.",
+            "B) Sus condiciones de empleo no tienen la consideración de materia objeto de negociación colectiva en ningún caso.",
+            "C) Están vinculados a una Administración Pública en virtud de nombramiento legal.",
+            "D) Prestan servicios retribuidos por las Administraciones Públicas en virtud de contrato de trabajo formalizado por escrito."
+        ],
+        respuestaCorrecta: "C) Están vinculados a una Administración Pública en virtud de nombramiento legal."
+    },
+    {
+        pregunta: "Señale la respuesta correcta respecto del personal laboral, de acuerdo con el artículo 11 del texto refundido de la Ley del Estatuto Básico del Empleado Público, aprobado por el Real Decreto Legislativo 5/2015, de 30 de octubre:",
+        opciones: [
+            "A) Son nombrados para el desempeño temporal de funciones propias de funcionarios de carrera.",
+            "B) Su nombramiento y cese son libres en todos los casos.",
+            "C) Está regulado por el Derecho Administrativo en todo caso, no siendo aplicable la normativa laboral.",
+            "D) Puede ser fijo, por tiempo indefinido o temporal."
+        ],
+        respuestaCorrecta: "D) Puede ser fijo, por tiempo indefinido o temporal."
+    },
+    {
+        pregunta: "Los empleados públicos tienen derecho, de acuerdo con el artículo 14 del texto refundido de la Ley del Estatuto Básico del Empleado Público, aprobado por el Real Decreto Legislativo 5/2015, de 30 de octubre:",
+        opciones: [
+            "A) A la formación continua y a la actualización permanente de sus conocimientos y capacidades profesionales, preferentemente en horario laboral.",
+            "B) A la inamovilidad en la condición de personal eventual.",
+            "C) A percibir solo las retribuciones que discrecionalmente determine el superior jerárquico.",
+            "D) A la adopción de medidas que favorezcan la conciliación de la vida personal, familiar y laboral solo para el personal laboral fijo."
+        ],
+        respuestaCorrecta: "A) A la formación continua y a la actualización permanente de sus conocimientos y capacidades profesionales, preferentemente en horario laboral."
+    },
+    {
+        pregunta: "Señale la respuesta correcta respecto del trabajo a distancia (teletrabajo) de los empleados públicos, de acuerdo con el artículo 47bis del texto refundido de la Ley del Estatuto Básico del Empleado Público:",
+        opciones: [
+            "A) Será obligatorio con carácter general.",
+            "B) La Administración proporcionará y mantendrá a las personas que trabajen a distancia los medios tecnológicos necesarios para su actividad.",
+            "C) No se aplicará la normativa de prevención de riesgos laborales a las personas que trabajen a distancia.",
+            "D) Es incompatible con la modalidad de trabajo presencial."
+        ],
+        respuestaCorrecta: "B) La Administración proporcionará y mantendrá a las personas que trabajen a distancia los medios tecnológicos necesarios para su actividad."
+    },
+    {
+        pregunta: "El acceso al empleo público se regirá, entre otros, por los principios constitucionales de:",
+        opciones: [
+            "A) Igualdad, mérito y capacidad.",
+            "B) Parcialidad de los miembros de los órganos de selección.",
+            "C) Opacidad.",
+            "D) Falta de adecuación entre el contenido de los procesos selectivos y las funciones o tareas a desarrollar."
+        ],
+        respuestaCorrecta: "A) Igualdad, mérito y capacidad."
+    },
+    {
+        pregunta: "Las ofertas de empleo público reservarán para las personas con discapacidad un cupo de plazas, de acuerdo con el artículo 59 del texto refundido de la Ley del Estatuto Básico del Empleado Público:",
+        opciones: [
+            "A) No inferior al 7% de las vacantes ofertadas, en todo caso.",
+            "B) Superior al 10% de las vacantes ofertadas, en todo caso.",
+            "C) Inferior al 7% de las vacantes ofertadas, en todo caso.",
+            "D) Ninguna de las opciones anteriores es correcta."
+        ],
+        respuestaCorrecta: "A) No inferior al 7% de las vacantes ofertadas, en todo caso."
+    },
+    {
+        pregunta: "Los órganos de selección de personas para el ingreso al empleo público:",
+        opciones: [
+            "A) Serán unipersonales con carácter general.",
+            "B) Podrá estar integrado por personal de elección o designación política.",
+            "C) Tenderán a la paridad entre mujer y hombre.",
+            "D) Estarán formados por miembros que podrán representar a otros órganos administrativos u organizaciones sindicales."
+        ],
+        respuestaCorrecta: "C) Tenderán a la paridad entre mujer y hombre."
+    },
+    {
+        pregunta: "Los sistemas selectivos de personal laboral fijo serán, de acuerdo con el artículo 60 del texto refundido de la Ley del Estatuto Básico del Empleado Público:",
+        opciones: [
+            "A) Oposición exclusivamente en todos los casos.",
+            "B) Concurso de valoración de méritos exclusivamente en todos los casos.",
+            "C) Concurso-oposición exclusivamente en todos los casos.",
+            "D) Oposición, concurso-oposición o concurso de valoración de méritos."
+        ],
+        respuestaCorrecta: "D) Oposición, concurso-oposición o concurso de valoración de méritos."
+    },
+    {
+        pregunta: "Los empleados públicos en activo que realizan una jornada ordinaria de trabajo podrán ejercer las siguientes actividades privadas, de acuerdo con el artículo 12 de la Ley 53/1984, de 26 de diciembre, de Incompatibilidades del personal al servicio de las Administraciones Públicas:",
+        opciones: [
+            "A) Aquellas relacionadas con asuntos en los que esté interviniendo.",
+            "B) Aquellas que requieran la presencia efectiva durante un horario de 40 horas semanales.",
+            "C) Aquellas que impliquen asumir un cargo en empresas que sean contratistas de la Administración donde desempeñan sus funciones como empleados públicos.",
+            "D) Aquellas relacionadas con empresas sin ninguna relación con el Departamento, Organismo o Entidad en las que presten servicio como empleados públicos."
+        ],
+        respuestaCorrecta: "D) Aquellas relacionadas con empresas sin ninguna relación con el Departamento, Organismo o Entidad en las que presten servicio como empleados públicos."
+    },
+    {
+        pregunta: "Según el artículo 7 del IV Convenio colectivo único para el personal laboral de la Administración General del Estado, la clasificación profesional del personal laboral del ámbito de aplicación de dicho Convenio solo podrá modificarse:",
+        opciones: [
+            "A) Cuando lo determine un juzgado.",
+            "B) A través de los procedimientos previstos en el mismo.",
+            "C) Por acuerdo de dos tercios de la Subcomisión Paritaria correspondiente.",
+            "D) No se puede modificar de ninguna manera."
+        ],
+        respuestaCorrecta: "B) A través de los procedimientos previstos en el mismo."
+    },
+    {
+        pregunta: "Corresponde interpretar la totalidad del articulado, disposiciones y anexos del IV Convenio Único para el personal laboral de la Administración General del Estado, vigilar y exigir su cumplimiento a:",
+        opciones: [
+            "A) La Comisión Paritaria.",
+            "B) Los Presidentes de las distintas Subcomisiones Paritarias.",
+            "C) La Comisión Ejecutiva de la Comisión Interministerial de Retribuciones.",
+            "D) El grupo de trabajo de disposiciones y anexos."
+        ],
+        respuestaCorrecta: "A) La Comisión Paritaria."
+    },
+    {
+        pregunta: "Una de las funciones de las Subcomisiones Paritarias del IV Convenio es:",
+        opciones: [
+            "A) Negociar las retribuciones del personal de su Departamento.",
+            "B) La creación de unidades específicas.",
+            "C) Interpretar el articulado correspondiente a los complementos salariales.",
+            "D) Recibir información sobre las vacantes que serán incluidas en el concurso abierto y permanente y los criterios para su determinación."
+        ],
+        respuestaCorrecta: "D) Recibir información sobre las vacantes que serán incluidas en el concurso abierto y permanente y los criterios para su determinación."
+    },
+    {
+        pregunta: "Se establecen en el artículo 12 del IV Convenio Único para el personal laboral de la Administración General del Estado:",
+        opciones: [
+            "A) Una Comisión Negociadora y una Comisión Paritaria.",
+            "B) Una Comisión de Función Pública y un grupo de trabajo de complementos.",
+            "C) Las familias profesionales correspondientes al citado Convenio.",
+            "D) Una Comisión de Traslados y otra de Promoción Interna."
+        ],
+        respuestaCorrecta: "C) Las familias profesionales correspondientes al citado Convenio."
+    },
+    {
+        pregunta: "La titulación exigida para el ingreso al grupo profesional E0, en el IV Convenio Único es:",
+        opciones: [
+            "A) Sin titulación prevista en el sistema educativo.",
+            "B) Título de Bachiller o Técnico o equivalentes.",
+            "C) Título de doctor.",
+            "D) Grado Superior de Formación Profesional."
+        ],
+        respuestaCorrecta: "A) Sin titulación prevista en el sistema educativo."
+    },
+    {
+        pregunta: "En relación a la forma del contrato regulada en el artículo 8 del Texto refundido de la Ley del Estatuto de los Trabajadores, señale la opción INCORRECTA:",
+        opciones: [
+            "A) El contrato de trabajo se podrá celebrar por escrito o de palabra.",
+            "B) La copia básica que se entrega a la representación legal de los trabajadores debe incluir siempre el número del documento nacional de identidad.",
+            "C) El empresario está obligado a comunicar a la oficina pública de empleo, en el plazo de los diez días siguientes a su concertación, el contenido de los contratos de trabajo que celebre.",
+            "D) Deberán constar por escrito los contratos de prácticas y para la formación y el aprendizaje, los contratos a tiempo parcial, fijos-discontinuos y de relevo y los contratos para la realización de una obra o servicio determinado."
+        ],
+        respuestaCorrecta: "B) La copia básica que se entrega a la representación legal de los trabajadores debe incluir siempre el número del documento nacional de identidad."
+    },
+    {
+        pregunta: "Respecto a la validez de los contratos, señale la opción INCORRECTA:",
+        opciones: [
+            "A) Si resultase nula solo una parte del contrato de trabajo, éste será declarado nulo en su integridad siempre.",
+            "B) En caso de nulidad por discriminación salarial por razón de sexo, el trabajador tendrá derecho a la retribución correspondiente al trabajo igual o de igual valor.",
+            "C) En caso de que el contrato resultase nulo, el trabajador podrá exigir, por el trabajo que ya hubiese prestado, la remuneración consiguiente a un contrato válido.",
+            "D) Si resultase nula solo una parte del contrato de trabajo, este permanecerá válido en lo restante, y se entenderá completado con los preceptos jurídicos adecuados conforme a lo dispuesto en el artículo 3.1 del Estatuto de los Trabajadores."
+        ],
+        respuestaCorrecta: "A) Si resultase nula solo una parte del contrato de trabajo, éste será declarado nulo en su integridad siempre."
+    },
+    {
+        pregunta: "Las personas contratadas con un contrato a tiempo parcial:",
+        opciones: [
+            "A) No podrán realizar trabajos nocturnos.",
+            "B) No podrán realizar horas extraordinarias, salvo en los supuestos establecidos en el artículo 35.3 del Estatuto de los Trabajadores.",
+            "C) El trabajador podrá ser despedido o sancionado en caso de rechazar la conversión de un trabajo a tiempo completo en un trabajo parcial y viceversa.",
+            "D) No podrán realizar horas complementarias."
+        ],
+        respuestaCorrecta: "B) No podrán realizar horas extraordinarias, salvo en los supuestos establecidos en el artículo 35.3 del Estatuto de los Trabajadores."
+    },
+    {
+        pregunta: "Conforme el artículo 49 del texto refundido de la Ley del Estatuto de los Trabajadores, el contrato de trabajo se extinguirá (Señale la respuesta INCORRECTA):",
+        opciones: [
+            "A) Por voluntad de los representantes del trabajador, fundamentada en un incumplimiento contractual del empresario.",
+            "B) Por mutuo acuerdo de las partes.",
+            "C) Por expiración del tiempo convenido o realización de la obra o servicio objeto del contrato.",
+            "D) Por dimisión del trabajador, debiendo mediar el preaviso que señalen los convenios colectivos o la costumbre del lugar."
+        ],
+        respuestaCorrecta: "A) Por voluntad de los representantes del trabajador, fundamentada en un incumplimiento contractual del empresario."
+    },
+    {
+        pregunta: "Una de las siguientes causas de extinción del contrato de trabajo es INCORRECTA según lo establecido en el artículo 49 de la Ley del Estatuto de los trabajadores:",
+        opciones: [
+            "A) Por voluntad del trabajador, fundamentada en un incumplimiento contractual del empresario.",
+            "B) Por decisión de la trabajadora que se vea obligada a abandonar temporalmente su puesto de trabajo como consecuencia de ser víctima de violencia de género.",
+            "C) Por despido del trabajador.",
+            "D) Por despido colectivo fundado en causas económicas, técnicas, organizativas o de producción."
+        ],
+        respuestaCorrecta: "B) Por decisión de la trabajadora que se vea obligada a abandonar temporalmente su puesto de trabajo como consecuencia de ser víctima de violencia de género."
+    },
+    {
+        pregunta: "Conforme establece el IV Convenio Único de la Administración General del Estado en su artículo 93, una de las siguientes causas de suspensión de contrato de trabajo no permite la reserva del puesto de trabajo:",
+        opciones: [
+            "A) Nacimiento, adopción, del progenitor diferente de la madre biológica, y, riesgo durante el embarazo o la lactancia natural de la mujer trabajadora.",
+            "B) Reservistas voluntarios y voluntarias.",
+            "C) Nombramiento del personal laboral como personal funcionario en prácticas o para la realización de períodos de prueba como personal laboral fijo en el ámbito de una Administración Pública.",
+            "D) Nombramiento como alto cargo del personal laboral fijo por el Gobierno de la Nación o por los órganos de gobierno de las Comunidades Autónomas y de las Ciudades de Ceuta y Melilla o de las Corporaciones Locales."
+        ],
+        respuestaCorrecta: "D) Nombramiento como alto cargo del personal laboral fijo por el Gobierno de la Nación o por los órganos de gobierno de las Comunidades Autónomas y de las Ciudades de Ceuta y Melilla o de las Corporaciones Locales."
+    },
+    {
+        pregunta: "El artículo 3.1 a) de la Ley 15/2022, de 12 de julio, integral para la igualdad de trato y la no discriminación, establece que, esta Ley se aplicará al empleo, por cuenta ajena y por cuenta propia, que comprende el acceso a:",
+        opciones: [
+            "A) Las condiciones de trabajo, incluidas las retributivas, excluido el despido, la promoción profesional y la formación para el empleo.",
+            "B) Las condiciones de trabajo, incluidas las retributivas y las de despido, la promoción profesional y la formación para el empleo.",
+            "C) Las condiciones de trabajo, incluidas las retributivas las de despido, con exclusión de la promoción profesional y la formación para el empleo.",
+            "D) Las condiciones de trabajo, incluidas las retributivas, excluidos el despido y la promoción profesional e incluida la formación para el empleo."
+        ],
+        respuestaCorrecta: "B) Las condiciones de trabajo, incluidas las retributivas y las de despido, la promoción profesional y la formación para el empleo."
+    },
+    {
+        pregunta: "Según el artículo 10 de la Ley 3/2007, de 22 de marzo, para la igualdad efectiva de mujeres y hombres, los actos y las cláusulas de los negocios jurídicos que constituyan o causen discriminación por razón de sexo se considerarán:",
+        opciones: [
+            "A) Nulos y sin efecto, y darán lugar a responsabilidad a través de un sistema de reparaciones o indemnizaciones.",
+            "B) Nulos y sin efecto, y darán lugar a responsabilidades penales en todo caso.",
+            "C) Nulos y con efecto por lo que darán lugar a sanciones.",
+            "D) Nulos y sin efecto, por lo que no darán lugar a responsabilidades."
+        ],
+        respuestaCorrecta: "A) Nulos y sin efecto, y darán lugar a responsabilidad a través de un sistema de reparaciones o indemnizaciones."
+    },
+    {
+        pregunta: "El artículo 3 i), de la Ley 4/2023, de 28 de febrero, para la igualdad real y efectiva de las personas trans y para la garantía de los derechos de las personas LGTBI, define la Identidad sexual como:",
+        opciones: [
+            "A) Persona cuya identidad sexual no se corresponde con el sexo asignado al nacer.",
+            "B) Vivencia interna e individual del sexo tal y como cada persona la siente y autodefine, pudiendo o no corresponder con el sexo asignado al nacer.",
+            "C) Manifestación que cada persona hace de su identidad sexual.",
+            "D) Persona cuya identidad sexual se corresponde con el sexo asignado al nacer."
+        ],
+        respuestaCorrecta: "B) Vivencia interna e individual del sexo tal y como cada persona la siente y autodefine, pudiendo o no corresponder con el sexo asignado al nacer."
+    },
+    {
+        pregunta: "Dispone el artículo 6.1 del Real Decreto Legislativo 1/2013, de 29 de noviembre, Texto Refundido de la Ley General de derechos de las personas con discapacidad y de su inclusión social, que el ejercicio de los derechos de las personas con discapacidad se realizará de acuerdo con:",
+        opciones: [
+            "A) El principio de igualdad constitucional.",
+            "B) El principio de legalidad en la toma de decisiones.",
+            "C) El principio de libertad en la toma de decisiones.",
+            "D) El principio de no discriminación."
+        ],
+        respuestaCorrecta: "D) El principio de no discriminación."
+    },
+    {
+        pregunta: "Conforme el artículo 6.2 de la Ley 39/2006, de 14 de diciembre, de Promoción de la Autonomía Personal y Atención a las personas en situación de dependencia, el Sistema para la Autonomía y la Dependencia se configura como:",
+        opciones: [
+            "A) Una red de utilización privada que integra, de forma coordinada, centros y servicios, públicos y privados.",
+            "B) Una red de utilización pública que integra los centros de las distintas Comunidades Autónomas.",
+            "C) Una red de utilización pública que integra, de forma coordinada, centros y servicios, públicos y privados.",
+            "D) Una red de centros estatales que se utilizan coordinadamente por los Ayuntamientos."
+        ],
+        respuestaCorrecta: "C) Una red de utilización pública que integra, de forma coordinada, centros y servicios, públicos y privados."
     }
+]
 ];
