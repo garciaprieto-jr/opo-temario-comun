@@ -1751,4 +1751,3 @@ export const comun_otros_años = {
         respuestaCorrecta: "C) Estarán exentas de aportación."
     }
 ]
-];
