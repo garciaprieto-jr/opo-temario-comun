@@ -1749,6 +1749,6 @@ export const comun_otros_años = {
             "D) En general, aportarán un máximo del 1%."
         ],
         respuestaCorrecta: "C) Estarán exentas de aportación."
-    }
-]
+    },
 };
+
