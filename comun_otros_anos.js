@@ -760,9 +760,6 @@ const comun_otros_anos_preguntas =  [
             ],
             respuestaCorrecta: "C) Las necesidades de recursos humanos, con asignación presupuestaria, que deban proveerse mediante la incorporación de personal de nuevo ingreso."
         },
-        {
-            pregunta: "Qué organizaciones sindicales están representadas en las Subcomisiones Paritarias de los Ministerios, según el IV Convenio colectivo único para el personal laboral de la
-    }
 ];
 export const comun_otros_anos = {
     titulo: 'Preguntas M1 Parte Común otros años',
