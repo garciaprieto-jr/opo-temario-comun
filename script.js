@@ -8,7 +8,6 @@ import { tema1 } from './tema_1.js';
 // Consolidación de temas: Mapea los data-tema del HTML a los objetos importados.
 const temas = {
     'tema1': tema1,
-    
 };
 
 // Constante para la clave de localStorage
@@ -46,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // ---------------------------------------------
 function mostrarSelectorTemas() {
     examenEl.style.display = 'none';
-    selectorTemasEl.style.display = 'grid';
+    selectorTemasEl.style.display = 'block'; // Usar 'block' o 'grid' según el diseño
     contenedorPreguntas.innerHTML = '';
     document.getElementById('btn-corregir')?.style.setProperty('display', 'inline-block');
     document.getElementById('contenedor-resultados')?.style.setProperty('display', 'none');
@@ -286,7 +285,4 @@ document.addEventListener('DOMContentLoaded', () => {
             iniciarExamen(e.target.dataset.tema);
         });
     });
-});
-        btnReiniciar.addEventListener('click', mostrarSelectorTemas);
-    }
 });
