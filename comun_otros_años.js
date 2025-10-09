@@ -764,7 +764,7 @@ const comun_otros_años_preguntas =  [
             pregunta: "Qué organizaciones sindicales están representadas en las Subcomisiones Paritarias de los Ministerios, según el IV Convenio colectivo único para el personal laboral de la
     }
 ];
-export const comun_otros_años = {
+export const comun_otros_anos = {
     titulo: 'Preguntas M1 Parte Común otros años',
     descripcion: 'Prueba con penalización de 1/3.',
     cantidadExamen: 40,
