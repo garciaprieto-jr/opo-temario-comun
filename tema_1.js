@@ -946,6 +946,7 @@ const tema1_preguntas = [
     ],
     "respuesta_correcta": "c",
     "articulo_referencia": "Art. 28.1"
+ }
 ];
 
 export const tema1 = {
