@@ -1,6 +1,6 @@
 const examen2024_preguntas = [
     {
-        id: 1,
+       
         pregunta: "El artículo 60 del Texto Refundido de la Ley del Estatuto Básico del Empleado Público aprobado por Real Decreto Legislativo 5/2015, de 30 de octubre (en adelante TREBEP) establece que la composición de los órganos de selección deberá ajustarse a los principios de:",
         opciones: [
             "A) Imparcialidad y profesionalidad.",
@@ -11,7 +11,7 @@ const examen2024_preguntas = [
         respuestaCorrecta: "A) Imparcialidad y profesionalidad."
     },
     {
-        id: 2,
+        
         pregunta: "Según el artículo 61 del TREBEP, los órganos de selección no podrán proponer el acceso a la condición de funcionario de un número superior de aprobados al de plazas convocadas, excepto:",
         opciones: [
             "A) Cuando sea autorizado por el Consejo de Ministros.",
@@ -22,7 +22,7 @@ const examen2024_preguntas = [
         respuestaCorrecta: "C) Cuando así lo prevea la propia convocatoria."
     },
     {
-        id: 3,
+        
         pregunta: "De acuerdo con el TREBEP, NO podrán formar parte de los órganos de selección:",
         opciones: [
             "A) El personal funcionario de carrera.",
@@ -33,7 +33,7 @@ const examen2024_preguntas = [
         respuestaCorrecta: "C) El personal de elección o de designación política, los funcionarios interinos y el personal eventual."
     },
     {
-        id: 4,
+        
         pregunta: "Señale la respuesta CORRECTA según lo dispuesto en el artículo 3 de la Ley 53/1984, de 26 de diciembre, de Incompatibilidades del personal al servicio de las Administraciones Públicas:",
         opciones: [
             "A) Para el ejercicio de una segunda actividad en el sector público, será indispensable la previa y expresa autorización de compatibilidad, que podrá suponer la modificación de la jornada de trabajo.",
@@ -44,7 +44,7 @@ const examen2024_preguntas = [
         respuestaCorrecta: "D) Para el ejercicio de una segunda actividad en el sector público, será indispensable la previa y expresa autorización de compatibilidad, que no supondrá la modificación de la jornada de trabajo y horario de los dos puestos."
     },
     {
-        id: 5,
+        
         pregunta: "Según la Ley 53/1984, de 26 de diciembre, de Incompatibilidades del personal al servicio de las Administraciones Públicas, podrá autorizarse la compatibilidad para el desempeño de un puesto de trabajo:",
         opciones: [
             "A) Como Profesor ayudante doctor en régimen de dedicación a tiempo completo.",
@@ -55,7 +55,7 @@ const examen2024_preguntas = [
         respuestaCorrecta: "C) Como Profesor universitario asociado en régimen de dedicación no superior a la de tiempo parcial."
     },
     {
-        id: 6,
+        
         pregunta: "Según lo establecido en IV Convenio colectivo único para el personal laboral de la Administración General del Estado, señale la titulación exigida para el acceso en el Grupo profesional M3:",
         opciones: [
             "A) Título de Graduado en Educación Secundaria Obligatoria o Título Profesional Básico o equivalentes.",
@@ -66,7 +66,7 @@ const examen2024_preguntas = [
         respuestaCorrecta: "D) Título clasificado en el Nivel 3 del Marco Español de Cualificaciones para la Educación Superior o equivalentes."
     },
     {
-        id: 7,
+        
         pregunta: "De acuerdo con lo establecido en IV Convenio colectivo único para el personal laboral de la Administración General del Estado, señale la respuesta CORRECTA respecto a la Comisión Paritaria:",
         opciones: [
             "A) La Comisión Paritaria es el órgano encargado de la negociación en el marco del Convenio único, de conformidad con lo dispuesto en el artículo 88 del Estatuto de los Trabajadores.",
@@ -77,7 +77,7 @@ const examen2024_preguntas = [
         respuestaCorrecta: "D) La Comisión Paritaria es el órgano máximo de interpretación, vigilancia, seguimiento, estudio y aplicación de lo pactado en el presente Convenio colectivo durante su vigencia. Estará compuesta por representantes de las partes firmantes del convenio."
     },
     {
-        id: 8,
+        
         pregunta: "Según lo dispuesto en el IV Convenio colectivo único para el personal laboral de la Administración General del Estado, NO son funciones de la Comisión Paritaria:",
         opciones: [
             "A) Interpretar la totalidad del articulado, disposiciones y anexos del convenio, vigilar y exigir su cumplimiento.",
@@ -88,7 +88,7 @@ const examen2024_preguntas = [
         respuestaCorrecta: "D) Autorizar los reingresos al servicio activo realizados por el personal laboral en el marco del convenio."
     },
     {
-        id: 9,
+       
         pregunta: "De acuerdo con el IV Convenio colectivo único para el personal laboral de la Administración General del Estado, ¿cuál de los siguientes grupos de trabajo tiene carácter permanente dentro de la Comisión Paritaria?",
         opciones: [
             "A) Grupo de Trabajo de Negociación del Convenio único.",
@@ -99,7 +99,7 @@ const examen2024_preguntas = [
         respuestaCorrecta: "B) Grupo de Trabajo de Interpretación del Convenio Único."
     },
     {
-        id: 10,
+        
         pregunta: "Según lo establecido en el IV Convenio colectivo único para el personal laboral de la Administración General del Estado, serán funciones de las Subcomisiones Paritarias:",
         opciones: [
             "A) Recibir comunicación y ser consultada sobre la distribución anual de la jornada y la fijación diaria y semanal de los horarios y turnos de trabajo.",
@@ -110,7 +110,7 @@ const examen2024_preguntas = [
         respuestaCorrecta: "A) Recibir comunicación y ser consultada sobre la distribución anual de la jornada y la fijación diaria y semanal de los horarios y turnos de trabajo."
     },
     {
-        id: 11,
+        
         pregunta: "El Estatuto de los Trabajadores determina que las empresas podrán formalizar contratos por circunstancias de la producción para atender situaciones ocasionales, previsibles y que tengan una duración reducida y delimitada por un máximo de:",
         opciones: [
             "A) 90 días en un periodo de seis meses.",
@@ -121,7 +121,7 @@ const examen2024_preguntas = [
         respuestaCorrecta: "C) 90 días en el año natural."
     },
     {
-        id: 12,
+        
         pregunta: "Según el Estatuto de los Trabajadores, el contrato que tiene por objeto compatibilizar la actividad laboral retribuida con los correspondientes procesos formativos en el ámbito de la formación profesional, los estudios universitarios o del Catálogo de especialidades formativas del Sistema Nacional de Empleo, se denomina:",
         opciones: [
             "A) Contrato formativo.",
@@ -132,7 +132,7 @@ const examen2024_preguntas = [
         respuestaCorrecta: "D) Contrato de formación en alternancia."
     },
     {
-        id: 13,
+        
         pregunta: "Podrán ser Delegados y Delegadas Sindicales en el ámbito del IV Convenio colectivo único para el personal laboral de la Administración General del Estado:",
         opciones: [
             "A) Personal jubilado.",
@@ -143,7 +143,7 @@ const examen2024_preguntas = [
         respuestaCorrecta: "C) Personal laboral en activo."
     },
     {
-        id: 14,
+        
         pregunta: "Según el artículo 93 del IV Convenio colectivo único para el personal laboral de la Administración General del Estado, NO es una causa de suspensión del contrato de trabajo:",
         opciones: [
             "A) Riesgo durante el embarazo o riesgo durante la lactancia natural.",
@@ -154,7 +154,7 @@ const examen2024_preguntas = [
         respuestaCorrecta: "D) La pena principal o accesoria de inhabilitación absoluta o especial para cargo público que tenga carácter firme."
     },
     {
-        id: 15,
+        
         pregunta: "Según establece el Estatuto de los Trabajadores, serán causas justas para que el trabajador pueda solicitar la extinción del contrato:",
         opciones: [
             "A) Las modificaciones sustanciales en las condiciones de trabajo llevadas a cabo de mutuo acuerdo y que no redunden en menoscabo de la dignidad del trabajador.",
@@ -165,7 +165,7 @@ const examen2024_preguntas = [
         respuestaCorrecta: "B) La falta de pago o retrasos continuados en el abono del salario pactado."
     },
     {
-        id: 16,
+       
         pregunta: "De acuerdo a la Ley Orgánica 3/2007, de 22 de marzo, para la igualdad efectiva de mujeres y hombres, cualquier comportamiento realizado en función del sexo de una persona, con el propósito o el efecto de atentar contra su dignidad y de crear un entorno intimidatorio, degradante u ofensivo, constituye:",
         opciones: [
             "A) Acoso por razón de sexo.",
@@ -176,7 +176,7 @@ const examen2024_preguntas = [
         respuestaCorrecta: "A) Acoso por razón de sexo."
     },
     {
-        id: 17,
+        
         pregunta: "En los litigios sobre acoso sexual y acoso por razón de sexo, estarán legitimados:",
         opciones: [
             "A) La persona acosada será la única legitimada.",
@@ -187,7 +187,7 @@ const examen2024_preguntas = [
         respuestaCorrecta: "A) La persona acosada será la única legitimada."
     },
     {
-        id: 18,
+        
         pregunta: "¿Cómo se denomina el instrumento de cooperación para la articulación de los servicios sociales y la promoción de la autonomía y atención a las personas en situación de dependencia?",
         opciones: [
             "A) Instituto de Servicios Sociales y del Sistema para la Autonomía y Atención a la Dependencia.",
@@ -198,7 +198,7 @@ const examen2024_preguntas = [
         respuestaCorrecta: "D) Consejo Territorial de Servicios Sociales y del Sistema para la Autonomía y Atención a la Dependencia."
     },
     {
-        id: 19,
+        
         pregunta: "Según lo establecido en IV Convenio colectivo único para el personal laboral de la Administración General del Estado, las trabajadoras víctimas de violencia de género, tendrán derecho a solicitar la excedencia:",
         opciones: [
             "A) Durante un periodo máximo de un año para hacer efectiva su protección.",
@@ -209,7 +209,7 @@ const examen2024_preguntas = [
         respuestaCorrecta: "B) Sin necesidad de haber prestado un tiempo mínimo de servicios previos y sin que sea exigible un plazo de permanencia en la misma."
     },
     {
-        id: 20,
+        
         pregunta: "Señale la respuesta INCORRECTA. Acorde a lo dispuesto en la Ley 4/2023, de 28 de febrero, para la igualdad real y efectiva de las personas trans y para la garantía de los derechos de las personas LGTBI, las Administraciones públicas competentes adoptarán las medidas necesarias para procurar que la documentación administrativa y los formularios sean adecuados a la diversidad, entre otras, en materia de:",
         opciones: [
             "A) Orientación sexual.",
@@ -220,7 +220,7 @@ const examen2024_preguntas = [
         respuestaCorrecta: "D) Libertad religiosa y de culto."
     },
     {
-        id: 21,
+        
         pregunta: "¿Cuál de las siguientes afirmaciones sobre la Constitución Española de 1978 es VERDADERA?",
         opciones: [
             "A) El Tribunal Constitucional no puede interpretar la Constitución Española.",
@@ -231,7 +231,7 @@ const examen2024_preguntas = [
         respuestaCorrecta: "C) La Constitución española de 1978 reconoce el pluralismo político como valor superior del ordenamiento jurídico español."
     },
     {
-        id: 22,
+        
         pregunta: "En relación con el artículo 9 de la Constitución Española de 1978, señale la respuesta INCORRECTA:",
         opciones: [
             "A) Garantiza el principio de inseguridad jurídica",
@@ -242,7 +242,7 @@ const examen2024_preguntas = [
         respuestaCorrecta: "A) Garantiza el principio de inseguridad jurídica"
     },
     {
-        id: 23,
+        
         pregunta: "Señale la respuesta CORRECTA en relación con “La libertad, justicia, igualdad y pluralismo político”:",
         opciones: [
             "A) Son derechos fundamentales",
@@ -253,7 +253,7 @@ const examen2024_preguntas = [
         respuestaCorrecta: "C) Son valores superiores del ordenamiento jurídico"
     },
     {
-        id: 24,
+        
         pregunta: "¿Cuál de los siguientes derechos NO es un derecho fundamental según la Constitución Española de 1978?",
         opciones: [
             "A) Derecho al honor, a la intimidad personal y familiar y a la propia imagen.",
@@ -264,7 +264,7 @@ const examen2024_preguntas = [
         respuestaCorrecta: "D) Derecho a la propiedad privada y a la herencia."
     },
     {
-        id: 25,
+        
         pregunta: "La protección de los derechos fundamentales se garantiza a través de:",
         opciones: [
             "A) La ley ordinaria.",
@@ -275,7 +275,7 @@ const examen2024_preguntas = [
         respuestaCorrecta: "C) El recurso de amparo ante el Tribunal Constitucional."
     },
     {
-        id: 26,
+        
         pregunta: "Señale la respuesta CORRECTA. Según la Constitución Española de 1978, el acceso a la función pública debe basarse en:",
         opciones: [
             "A) La recomendación de un superior",
@@ -286,7 +286,7 @@ const examen2024_preguntas = [
         respuestaCorrecta: "C) El mérito y la capacidad"
     },
     {
-        id: 27,
+        
         pregunta: "¿Cómo se organiza la Administración General del Estado en el territorio?",
         opciones: [
             "A) Solo en la capital.",
@@ -297,7 +297,7 @@ const examen2024_preguntas = [
         respuestaCorrecta: "B) A través de Delegaciones y Subdelegaciones del Gobierno."
     },
     {
-        id: 28,
+        
         pregunta: "¿Cuál es la función del Consejo de Estado en relación con las Comunidades Autónomas?",
         opciones: [
             "A) Aprobar las leyes autonómicas.",
@@ -885,16 +885,13 @@ export const examen2024 = {
     titulo: 'M1 Proyectos de Edificación Examen 2024',
     descripcion: 'Prueba con penalización de 1/3.',
     cantidadExamen: 80, // Cantidad específica de preguntas para el examen
-    
-    // ⭐⭐⭐ CRÍTICO: Definimos la puntuación máxima absoluta para este examen ⭐⭐⭐
-    puntajeMaximoTema: 40.0, // 👈 Este examen puntúa sobre 40.0
-    
+    puntajeMaximoTema: 40.0, // 👈 Este examen puntúa sobre 40.0    
     logicaPuntuacion: {
         valorCorrecta: 1.0,
         valorIncorrecta: 1/3, 
         restaPorFallo: true
     },
-    
-    // 💥 CORRECCIÓN CRÍTICA: Debe usar la variable definida en este archivo.
-    preguntas: examen2024_preguntas
+    preguntas: examen2024_preguntas // 💥 CORRECCIÓN CRÍTICA: Debe usar la variable definida en este archivo.
 };
+
+/// examen2024
