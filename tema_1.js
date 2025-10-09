@@ -507,6 +507,445 @@ const tema1_preguntas = [
         opciones: ["Capítulo I", "Capítulo II", "Capítulo III", "Capítulo IV"],
         respuestaCorrecta: "Capítulo III"
     }
+      {
+    "pregunta": "Según el artículo 1.1 de la Constitución, ¿cuáles son los valores superiores del ordenamiento jurídico español?",
+    "opciones": [
+      "a) La libertad, la justicia, la igualdad y el pluralismo político.",
+      "b) La unidad de la Nación, la autonomía de las nacionalidades y la solidaridad.",
+      "c) La dignidad de la persona, los derechos inviolables y el libre desarrollo de la personalidad.",
+      "d) La soberanía nacional, la división de poderes y la monarquía parlamentaria."
+    ],
+    "respuesta_correcta": "a",
+    "articulo_referencia": "Art. 1.1"
+  },
+  {
+    "pregunta": "La forma política del Estado español es:",
+    "opciones": [
+      "a) República parlamentaria.",
+      "b) Monarquía constitucional.",
+      "c) Estado social y democrático de Derecho.",
+      "d) Monarquía parlamentaria."
+    ],
+    "respuesta_correcta": "d",
+    "articulo_referencia": "Art. 1.3"
+  },
+  {
+    "pregunta": "¿En quién reside la soberanía nacional, según la Constitución Española (CE)?",
+    "opciones": [
+      "a) En las Cortes Generales.",
+      "b) En el Rey.",
+      "c) En el pueblo español.",
+      "d) En el Gobierno de la Nación."
+    ],
+    "respuesta_correcta": "c",
+    "articulo_referencia": "Art. 1.2"
+  },
+  {
+    "pregunta": "El castellano es la lengua española oficial del Estado. Según la CE, las demás lenguas españolas:",
+    "opciones": [
+      "a) Serán también oficiales en las respectivas Comunidades Autónomas de acuerdo con la ley.",
+      "b) Serán también oficiales en las respectivas Comunidades Autónomas de acuerdo con sus Estatutos.",
+      "c) Serán cooficiales en todo el territorio español si así lo aprueban las Cortes Generales.",
+      "d) Son consideradas un patrimonio cultural que será objeto de especial respeto, pero no de oficialidad."
+    ],
+    "respuesta_correcta": "b",
+    "articulo_referencia": "Art. 3.2"
+  },
+  {
+    "pregunta": "La capital del Estado, según el artículo 5 de la CE, es:",
+    "opciones": [
+      "a) La ciudad que elijan las Cortes Generales por mayoría absoluta.",
+      "b) La ciudad de Madrid.",
+      "c) La ciudad donde el Rey fije su residencia oficial.",
+      "d) No se establece ninguna capital en la Constitución."
+    ],
+    "respuesta_correcta": "b",
+    "articulo_referencia": "Art. 5"
+  },
+  {
+    "pregunta": "¿Cuál de las siguientes afirmaciones sobre la bandera de España es la correcta según la CE?",
+    "opciones": [
+      "a) Está formada por tres franjas horizontales, roja, amarilla y roja, siendo la amarilla de doble anchura que cada una de las rojas.",
+      "b) Está formada por tres franjas verticales, roja, amarilla y roja, siendo la amarilla de igual anchura que las rojas.",
+      "c) Los Estatutos podrán reconocer banderas y enseñas propias de las Comunidades Autónomas, que podrán utilizarse en lugar de la bandera de España en los edificios públicos.",
+      "d) Una ley orgánica regulará el diseño del escudo de España, que deberá figurar en todo caso en la bandera."
+    ],
+    "respuesta_correcta": "a",
+    "articulo_referencia": "Art. 4.1"
+  },
+  {
+    "pregunta": "La Constitución reconoce a los partidos políticos como expresión del pluralismo político, pero su estructura interna y funcionamiento deberán ser:",
+    "opciones": [
+      "a) Libres.",
+      "b) Democráticos.",
+      "c) Aprobados por el Ministerio del Interior.",
+      "d) Regulados por una ley de bases."
+    ],
+    "respuesta_correcta": "b",
+    "articulo_referencia": "Art. 6"
+  },
+  {
+    "pregunta": "Según el artículo 9.1 de la CE, los ciudadanos y los poderes públicos están sujetos a:",
+    "opciones": [
+      "a) La Constitución y al resto del ordenamiento jurídico.",
+      "b) Únicamente a la Constitución.",
+      "c) A las leyes orgánicas y a la Constitución.",
+      "d) A las directivas de la Unión Europea y a la Constitución."
+    ],
+    "respuesta_correcta": "a",
+    "articulo_referencia": "Art. 9.1"
+  },
+  {
+    "pregunta": "¿Cuál de los siguientes NO es un principio garantizado por el artículo 9.3 de la CE?",
+    "opciones": [
+      "a) La jerarquía normativa.",
+      "b) La retroactividad de las disposiciones sancionadoras no favorables o restrictivas de derechos individuales.",
+      "c) La seguridad jurídica.",
+      "d) La interdicción de la arbitrariedad de los poderes públicos."
+    ],
+    "respuesta_correcta": "b",
+    "articulo_referencia": "Art. 9.3"
+  },
+  {
+    "pregunta": "La dignidad de la persona y el libre desarrollo de la personalidad son, según el artículo 10.1 de la CE:",
+    "opciones": [
+      "a) Derechos fundamentales de la Sección 1ª.",
+      "b) Principios rectores de la política social y económica.",
+      "c) El fundamento del orden político y de la paz social.",
+      "d) Valores superiores del ordenamiento jurídico."
+    ],
+    "respuesta_correcta": "c",
+    "articulo_referencia": "Art. 10.1"
+  },
+  {
+    "pregunta": "Las normas relativas a los derechos fundamentales y a las libertades que la Constitución reconoce se interpretarán de conformidad con:",
+    "opciones": [
+      "a) La jurisprudencia del Tribunal Supremo.",
+      "b) La Declaración Universal de Derechos Humanos y los tratados y acuerdos internacionales sobre las mismas materias ratificados por España.",
+      "c) Las costumbres y los principios generales del derecho.",
+      "d) Las leyes orgánicas que los desarrollen."
+    ],
+    "respuesta_correcta": "b",
+    "articulo_referencia": "Art. 10.2"
+  },
+  {
+    "pregunta": "La nacionalidad española se adquiere, se conserva y se pierde de acuerdo con lo establecido en:",
+    "opciones": [
+      "a) El Código Civil.",
+      "b) La propia Constitución.",
+      "c) Una ley orgánica.",
+      "d) La ley."
+    ],
+    "respuesta_correcta": "d",
+    "articulo_referencia": "Art. 11.1"
+  },
+  {
+    "pregunta": "¿Puede un español de origen ser privado de su nacionalidad?",
+    "opciones": [
+      "a) Sí, si reside habitualmente en el extranjero y adquiere otra nacionalidad.",
+      "b) No, en ningún caso.",
+      "c) Sí, por sentencia judicial firme si ha cometido delitos de traición.",
+      "d) Sí, por decisión del Consejo de Ministros."
+    ],
+    "respuesta_correcta": "b",
+    "articulo_referencia": "Art. 11.2"
+  },
+  {
+    "pregunta": "¿Cuándo alcanzan los españoles la mayoría de edad según la Constitución?",
+    "opciones": [
+      "a) A los 16 años.",
+      "b) A los 21 años.",
+      "c) A los 18 años.",
+      "d) La Constitución no fija una edad, se remite a la ley."
+    ],
+    "respuesta_correcta": "c",
+    "articulo_referencia": "Art. 12"
+  },
+  {
+    "pregunta": "En relación con los extranjeros en España, la Constitución establece que:",
+    "opciones": [
+      "a) Gozarán de las mismas libertades públicas que los españoles.",
+      "b) Gozarán de las libertades públicas que garantiza el presente Título en los términos que establezcan los tratados y la ley.",
+      "c) Solo podrán ejercer el derecho de sufragio activo en las elecciones europeas.",
+      "d) No pueden ser extraditados en ningún caso."
+    ],
+    "respuesta_correcta": "b",
+    "articulo_referencia": "Art. 13.1"
+  },
+  {
+    "pregunta": "La extradición solo se concederá en cumplimiento de:",
+    "opciones": [
+      "a) Una orden judicial europea.",
+      "b) Un tratado o de la ley, atendiendo al principio de reciprocidad.",
+      "c) La legislación penal española.",
+      "d) Una decisión del Gobierno."
+    ],
+    "respuesta_correcta": "b",
+    "articulo_referencia": "Art. 13.3"
+  },
+  {
+    "pregunta": "Quedan excluidos de la extradición:",
+    "opciones": [
+      "a) Los delitos de terrorismo.",
+      "b) Los delitos fiscales.",
+      "c) Los delitos políticos.",
+      "d) Los delitos contra la seguridad vial."
+    ],
+    "respuesta_correcta": "c",
+    "articulo_referencia": "Art. 13.3"
+  },
+  {
+    "pregunta": "El derecho a la vida se reconoce en el artículo 15 de la CE, que establece que:",
+    "opciones": [
+      "a) Todos tienen derecho a la vida, sin excepción alguna.",
+      "b) Queda abolida la pena de muerte, sin excepción alguna.",
+      "c) Queda abolida la pena de muerte, salvo lo que puedan disponer las leyes penales militares para tiempos de guerra.",
+      "d) La ley regulará la práctica de la eutanasia."
+    ],
+    "respuesta_correcta": "c",
+    "articulo_referencia": "Art. 15"
+  },
+  {
+    "pregunta": "Según el artículo 16 de la CE, en relación con la libertad religiosa, se establece que:",
+    "opciones": [
+      "a) España es un Estado confesional.",
+      "b) Ninguna confesión tendrá carácter estatal.",
+      "c) La religión católica es la religión oficial del Estado.",
+      "d) Se prohíben las ceremonias de cualquier confesión en público."
+    ],
+    "respuesta_correcta": "b",
+    "articulo_referencia": "Art. 16.3"
+  },
+  {
+    "pregunta": "¿Puede alguien ser obligado a declarar sobre su ideología, religión o creencias?",
+    "opciones": [
+      "a) Sí, si lo requiere un juez en un procedimiento penal.",
+      "b) Solo si la declaración es para fines estadísticos.",
+      "c) No, nadie podrá ser obligado a declarar sobre su ideología, religión o creencias.",
+      "d) Sí, en el momento de solicitar la nacionalidad española."
+    ],
+    "respuesta_correcta": "c",
+    "articulo_referencia": "Art. 16.2"
+  },
+  {
+    "pregunta": "El derecho a la libertad y a la seguridad se regula en el artículo 17 de la CE. ¿Cuál es el plazo máximo de la detención preventiva?",
+    "opciones": [
+      "a) 24 horas.",
+      "b) 48 horas.",
+      "c) El tiempo estrictamente necesario para la realización de las averiguaciones y, en todo caso, en el plazo máximo de 72 horas.",
+      "d) El que determine el juez en cada caso."
+    ],
+    "respuesta_correcta": "c",
+    "articulo_referencia": "Art. 17.2"
+  },
+  {
+    "pregunta": "Toda persona detenida debe ser informada de forma inmediata y de modo que le sea comprensible de:",
+    "opciones": [
+      "a) La identidad del agente que le detiene.",
+      "b) La posible pena a la que se enfrenta.",
+      "c) Sus derechos y de las razones de su detención.",
+      "d) El lugar exacto al que va a ser conducido."
+    ],
+    "respuesta_correcta": "c",
+    "articulo_referencia": "Art. 17.3"
+  },
+  {
+    "pregunta": "La Constitución garantiza el derecho al honor, a la intimidad personal y familiar y a la propia imagen en su artículo:",
+    "opciones": [
+      "a) 17.",
+      "b) 18.",
+      "c) 19.",
+      "d) 20."
+    ],
+    "respuesta_correcta": "b",
+    "articulo_referencia": "Art. 18"
+  },
+  {
+    "pregunta": "El domicilio es inviolable. ¿Cuándo se puede realizar una entrada o registro en él sin consentimiento del titular?",
+    "opciones": [
+      "a) Con autorización de la autoridad gubernativa.",
+      "b) En caso de flagrante delito o con resolución judicial.",
+      "c) Cuando existan indicios de una actividad ilícita.",
+      "d) Por orden de un agente de la autoridad."
+    ],
+    "respuesta_correcta": "b",
+    "articulo_referencia": "Art. 18.2"
+  },
+  {
+    "pregunta": "El secreto de las comunicaciones, y en especial de las postales, telegráficas y telefónicas, está garantizado, salvo:",
+    "opciones": [
+      "a) Decisión de la policía judicial.",
+      "b) Petición de una de las partes implicadas.",
+      "c) Resolución administrativa motivada.",
+      "d) Resolución judicial."
+    ],
+    "respuesta_correcta": "d",
+    "articulo_referencia": "Art. 18.3"
+  },
+  {
+    "pregunta": "El derecho a expresar y difundir libremente los pensamientos, ideas y opiniones mediante la palabra, el escrito o cualquier otro medio de reproducción se reconoce en el artículo:",
+    "opciones": [
+      "a) 18.",
+      "b) 19.",
+      "c) 20.",
+      "d) 21."
+    ],
+    "respuesta_correcta": "c",
+    "articulo_referencia": "Art. 20"
+  },
+  {
+    "pregunta": "El ejercicio del derecho a la libertad de expresión:",
+    "opciones": [
+      "a) No tiene más límite que la ley.",
+      "b) No puede restringirse mediante ningún tipo de censura previa.",
+      "c) Puede restringirse por la autoridad gubernativa en caso de alteración del orden público.",
+      "d) Solo ampara las informaciones veraces."
+    ],
+    "respuesta_correcta": "b",
+    "articulo_referencia": "Art. 20.2"
+  },
+  {
+    "pregunta": "¿Qué derecho NO se menciona en el artículo 20 de la CE?",
+    "opciones": [
+      "a) A la producción y creación literaria, artística, científica y técnica.",
+      "b) A la cláusula de conciencia y al secreto profesional.",
+      "c) El derecho de reunión pacífica y sin armas.",
+      "d) A comunicar o recibir libremente información veraz por cualquier medio de difusión."
+    ],
+    "respuesta_correcta": "c",
+    "articulo_referencia": "Art. 20"
+  },
+  {
+    "pregunta": "El derecho de reunión pacífica y sin armas:",
+    "opciones": [
+      "a) Requerirá siempre autorización previa.",
+      "b) No necesitará autorización previa.",
+      "c) Deberá ser comunicado a la autoridad, que solo podrá prohibirla por motivos de seguridad vial.",
+      "d) Solo puede ejercerse en lugares cerrados."
+    ],
+    "respuesta_correcta": "b",
+    "articulo_referencia": "Art. 21.1"
+  },
+  {
+    "pregunta": "En los casos de reuniones en lugares de tránsito público y manifestaciones, se deberá dar comunicación previa a la autoridad, que solo podrá prohibirlas cuando:",
+    "opciones": [
+      "a) Se prevea una asistencia masiva de personas.",
+      "b) Existan razones fundadas de alteración del orden público, con peligro para personas o bienes.",
+      "c) Coincidan con otros actos o eventos en la misma zona.",
+      "d) No se identifique a los organizadores."
+    ],
+    "respuesta_correcta": "b",
+    "articulo_referencia": "Art. 21.2"
+  },
+  {
+    "pregunta": "El derecho de asociación se regula en el artículo 22 de la CE. ¿Qué tipo de asociaciones son ilegales?",
+    "opciones": [
+      "a) Las que no tengan un fin lucrativo.",
+      "b) Las que persigan fines o utilicen medios tipificados como delito.",
+      "c) Las asociaciones con estructura jerárquica.",
+      "d) Las asociaciones que no se inscriban en el registro correspondiente."
+    ],
+    "respuesta_correcta": "b",
+    "articulo_referencia": "Art. 22.2"
+  },
+  {
+    "pregunta": "Las asociaciones constituidas al amparo del artículo 22 de la CE:",
+    "opciones": [
+      "a) Deberán inscribirse en un registro a los solos efectos de publicidad.",
+      "b) Deberán inscribirse en un registro para adquirir personalidad jurídica.",
+      "c) Solo podrán ser disueltas por decisión de la autoridad gubernativa.",
+      "d) Están exentas de cualquier tipo de control administrativo."
+    ],
+    "respuesta_correcta": "a",
+    "articulo_referencia": "Art. 22.3"
+  },
+  {
+    "pregunta": "El derecho a participar en los asuntos públicos se reconoce en el artículo 23. Señale la afirmación correcta:",
+    "opciones": [
+      "a) Los ciudadanos tienen el derecho a participar en los asuntos públicos, pero solo a través de representantes.",
+      "b) El sufragio en España es universal, libre, igual, directo y puede no ser secreto en algunos casos.",
+      "c) Los ciudadanos tienen derecho a acceder en condiciones de igualdad a las funciones y cargos públicos, con los requisitos que señalen las leyes.",
+      "d) Solo los españoles de origen pueden acceder a los altos cargos del Estado."
+    ],
+    "respuesta_correcta": "c",
+    "articulo_referencia": "Art. 23.2"
+  },
+  {
+    "pregunta": "¿Qué derecho fundamental se regula en el artículo 24 de la CE?",
+    "opciones": [
+      "a) El derecho a la educación.",
+      "b) El derecho a la tutela judicial efectiva.",
+      "c) El principio de legalidad penal.",
+      "d) El derecho a la sindicación."
+    ],
+    "respuesta_correcta": "b",
+    "articulo_referencia": "Art. 24"
+  },
+  {
+    "pregunta": "¿Cuál de las siguientes garantías NO forma parte del derecho a la tutela judicial efectiva del artículo 24?",
+    "opciones": [
+      "a) A no declarar contra sí mismos y a no confesarse culpables.",
+      "b) A la presunción de inocencia.",
+      "c) A ser informado de la acusación formulada contra ellos.",
+      "d) A la doble instancia judicial en todos los procedimientos."
+    ],
+    "respuesta_correcta": "d",
+    "articulo_referencia": "Art. 24.2"
+  },
+  {
+    "pregunta": "Según el artículo 25 de la CE, nadie puede ser condenado o sancionado por acciones u omisiones que en el momento de producirse:",
+    "opciones": [
+      "a) Fueran consideradas socialmente reprobables.",
+      "b) No constituyan delito, falta o infracción administrativa según la legislación vigente en aquel momento.",
+      "c) No estuvieran recogidas en el Código Penal, aunque sí en una ley ordinaria.",
+      "d) Causaran un grave perjuicio a terceros."
+    ],
+    "respuesta_correcta": "b",
+    "articulo_referencia": "Art. 25.1"
+  },
+  {
+    "pregunta": "Las penas privativas de libertad y las medidas de seguridad estarán orientadas hacia:",
+    "opciones": [
+      "a) La reinserción social y la reeducación.",
+      "b) El castigo y la disuasión.",
+      "c) La protección de la sociedad.",
+      "d) La reparación del daño causado."
+    ],
+    "respuesta_correcta": "a",
+    "articulo_referencia": "Art. 25.2"
+  },
+  {
+    "pregunta": "La Administración civil, según el artículo 25.3 de la CE:",
+    "opciones": [
+      "a) Podrá imponer sanciones que impliquen penas privativas de libertad en casos excepcionales.",
+      "b) No podrá imponer sanciones que directa o subsidiariamente impliquen privación de libertad.",
+      "c) Podrá imponer privación de libertad por un tiempo máximo de 72 horas.",
+      "d) Puede delegar la imposición de penas privativas de libertad en la autoridad judicial."
+    ],
+    "respuesta_correcta": "b",
+    "articulo_referencia": "Art. 25.3"
+  },
+  {
+    "pregunta": "¿Qué se reconoce en el artículo 27 de la CE?",
+    "opciones": [
+      "a) La libertad de empresa.",
+      "b) El derecho a la educación y la libertad de enseñanza.",
+      "c) El derecho al trabajo.",
+      "d) El derecho a la propiedad privada."
+    ],
+    "respuesta_correcta": "b",
+    "articulo_referencia": "Art. 27"
+  },
+  {
+    "pregunta": "Según el artículo 28 de la CE, todos tienen derecho a sindicarse libremente. La ley podrá limitar o exceptuar el ejercicio de este derecho a:",
+    "opciones": [
+      "a) Los trabajadores autónomos.",
+      "b) El personal civil al servicio de la Administración.",
+      "c) Las Fuerzas o Institutos armados o a los demás Cuerpos sometidos a disciplina militar.",
+      "d) Los jueces, magistrados y fiscales."
+    ],
+    "respuesta_correcta": "c",
+    "articulo_referencia": "Art. 28.1"
 ];
 
 export const tema1 = {
