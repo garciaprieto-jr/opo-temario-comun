@@ -18,6 +18,9 @@ const temas = {
     'comun_otros_años': comun_otros_años,
 };
 
+// Constante para la clave de localStorage
+const KEY_LOCAL_STORAGE = 'estadoExamen';
+
 // Variables globales
 let temaActualNombre = null;          // Título del tema actual
 let preguntasActuales = [];           // Array con las preguntas mostradas
@@ -66,7 +69,7 @@ function mostrarExamen(titulo) {
 // Carga/Inició de temas
 // ---------------------------------------------
 function iniciarExamen(temaId) {
-    const tema = window.temas[temaId];
+    const tema = temas[temaId];
     if (!tema) return;
 
     temaActualNombre = tema.titulo;
@@ -281,6 +284,16 @@ document.addEventListener('DOMContentLoaded', () => {
     // Listener para el botón de volver al selector.
     const btnReiniciar = document.getElementById('btn-reiniciar-selector');
     if (btnReiniciar) {
+        btnReiniciar.addEventListener('click', mostrarSelectorTemas);
+    }
+
+    // Listener para los botones de tema
+    document.querySelectorAll('.btn-tema').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            iniciarExamen(e.target.dataset.tema);
+        });
+    });
+});
         btnReiniciar.addEventListener('click', mostrarSelectorTemas);
     }
 });
