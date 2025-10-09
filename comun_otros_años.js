@@ -1,13 +1,5 @@
-export const comun_otros_años = {
-    titulo: 'Preguntas M1 Parte Común otros años',
-    descripcion: 'Prueba con penalización de 1/3.',
-    cantidadExamen: 40,
-    logicaPuntuacion: {
-        valorCorrecta: 1.0,
-        valorIncorrecta: 1/3,
-        restaPorFallo: true
-    },
-    preguntas: [
+const comun_otros_años_preguntas =  [
+
         // Constitución Española
         // PRIMERA SERIE DE PREGUNTAS (24 PREGUNTAS)
         {
@@ -770,5 +762,16 @@ export const comun_otros_años = {
         },
         {
             pregunta: "Qué organizaciones sindicales están representadas en las Subcomisiones Paritarias de los Ministerios, según el IV Convenio colectivo único para el personal laboral de la
-]
+    }
+];
+export const comun_otros_años = {
+    titulo: 'Preguntas M1 Parte Común otros años',
+    descripcion: 'Prueba con penalización de 1/3.',
+    cantidadExamen: 40,
+    logicaPuntuacion: {
+        valorCorrecta: 1.0,
+        valorIncorrecta: 1/3,
+        restaPorFallo: true
+ },
+    preguntas: comun_otros_años_preguntas
 };
