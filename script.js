@@ -6,14 +6,12 @@
 import { tema1 } from './tema_1.js';
 import { tema2 } from './tema_2.js';
 import { tema3 } from './tema_3.js';
-import { examen2024 } from './examen_2024_01.js';
 
 // Consolidación de temas: Mapea los data-tema del HTML a los objetos importados.
 const temas = {
     'tema1': tema1,
     'tema2': tema2,
     'tema3': tema3,
-    'examen2024': examen2024,
     
 };
 
