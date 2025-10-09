@@ -7,7 +7,7 @@ import { tema1 } from './tema_1.js';
 import { tema2 } from './tema_2.js';
 import { tema3 } from './tema_3.js';
 import { examen2024 } from './examen_2024_01.js';
-import { comun_otros_años } from './comun_otros_años.js';
+import { comun_otros_anos } from './comun_otros_años.js';
 
 // Consolidación de temas: Mapea los data-tema del HTML a los objetos importados.
 const temas = {
@@ -15,7 +15,7 @@ const temas = {
     'tema2': tema2,
     'tema3': tema3,
     'examen2024': examen2024,  
-    'comun_otros_años': comun_otros_años,
+    'comun_otros_anos': comun_otros_anos,
 };
 
 // Constante para la clave de localStorage
