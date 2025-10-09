@@ -1,4 +1,4 @@
-const comun_otros_años_preguntas =  [
+const comun_otros_anos_preguntas =  [
 
         // Constitución Española
         // PRIMERA SERIE DE PREGUNTAS (24 PREGUNTAS)
@@ -773,5 +773,5 @@ export const comun_otros_anos = {
         valorIncorrecta: 1/3,
         restaPorFallo: true
  },
-    preguntas: comun_otros_años_preguntas
+    preguntas: comun_otros_anos_preguntas
 };
